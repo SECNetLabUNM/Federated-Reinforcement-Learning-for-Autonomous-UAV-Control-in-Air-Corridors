@@ -141,7 +141,11 @@ class parallel_env(ParallelEnv):
         except:
             pass
 
-    def update_distance_map(self):
+
+    def update_distance_map(self): 
+    # Creates array of (NxN) where N is the number of agents
+    # Entry ij is the distance from agent i to agent j
+    # Distance is evaluated only for the upper-right triangular since it's symmetric
         count = len(self.agents)
         self.distance_map = np.ones([count, count]) / 1e-5
 
@@ -154,8 +158,10 @@ class parallel_env(ParallelEnv):
                 dis = self.agents[i].get_distance_to(self.agents[j])
                 self.distance_map[i, j] = dis
 
-    def collision_detection(self, collisiion_distance=0.4):
-        index = np.where(self.distance_map < collisiion_distance)
+    def collision_detection(self, collision_distance=0.4):
+    # self-explanatory. "self.update_distance_map" pre-processes so you don't
+    # need to check every agent for collision.
+        index = np.where(self.distance_map < collision_distance) 
         collide_set = set(reduce((lambda x, y: x + y), [list(i) for i in index]))
         for i in collide_set:
             if not self.agents[i].terminated:
@@ -183,6 +189,8 @@ class parallel_env(ParallelEnv):
         return tuple(seq)
 
     def generate_structure(self, difficulty=1, seq=None, minor_radius=2.0, test=False):
+
+    # I think this generates the toroids and cylinders
         '''
         :param connect_plane_anchor: in base,
         :param connect_plane_orientation: in base,

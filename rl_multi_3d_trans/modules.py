@@ -81,6 +81,10 @@ class MAB(nn.Module):
         Q = self.fc_q(Q)
         K, V = self.fc_k(K), self.fc_v(K)
 
+        print(Q.shape,"Q")
+        print(K.shape,"K")
+        print(V.shape,"V")
+
         dim_split = self.dim_V // self.num_heads
         Q_ = torch.cat(Q.split(dim_split, 2), 0)
         K_ = torch.cat(K.split(dim_split, 2), 0)
@@ -107,6 +111,9 @@ class FcModule(nn.Module):
         self.fc2_2 = nn.Linear(int(net_width / 2), net_width)
 
     def forward(self, x, times=1):
+        # If the length of the input is 2*netwidth, aka concatenated inputs in smallsettransformer
+        # Pre-pass through layer 0 to make it 1xnetwidth
+        # This means we can pass a residual input instead of cat
         if x.size(-1) == self.net_width * 2:
             x = self.fc0(x)
         input1 = x

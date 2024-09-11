@@ -22,8 +22,9 @@ class SmallSetTransformer(nn.Module):
         encoder_layer = nn.TransformerEncoderLayer(d_model=net_width, nhead=4, dim_feedforward=512, batch_first=True)
         self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_enc)
         self.decoder_mab = MAB(net_width, net_width, net_width, num_heads=4, ln=True)
+        
         # pytorch official decoder, having bugs
-        self.decoder_layer = nn.TransformerDecoderLayer(d_model=net_width, nhead=8, activation='gelu',
+        self.decoder_layer = nn.TransformerDecoderLayer(d_model=net_width, nhead=4, activation='gelu',
                                                         dim_feedforward=512,
                                                         batch_first=True)
         self.tk = Tokenizer(output_dim=net_width)
@@ -43,12 +44,25 @@ class SmallSetTransformer(nn.Module):
         # ########################################
 
     def forward(self, x, state):
-        x1 = self.encoder(x)
+        x1 = x #self.encoder(x)
         nan_recoding(self.logger, x1, 'encoding')
         query = self.S.repeat(x.size(0), 1, 1)
-        x7 = self.decoder_mab(query, x1)
+        #debug try to feed state as query. It works!
+        # LIST OF MODS TO ORIGNAL CODE 
+        # no encoder, only the MAB decoder
+        # The MAB decoder takes the self-state as query, and all observations as key/value
+        # Instead of concatenating x7 to state, add it as a residual. Not sure if this works better or not
+
+        # the MAB decoder splits the vectors along an axis, requiring inserting on into state2
+        # which is now [D_net * 1 * 1]
+        # Not sure if this splitting is required
+        # Is it because how batches are handled during training?
+        state2 = state.unsqueeze(1)
+        
+        x7 = self.decoder_mab(state2, x1)
         x7 = x7.view(x7.size(0), -1)
-        x7 = torch.cat([x7, state], dim=1)
+        x7 = x7 + state
+        
         x8 = self.fc_module(x7)
         return x8
 
