@@ -81,10 +81,6 @@ class MAB(nn.Module):
         Q = self.fc_q(Q)
         K, V = self.fc_k(K), self.fc_v(K)
 
-        print(Q.shape,"Q")
-        print(K.shape,"K")
-        print(V.shape,"V")
-
         dim_split = self.dim_V // self.num_heads
         Q_ = torch.cat(Q.split(dim_split, 2), 0)
         K_ = torch.cat(K.split(dim_split, 2), 0)
