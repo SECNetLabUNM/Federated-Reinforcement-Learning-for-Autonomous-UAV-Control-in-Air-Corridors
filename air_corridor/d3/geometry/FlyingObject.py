@@ -367,6 +367,7 @@ class UAV(FlyingObject):
 
         uav_status = self._report_self()
         other_uavs_status = self._report_other()
+      
         # print(f" corridor, {len(corridor_status)}")
         # print(f" uav_status, {len(uav_status)}")
         return {'self': uav_status, 'other': other_uavs_status}

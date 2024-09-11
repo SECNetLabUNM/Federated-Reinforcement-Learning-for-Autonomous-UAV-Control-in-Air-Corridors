@@ -23,7 +23,7 @@ class SmallSetTransformer(nn.Module):
         #encoder_layer = nn.TransformerEncoderLayer(d_model=net_width, nhead=4, dim_feedforward=512, batch_first=True)
         #self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_enc)
         
-        self.decoder_mab = MAB(net_width, net_width, net_width, num_heads=6, ln=True)
+        self.decoder_mab = MAB(net_width, net_width, net_width, num_heads=8, ln=True)
         
         # pytorch official decoder, having bugs
         self.decoder_layer = nn.TransformerDecoderLayer(d_model=net_width, nhead=8, activation='gelu',

@@ -33,20 +33,27 @@ class Tokenizer(nn.Module):
     def forward(self, input_tensor, position_index=-1, max_len=3):
         # Padding or truncating the input tensor
         assert input_tensor.size(-1) <= self.input_dim_pad * 2
+
+        # Assert required padding size. However, currently it will always go to the max pad size of 4*initial.
+        # Did you mean to check if the input_tensor is larger than the value??
         for i in range(3):
             multplier = 2 ** i
-            if input_tensor.size(-1) <= self.input_dim_pad * multplier:
+            if input_tensor.size(-1) >= self.input_dim_pad * multplier:
                 padSize = self.input_dim_pad * multplier
+            
         padded_input = F.pad(input_tensor, (0, padSize - input_tensor.size(-1)))
 
+        # Used to check with multiplier for deciding which FC layer to use
+        # Changed to check with padsize, i think that's the initial intent
+        # To be tested
         input_dims = len(input_tensor.shape)
         if input_dims == 3:
             padded_input = padded_input.view(-1, padSize)
-        if multplier == 1:
+        if padSize == 32:
             x = self.bn1(self.fc32(padded_input))
-        elif multplier == 2:
+        elif padSize == 64:
             x = self.bn1(self.fc64(padded_input))
-        elif multplier == 4:
+        elif padSize == 128:
             x = self.bn1(self.fc128(padded_input))
         x = F.relu(self.fc11(x))
         x = self.bn2(self.fc2(x))
