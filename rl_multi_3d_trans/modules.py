@@ -27,7 +27,7 @@ class Tokenizer(nn.Module):
         self.fc3 = nn.Linear(128, 128)
         self.fc4 = nn.Linear(128, output_dim)
         self.act = nn.ReLU()
-        self.res_fc = nn.Linear(hidden, output_dim) if hidden != output_dim else None
+        #self.res_fc = nn.Linear(hidden, output_dim) if hidden != output_dim else None
         self.output_dim = output_dim
 
     def forward(self, input_tensor, position_index=-1, max_len=3):

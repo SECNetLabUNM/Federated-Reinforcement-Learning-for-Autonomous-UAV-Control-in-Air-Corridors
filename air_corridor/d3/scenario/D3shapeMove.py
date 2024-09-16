@@ -403,7 +403,8 @@ class parallel_env(ParallelEnv):
         CylinderCorridor.num_corridor_in_state = num_corridor_in_state
 
         # setup uavs
-        plane_offsets = distribute_evenly_within_circle(radius=2, min_distance=1, num_points=num_agents)
+        # NOTE: sqrt of num_agents is a good approximation for the circle size reqd
+        plane_offsets = distribute_evenly_within_circle(radius=(np.sqrt(num_agents)), min_distance=1, num_points=num_agents)
         UAV.flying_list = []
         if len(self.corridors) == 1:
             self.agents = [UAV(init_corridor='A',

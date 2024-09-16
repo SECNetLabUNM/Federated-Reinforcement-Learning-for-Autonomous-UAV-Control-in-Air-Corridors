@@ -1,0 +1,533 @@
+2024-09-11 16:04:53,645 - Random Seed: 1
+2024-09-11 16:04:53,645 - did not find summary
+2024-09-11 16:04:54,014 - Namespace(Loadmodel=False, ModelIdex=1000000, LoadFolder=None, complexity='simple', time=None, exp_name='0:0', EnvIdex=2, write=True, render=False, video_turns=50, num_agents=5, dt=1, reduce_space=True, seed=1, T_horizon=16384, distnum=0, Max_train_steps=10000000.0, save_interval=250000.0, eval_interval=10000.0, gamma=0.99, lambd=0.95, clip_rate=0.2, K_epochs=10, net_width=256, activation='tanh', a_lr=0.00015, c_lr=1.5e-05, l2_reg=0.001, a_optim_batch_size=1024, c_optim_batch_size=1024, entropy_coef=0.001, entropy_coef_decay=0.99, share_layer_flag=True, multiply_horrizion=8, multiply_batch=16, reduce_epoch=False, curriculum=True, consider_boid=False, token_query=True, trans_position=False, num_enc=4, net_model='fc', liability=True, collision_free=False, beta_adaptor_coefficient=1.1, beta_base=1.0, level=14, num_corridor_in_state=1, corridor_index_awareness=None, acceleration_max=0.3, velocity_max=1.5, base_difficulty=0.2, ratio=0.5, uniform_state=False, dynamic_minor_radius=False, dir='d2move_1726092293_0/0')
+2024-09-11 16:04:56,753 - seed: 1, steps: 0k, diffic: 0.2, score: -138.12, status: Counter({'breached': 239, 'collided': 6, 'breached_wall': 4, 'breached_rad_wall': 1}), 0:0
+2024-09-11 16:07:32,044 - 1283, 10, 0:0
+2024-09-11 16:10:07,008 - 1053, 10, 0:0
+2024-09-11 16:10:10,300 - seed: 1, steps: 33k, diffic: 0.2, score: -124.19, status: Counter({'breached': 220, 'breached_wall': 16, 'collided': 12, 'breached_rad_wall': 1, 'won': 1}), 0:0
+2024-09-11 16:12:42,338 - 947, 10, 0:0
+2024-09-11 16:15:11,177 - 780, 10, 0:0
+2024-09-11 16:15:16,182 - seed: 1, steps: 66k, diffic: 0.2, score: -67.58, status: Counter({'breached': 150, 'breached_wall': 61, 'collided': 20, 'won': 12, 'breached_rad_wall': 7}), 0:0
+2024-09-11 16:17:30,895 - 737, 10, 0:0
+2024-09-11 16:19:46,109 - 680, 10, 0:0
+2024-09-11 16:19:54,314 - seed: 1, steps: 99k, diffic: 0.2, score: -13.98, status: Counter({'breached': 116, 'breached_wall': 70, 'won': 34, 'collided': 18, 'breached_rad_wall': 11, 'breached_rad': 1}), 0:0
+2024-09-11 16:22:11,554 - 632, 10, 0:0
+2024-09-11 16:24:47,745 - 596, 10, 0:0
+2024-09-11 16:24:54,320 - seed: 1, steps: 132k, diffic: 0.2, score: 94.43, status: Counter({'breached': 83, 'won': 75, 'breached_wall': 64, 'collided': 16, 'breached_rad_wall': 11, 'breached_rad': 1}), 0:0
+2024-09-11 16:27:28,021 - 585, 10, 0:0
+2024-09-11 16:30:09,049 - 585, 10, 0:0
+2024-09-11 16:30:14,845 - seed: 1, steps: 165k, diffic: 0.2, score: 135.3, status: Counter({'won': 95, 'breached_wall': 57, 'breached': 56, 'collided': 30, 'breached_rad_wall': 11, 'breached_rad': 1}), 0:0
+2024-09-11 16:32:43,748 - 577, 10, 0:0
+2024-09-11 16:35:13,955 - 584, 10, 0:0
+2024-09-11 16:35:23,078 - seed: 1, steps: 198k, diffic: 0.2, score: 209.55, status: Counter({'won': 127, 'breached': 53, 'breached_wall': 51, 'collided': 12, 'breached_rad_wall': 7}), 0:0
+2024-09-11 16:37:43,722 - 595, 10, 0:0
+2024-09-11 16:40:25,452 - 608, 10, 0:0
+2024-09-11 16:40:34,608 - seed: 1, steps: 230k, diffic: 0.2, score: 243.32, status: Counter({'won': 144, 'breached_wall': 43, 'breached': 42, 'collided': 14, 'breached_rad_wall': 6, 'breached_rad': 1}), 0:0
+2024-09-11 16:43:13,782 - 591, 10, 0:0
+2024-09-11 16:46:08,520 - 583, 10, 0:0
+2024-09-11 16:46:14,440 - seed: 1, steps: 263k, diffic: 0.2, score: 304.38, status: Counter({'won': 179, 'collided': 30, 'breached_wall': 25, 'breached': 12, 'breached_rad_wall': 4}), 0:0
+2024-09-11 16:49:05,049 - 591, 10, 0:0
+2024-09-11 16:52:01,232 - 614, 10, 0:0
+2024-09-11 16:52:07,444 - seed: 1, steps: 296k, diffic: 0.2, score: 266.7, status: Counter({'won': 160, 'breached_wall': 48, 'breached': 24, 'collided': 12, 'breached_rad_wall': 3, 'breached_rad': 3}), 0:0
+2024-09-11 16:54:51,457 - 609, 10, 0:0
+2024-09-11 16:57:33,056 - 584, 10, 0:0
+2024-09-11 16:57:40,142 - seed: 1, steps: 329k, diffic: 0.2, score: 323.24, status: Counter({'won': 194, 'breached_wall': 23, 'collided': 17, 'breached': 13, 'breached_rad_wall': 3}), 0:0
+2024-09-11 17:00:06,570 - 590, 10, 0:0
+2024-09-11 17:02:48,795 - 589, 10, 0:0
+2024-09-11 17:02:57,664 - seed: 1, steps: 362k, diffic: 0.2, score: 356.85, status: Counter({'won': 212, 'collided': 16, 'breached': 11, 'breached_wall': 7, 'breached_rad_wall': 4}), 0:0
+2024-09-11 17:05:32,138 - 538, 10, 0:0
+2024-09-11 17:08:23,944 - 515, 10, 0:0
+2024-09-11 17:08:31,255 - seed: 1, steps: 395k, diffic: 0.30000000000000004, score: 332.78, status: Counter({'won': 201, 'breached': 19, 'breached_wall': 15, 'collided': 10, 'breached_rad_wall': 5}), 0:0
+2024-09-11 17:11:16,276 - 457, 10, 0:0
+2024-09-11 17:14:04,538 - 499, 10, 0:0
+2024-09-11 17:14:11,765 - seed: 1, steps: 428k, diffic: 0.4, score: 283.36, status: Counter({'won': 168, 'breached': 33, 'breached_wall': 24, 'collided': 14, 'breached_rad_wall': 11}), 0:0
+2024-09-11 17:16:47,142 - 500, 10, 0:0
+2024-09-11 17:19:19,740 - 512, 10, 0:0
+2024-09-11 17:19:29,599 - seed: 1, steps: 460k, diffic: 0.4, score: 281.35, status: Counter({'won': 167, 'breached_wall': 32, 'breached': 28, 'collided': 20, 'breached_rad_wall': 3}), 0:0
+2024-09-11 17:21:59,046 - 524, 10, 0:0
+2024-09-11 17:24:40,196 - 469, 10, 0:0
+2024-09-11 17:24:51,705 - seed: 1, steps: 493k, diffic: 0.4, score: 293.96, status: Counter({'won': 177, 'breached_wall': 26, 'collided': 20, 'breached': 16, 'breached_rad_wall': 11}), 0:0
+2024-09-11 17:27:30,288 - 467, 10, 0:0
+2024-09-11 17:30:23,585 - 464, 10, 0:0
+2024-09-11 17:30:30,881 - seed: 1, steps: 526k, diffic: 0.4, score: 319.96, status: Counter({'won': 193, 'breached_wall': 22, 'breached': 16, 'collided': 16, 'breached_rad_wall': 3}), 0:0
+2024-09-11 17:33:16,020 - 486, 10, 0:0
+2024-09-11 17:36:05,373 - 484, 10, 0:0
+2024-09-11 17:36:12,819 - seed: 1, steps: 559k, diffic: 0.4, score: 327.55, status: Counter({'won': 194, 'breached': 22, 'breached_wall': 17, 'collided': 14, 'breached_rad_wall': 3}), 0:0
+2024-09-11 17:38:49,000 - 477, 10, 0:0
+2024-09-11 17:41:22,429 - 471, 10, 0:0
+2024-09-11 17:41:33,748 - seed: 1, steps: 592k, diffic: 0.4, score: 336.79, status: Counter({'won': 203, 'breached': 22, 'breached_wall': 15, 'collided': 6, 'breached_rad_wall': 4}), 0:0
+2024-09-11 17:43:56,369 - 433, 10, 0:0
+2024-09-11 17:46:37,029 - 433, 10, 0:0
+2024-09-11 17:46:49,248 - seed: 1, steps: 625k, diffic: 0.5, score: 357.52, status: Counter({'won': 218, 'breached_wall': 14, 'collided': 10, 'breached': 7, 'breached_rad_wall': 1}), 0:0
+2024-09-11 17:49:23,603 - 403, 10, 0:0
+2024-09-11 17:52:14,405 - 403, 10, 0:0
+2024-09-11 17:52:27,883 - seed: 1, steps: 658k, diffic: 0.6, score: 306.14, status: Counter({'won': 190, 'breached_wall': 31, 'breached': 13, 'collided': 12, 'breached_rad_wall': 4}), 0:0
+2024-09-11 17:55:06,674 - 383, 10, 0:0
+2024-09-11 17:58:03,833 - 394, 10, 0:0
+2024-09-11 17:58:13,543 - seed: 1, steps: 690k, diffic: 0.6, score: 343.01, status: Counter({'won': 213, 'collided': 16, 'breached_wall': 12, 'breached': 9}), 0:0
+2024-09-11 18:01:01,836 - 370, 10, 0:0
+2024-09-11 18:03:56,786 - 371, 10, 0:0
+2024-09-11 18:04:06,294 - seed: 1, steps: 723k, diffic: 0.7, score: 340.14, status: Counter({'won': 213, 'collided': 18, 'breached_wall': 9, 'breached': 7, 'breached_rad_wall': 3}), 0:0
+2024-09-11 18:06:47,360 - 345, 10, 0:0
+2024-09-11 18:09:34,068 - 348, 10, 0:0
+2024-09-11 18:09:44,787 - seed: 1, steps: 756k, diffic: 0.7999999999999999, score: 356.81, status: Counter({'won': 224, 'collided': 12, 'breached': 7, 'breached_wall': 6, 'breached_rad_wall': 1}), 0:0
+2024-09-11 18:12:19,606 - 326, 10, 0:0
+2024-09-11 18:14:57,554 - 314, 10, 0:0
+2024-09-11 18:15:13,684 - seed: 1, steps: 789k, diffic: 0.8999999999999999, score: 346.61, status: Counter({'won': 220, 'collided': 12, 'breached_wall': 10, 'breached': 7, 'breached_rad_wall': 1}), 0:0
+2024-09-11 18:17:35,403 - 297, 10, 0:0
+2024-09-11 18:20:19,980 - 287, 10, 0:0
+2024-09-11 18:20:39,087 - seed: 1, steps: 823k, diffic: 0.9999999999999999, score: 345.34, status: Counter({'won': 222, 'collided': 24, 'breached': 3, 'breached_wall': 1}), 0:0
+2024-09-11 18:23:07,389 - 284, 10, 0:0
+2024-09-11 18:25:57,728 - 287, 10, 0:0
+2024-09-11 18:26:16,467 - seed: 1, steps: 855k, diffic: 1.0, score: 351.42, status: Counter({'won': 227, 'collided': 16, 'breached_wall': 6, 'breached': 1}), 0:0
+2024-09-11 18:28:53,887 - 291, 10, 0:0
+2024-09-11 18:31:51,475 - 295, 10, 0:0
+2024-09-11 18:32:10,411 - seed: 1, steps: 888k, diffic: 1.0, score: 346.57, status: Counter({'won': 227, 'breached_wall': 9, 'breached': 7, 'collided': 6, 'breached_rad_wall': 1}), 0:0
+2024-09-11 18:34:47,193 - 288, 10, 0:0
+2024-09-11 18:37:41,923 - 290, 10, 0:0
+2024-09-11 18:38:00,561 - seed: 1, steps: 921k, diffic: 1.0, score: 359.09, status: Counter({'won': 232, 'breached_wall': 10, 'breached': 4, 'collided': 4}), 0:0
+2024-09-11 18:40:38,961 - 293, 10, 0:0
+2024-09-11 18:43:36,454 - 287, 10, 0:0
+2024-09-11 18:43:52,076 - seed: 1, steps: 954k, diffic: 1.0, score: 320.03, status: Counter({'won': 207, 'breached': 26, 'collided': 14, 'breached_wall': 3}), 0:0
+2024-09-11 18:46:32,434 - 294, 10, 0:0
+2024-09-11 18:49:32,025 - 317, 10, 0:0
+2024-09-11 18:49:42,618 - seed: 1, steps: 986k, diffic: 1.0, score: 286.29, status: Counter({'won': 191, 'collided': 32, 'breached': 21, 'breached_wall': 6}), 0:0
+2024-09-11 18:52:26,532 - 332, 10, 0:0
+2024-09-11 18:55:16,907 - 331, 10, 0:0
+2024-09-11 18:55:27,784 - seed: 1, steps: 1019k, diffic: 1.0, score: 336.82, status: Counter({'won': 219, 'collided': 16, 'breached_wall': 8, 'breached': 6, 'breached_rad_wall': 1}), 0:0
+2024-09-11 18:58:03,112 - 334, 10, 0:0
+2024-09-11 19:00:41,976 - 332, 10, 0:0
+2024-09-11 19:00:58,308 - seed: 1, steps: 1052k, diffic: 1.0, score: 352.39, status: Counter({'won': 228, 'collided': 14, 'breached_wall': 4, 'breached': 4}), 0:0
+2024-09-11 19:03:29,553 - 340, 10, 0:0
+2024-09-11 19:06:21,101 - 340, 10, 0:0
+2024-09-11 19:06:38,570 - seed: 1, steps: 1085k, diffic: 1.0, score: 365.06, status: Counter({'won': 237, 'collided': 8, 'breached': 4, 'breached_wall': 1}), 0:0
+2024-09-11 19:09:17,505 - 330, 10, 0:0
+2024-09-11 19:12:18,918 - 332, 10, 0:0
+2024-09-11 19:12:33,410 - seed: 1, steps: 1118k, diffic: 1.0, score: 353.78, status: Counter({'won': 229, 'collided': 14, 'breached_wall': 6, 'breached': 1}), 0:0
+2024-09-11 19:15:22,304 - 335, 10, 0:0
+2024-09-11 19:18:25,455 - 339, 10, 0:0
+2024-09-11 19:18:36,707 - seed: 1, steps: 1150k, diffic: 1.0, score: 358.05, status: Counter({'won': 233, 'collided': 10, 'breached_wall': 6, 'breached': 1}), 0:0
+2024-09-11 19:21:28,922 - 338, 10, 0:0
+2024-09-11 19:24:29,078 - 337, 10, 0:0
+2024-09-11 19:24:40,616 - seed: 1, steps: 1183k, diffic: 1.0, score: 326.76, status: Counter({'won': 211, 'collided': 30, 'breached_wall': 5, 'breached': 4}), 0:0
+2024-09-11 19:27:26,722 - 340, 10, 0:0
+2024-09-11 19:30:14,849 - 342, 10, 0:0
+2024-09-11 19:30:27,031 - seed: 1, steps: 1216k, diffic: 1.0, score: 334.99, status: Counter({'won': 218, 'collided': 16, 'breached': 11, 'breached_wall': 5}), 0:0
+2024-09-11 19:32:54,918 - 347, 10, 0:0
+2024-09-11 19:35:45,257 - 349, 10, 0:0
+2024-09-11 19:36:00,404 - seed: 1, steps: 1249k, diffic: 1.0, score: 319.64, status: Counter({'won': 207, 'collided': 22, 'breached': 11, 'breached_wall': 8, 'breached_rad_wall': 2}), 0:0
+2024-09-11 19:38:38,917 - 349, 10, 0:0
+2024-09-11 19:41:40,545 - 342, 10, 0:0
+2024-09-11 19:41:54,420 - seed: 1, steps: 1281k, diffic: 1.0, score: 353.93, status: Counter({'won': 231, 'collided': 8, 'breached_wall': 6, 'breached': 5}), 0:0
+2024-09-11 19:44:47,477 - 343, 10, 0:0
+2024-09-11 19:47:51,493 - 338, 10, 0:0
+2024-09-11 19:48:02,594 - seed: 1, steps: 1314k, diffic: 1.0, score: 357.21, status: Counter({'won': 233, 'breached_wall': 9, 'breached': 4, 'collided': 4}), 0:0
+2024-09-11 19:50:53,076 - 347, 10, 0:0
+2024-09-11 19:53:49,734 - 348, 10, 0:0
+2024-09-11 19:53:59,950 - seed: 1, steps: 1347k, diffic: 1.0, score: 357.76, status: Counter({'won': 229, 'collided': 12, 'breached_wall': 5, 'breached': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-11 19:56:37,051 - 353, 10, 0:0
+2024-09-11 19:59:18,563 - 347, 10, 0:0
+2024-09-11 19:59:34,091 - seed: 1, steps: 1380k, diffic: 1.0, score: 337.76, status: Counter({'won': 219, 'breached': 14, 'collided': 12, 'breached_wall': 5}), 0:0
+2024-09-11 20:02:09,358 - 350, 10, 0:0
+2024-09-11 20:05:11,361 - 348, 10, 0:0
+2024-09-11 20:05:27,358 - seed: 1, steps: 1413k, diffic: 1.0, score: 357.76, status: Counter({'won': 228, 'collided': 12, 'breached_wall': 8, 'breached': 2}), 0:0
+2024-09-11 20:08:16,197 - 345, 10, 0:0
+2024-09-11 20:11:22,887 - 352, 10, 0:0
+2024-09-11 20:11:35,364 - seed: 1, steps: 1446k, diffic: 1.0, score: 367.33, status: Counter({'won': 238, 'breached_wall': 4, 'collided': 4, 'breached': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-11 20:14:31,029 - 348, 10, 0:0
+2024-09-11 20:17:36,768 - 347, 10, 0:0
+2024-09-11 20:17:47,865 - seed: 1, steps: 1478k, diffic: 1.0, score: 367.33, status: Counter({'won': 234, 'collided': 10, 'breached_wall': 3, 'breached': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-11 20:20:41,675 - 342, 10, 0:0
+2024-09-11 20:23:42,538 - 345, 10, 0:0
+2024-09-11 20:23:53,392 - seed: 1, steps: 1511k, diffic: 1.0, score: 371.13, status: Counter({'won': 238, 'collided': 8, 'breached_wall': 3, 'breached': 1}), 0:0
+2024-09-11 20:26:38,395 - 348, 10, 0:0
+2024-09-11 20:29:26,006 - 347, 10, 0:0
+2024-09-11 20:29:42,429 - seed: 1, steps: 1544k, diffic: 1.0, score: 363.14, status: Counter({'won': 234, 'collided': 6, 'breached_wall': 6, 'breached': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-11 20:32:16,056 - 345, 10, 0:0
+2024-09-11 20:35:13,186 - 341, 10, 0:0
+2024-09-11 20:35:29,071 - seed: 1, steps: 1577k, diffic: 1.0, score: 367.93, status: Counter({'won': 236, 'collided': 10, 'breached_wall': 4}), 0:0
+2024-09-11 20:38:13,025 - 348, 10, 0:0
+2024-09-11 20:41:20,424 - 353, 10, 0:0
+2024-09-11 20:41:36,077 - seed: 1, steps: 1610k, diffic: 1.0, score: 371.49, status: Counter({'won': 241, 'breached': 4, 'breached_wall': 3, 'collided': 2}), 0:0
+2024-09-11 20:44:32,842 - 342, 10, 0:0
+2024-09-11 20:47:42,173 - 345, 10, 0:0
+2024-09-11 20:47:53,018 - seed: 1, steps: 1642k, diffic: 1.0, score: 356.41, status: Counter({'won': 230, 'collided': 10, 'breached': 6, 'breached_wall': 4}), 0:0
+2024-09-11 20:50:49,077 - 346, 10, 0:0
+2024-09-11 20:53:57,939 - 351, 10, 0:0
+2024-09-11 20:54:08,756 - seed: 1, steps: 1675k, diffic: 1.0, score: 374.26, status: Counter({'won': 242, 'collided': 4, 'breached_wall': 4}), 0:0
+2024-09-11 20:56:59,859 - 349, 10, 0:0
+2024-09-11 20:59:56,713 - 355, 10, 0:0
+2024-09-11 21:00:07,721 - seed: 1, steps: 1708k, diffic: 1.0, score: 368.87, status: Counter({'won': 238, 'collided': 6, 'breached_wall': 4, 'breached': 2}), 0:0
+2024-09-11 21:02:48,718 - 355, 10, 0:0
+2024-09-11 21:05:37,562 - 354, 10, 0:0
+2024-09-11 21:05:52,951 - seed: 1, steps: 1741k, diffic: 1.0, score: 353.14, status: Counter({'won': 225, 'collided': 14, 'breached': 5, 'breached_wall': 5, 'breached_rad_wall': 1}), 0:0
+2024-09-11 21:08:32,056 - 358, 10, 0:0
+2024-09-11 21:11:35,265 - 357, 10, 0:0
+2024-09-11 21:11:51,246 - seed: 1, steps: 1774k, diffic: 1.0, score: 370.66, status: Counter({'won': 239, 'collided': 6, 'breached': 4, 'breached_wall': 1}), 0:0
+2024-09-11 21:14:41,689 - 356, 10, 0:0
+2024-09-11 21:17:52,404 - 357, 10, 0:0
+2024-09-11 21:18:06,924 - seed: 1, steps: 1807k, diffic: 1.0, score: 367.06, status: Counter({'won': 236, 'collided': 10, 'breached': 3, 'breached_wall': 1}), 0:0
+2024-09-11 21:21:03,963 - 354, 10, 0:0
+2024-09-11 21:24:15,909 - 359, 10, 0:0
+2024-09-11 21:24:26,676 - seed: 1, steps: 1839k, diffic: 1.0, score: 370.8, status: Counter({'won': 237, 'collided': 10, 'breached_wall': 3}), 0:0
+2024-09-11 21:27:26,133 - 361, 10, 0:0
+2024-09-11 21:30:32,592 - 360, 10, 0:0
+2024-09-11 21:30:43,336 - seed: 1, steps: 1872k, diffic: 1.0, score: 361.48, status: Counter({'won': 233, 'breached_wall': 13, 'breached': 2, 'collided': 2}), 0:0
+2024-09-11 21:33:36,799 - 363, 10, 0:0
+2024-09-11 21:36:35,001 - 362, 10, 0:0
+2024-09-11 21:36:45,557 - seed: 1, steps: 1905k, diffic: 1.0, score: 363.24, status: Counter({'won': 232, 'breached_wall': 8, 'collided': 6, 'breached': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-11 21:39:26,211 - 368, 10, 0:0
+2024-09-11 21:42:16,107 - 363, 10, 0:0
+2024-09-11 21:42:31,529 - seed: 1, steps: 1938k, diffic: 1.0, score: 375.49, status: Counter({'won': 240, 'collided': 8, 'breached': 2}), 0:0
+2024-09-11 21:45:13,883 - 358, 10, 0:0
+2024-09-11 21:48:16,351 - 360, 10, 0:0
+2024-09-11 21:48:31,378 - seed: 1, steps: 1970k, diffic: 1.0, score: 352.25, status: Counter({'won': 224, 'breached': 10, 'breached_wall': 9, 'collided': 6, 'breached_rad_wall': 1}), 0:0
+2024-09-11 21:51:23,628 - 364, 10, 0:0
+2024-09-11 21:54:35,027 - 365, 10, 0:0
+2024-09-11 21:54:46,872 - seed: 1, steps: 2003k, diffic: 1.0, score: 367.45, status: Counter({'won': 236, 'breached': 7, 'collided': 4, 'breached_wall': 3}), 0:0
+2024-09-11 21:57:47,437 - 362, 10, 0:0
+2024-09-11 22:00:58,309 - 368, 10, 0:0
+2024-09-11 22:01:08,949 - seed: 1, steps: 2036k, diffic: 1.0, score: 379.63, status: Counter({'won': 243, 'collided': 4, 'breached_rad_wall': 1, 'breached': 1, 'breached_wall': 1}), 0:0
+2024-09-11 22:04:07,192 - 366, 10, 0:0
+2024-09-11 22:07:12,506 - 370, 10, 0:0
+2024-09-11 22:07:23,324 - seed: 1, steps: 2069k, diffic: 1.0, score: 372.52, status: Counter({'won': 238, 'breached': 5, 'collided': 4, 'breached_wall': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-11 22:10:15,266 - 367, 10, 0:0
+2024-09-11 22:13:11,323 - 369, 10, 0:0
+2024-09-11 22:13:24,151 - seed: 1, steps: 2102k, diffic: 1.0, score: 371.37, status: Counter({'won': 237, 'collided': 6, 'breached_wall': 4, 'breached': 3}), 0:0
+2024-09-11 22:16:02,499 - 368, 10, 0:0
+2024-09-11 22:19:00,348 - 367, 10, 0:0
+2024-09-11 22:19:15,530 - seed: 1, steps: 2135k, diffic: 1.0, score: 368.58, status: Counter({'won': 235, 'collided': 12, 'breached_wall': 2, 'breached': 1}), 0:0
+2024-09-11 22:22:05,221 - 367, 10, 0:0
+2024-09-11 22:25:13,498 - 368, 10, 0:0
+2024-09-11 22:25:28,908 - seed: 1, steps: 2167k, diffic: 1.0, score: 367.16, status: Counter({'won': 234, 'breached_wall': 7, 'collided': 6, 'breached': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-11 22:28:21,733 - 370, 10, 0:0
+2024-09-11 22:31:32,787 - 373, 10, 0:0
+2024-09-11 22:31:47,102 - seed: 1, steps: 2200k, diffic: 1.0, score: 357.98, status: Counter({'won': 229, 'breached_wall': 10, 'breached': 8, 'collided': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-11 22:34:46,799 - 376, 10, 0:0
+2024-09-11 22:38:00,008 - 369, 10, 0:0
+2024-09-11 22:38:10,975 - seed: 1, steps: 2233k, diffic: 1.0, score: 370.14, status: Counter({'won': 235, 'collided': 6, 'breached_wall': 5, 'breached': 4}), 0:0
+2024-09-11 22:41:15,735 - 371, 10, 0:0
+2024-09-11 22:44:26,696 - 373, 10, 0:0
+2024-09-11 22:44:37,548 - seed: 1, steps: 2266k, diffic: 1.0, score: 379.64, status: Counter({'won': 243, 'breached': 4, 'collided': 2, 'breached_wall': 1}), 0:0
+2024-09-11 22:47:37,475 - 371, 10, 0:0
+2024-09-11 22:50:46,632 - 369, 10, 0:0
+2024-09-11 22:50:57,060 - seed: 1, steps: 2299k, diffic: 1.0, score: 374.26, status: Counter({'won': 238, 'breached': 8, 'breached_wall': 2, 'collided': 2}), 0:0
+2024-09-11 22:53:51,271 - 372, 10, 0:0
+2024-09-11 22:56:47,384 - 375, 10, 0:0
+2024-09-11 22:56:58,851 - seed: 1, steps: 2332k, diffic: 1.0, score: 366.73, status: Counter({'won': 235, 'collided': 8, 'breached': 5, 'breached_rad_wall': 1, 'breached_wall': 1}), 0:0
+2024-09-11 22:59:38,615 - 376, 10, 0:0
+2024-09-11 23:02:35,950 - 373, 10, 0:0
+2024-09-11 23:02:51,351 - seed: 1, steps: 2364k, diffic: 1.0, score: 379.94, status: Counter({'won': 243, 'breached': 3, 'collided': 2, 'breached_wall': 2}), 0:0
+2024-09-11 23:05:39,128 - 376, 10, 0:0
+2024-09-11 23:08:45,955 - 378, 10, 0:0
+2024-09-11 23:09:01,226 - seed: 1, steps: 2397k, diffic: 1.0, score: 367.75, status: Counter({'won': 235, 'collided': 6, 'breached_wall': 5, 'breached': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-11 23:11:55,275 - 369, 10, 0:0
+2024-09-11 23:15:08,080 - 377, 10, 0:0
+2024-09-11 23:15:23,393 - seed: 1, steps: 2430k, diffic: 1.0, score: 369.16, status: Counter({'won': 235, 'collided': 6, 'breached': 5, 'breached_wall': 4}), 0:0
+2024-09-11 23:18:22,650 - 372, 10, 0:0
+2024-09-11 23:21:38,391 - 375, 10, 0:0
+2024-09-11 23:21:50,348 - seed: 1, steps: 2463k, diffic: 1.0, score: 359.17, status: Counter({'won': 231, 'breached_wall': 8, 'collided': 6, 'breached': 4, 'breached_rad_wall': 1}), 0:0
+2024-09-11 23:24:56,465 - 369, 10, 0:0
+2024-09-11 23:28:13,034 - 374, 10, 0:0
+2024-09-11 23:28:23,486 - seed: 1, steps: 2496k, diffic: 1.0, score: 371.78, status: Counter({'won': 239, 'breached_wall': 8, 'collided': 2, 'breached': 1}), 0:0
+2024-09-11 23:31:24,890 - 373, 10, 0:0
+2024-09-11 23:34:32,138 - 374, 10, 0:0
+2024-09-11 23:34:42,367 - seed: 1, steps: 2528k, diffic: 1.0, score: 376.45, status: Counter({'won': 239, 'breached': 5, 'collided': 4, 'breached_wall': 2}), 0:0
+2024-09-11 23:37:36,799 - 378, 10, 0:0
+2024-09-11 23:40:37,009 - 375, 10, 0:0
+2024-09-11 23:40:46,961 - seed: 1, steps: 2561k, diffic: 1.0, score: 381.23, status: Counter({'won': 242, 'collided': 6, 'breached': 2}), 0:0
+2024-09-11 23:43:25,258 - 379, 10, 0:0
+2024-09-11 23:46:20,940 - 373, 10, 0:0
+2024-09-11 23:46:36,281 - seed: 1, steps: 2594k, diffic: 1.0, score: 359.64, status: Counter({'won': 231, 'breached_wall': 8, 'collided': 6, 'breached': 5}), 0:0
+2024-09-11 23:49:22,947 - 374, 10, 0:0
+2024-09-11 23:52:31,749 - 375, 10, 0:0
+2024-09-11 23:52:46,381 - seed: 1, steps: 2627k, diffic: 1.0, score: 375.97, status: Counter({'won': 240, 'breached': 4, 'collided': 4, 'breached_wall': 2}), 0:0
+2024-09-11 23:55:41,834 - 378, 10, 0:0
+2024-09-11 23:58:56,027 - 380, 10, 0:0
+2024-09-11 23:59:07,240 - seed: 1, steps: 2660k, diffic: 1.0, score: 385.35, status: Counter({'won': 247, 'breached_wall': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 00:02:09,773 - 380, 10, 0:0
+2024-09-12 00:05:21,982 - 379, 10, 0:0
+2024-09-12 00:05:32,150 - seed: 1, steps: 2693k, diffic: 1.0, score: 369.16, status: Counter({'won': 236, 'breached_wall': 8, 'collided': 4, 'breached': 2}), 0:0
+2024-09-12 00:08:30,228 - 376, 10, 0:0
+2024-09-12 00:11:35,196 - 376, 10, 0:0
+2024-09-12 00:11:45,212 - seed: 1, steps: 2725k, diffic: 1.0, score: 372.65, status: Counter({'won': 237, 'breached_wall': 5, 'collided': 4, 'breached': 4}), 0:0
+2024-09-12 00:14:35,810 - 378, 10, 0:0
+2024-09-12 00:17:26,799 - 381, 10, 0:0
+2024-09-12 00:17:41,621 - seed: 1, steps: 2758k, diffic: 1.0, score: 362.19, status: Counter({'won': 233, 'breached_wall': 15, 'collided': 2}), 0:0
+2024-09-12 00:20:17,135 - 377, 10, 0:0
+2024-09-12 00:23:15,010 - 382, 10, 0:0
+2024-09-12 00:23:29,967 - seed: 1, steps: 2791k, diffic: 1.0, score: 372.3, status: Counter({'won': 238, 'breached_wall': 6, 'collided': 4, 'breached': 2}), 0:0
+2024-09-12 00:26:16,720 - 378, 10, 0:0
+2024-09-12 00:29:22,085 - 377, 10, 0:0
+2024-09-12 00:29:37,161 - seed: 1, steps: 2824k, diffic: 1.0, score: 377.2, status: Counter({'won': 241, 'collided': 4, 'breached': 3, 'breached_wall': 2}), 0:0
+2024-09-12 00:32:29,191 - 377, 10, 0:0
+2024-09-12 00:35:39,377 - 378, 10, 0:0
+2024-09-12 00:35:54,528 - seed: 1, steps: 2857k, diffic: 1.0, score: 380.7, status: Counter({'won': 243, 'breached': 3, 'breached_wall': 2, 'collided': 2}), 0:0
+2024-09-12 00:38:54,509 - 378, 10, 0:0
+2024-09-12 00:42:09,002 - 381, 10, 0:0
+2024-09-12 00:42:21,302 - seed: 1, steps: 2889k, diffic: 1.0, score: 378.8, status: Counter({'won': 243, 'breached_wall': 4, 'breached': 3}), 0:0
+2024-09-12 00:45:25,929 - 376, 10, 0:0
+2024-09-12 00:48:43,687 - 381, 10, 0:0
+2024-09-12 00:48:54,280 - seed: 1, steps: 2922k, diffic: 1.0, score: 348.7, status: Counter({'won': 223, 'breached_wall': 11, 'collided': 10, 'breached': 6}), 0:0
+2024-09-12 00:51:58,700 - 378, 10, 0:0
+2024-09-12 00:55:13,859 - 385, 10, 0:0
+2024-09-12 00:55:24,094 - seed: 1, steps: 2955k, diffic: 1.0, score: 366.59, status: Counter({'won': 233, 'breached_wall': 6, 'breached': 6, 'collided': 4, 'breached_rad_wall': 1}), 0:0
+2024-09-12 00:58:27,228 - 385, 10, 0:0
+2024-09-12 01:01:37,510 - 388, 10, 0:0
+2024-09-12 01:01:48,443 - seed: 1, steps: 2988k, diffic: 1.0, score: 374.34, status: Counter({'won': 239, 'collided': 6, 'breached': 4, 'breached_wall': 1}), 0:0
+2024-09-12 01:04:45,883 - 382, 10, 0:0
+2024-09-12 01:07:49,604 - 381, 10, 0:0
+2024-09-12 01:07:59,982 - seed: 1, steps: 3021k, diffic: 1.0, score: 371.51, status: Counter({'won': 237, 'collided': 6, 'breached_wall': 3, 'breached': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-12 01:10:43,353 - 383, 10, 0:0
+2024-09-12 01:13:38,522 - 379, 10, 0:0
+2024-09-12 01:13:53,595 - seed: 1, steps: 3053k, diffic: 1.0, score: 372.13, status: Counter({'won': 238, 'breached': 4, 'collided': 4, 'breached_wall': 4}), 0:0
+2024-09-12 01:16:38,934 - 384, 10, 0:0
+2024-09-12 01:19:46,614 - 378, 10, 0:0
+2024-09-12 01:20:01,891 - seed: 1, steps: 3086k, diffic: 1.0, score: 364.66, status: Counter({'won': 233, 'breached': 7, 'collided': 6, 'breached_wall': 3, 'breached_rad_wall': 1}), 0:0
+2024-09-12 01:22:54,248 - 381, 10, 0:0
+2024-09-12 01:26:06,843 - 390, 10, 0:0
+2024-09-12 01:26:19,369 - seed: 1, steps: 3119k, diffic: 1.0, score: 370.67, status: Counter({'won': 238, 'breached_wall': 6, 'breached': 3, 'collided': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 01:29:24,275 - 380, 10, 0:0
+2024-09-12 01:32:40,967 - 384, 10, 0:0
+2024-09-12 01:32:50,583 - seed: 1, steps: 3152k, diffic: 1.0, score: 349.44, status: Counter({'won': 221, 'breached_wall': 14, 'collided': 8, 'breached': 7}), 0:0
+2024-09-12 01:35:53,546 - 385, 10, 0:0
+2024-09-12 01:39:03,321 - 383, 10, 0:0
+2024-09-12 01:39:13,266 - seed: 1, steps: 3185k, diffic: 1.0, score: 349.21, status: Counter({'won': 222, 'breached': 15, 'breached_wall': 8, 'collided': 4, 'breached_rad_wall': 1}), 0:0
+2024-09-12 01:42:08,373 - 381, 10, 0:0
+2024-09-12 01:45:05,686 - 385, 10, 0:0
+2024-09-12 01:45:20,197 - seed: 1, steps: 3217k, diffic: 1.0, score: 376.85, status: Counter({'won': 239, 'breached': 5, 'collided': 4, 'breached_wall': 2}), 0:0
+2024-09-12 01:48:01,348 - 382, 10, 0:0
+2024-09-12 01:51:04,460 - 383, 10, 0:0
+2024-09-12 01:51:18,818 - seed: 1, steps: 3250k, diffic: 1.0, score: 375.73, status: Counter({'won': 237, 'collided': 6, 'breached': 6, 'breached_wall': 1}), 0:0
+2024-09-12 01:54:11,284 - 388, 10, 0:0
+2024-09-12 01:57:22,981 - 385, 10, 0:0
+2024-09-12 01:57:37,577 - seed: 1, steps: 3283k, diffic: 1.0, score: 373.13, status: Counter({'won': 238, 'breached': 5, 'breached_wall': 4, 'collided': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 02:00:38,724 - 393, 10, 0:0
+2024-09-12 02:03:56,651 - 384, 10, 0:0
+2024-09-12 02:04:07,861 - seed: 1, steps: 3316k, diffic: 1.0, score: 367.98, status: Counter({'won': 234, 'collided': 6, 'breached': 5, 'breached_wall': 5}), 0:0
+2024-09-12 02:07:15,472 - 388, 10, 0:0
+2024-09-12 02:10:31,650 - 387, 10, 0:0
+2024-09-12 02:10:41,850 - seed: 1, steps: 3349k, diffic: 1.0, score: 373.77, status: Counter({'won': 238, 'breached': 8, 'breached_wall': 4}), 0:0
+2024-09-12 02:13:41,581 - 390, 10, 0:0
+2024-09-12 02:16:46,543 - 388, 10, 0:0
+2024-09-12 02:16:56,298 - seed: 1, steps: 3381k, diffic: 1.0, score: 374.96, status: Counter({'won': 239, 'breached_wall': 5, 'breached': 4, 'collided': 2}), 0:0
+2024-09-12 02:19:43,809 - 387, 10, 0:0
+2024-09-12 02:22:36,742 - 387, 10, 0:0
+2024-09-12 02:22:51,352 - seed: 1, steps: 3414k, diffic: 1.0, score: 373.53, status: Counter({'won': 239, 'breached_wall': 9, 'breached': 2}), 0:0
+2024-09-12 02:25:35,154 - 386, 10, 0:0
+2024-09-12 02:28:41,928 - 389, 10, 0:0
+2024-09-12 02:28:56,713 - seed: 1, steps: 3447k, diffic: 1.0, score: 379.56, status: Counter({'won': 241, 'breached': 5, 'collided': 2, 'breached_wall': 2}), 0:0
+2024-09-12 02:31:55,994 - 389, 10, 0:0
+2024-09-12 02:35:12,315 - 392, 10, 0:0
+2024-09-12 02:35:24,014 - seed: 1, steps: 3480k, diffic: 1.0, score: 379.36, status: Counter({'won': 240, 'breached': 4, 'collided': 4, 'breached_wall': 2}), 0:0
+2024-09-12 02:38:31,361 - 385, 10, 0:0
+2024-09-12 02:41:46,977 - 390, 10, 0:0
+2024-09-12 02:41:57,153 - seed: 1, steps: 3513k, diffic: 1.0, score: 374.09, status: Counter({'won': 238, 'breached': 9, 'collided': 2, 'breached_wall': 1}), 0:0
+2024-09-12 02:44:59,591 - 388, 10, 0:0
+2024-09-12 02:48:05,651 - 390, 10, 0:0
+2024-09-12 02:48:16,137 - seed: 1, steps: 3545k, diffic: 1.0, score: 383.82, status: Counter({'won': 244, 'breached': 4, 'collided': 2}), 0:0
+2024-09-12 02:51:08,933 - 387, 10, 0:0
+2024-09-12 02:54:02,847 - 385, 10, 0:0
+2024-09-12 02:54:17,769 - seed: 1, steps: 3578k, diffic: 1.0, score: 379.66, status: Counter({'won': 242, 'breached': 3, 'breached_wall': 2, 'collided': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 02:57:04,420 - 391, 10, 0:0
+2024-09-12 03:00:06,758 - 384, 10, 0:0
+2024-09-12 03:00:21,695 - seed: 1, steps: 3611k, diffic: 1.0, score: 382.64, status: Counter({'won': 245, 'breached': 2, 'collided': 2, 'breached_wall': 1}), 0:0
+2024-09-12 03:03:16,475 - 390, 10, 0:0
+2024-09-12 03:06:32,073 - 393, 10, 0:0
+2024-09-12 03:06:44,195 - seed: 1, steps: 3644k, diffic: 1.0, score: 377.52, status: Counter({'won': 239, 'collided': 4, 'breached': 4, 'breached_wall': 3}), 0:0
+2024-09-12 03:09:50,532 - 388, 10, 0:0
+2024-09-12 03:13:07,414 - 397, 10, 0:0
+2024-09-12 03:13:17,178 - seed: 1, steps: 3677k, diffic: 1.0, score: 365.73, status: Counter({'won': 231, 'breached': 11, 'collided': 6, 'breached_wall': 2}), 0:0
+2024-09-12 03:16:21,067 - 393, 10, 0:0
+2024-09-12 03:19:29,951 - 391, 10, 0:0
+2024-09-12 03:19:39,846 - seed: 1, steps: 3709k, diffic: 1.0, score: 370.23, status: Counter({'won': 234, 'breached': 8, 'collided': 4, 'breached_wall': 2, 'breached_rad_wall': 2}), 0:0
+2024-09-12 03:22:33,419 - 388, 10, 0:0
+2024-09-12 03:25:27,125 - 396, 10, 0:0
+2024-09-12 03:25:41,546 - seed: 1, steps: 3742k, diffic: 1.0, score: 370.63, status: Counter({'won': 234, 'breached': 6, 'breached_wall': 4, 'collided': 4, 'breached_rad_wall': 2}), 0:0
+2024-09-12 03:28:22,909 - 389, 10, 0:0
+2024-09-12 03:31:26,331 - 391, 10, 0:0
+2024-09-12 03:31:41,428 - seed: 1, steps: 3775k, diffic: 1.0, score: 368.75, status: Counter({'won': 232, 'collided': 12, 'breached': 4, 'breached_rad_wall': 1, 'breached_wall': 1}), 0:0
+2024-09-12 03:34:35,522 - 388, 10, 0:0
+2024-09-12 03:37:49,488 - 394, 10, 0:0
+2024-09-12 03:38:01,922 - seed: 1, steps: 3808k, diffic: 1.0, score: 384.15, status: Counter({'won': 244, 'breached': 2, 'breached_wall': 2, 'collided': 2}), 0:0
+2024-09-12 03:41:06,695 - 393, 10, 0:0
+2024-09-12 03:44:25,376 - 391, 10, 0:0
+2024-09-12 03:44:35,786 - seed: 1, steps: 3841k, diffic: 1.0, score: 381.13, status: Counter({'won': 244, 'breached_wall': 3, 'breached': 3}), 0:0
+2024-09-12 03:47:39,976 - 389, 10, 0:0
+2024-09-12 03:50:49,267 - 393, 10, 0:0
+2024-09-12 03:50:59,604 - seed: 1, steps: 3874k, diffic: 1.0, score: 376.83, status: Counter({'won': 240, 'collided': 4, 'breached_wall': 2, 'breached_rad_wall': 2, 'breached': 2}), 0:0
+2024-09-12 03:53:54,687 - 397, 10, 0:0
+2024-09-12 03:56:48,322 - 394, 10, 0:0
+2024-09-12 03:57:03,045 - seed: 1, steps: 3906k, diffic: 1.0, score: 385.04, status: Counter({'won': 245, 'breached': 4, 'breached_rad_wall': 1}), 0:0
+2024-09-12 03:59:47,066 - 387, 10, 0:0
+2024-09-12 04:02:52,143 - 389, 10, 0:0
+2024-09-12 04:03:06,660 - seed: 1, steps: 3939k, diffic: 1.0, score: 386.66, status: Counter({'won': 246, 'breached': 4}), 0:0
+2024-09-12 04:06:02,658 - 388, 10, 0:0
+2024-09-12 04:09:19,471 - 396, 10, 0:0
+2024-09-12 04:09:31,187 - seed: 1, steps: 3972k, diffic: 1.0, score: 384.13, status: Counter({'won': 244, 'collided': 2, 'breached': 2, 'breached_wall': 2}), 0:0
+2024-09-12 04:12:38,616 - 390, 10, 0:0
+2024-09-12 04:15:55,677 - 392, 10, 0:0
+2024-09-12 04:16:05,927 - seed: 1, steps: 4005k, diffic: 1.0, score: 380.91, status: Counter({'won': 244, 'breached_wall': 4, 'breached': 2}), 0:0
+2024-09-12 04:19:10,741 - 395, 10, 0:0
+2024-09-12 04:22:21,805 - 398, 10, 0:0
+2024-09-12 04:22:31,801 - seed: 1, steps: 4038k, diffic: 1.0, score: 381.1, status: Counter({'won': 241, 'breached': 4, 'collided': 4, 'breached_wall': 1}), 0:0
+2024-09-12 04:25:25,464 - 395, 10, 0:0
+2024-09-12 04:28:20,545 - 397, 10, 0:0
+2024-09-12 04:28:34,563 - seed: 1, steps: 4070k, diffic: 1.0, score: 373.14, status: Counter({'won': 235, 'breached': 6, 'breached_wall': 5, 'collided': 4}), 0:0
+2024-09-12 04:31:14,379 - 394, 10, 0:0
+2024-09-12 04:34:16,509 - 394, 10, 0:0
+2024-09-12 04:34:30,721 - seed: 1, steps: 4103k, diffic: 1.0, score: 376.67, status: Counter({'won': 237, 'collided': 8, 'breached': 5}), 0:0
+2024-09-12 04:37:22,906 - 398, 10, 0:0
+2024-09-12 04:40:36,448 - 397, 10, 0:0
+2024-09-12 04:40:48,870 - seed: 1, steps: 4136k, diffic: 1.0, score: 381.91, status: Counter({'won': 242, 'breached': 5, 'breached_wall': 3}), 0:0
+2024-09-12 04:43:55,643 - 391, 10, 0:0
+2024-09-12 04:47:14,616 - 396, 10, 0:0
+2024-09-12 04:47:24,888 - seed: 1, steps: 4169k, diffic: 1.0, score: 383.21, status: Counter({'won': 244, 'collided': 4, 'breached_wall': 1, 'breached': 1}), 0:0
+2024-09-12 04:50:31,385 - 397, 10, 0:0
+2024-09-12 04:53:43,864 - 394, 10, 0:0
+2024-09-12 04:53:53,696 - seed: 1, steps: 4202k, diffic: 1.0, score: 366.2, status: Counter({'won': 232, 'breached': 8, 'breached_wall': 5, 'breached_rad_wall': 3, 'collided': 2}), 0:0
+2024-09-12 04:56:49,148 - 400, 10, 0:0
+2024-09-12 04:59:45,867 - 394, 10, 0:0
+2024-09-12 04:59:58,847 - seed: 1, steps: 4234k, diffic: 1.0, score: 382.91, status: Counter({'won': 243, 'breached': 5, 'breached_wall': 2}), 0:0
+2024-09-12 05:02:37,807 - 394, 10, 0:0
+2024-09-12 05:05:42,622 - 390, 10, 0:0
+2024-09-12 05:05:56,977 - seed: 1, steps: 4267k, diffic: 1.0, score: 386.97, status: Counter({'won': 245, 'breached': 2, 'collided': 2, 'breached_wall': 1}), 0:0
+2024-09-12 05:08:49,873 - 397, 10, 0:0
+2024-09-12 05:12:00,615 - 395, 10, 0:0
+2024-09-12 05:12:15,585 - seed: 1, steps: 4300k, diffic: 1.0, score: 376.78, status: Counter({'won': 241, 'breached_wall': 5, 'breached': 2, 'collided': 2}), 0:0
+2024-09-12 05:15:16,319 - 396, 10, 0:0
+2024-09-12 05:18:34,590 - 395, 10, 0:0
+2024-09-12 05:18:44,787 - seed: 1, steps: 4333k, diffic: 1.0, score: 376.4, status: Counter({'won': 240, 'breached_wall': 5, 'breached': 3, 'collided': 2}), 0:0
+2024-09-12 05:21:52,794 - 395, 10, 0:0
+2024-09-12 05:25:06,477 - 389, 10, 0:0
+2024-09-12 05:25:16,789 - seed: 1, steps: 4366k, diffic: 1.0, score: 381.63, status: Counter({'won': 244, 'breached_wall': 3, 'collided': 2, 'breached': 1}), 0:0
+2024-09-12 05:28:16,707 - 399, 10, 0:0
+2024-09-12 05:31:22,968 - 395, 10, 0:0
+2024-09-12 05:31:33,403 - seed: 1, steps: 4398k, diffic: 1.0, score: 381.21, status: Counter({'won': 244, 'breached': 4, 'breached_wall': 2}), 0:0
+2024-09-12 05:34:21,069 - 390, 10, 0:0
+2024-09-12 05:37:16,224 - 391, 10, 0:0
+2024-09-12 05:37:30,789 - seed: 1, steps: 4431k, diffic: 1.0, score: 375.27, status: Counter({'won': 239, 'breached': 5, 'breached_wall': 4, 'collided': 2}), 0:0
+2024-09-12 05:40:19,714 - 395, 10, 0:0
+2024-09-12 05:43:28,873 - 399, 10, 0:0
+2024-09-12 05:43:43,153 - seed: 1, steps: 4464k, diffic: 1.0, score: 380.03, status: Counter({'won': 239, 'collided': 6, 'breached_wall': 2, 'breached': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 05:46:43,745 - 399, 10, 0:0
+2024-09-12 05:49:58,811 - 398, 10, 0:0
+2024-09-12 05:50:11,397 - seed: 1, steps: 4497k, diffic: 1.0, score: 375.58, status: Counter({'won': 238, 'collided': 6, 'breached_wall': 3, 'breached': 3}), 0:0
+2024-09-12 05:53:16,273 - 395, 10, 0:0
+2024-09-12 05:56:33,847 - 398, 10, 0:0
+2024-09-12 05:56:43,585 - seed: 1, steps: 4530k, diffic: 1.0, score: 382.94, status: Counter({'won': 244, 'breached_wall': 3, 'collided': 2, 'breached': 1}), 0:0
+2024-09-12 05:59:48,487 - 400, 10, 0:0
+2024-09-12 06:03:01,708 - 396, 10, 0:0
+2024-09-12 06:03:11,924 - seed: 1, steps: 4562k, diffic: 1.0, score: 384.82, status: Counter({'won': 245, 'breached': 3, 'breached_wall': 2}), 0:0
+2024-09-12 06:06:13,236 - 389, 10, 0:0
+2024-09-12 06:09:18,470 - 398, 10, 0:0
+2024-09-12 06:09:28,693 - seed: 1, steps: 4595k, diffic: 1.0, score: 384.72, status: Counter({'won': 245, 'collided': 4, 'breached_wall': 1}), 0:0
+2024-09-12 06:12:13,962 - 394, 10, 0:0
+2024-09-12 06:15:10,344 - 395, 10, 0:0
+2024-09-12 06:15:24,887 - seed: 1, steps: 4628k, diffic: 1.0, score: 383.15, status: Counter({'won': 245, 'collided': 2, 'breached_wall': 2, 'breached': 1}), 0:0
+2024-09-12 06:18:13,310 - 395, 10, 0:0
+2024-09-12 06:21:22,310 - 401, 10, 0:0
+2024-09-12 06:21:36,643 - seed: 1, steps: 4661k, diffic: 1.0, score: 387.33, status: Counter({'won': 246, 'breached_wall': 2, 'collided': 2}), 0:0
+2024-09-12 06:24:37,347 - 395, 10, 0:0
+2024-09-12 06:27:55,317 - 395, 10, 0:0
+2024-09-12 06:28:05,432 - seed: 1, steps: 4694k, diffic: 1.0, score: 380.38, status: Counter({'won': 241, 'breached': 5, 'collided': 4}), 0:0
+2024-09-12 06:31:11,960 - 396, 10, 0:0
+2024-09-12 06:34:25,494 - 403, 10, 0:0
+2024-09-12 06:34:35,487 - seed: 1, steps: 4727k, diffic: 1.0, score: 382.85, status: Counter({'won': 242, 'collided': 4, 'breached': 4}), 0:0
+2024-09-12 06:37:34,441 - 396, 10, 0:0
+2024-09-12 06:40:39,402 - 398, 10, 0:0
+2024-09-12 06:40:49,373 - seed: 1, steps: 4759k, diffic: 1.0, score: 384.04, status: Counter({'won': 244, 'breached_wall': 4, 'breached': 2}), 0:0
+2024-09-12 06:43:33,902 - 399, 10, 0:0
+2024-09-12 06:46:29,168 - 399, 10, 0:0
+2024-09-12 06:46:43,685 - seed: 1, steps: 4792k, diffic: 1.0, score: 382.33, status: Counter({'won': 243, 'breached_wall': 3, 'breached': 2, 'collided': 2}), 0:0
+2024-09-12 06:49:35,866 - 399, 10, 0:0
+2024-09-12 06:52:45,127 - 395, 10, 0:0
+2024-09-12 06:52:59,236 - seed: 1, steps: 4825k, diffic: 1.0, score: 389.36, status: Counter({'won': 247, 'breached': 2, 'breached_wall': 1}), 0:0
+2024-09-12 06:56:02,412 - 397, 10, 0:0
+2024-09-12 06:59:20,285 - 391, 10, 0:0
+2024-09-12 06:59:31,407 - seed: 1, steps: 4858k, diffic: 1.0, score: 383.89, status: Counter({'won': 244, 'breached_wall': 3, 'collided': 2, 'breached': 1}), 0:0
+2024-09-12 07:02:39,290 - 399, 10, 0:0
+2024-09-12 07:05:57,543 - 398, 10, 0:0
+2024-09-12 07:06:07,511 - seed: 1, steps: 4891k, diffic: 1.0, score: 370.81, status: Counter({'won': 236, 'breached': 7, 'breached_wall': 6, 'breached_rad_wall': 1}), 0:0
+2024-09-12 07:09:10,974 - 396, 10, 0:0
+2024-09-12 07:12:16,507 - 396, 10, 0:0
+2024-09-12 07:12:26,185 - seed: 1, steps: 4923k, diffic: 1.0, score: 379.6, status: Counter({'won': 240, 'breached': 5, 'collided': 4, 'breached_wall': 1}), 0:0
+2024-09-12 07:15:14,088 - 400, 10, 0:0
+2024-09-12 07:18:05,491 - 397, 10, 0:0
+2024-09-12 07:18:19,009 - seed: 1, steps: 4956k, diffic: 1.0, score: 379.71, status: Counter({'won': 239, 'collided': 4, 'breached': 4, 'breached_wall': 3}), 0:0
+2024-09-12 07:21:08,867 - 403, 10, 0:0
+2024-09-12 07:24:17,737 - 397, 10, 0:0
+2024-09-12 07:24:31,785 - seed: 1, steps: 4989k, diffic: 1.0, score: 388.63, status: Counter({'won': 246, 'breached': 3, 'breached_wall': 1}), 0:0
+2024-09-12 07:27:29,100 - 399, 10, 0:0
+2024-09-12 07:30:46,379 - 402, 10, 0:0
+2024-09-12 07:30:58,158 - seed: 1, steps: 5022k, diffic: 1.0, score: 380.07, status: Counter({'won': 242, 'breached': 5, 'collided': 2, 'breached_wall': 1}), 0:0
+2024-09-12 07:34:05,370 - 394, 10, 0:0
+2024-09-12 07:37:24,087 - 397, 10, 0:0
+2024-09-12 07:37:34,190 - seed: 1, steps: 5055k, diffic: 1.0, score: 381.22, status: Counter({'won': 242, 'breached': 5, 'breached_wall': 3}), 0:0
+2024-09-12 07:40:41,554 - 400, 10, 0:0
+2024-09-12 07:43:55,693 - 394, 10, 0:0
+2024-09-12 07:44:05,958 - seed: 1, steps: 5087k, diffic: 1.0, score: 383.07, status: Counter({'won': 244, 'breached': 3, 'collided': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 07:47:10,182 - 398, 10, 0:0
+2024-09-12 07:50:20,213 - 400, 10, 0:0
+2024-09-12 07:50:30,273 - seed: 1, steps: 5120k, diffic: 1.0, score: 387.54, status: Counter({'won': 246, 'breached_wall': 2, 'breached': 2}), 0:0
+2024-09-12 07:53:28,332 - 396, 10, 0:0
+2024-09-12 07:56:30,884 - 401, 10, 0:0
+2024-09-12 07:56:41,464 - seed: 1, steps: 5153k, diffic: 1.0, score: 379.0, status: Counter({'won': 241, 'collided': 4, 'breached_wall': 3, 'breached': 2}), 0:0
+2024-09-12 07:59:23,441 - 401, 10, 0:0
+2024-09-12 08:02:21,214 - 397, 10, 0:0
+2024-09-12 08:02:35,063 - seed: 1, steps: 5186k, diffic: 1.0, score: 388.05, status: Counter({'won': 245, 'breached': 3, 'collided': 2}), 0:0
+2024-09-12 08:05:25,632 - 397, 10, 0:0
+2024-09-12 08:08:37,672 - 395, 10, 0:0
+2024-09-12 08:08:52,655 - seed: 1, steps: 5219k, diffic: 1.0, score: 375.83, status: Counter({'won': 239, 'breached': 6, 'collided': 4, 'breached_wall': 1}), 0:0
+2024-09-12 08:11:53,562 - 394, 10, 0:0
+2024-09-12 08:15:12,096 - 399, 10, 0:0
+2024-09-12 08:15:24,245 - seed: 1, steps: 5251k, diffic: 1.0, score: 378.06, status: Counter({'won': 240, 'breached': 6, 'collided': 2, 'breached_wall': 2}), 0:0
+2024-09-12 08:18:34,004 - 401, 10, 0:0
+2024-09-12 08:21:55,302 - 398, 10, 0:0
+2024-09-12 08:22:05,476 - seed: 1, steps: 5284k, diffic: 1.0, score: 380.32, status: Counter({'won': 241, 'breached': 5, 'collided': 4}), 0:0
+2024-09-12 08:25:13,479 - 400, 10, 0:0
+2024-09-12 08:28:27,810 - 397, 10, 0:0
+2024-09-12 08:28:37,947 - seed: 1, steps: 5317k, diffic: 1.0, score: 379.91, status: Counter({'won': 243, 'breached': 3, 'breached_wall': 2, 'collided': 2}), 0:0
+2024-09-12 08:31:38,055 - 391, 10, 0:0
+2024-09-12 08:34:43,472 - 399, 10, 0:0
+2024-09-12 08:34:53,598 - seed: 1, steps: 5350k, diffic: 1.0, score: 380.24, status: Counter({'won': 242, 'breached': 4, 'breached_wall': 2, 'collided': 2}), 0:0
+2024-09-12 08:37:40,855 - 397, 10, 0:0
+2024-09-12 08:40:32,894 - 393, 10, 0:0
+2024-09-12 08:40:47,539 - seed: 1, steps: 5383k, diffic: 1.0, score: 386.18, status: Counter({'won': 246, 'collided': 4}), 0:0
+2024-09-12 08:43:33,129 - 390, 10, 0:0
+2024-09-12 08:46:41,616 - 399, 10, 0:0
+2024-09-12 08:46:55,941 - seed: 1, steps: 5415k, diffic: 1.0, score: 391.4, status: Counter({'won': 249, 'breached': 1}), 0:0
+2024-09-12 08:49:57,389 - 399, 10, 0:0
+2024-09-12 08:53:15,901 - 390, 10, 0:0
+2024-09-12 08:53:27,478 - seed: 1, steps: 5448k, diffic: 1.0, score: 384.87, status: Counter({'won': 245, 'breached': 4, 'breached_wall': 1}), 0:0
+2024-09-12 08:56:37,566 - 397, 10, 0:0
+2024-09-12 08:59:54,211 - 392, 10, 0:0
+2024-09-12 09:00:03,538 - seed: 1, steps: 5481k, diffic: 1.0, score: 386.97, status: Counter({'won': 245, 'breached': 3, 'collided': 2}), 0:0
+2024-09-12 09:03:06,230 - 397, 10, 0:0
+2024-09-12 09:06:14,977 - 394, 10, 0:0
+2024-09-12 09:06:24,763 - seed: 1, steps: 5514k, diffic: 1.0, score: 377.13, status: Counter({'won': 240, 'breached': 4, 'breached_wall': 3, 'collided': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 09:09:17,501 - 396, 10, 0:0
+2024-09-12 09:12:11,010 - 394, 10, 0:0
+2024-09-12 09:12:25,817 - seed: 1, steps: 5547k, diffic: 1.0, score: 386.51, status: Counter({'won': 246, 'breached': 3, 'breached_wall': 1}), 0:0
+2024-09-12 09:15:10,011 - 402, 10, 0:0
+2024-09-12 09:18:12,200 - 395, 10, 0:0
+2024-09-12 09:18:26,570 - seed: 1, steps: 5579k, diffic: 1.0, score: 383.5, status: Counter({'won': 244, 'breached_wall': 3, 'breached': 2, 'breached_rad_wall': 1}), 0:0
+2024-09-12 09:21:18,406 - 397, 10, 0:0
+2024-09-12 09:24:30,199 - 399, 10, 0:0
+2024-09-12 09:24:44,257 - seed: 1, steps: 5612k, diffic: 1.0, score: 378.18, status: Counter({'won': 239, 'breached': 5, 'breached_wall': 4, 'collided': 2}), 0:0
+2024-09-12 09:27:44,719 - 401, 10, 0:0
+2024-09-12 09:31:02,171 - 399, 10, 0:0
+2024-09-12 09:31:13,690 - seed: 1, steps: 5645k, diffic: 1.0, score: 387.5, status: Counter({'won': 245, 'breached': 3, 'collided': 2}), 0:0
+2024-09-12 09:34:21,234 - 402, 10, 0:0
+2024-09-12 09:37:39,295 - 393, 10, 0:0
+2024-09-12 09:37:49,163 - seed: 1, steps: 5678k, diffic: 1.0, score: 382.66, status: Counter({'won': 244, 'breached': 3, 'breached_wall': 3}), 0:0
+2024-09-12 09:40:55,993 - 396, 10, 0:0
+2024-09-12 09:44:09,150 - 395, 10, 0:0
+2024-09-12 09:44:18,682 - seed: 1, steps: 5711k, diffic: 1.0, score: 388.79, status: Counter({'won': 247, 'breached_wall': 2, 'breached': 1}), 0:0
+2024-09-12 09:47:16,224 - 398, 10, 0:0
+2024-09-12 09:50:18,682 - 399, 10, 0:0
+2024-09-12 09:50:28,798 - seed: 1, steps: 5743k, diffic: 1.0, score: 385.89, status: Counter({'won': 246, 'breached_wall': 2, 'breached': 2}), 0:0
+2024-09-12 09:53:16,582 - 403, 10, 0:0
+2024-09-12 09:56:16,510 - 396, 10, 0:0
+2024-09-12 09:56:30,431 - seed: 1, steps: 5776k, diffic: 1.0, score: 379.37, status: Counter({'won': 238, 'breached': 5, 'collided': 4, 'breached_wall': 3}), 0:0
+2024-09-12 09:59:21,591 - 401, 10, 0:0

@@ -25,10 +25,10 @@ class SmallSetTransformer(nn.Module):
         
         self.decoder_mab = MAB(net_width, net_width, net_width, num_heads=8, ln=True)
         
-        # pytorch official decoder, having bugs
-        self.decoder_layer = nn.TransformerDecoderLayer(d_model=net_width, nhead=8, activation='gelu',
-                                                        dim_feedforward=512,
-                                                        batch_first=True)
+        # # pytorch official decoder, having bugs
+        # self.decoder_layer = nn.TransformerDecoderLayer(d_model=net_width, nhead=8, activation='gelu',
+        #                                                 dim_feedforward=512,
+        #                                                 batch_first=True)
         
         # Unused layers
         #self.tk = Tokenizer(output_dim=net_width)
