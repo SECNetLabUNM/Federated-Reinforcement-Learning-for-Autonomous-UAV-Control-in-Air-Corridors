@@ -53,6 +53,8 @@ kwargs = {
     "beta_base": 1.0
     }
 
+print(torch.cuda.is_available())
+
 actorpath = filedialog.askopenfilename(title='Select actor parameter file (.pth)',filetypes=[("Model parameters","*.pth")])
 criticpath = filedialog.askopenfilename(title='Select critic parameter file (.pth)',filetypes=[("Model parameters","*.pth")])
 
@@ -63,5 +65,13 @@ print(actorpath)
 print(criticpath)
 
 model = PPO(**kwargs)
-model.critic.load_state_dict(torch.load(actorpath))
-model.actor.load_state_dict(torch.load(criticpath))
+model.critic.load_state_dict(torch.load(criticpath))
+model.actor.load_state_dict(torch.load(actorpath))
+
+
+def gen_path(start,end):
+# Wayfind between two points using tori and cylinders in a sequence 
+    path = []
+
+
+    return path

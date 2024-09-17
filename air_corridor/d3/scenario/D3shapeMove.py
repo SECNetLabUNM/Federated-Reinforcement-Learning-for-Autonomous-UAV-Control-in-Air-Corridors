@@ -191,6 +191,7 @@ class parallel_env(ParallelEnv):
     def generate_structure(self, difficulty=1, seq=None, minor_radius=2.0, test=False):
 
     # I think this generates the toroids and cylinders
+    # It does, uses a 'ctcc' list to create cyls and tori in the order
         '''
         :param connect_plane_anchor: in base,
         :param connect_plane_orientation: in base,

@@ -61,18 +61,22 @@ class SmallSetTransformer(nn.Module):
         # LIST OF MODS TO ORIGNAL CODE 
         # no encoder, only the MAB decoder
         # The MAB decoder takes the self-state as query, and all observations as key/value
-        # Instead of concatenating x7 to state, add it as a residual. Not sure if this works better or not
+        # The MAB already has a residual connection so no concatenation or addition
 
         # the MAB decoder splits the vectors along axis 2 (for separating heads), requiring adding a dimension to state
         # which is now [D_net * 1 * 1]
         # Not sure if this splitting is required
         # Is it because how batches are handled during training?
         state2 = state.unsqueeze(1)
-        
-        x7 = self.decoder_mab(state2, x1)
+
+        # Add the self-state output (state) to the "database" to use as K,V 
+        # Use self-state output (state) as Q
+        x7 = self.decoder_mab(state2, torch.cat([x1,state2],dim=1))
         x7 = x7.view(x7.size(0), -1)
         x7 = x7 + state
         
+        # Originally, fc_module can dynamically skip a FC layer if the size is not 2*netwidth.
+        # instead I've specifically removed the unused layer for less weights
         x8 = self.fc_module(x7)
         return x8
 

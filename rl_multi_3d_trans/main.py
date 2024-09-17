@@ -57,7 +57,7 @@ parser.add_argument('--seed', type=int, default=8, help='random seed')
 # NOTE: Code will not work if too small: When set to 512, returns the error
 # UnboundLocalError: local variable 'c_loss' referenced before assignment
 # Coming from ppo.py, line 327
-parser.add_argument('--T_horizon', type=int, default=24576, help='lenth of long trajectory')
+parser.add_argument('--T_horizon', type=int, default=2048, help='lenth of long trajectory')
 
 parser.add_argument('--distnum', type=int, default=0, help='0:Beta ; 1:GS_ms;  2: GS_m')
 parser.add_argument('--Max_train_steps', type=int, default=10000000, help='Max training steps')
@@ -72,8 +72,8 @@ parser.add_argument('--activation', type=str, default='tanh', help='activation f
 parser.add_argument('--a_lr', type=float, default=1.5e-4, help='Learning rate of actor')
 parser.add_argument('--c_lr', type=float, default=1.5e-5, help='Learning rate of critic')
 parser.add_argument('--l2_reg', type=float, default=1e-3, help='L2 regulization coefficient for Critic')
-parser.add_argument('--a_optim_batch_size', type=int, default=1536, help='lenth of sliced trajectory of actor')
-parser.add_argument('--c_optim_batch_size', type=int, default=1536, help='lenth of sliced trajectory of critic')
+parser.add_argument('--a_optim_batch_size', type=int, default=256, help='lenth of sliced trajectory of actor')
+parser.add_argument('--c_optim_batch_size', type=int, default=256, help='lenth of sliced trajectory of critic')
 parser.add_argument('--entropy_coef', type=float, default=1e-3, help='Entropy coefficient of Actor')
 parser.add_argument('--entropy_coef_decay', type=float, default=0.99, help='Decay rate of entropy_coef')
 parser.add_argument('--share_layer_flag', type=str2bool, default=True, help='Share feature extraction layers?')
