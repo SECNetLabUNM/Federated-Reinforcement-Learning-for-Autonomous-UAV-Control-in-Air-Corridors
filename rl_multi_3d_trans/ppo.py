@@ -6,29 +6,20 @@ from torch.utils.data import DataLoader
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 from torch.utils.data import Dataset
-import sys
+#import sys
 
-sys.path.append('/home/kun/PycharmProjects/air-corridor/')
-from rl_multi_3d_trans import net_nn_fc
+#sys.path.append('/home/kun/PycharmProjects/air-corridor/')
+from rl_multi_3d_trans import (net_nn_decmod,
+                               net_nn_fc_10_3e,
+                               net_nn_fc_12,
+                               net_nn_dec,)
 #comment
 net_models = {
-    'fc': net_nn_fc,
-    # 'fc1': net_nn_fc1,
-    # 'fc2': net_nn_fc_2,
-    # 'fc2_1': net_nn_fc_2_1,
-    # 'fc2_2': net_nn_fc_2_2,
-    # 'fc3': net_nn_fc_3,
-    # 'tran': net_nn_tran,
-    # 'tran2': net_nn_tran2,
-    # 'tran2_1': net_nn_tran2_1,
-    # 'tran2_1_1': net_nn_tran2_1_1,
-    # 'tran2_1_3': net_nn_tran2_1_3,
-    # 'tran2_1_4': net_nn_tran2_1_4,
-    # 'tran2_1_2': net_nn_tran2_1_2,
-    # 'tran2_2': net_nn_tran2_2,
-    # 'tran3': net_nn_tran3,
-    # 'tran4': net_nn_tran4,
-    # add more mappings as needed
+    'decmod': net_nn_decmod,
+    'fc10_3e': net_nn_fc_10_3e,
+    'fc12': net_nn_fc_12,
+    'dec': net_nn_dec,
+    
 }
 
 
@@ -100,7 +91,8 @@ class PPO(object):
             totoal_steps=0,
             with_position=False,
             token_query=False,
-            num_enc=5,
+            num_enc=1,
+            num_dec=1,
             logger=None,
             dir=None,
             test=False,
@@ -125,7 +117,7 @@ class PPO(object):
         self.share_layer_flag = share_layer_flag
         shared_layers_actor = net_models[net_model].MergedModel(s1_dim=state_dim, s2_dim=s2_dim, net_width=net_width,
                                                                 with_position=with_position, token_query=token_query,
-                                                                num_enc=num_enc)
+                                                                num_enc=num_enc,num_dec = num_dec)
         if share_layer_flag:
             shared_layers_critic = shared_layers_actor
         else:
@@ -133,7 +125,7 @@ class PPO(object):
                                                                      net_width=net_width,
                                                                      with_position=with_position,
                                                                      token_query=token_query,
-                                                                     num_enc=num_enc)
+                                                                     num_enc=num_enc,num_dec = num_dec)
         self.dist = dist
         self.env_with_Dead = env_with_Dead
         self.action_dim = action_dim
@@ -176,40 +168,44 @@ class PPO(object):
             s2 = np.array(s2)
             s2 = torch.FloatTensor(s2).to(device)
 
-            dist, alpha, beta, nan_event = self.actor.get_dist(s1, s2, self.logger)
+            dist, alpha, beta = self.actor.get_dist(s1, s2)
 
             assert torch.all((0 <= alpha))
             assert torch.all((0 <= beta))
-            if nan_event:
-                self.save('nan')
-                sys.exit()
             a = dist.sample()
             assert torch.all((0 <= a)) and torch.all(a <= 1)
             a = torch.clamp(a, 0, 1)
             logprob_a = dist.log_prob(a).cpu().numpy()
             return a.cpu().numpy(), logprob_a, alpha, beta
 
-    def evaluate(self, s1, s2):  # only used when evaluate the policy.Making the performance more stable
+    def evaluate(self, s1, s2,
+                 deterministic=True):  # only used when evaluate the policy.Making the performance more stable
         self.actor.eval()
         with torch.no_grad():
             s1 = np.array(s1)
             s1 = torch.FloatTensor(s1).to(device)
             s2 = np.array(s2)
             s2 = torch.FloatTensor(s2).to(device)
-            if self.dist == 'Beta':
-                a = self.actor.dist_mode(s1, s2)
-            if self.dist == 'GS_ms':
-                a, b = self.actor(s1)
-            if self.dist == 'GS_m':
-                a = self.actor(s1)
-            return a.cpu().numpy(), 0.0
+            if deterministic:
+                action_with_highest_probability = self.actor.dist_mode(s1, s2)
+                chosen_action = action_with_highest_probability
+            else:
+                dist, alpha, beta = self.actor.get_dist(s1, s2)
+                chosen_action = dist.sample()
+            return chosen_action.cpu().numpy(), 0.0
 
-    def train(self, global_step, epoches=None):
+
+    def train(self, global_step, epoches=None, anneal_mode='exponential'):
 
         if self.anneal_lr:
-            frac = 1.0 - global_step / self.totoal_steps
+            if anneal_mode == 'linear':
+                frac = 1.0 - global_step / self.totoal_steps
+            if anneal_mode == 'exponential':
+                frac = 0.995 ** (global_step / self.totoal_steps * 1000)
+            print(f"learning discount: {round(frac * 100, 2)}%")
             alrnow = frac * self.a_lr
             clrnow = frac * self.c_lr
+            # print(alrnow,clrnow)
             self.actor_optimizer.param_groups[0]["lr"] = alrnow
             self.critic_optimizer.param_groups[0]["lr"] = clrnow
 
@@ -219,47 +215,10 @@ class PPO(object):
         dataset = MyDataset(transitions)
 
         dataloader = DataLoader(dataset, batch_size=self.a_optim_batch_size, shuffle=True, drop_last=True)
-        # s1, s2, a, r, s1_prime, s2_prime, logprob_a, done_mask, dw_mask = self.make_batch()
-        #
-        # ''' Use TD+GAE+LongTrajectory to compute Advantage and TD target'''
-        # self.critic.eval()
-        # with torch.no_grad():
-        #     vs = self.critic(s1, s2)
-        #     vs_ = self.critic(s1_prime, s2_prime)
-        #
-        #     '''dw for TD_target and Adv'''
-        #     deltas = r + self.gamma * vs_ * (1 - dw_mask) - vs
-        #
-        #     deltas = deltas.cpu().flatten().numpy()
-        #     adv = [0]
-        #
-        #     '''done for GAE'''
-        #     for dlt, mask in zip(deltas[::-1], done_mask.cpu().flatten().numpy()[::-1]):
-        #         advantage = dlt + self.gamma * self.lambd * adv[-1] * (1 - mask)
-        #         adv.append(advantage)
-        #     adv.reverse()
-        #     adv = copy.deepcopy(adv[0:-1])
-        #     adv = torch.tensor(adv).unsqueeze(1).float().to(device)
-        #     td_target = adv + vs
-        #     adv = (adv - adv.mean()) / (adv.std() + 1e-6)  # sometimes helps
-
-        """Slice long trajectopy into short trajectory and perform mini-batch PPO update"""
-        # a_optim_iter_num = int(math.ceil(s1.shape[0] / self.a_optim_batch_size))
-        # c_optim_iter_num = int(math.ceil(s1.shape[0] / self.c_optim_batch_size))
+        
 
         clipfracs = []
         for i in range(epoches):
-
-            # Shuffle the trajectory, Good for training
-            # perm = np.arange(s1.shape[0])
-            # np.random.shuffle(perm)
-            # perm = torch.LongTensor(perm).to(device)
-            # s1 = s1[perm].clone()
-            # s2 = s2[perm].clone()
-            # a = a[perm].clone()
-            # td_target = td_target[perm].clone()
-            # adv = adv[perm].clone()
-            # logprob_a = logprob_a[perm].clone()
 
             '''update the actor-critic'''
             self.actor.train()
@@ -280,9 +239,9 @@ class PPO(object):
 
                 '''derive the actor loss'''
                 # index = slice(i * self.a_optim_batch_size, min((i + 1) * self.a_optim_batch_size, s1.shape[0]))
-                distribution, _, _, nan_event = self.actor.get_dist(s1, s2, self.logger)
-                if nan_event:
-                    self.save('nan')
+                distribution, alpha, beta = self.actor.get_dist(s1, s2)
+                # if nan_event:
+                #     self.save('nan')
                 dist_entropy = distribution.entropy().sum(1, keepdim=True)
                 logprob_a_now = distribution.log_prob(a)
 
@@ -310,11 +269,24 @@ class PPO(object):
                 '''updata parameters'''
                 self.actor_optimizer.zero_grad()
                 a_loss.mean().backward(retain_graph=self.share_layer_flag)
-                torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 40)
+                # torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 40)
+                total_actor_norm_before = torch.norm(
+                    torch.stack([torch.norm(p.grad.detach(), 2) for p in self.actor.parameters() if
+                                 p.grad is not None]), 2)
+
+                total_actor_norm = torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 20)
+
                 self.actor_optimizer.step()
 
                 self.critic_optimizer.zero_grad()
                 c_loss.backward()
+                total_critic_norm_before = torch.norm(
+                    torch.stack([torch.norm(p.grad.detach(), 2) for p in self.critic.parameters() if
+                                 p.grad is not None]), 2)
+                total_critic_norm = torch.nn.utils.clip_grad_norm_(self.critic.parameters(), 1000)
+                # was_clipped = total_actor_norm > 20 or total_critic_norm > 1000
+                # print(
+                #     f" Total norm before clipping: {total_actor_norm_before:.4f}, After clipping: {total_critic_norm_before:.4f}, Was clipped: {was_clipped}")
                 self.critic_optimizer.step()
 
         # y_pred, y_true = vs.cpu().numpy(), td_target.cpu().numpy()
@@ -419,28 +391,36 @@ class PPO(object):
         else:
             self.data[agent] = [transition]
 
-    def save(self, global_step,index=None):
+    def save(self, global_step, index=None):
         # global_step is usually interger, but also could be string for some events
-        diff=f"_{index}" if index else ''
+        diff = f"_{index}" if index else ''
         if isinstance(global_step, str):
             global_step = global_step
-            torch.save(self.critic.state_dict(), f"{self.dir}/ppo_critic_{global_step}{diff}.pth")
-            torch.save(self.actor.state_dict(), f"{self.dir}/ppo_actor_{global_step}{diff}.pth")
+            seq_name = f"{global_step}{diff}"
         else:
             global_step /= 1e6
-            torch.save(self.critic.state_dict(), f"{self.dir}/ppo_critic_{global_step}m{diff}.pth")
-            torch.save(self.actor.state_dict(), f"{self.dir}/ppo_actor_{global_step}m{diff}.pth")
+            seq_name = f"{global_step}m{diff}"
+        torch.save(self.actor.state_dict(), f"{self.dir}/ppo_actor_{seq_name}.pth")
+        torch.save(self.critic.state_dict(), f"{self.dir}/ppo_critic_{seq_name}.pth")
 
 
-    def load(self, folder, global_step):
-        if isinstance(global_step, float):
+    def load(self, folder, global_step, dir=None):
+        if isinstance(global_step, float) or isinstance(global_step, int):
             global_step = str(global_step / 1000000) + 'm'
-        if folder.startswith('/'):
-            self.critic.load_state_dict(torch.load(f"{folder}/ppo_critic_{global_step}.pth"))
-            self.actor.load_state_dict(torch.load(f"{folder}/ppo_actor_{global_step}.pth"))
+        if dir is not None:
+            if global_step:
+                self.critic.load_state_dict(torch.load(f"{dir}/ppo_critic_{global_step}.pth"), strict=False)
+                self.actor.load_state_dict(torch.load(f"{dir}/ppo_actor_{global_step}.pth"), strict=False)
+            else:
+                self.critic.load_state_dict(torch.load(f"{dir}/ppo_critic.pth"), strict=False)
+                self.actor.load_state_dict(torch.load(f"{dir}/ppo_actor.pth"), strict=False)
         else:
-            self.critic.load_state_dict(torch.load(f"./{folder}/ppo_critic_{global_step}.pth"))
-            self.actor.load_state_dict(torch.load(f"./{folder}/ppo_actor_{global_step}.pth"))
+            if folder.startswith('/'):
+                self.critic.load_state_dict(torch.load(f"{folder}/ppo_critic_{global_step}.pth"), strict=False)
+                self.actor.load_state_dict(torch.load(f"{folder}/ppo_actor_{global_step}.pth"), strict=False)
+            else:
+                self.critic.load_state_dict(torch.load(f"./{folder}/ppo_critic_{global_step}.pth"), strict=False)
+                self.actor.load_state_dict(torch.load(f"./{folder}/ppo_actor_{global_step}.pth"), strict=False)
 
     def load_and_copy(self, folder, global_step, a_lr, c_lr):
         if folder.startswith('/'):

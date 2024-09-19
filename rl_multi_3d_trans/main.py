@@ -90,7 +90,7 @@ parser.add_argument('--trans_position', type=str2bool, default=False, help='toke
 parser.add_argument('--num_enc', type=int, default=1, help='number of encoders')
 parser.add_argument('--num_dec', type=int, default=2, help='number of encoders')
 
-parser.add_argument('--net_model', type=str, default='fc', help='number of encoders')
+parser.add_argument('--net_model', type=str, default='decmod', help='number of encoders')
 # Liangkun's up-to-date version added dec, fc10, fc12
 
 parser.add_argument('--liability', type=str2bool, default=True, help='number of encoders')
