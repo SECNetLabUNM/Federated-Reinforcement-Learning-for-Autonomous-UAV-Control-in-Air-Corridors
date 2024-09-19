@@ -50,6 +50,7 @@ parser.add_argument('--write', type=str2bool, default=True, help='Use SummaryWri
 parser.add_argument('--render', type=str2bool, default=False, help='Render or Not')
 parser.add_argument('--video_turns', type=int, default=50, help='which model to load')
 parser.add_argument('--num_agents', type=int, default=5, help='Decay rate of entropy_coef')
+parser.add_argument('--variable_agent', type=str2bool, default=False, help='Decay rate of entropy_coef')
 parser.add_argument('--dt', type=float, default=1, help='Decay rate of entropy_coef')
 parser.add_argument('--reduce_space', type=str2bool, default=True, help='Share feature extraction layers?')
 parser.add_argument('--seed', type=int, default=8, help='random seed')
@@ -60,7 +61,7 @@ parser.add_argument('--seed', type=int, default=8, help='random seed')
 parser.add_argument('--T_horizon', type=int, default=2048, help='lenth of long trajectory')
 
 parser.add_argument('--distnum', type=int, default=0, help='0:Beta ; 1:GS_ms;  2: GS_m')
-parser.add_argument('--Max_train_steps', type=int, default=10000000, help='Max training steps')
+parser.add_argument('--Max_train_steps', type=int, default=1e7, help='Max training steps')
 parser.add_argument('--save_interval', type=int, default=2e5, help='Model saving interval, in steps.')
 parser.add_argument('--eval_interval', type=int, default=1e4, help='Model evaluating interval, in steps.')
 parser.add_argument('--gamma', type=float, default=0.99, help='Discounted Factor')
@@ -87,8 +88,11 @@ parser.add_argument('--trans_position', type=str2bool, default=False, help='toke
 
 # NOTE: This argument doesnt seem to be used
 parser.add_argument('--num_enc', type=int, default=1, help='number of encoders')
+parser.add_argument('--num_dec', type=int, default=2, help='number of encoders')
 
 parser.add_argument('--net_model', type=str, default='fc', help='number of encoders')
+# Liangkun's up-to-date version added dec, fc10, fc12
+
 parser.add_argument('--liability', type=str2bool, default=True, help='number of encoders')
 parser.add_argument('--collision_free', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--beta_adaptor_coefficient', type=float, default=1.1, help='number of encoders')
@@ -97,18 +101,21 @@ parser.add_argument('--level', type=int, default=15, help='Share feature extract
 parser.add_argument('--num_corridor_in_state', type=int, default=1, help='number of encoders')
 
 # NOTE: idk why??
-parser.add_argument('--corridor_index_awareness', type=str, default=[
-        1,
-        1,
-        1,
-        1
-    ], help='indicate the corridor index')
+parser.add_argument('--corridor_index_awareness', type=str, default='1111', help='indicate the corridor index')
 parser.add_argument('--acceleration_max', type=float, default=0.3, help='Learning rate of actor')
 parser.add_argument('--velocity_max', type=float, default=1.5, help='Learning rate of actor')
 parser.add_argument('--base_difficulty', type=float, default=0.2, help='Learning rate of actor')
 parser.add_argument('--ratio', type=float, default=0.5, help='How much percent for torus?')
 parser.add_argument('--uniform_state', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--dynamic_minor_radius', type=str2bool, default=False, help='Share feature extraction layers?')
+parser.add_argument('--num_obstacles', type=int, default=2, help='number of encoders')
+parser.add_argument('--num_ncfos', type=int, default=3, help='number of encoders')
+parser.add_argument('--rotate_for_cylinder', type=str2bool, default=True, help='number of encoders')
+parser.add_argument('--state_choice', type=int, default=2, help='number of encoders')
+parser.add_argument('--rest_awareness', type=str2bool, default=True, help='number of encoders')
+parser.add_argument('--cbf', type=str2bool, default=False, help='number of encoders')
+parser.add_argument('--with_corridor_index', type=str2bool, default=True, help='number of encoders')
+parser.add_argument('--visibility', type=float, default=4.5, help='Learning rate of actor')
 
 opt = parser.parse_args()
 
@@ -118,7 +125,7 @@ opt.T_horizon *= opt.multiply_horrizion
 opt.a_optim_batch_size *= opt.multiply_batch
 opt.c_optim_batch_size *= opt.multiply_batch
 opt.save_interval = 2.5e5
-opt.Max_train_steps = 1e7
+opt.Max_train_steps = int(opt.Max_train_steps)
 
 
 def main():
@@ -204,6 +211,7 @@ def main():
         'with_position': opt.trans_position,
         'token_query': opt.token_query,
         'num_enc': opt.num_enc,
+        'num_dec': opt.num_dec,
         'dir': dir,
         "writer": writer,
         'logger': logger,
@@ -244,7 +252,11 @@ def main():
     while total_steps < Max_train_steps:
         # active_agents = [{'terminated': False, 'trajectory': []} for _ in range(num_agents)]
         steps = 0
-
+        if opt.variable_agent:
+            opt.num_agents = np.random.randint(6, 13)
+            capacity = 12 + opt.num_obstacles + opt.num_ncfos
+        else:
+            capacity = opt.num_agents + opt.num_obstacles + opt.num_ncfos
         s, init_info = env.reset(seed=seed,
                                  options=env_options,
                                  num_agents=opt.num_agents,
@@ -256,21 +268,30 @@ def main():
                                  beta_adaptor_coefficient=opt.beta_adaptor_coefficient,
                                  num_corridor_in_state=opt.num_corridor_in_state,
                                  dt=opt.dt,
-                                 #consider_boid=opt.consider_boid,
+                                 capacity=capacity,
                                  corridor_index_awareness=opt.corridor_index_awareness,
                                  velocity_max=opt.velocity_max,
                                  acceleration_max=opt.acceleration_max,
                                  uniform_state=opt.uniform_state,
                                  dynamic_minor_radius=opt.dynamic_minor_radius,
-                                 epsilon=epsilon)
+                                 num_obstacles=opt.num_obstacles,
+                                 num_ncfo=opt.num_ncfos,
+                                 rotate_for_cylinder=opt.rotate_for_cylinder,
+                                 epsilon=epsilon,
+                                 state_choice=opt.state_choice,
+                                 cbf=opt.cbf,
+                                 rest_awareness=opt.rest_awareness,
+                                 with_corridor_index=opt.with_corridor_index,
+                                 visibility=opt.visibility)
         s1 = {agent: s[agent]['self'] for agent in env.agents}
         s2 = {agent: s[agent]['other'] for agent in env.agents}
         if ready_for_log:
-            model.weights_track(total_steps)
+            #model.weights_track(total_steps)
             ready_for_log = False
             videoing = True
             turns = 0  # opt.video_turns
             scores = 0
+            ave_speed = 0
             lst_std_variance = []
             env.anima_recording = True
             status_summary = defaultdict(list)
@@ -320,6 +341,7 @@ def main():
                     if done[agent]:
                         status_summary[init_info['corridor_seq']].append(agent.status)
                         scores += agent.accumulated_reward
+                        ave_speed += agent.trajectory_ave_speed if agent.trajectory_ave_speed > 0 else 0
 
                 ## calculate beta distribution variance
                 alpha = np.array(alpha.to('cpu'))
@@ -339,35 +361,45 @@ def main():
                     status_lst = reduce(lambda x, y: x + y, status_summary.values())
                     counter = Counter(status_lst)
 
-                    logger.info(
-                        f"seed: {seed}, steps: {int(total_steps / 1000)}k, diffic: {env_options['difficulty']}, score: {round(average_score, 2)}, status: {counter}, {opt.exp_name}")
-
+                    ave_won_speed = ave_speed / max(1, counter['won'])
+                    
                     ## average beta distribution variance
                     stacked_std = np.vstack(lst_std_variance)
                     mean_array = np.mean(stacked_std, axis=0)
-
+                    total_cases = sum(counter.values())
                     if write:
                         for key, values in status_summary.items():
                             writer.add_scalar(f"scenario/{key}", Counter(values)['won'] / len(values), total_steps)
-                        won_percent = counter['won'] / sum(counter.values())
+
+                        won_percent = counter['won'] / total_cases
                         writer.add_scalar('charts/reward_steps', average_score, total_steps)
                         writer.add_scalar('charts/reward_episodes', average_score, total_episode)
-                        writer.add_scalar("charts/won_percent", counter['won'] / sum(counter.values()), total_steps)
-                        writer.add_scalar("charts/collide_percent", counter['collided'] / sum(counter.values()),
+                        writer.add_scalar("charts/won_percent", counter['won'] / total_cases, total_steps)
+                        writer.add_scalar("fail_reasons/collide_percent", counter['collided'] / total_cases,
                                           total_steps)
+                        writer.add_scalar("fail_reasons/collided_UAV", counter['collided_UAV'] / total_cases,
+                                          total_steps)
+                        writer.add_scalar("fail_reasons/breached_wall", counter['breached_wall'] / total_cases,
+                                          total_steps)
+                        writer.add_scalar("fail_reasons/breached_c", counter['breached_c'] / total_cases, total_steps)
                         writer.add_scalar('charts/difficulty', env_options['difficulty'], total_steps)
                         writer.add_scalar('charts/uni_r_steps', average_score * min(1, env_options['difficulty']),
                                           total_steps)
                         writer.add_scalar("charts/uni_won_percent", won_percent * min(1, env_options['difficulty']),
                                           total_steps)
+                        writer.add_scalar("charts/ave_won_speed", ave_won_speed, total_steps)
+                        writer.add_scalar("charts/unified_speed", ave_speed / total_cases, total_steps)
                         writer.add_scalar("dist/beta_std_phi", mean_array[2], total_steps)
                         writer.add_scalar("dist/beta_std_theta", mean_array[1], total_steps)
                         writer.add_scalar("dist/beta_std_r", mean_array[0], total_steps)
+                    logger.info(
+                        f"seed:{seed}, steps:{int(total_steps / 1000)}k, {env_options['difficulty']}, won:{round(counter['won'] / total_cases * 100, 1)}%, s:{round(average_score, 2)}, won_speed:{round(ave_won_speed, 3)}, status: {counter}, \n {opt.exp_name}")
+
 
                     if opt.curriculum:
                         # difficulty 1 is np.pi/2;   1.2 corresponds to slightly larger than
                         maxDiff = 1.0
-                        diffThreshold = 0.8
+                        diffThreshold = 0.6
                         if env_options['difficulty'] < maxDiff and won_percent >= diffThreshold:
                             if env_options['difficulty'] == 1 and epsilon > 1e-5:
                                 epsilon /= 2
