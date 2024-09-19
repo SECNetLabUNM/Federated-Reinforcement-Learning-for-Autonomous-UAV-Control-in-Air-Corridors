@@ -122,29 +122,10 @@ class BetaActorMulti(nn.Module):
         beta = F.softplus(self.beta_head(x_b)) + self.beta_base
         return alpha, beta
 
-    def get_dist(self, s1, s2, log):
-        nan_event = False
+    def get_dist(self, s1, s2):
         alpha, beta = self.forward(s1, s2)
-
-        nan_mask = torch.isnan(alpha)
-        if nan_mask.sum() > 0:
-            nan_event = True
-            log.info(f"s1: {s1}")
-            log.info(f"s2: {s2}")
-            log.info(f"alpha: {alpha}")
-            log.info(f"alpha with shape {alpha.shape} has {nan_mask.sum()} nan")
-            alpha[nan_mask] = torch.rand(nan_mask.sum()).to(alpha.device)
-
-        nan_mask = torch.isnan(beta)
-        if nan_mask.sum() > 0:
-            nan_event = True
-            log.info(f"s1: {s1}")
-            log.info(f"s2: {s2}")
-            log.info(f"beta: {beta}")
-            log.info(f"beta with shape {beta.shape} has {nan_mask.sum()} nan")
-            beta[nan_mask] = torch.rand(nan_mask.sum()).to(beta.device)
         dist = Beta(alpha, beta)
-        return dist, alpha, beta, nan_event
+        return dist, alpha, beta
 
     def dist_mode(self, s1, s2):
         alpha, beta = self.forward(s1, s2)
@@ -188,7 +169,7 @@ class ResBlock(nn.Module):
 
 
 class MergedModel(nn.Module):
-    def __init__(self, s1_dim, s2_dim, net_width, with_position, token_query, num_enc, logger=None):
+    def __init__(self, s1_dim, s2_dim, net_width, with_position, token_query, num_enc, logger=None,num_dec = 0):
         super(MergedModel, self).__init__()
         # self.fixed_branch = FixedBranch(s1_dim, net_width)
         self.trans = SmallSetTransformer(net_width, net_width, with_position, token_query, num_enc, logger)
