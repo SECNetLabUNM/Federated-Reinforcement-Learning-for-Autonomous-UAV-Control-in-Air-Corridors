@@ -38,22 +38,22 @@ def str2bool(v):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--Loadmodel', type=str2bool, default=False, help='Load pretrained model or Not')
-parser.add_argument('--ModelIdex', type=float, default=1000000, help='which model to load')
+parser.add_argument('--ModelIdex', type=float, default=0, help='which model to load')
 parser.add_argument('--LoadFolder', type=str, default=None, help='Which folder to load')
 parser.add_argument('--complexity', type=str, default='simple', help='BWv3, BWHv3, Lch_Cv2, PV0, Humanv2, HCv2')
 # NOTE: Added dynamic time
 parser.add_argument('--time', type=str, default=datetime.today().strftime('%Y-%m-%d_%H:%M:%S'), help='BWv3, BWHv3, Lch_Cv2, PV0, Humanv2, HCv2')
 
-parser.add_argument('--exp-name', type=str, default="0:0", help='BWv3, BWHv3, Lch_Cv2, PV0, Humanv2, HCv2')
+parser.add_argument('--exp-name', type=str, default="AC_deconly", help='BWv3, BWHv3, Lch_Cv2, PV0, Humanv2, HCv2')
 parser.add_argument('--EnvIdex', type=int, default=2, help='BWv3, BWHv3, Lch_Cv2, PV0, Humanv2, HCv2')
 parser.add_argument('--write', type=str2bool, default=True, help='Use SummaryWriter to record the training')
 parser.add_argument('--render', type=str2bool, default=False, help='Render or Not')
-parser.add_argument('--video_turns', type=int, default=50, help='which model to load')
-parser.add_argument('--num_agents', type=int, default=5, help='Decay rate of entropy_coef')
-parser.add_argument('--variable_agent', type=str2bool, default=False, help='Decay rate of entropy_coef')
+parser.add_argument('--video_turns', type=int, default=100, help='which model to load')
+parser.add_argument('--num_agents', type=int, default=4, help='Decay rate of entropy_coef')
+parser.add_argument('--variable_agent', type=str2bool, default=True, help='Decay rate of entropy_coef')
 parser.add_argument('--dt', type=float, default=1, help='Decay rate of entropy_coef')
 parser.add_argument('--reduce_space', type=str2bool, default=True, help='Share feature extraction layers?')
-parser.add_argument('--seed', type=int, default=8, help='random seed')
+parser.add_argument('--seed', type=int, default=55, help='random seed')
 
 # NOTE: Code will not work if too small: When set to 512, returns the error
 # UnboundLocalError: local variable 'c_loss' referenced before assignment
@@ -62,13 +62,13 @@ parser.add_argument('--T_horizon', type=int, default=2048, help='lenth of long t
 
 parser.add_argument('--distnum', type=int, default=0, help='0:Beta ; 1:GS_ms;  2: GS_m')
 parser.add_argument('--Max_train_steps', type=int, default=1e7, help='Max training steps')
-parser.add_argument('--save_interval', type=int, default=2e5, help='Model saving interval, in steps.')
+parser.add_argument('--save_interval', type=int, default=2.5e4, help='Model saving interval, in steps.')
 parser.add_argument('--eval_interval', type=int, default=1e4, help='Model evaluating interval, in steps.')
 parser.add_argument('--gamma', type=float, default=0.99, help='Discounted Factor')
 parser.add_argument('--lambd', type=float, default=0.95, help='GAE Factor')
 parser.add_argument('--clip_rate', type=float, default=0.2, help='PPO Clip rate')
-parser.add_argument('--K_epochs', type=int, default=10, help='PPO update times')
-parser.add_argument('--net_width', type=int, default=256, help='Hidden net width')
+parser.add_argument('--K_epochs', type=int, default=4, help='PPO update times')
+parser.add_argument('--net_width', type=int, default=128, help='Hidden net width')
 parser.add_argument('--activation', type=str, default='tanh', help='activation function')
 parser.add_argument('--a_lr', type=float, default=1.5e-4, help='Learning rate of actor')
 parser.add_argument('--c_lr', type=float, default=1.5e-5, help='Learning rate of critic')
@@ -78,8 +78,8 @@ parser.add_argument('--c_optim_batch_size', type=int, default=64, help='lenth of
 parser.add_argument('--entropy_coef', type=float, default=1e-3, help='Entropy coefficient of Actor')
 parser.add_argument('--entropy_coef_decay', type=float, default=0.99, help='Decay rate of entropy_coef')
 parser.add_argument('--share_layer_flag', type=str2bool, default=True, help='Share feature extraction layers?')
-parser.add_argument('--multiply_horrizion', type=int, default=12, help='Share feature extraction layers?')
-parser.add_argument('--multiply_batch', type=int, default=24, help='Share feature extraction layers?')
+parser.add_argument('--multiply_horrizion', type=int, default=8, help='Share feature extraction layers?')
+parser.add_argument('--multiply_batch', type=int, default=16, help='Share feature extraction layers?')
 parser.add_argument('--reduce_epoch', type=str2bool, default=False, help='Share feature extraction layers?')
 parser.add_argument('--curriculum', type=str2bool, default=True, help='gradually increase range')
 parser.add_argument('--consider_boid', type=str2bool, default=False, help='Render or Not')
@@ -87,8 +87,8 @@ parser.add_argument('--token_query', type=str2bool, default=True, help='tokenize
 parser.add_argument('--trans_position', type=str2bool, default=False, help='token input with position')
 
 # NOTE: This argument doesnt seem to be used
-parser.add_argument('--num_enc', type=int, default=1, help='number of encoders')
-parser.add_argument('--num_dec', type=int, default=2, help='number of encoders')
+parser.add_argument('--num_enc', type=int, default=2, help='number of encoders')
+parser.add_argument('--num_dec', type=int, default=3, help='number of encoders')
 
 parser.add_argument('--net_model', type=str, default='decmod', help='number of encoders')
 # Liangkun's up-to-date version added dec, fc10, fc12
@@ -97,8 +97,8 @@ parser.add_argument('--liability', type=str2bool, default=True, help='number of 
 parser.add_argument('--collision_free', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--beta_adaptor_coefficient', type=float, default=1.1, help='number of encoders')
 parser.add_argument('--beta_base', type=float, default=1.0, help='number of encoders')
-parser.add_argument('--level', type=int, default=15, help='Share feature extraction layers?')
-parser.add_argument('--num_corridor_in_state', type=int, default=1, help='number of encoders')
+parser.add_argument('--level', type=int, default=19, help='Share feature extraction layers?')
+parser.add_argument('--num_corridor_in_state', type=int, default=2, help='number of encoders')
 
 # NOTE: idk why??
 parser.add_argument('--corridor_index_awareness', type=str, default='1111', help='indicate the corridor index')
