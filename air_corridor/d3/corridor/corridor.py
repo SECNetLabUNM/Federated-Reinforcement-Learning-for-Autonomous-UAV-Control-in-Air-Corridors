@@ -21,13 +21,12 @@ class Corridor:
     # all_corridors = []
     graph = None
     # consider_next_corridor = False
-    num_corridor_in_state = 1
+    reduce_space = True
 
-    def __init__(self, name, connections, reduce_space):
+    def __init__(self, name, connections, ):
         # Initialize corridor properties
         self.name = name
         self.connections = connections
-        self.reduce_space = reduce_space
 
     @classmethod
     def convert2graph(cls, corridors):
@@ -84,10 +83,9 @@ class CylinderCorridor(Corridor, Cylinder):
                  width,
                  name,
                  connections,
-                 reduce_space,
                  orientation_rad=None,
                  orientation_vec=None, ):
-        Corridor.__init__(self, name, connections, reduce_space)
+        Corridor.__init__(self, name, connections)
         self.radius = width / 2
         Cylinder.__init__(self,
                           anchor_point=anchor_point,
@@ -95,8 +93,7 @@ class CylinderCorridor(Corridor, Cylinder):
                           orientation_rad=orientation_rad,
                           length=length,
                           radius=self.radius)
-        self.shapeType = [1, 0]
-        self.reduce_space = reduce_space
+        self.shapeType = [0, 0, 1, 0]
 
     def evaluate_action(self, a_uav):
         alignment = 0
@@ -131,26 +128,12 @@ class CylinderCorridor(Corridor, Cylinder):
     def report(self, base=None):
         # 7+2+4=13,
         # last two 0 are padding, keeping the format the same as
-        if self.reduce_space:
 
-            common_part = super().report(base)
-            corridor_status = common_part + self.shapeType + [self.length, self.radius] + [0] * 4
+        # important, report fcn for corridors
+        common_part = super().report(base=base, reduce_space=self.reduce_space)
 
-            # if self == base:
-            #     # 8 elements
-            #     # 4 for the rest
-            #     # 4 for padding
-            #     # 16 intotal
-            #     common_part = super().report(base)
-            #     corridor_status = common_part + self.shapeType + [self.length, self.radius] + [0] * 4
-            #
-            # else:
-            #     corridor_status = self.shapeType + list(Z_UNIT) + [self.length, self.radius] + [0] * 6
+        corridor_status = common_part + self.shapeType + [self.length, self.radius] + [0] * 4
 
-        else:
-            corridor_status = (self.shapeType + list(self.orientation_vec) +
-                               [self.length, self.radius] +
-                               [0] * 6)
         if any(np.isnan(corridor_status)):
             print('nan in cylinder')
             input("Press Enter to continue...")
@@ -173,8 +156,8 @@ class DirectionalPartialTorusCorridor(Corridor, newTorus):
                  orientation_vec=None,
                  name=None,
                  connections=None,
-                 reduce_space=True):
-        Corridor.__init__(self, name, connections, reduce_space)
+                 ):
+        Corridor.__init__(self, name, connections)
         newTorus.__init__(self,
                           anchor_point=anchor_point,
                           orientation_vec=orientation_vec,
@@ -184,7 +167,7 @@ class DirectionalPartialTorusCorridor(Corridor, newTorus):
                           begin_rad=begin_rad,
                           end_rad=end_rad)
         assert -np.pi <= self.begin_rad <= np.pi, "Error, begin radian needs to be in [-pi,pi]"
-        self.shapeType = [0, 1]
+        self.shapeType = [0, 0, 0, 1]
 
     def evaluate_action(self, a_uav):
         alignment = 0
@@ -198,24 +181,21 @@ class DirectionalPartialTorusCorridor(Corridor, newTorus):
 
     @lru_cache(maxsize=8)
     def report(self, base=None):
-        if self.reduce_space:
-            # 8 elements for common
-            # 8 for the rest
-            # 16 intotal
-            common_part = super().report(base)
-
-            corridor_status = common_part + self.shapeType + \
-                              [self.major_radius, self.minor_radius, np.pi / 2 - (self.end_rad - self.begin_rad),
-                               np.pi / 2, self.major_radius + self.minor_radius,
-                               self.major_radius - self.minor_radius]
-        else:
-            corridor_status = self.shapeType + list(self.directionRad) + list(self.orientation_vec) + \
-                              [self.major_radius, self.minor_radius, self.begin_rad, self.end_rad,
-                               self.major_radius + self.minor_radius, self.major_radius - self.minor_radius]
+        common_part = super().report(base=base, reduce_space=self.reduce_space)
+        corridor_status = common_part + self.shapeType + [self.major_radius, self.minor_radius,
+                                                          self.major_radius + self.minor_radius,
+                                                          self.major_radius - self.minor_radius]
+        # if self.reduce_space:
+        #     radian_range = [np.pi / 2 - (self.end_rad - self.begin_rad), np.pi / 2]
+        # else:
+        #     radian_range = [self.begin_rad, self.end_rad]
+        # radian_range = [np.pi / 2 - (self.end_rad - self.begin_rad), np.pi / 2, self.begin_rad, self.end_rad]
+        radian_range = [np.pi / 2 - (self.end_rad - self.begin_rad), np.pi / 2]#, self.begin_rad, self.end_rad]
         if any(np.isnan(corridor_status)):
             print('nan in torus')
             input("Press Enter to continue...")
-        return corridor_status
+
+        return corridor_status + radian_range
 
     def release_uav(self, plane_offset_assigned):
         plane_offset = self.beginCirclePlane.x * plane_offset_assigned[0] + \

@@ -19,40 +19,34 @@ BLUE = (0, 0, 255)
 PURPLE = (129, 132, 203)
 
 # # env reward
-# REWARD_REACH = 100.0
-# PENALTY_COLLISION = -8
-# PENALTY_BREACH = -5
-# PENALTY_TIME = -0.1
-# REWARD_POSITIVE_STEP = 0.05  # it must be smaller than abs(PENALTY_TIME)
-# BREACH_TOLERANCE = 1
-
-
-# # env reward
-# REWARD_REACH = 100.0
-# PENALTY_COLLISION = -50
-# PENALTY_BREACH = -30
-# PENALTY_TIME = -0.2
-# REWARD_POSITIVE_STEP = 0.04  # it must be smaller than abs(PENALTY_TIME)
-# Max_collision_vigilant = 3
-# REWARD_BOID = PENALTY_TIME * 0.2
-# PENALTY_BOID = -0.02
-# BREACH_TOLERANCE = 1
-
 
 # env reward
 '''
 each step penalty / 0.01 < abs(breach, collision)
 '''
-# REWARD_REACH = 100.0
-# PENALTY_COLLISION = -100
-# PENALTY_BREACH = -60
+
 REWARD_REACH = 160.0
 REWARD_INTERMEDIA = 40
-REACH_ALIGNMENT = 40
+REACH_ALIGNMENT = 0
 LIABILITY_PENALITY = -10  # for vicinity
-PENALTY_COLLISION = -80
-PENALTY_BREACH = -140
-PENALTY_TIME = -0.2
+
+
+
+
+
+
+# LIABILITY_PENALITY = -10  # for vicinity
+# PENALTY_TIME = -0.2
+PENALTY_COLLISION = -120
+PENALTY_BREACH = -100
+## change made by May 6
+LIABILITY_PENALITY = 0  # for vicinity
+PENALTY_TIME = 0
+# PENALTY_COLLISION = -80
+# PENALTY_BREACH = -140
+
+
+
 REWARD_POSITIVE_STEP = PENALTY_TIME * 0.1  # it must be smaller than abs(PENALTY_TIME)
 Max_collision_vigilant = 1
 REWARD_BOID = PENALTY_TIME * 0.2
@@ -70,4 +64,4 @@ Y_UNIT = np.array([0.0, 1.0, .0])
 TRIVIAL_TOLERANCE = 1e-05
 CORRIDOR_OVERLAP = 1e-2
 
-assert abs(PENALTY_TIME) > REWARD_POSITIVE_STEP
+# assert abs(PENALTY_TIME) > REWARD_POSITIVE_STEP

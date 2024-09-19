@@ -89,7 +89,7 @@ class RectangleCorridor(Corridor, DirectionalRectangle):
                  connections):
         Corridor.__init__(self, name, connections)
         self.direction_rad = direction_rad
-        direction = np.array([np.cos(direction_rad), np.sin(direction_rad)])
+        direction = np.array([math.cos(direction_rad), math.sin(direction_rad)])
         DirectionalRectangle.__init__(self, anchor_point, direction, length, width)
         self.shape_type = [1, 0]
 

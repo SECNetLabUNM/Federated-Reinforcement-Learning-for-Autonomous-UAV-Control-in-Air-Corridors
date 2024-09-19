@@ -72,8 +72,8 @@ parser.add_argument('--activation', type=str, default='tanh', help='activation f
 parser.add_argument('--a_lr', type=float, default=1.5e-4, help='Learning rate of actor')
 parser.add_argument('--c_lr', type=float, default=1.5e-5, help='Learning rate of critic')
 parser.add_argument('--l2_reg', type=float, default=1e-3, help='L2 regulization coefficient for Critic')
-parser.add_argument('--a_optim_batch_size', type=int, default=256, help='lenth of sliced trajectory of actor')
-parser.add_argument('--c_optim_batch_size', type=int, default=256, help='lenth of sliced trajectory of critic')
+parser.add_argument('--a_optim_batch_size', type=int, default=64, help='lenth of sliced trajectory of actor')
+parser.add_argument('--c_optim_batch_size', type=int, default=64, help='lenth of sliced trajectory of critic')
 parser.add_argument('--entropy_coef', type=float, default=1e-3, help='Entropy coefficient of Actor')
 parser.add_argument('--entropy_coef_decay', type=float, default=0.99, help='Decay rate of entropy_coef')
 parser.add_argument('--share_layer_flag', type=str2bool, default=True, help='Share feature extraction layers?')
@@ -128,7 +128,8 @@ def main():
     if opt.time is None:
         run_name = f"d2move_{int(time.time())}_{exp_name[0]}"
     else:
-        run_name = f"d2move_{opt.time}_{exp_name[0]}"
+        comment = input('Comment for current run: ')
+        run_name = f"d2move_{opt.time}_{exp_name[0]}_{comment}"
     env = d3.parallel_env(render_mode='rgb_array')
     exp_name = ''.join(exp_name[1:])
     if exp_name is None:
@@ -255,7 +256,7 @@ def main():
                                  beta_adaptor_coefficient=opt.beta_adaptor_coefficient,
                                  num_corridor_in_state=opt.num_corridor_in_state,
                                  dt=opt.dt,
-                                 consider_boid=opt.consider_boid,
+                                 #consider_boid=opt.consider_boid,
                                  corridor_index_awareness=opt.corridor_index_awareness,
                                  velocity_max=opt.velocity_max,
                                  acceleration_max=opt.acceleration_max,

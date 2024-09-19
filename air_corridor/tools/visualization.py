@@ -1,8 +1,10 @@
 import pickle
+
 import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from moviepy.editor import VideoFileClip
+
 from air_corridor.d3.corridor.corridor import CylinderCorridor, DirectionalPartialTorusCorridor
 
 matplotlib.use('TkAgg')
@@ -12,15 +14,15 @@ from air_corridor.tools.util import *
 class Visualization():
     def __init__(self, max_rounds=None, to_base=False):
 
-        self.size = 20
+        self.size = 30
         self.ax = None
         self.max_rounds = max_rounds if max_rounds is not None else 1
-        self.animate_rounds = [{'corridor': None, 'uav': {}} for _ in range(self.max_rounds)]
+        self.animate_rounds = [{'corridor': None, 'uav': {}, 'ncfo': {}} for _ in range(self.max_rounds)]
         self.line = None
         self.current_corridor = []  # None#[]
         self.to_base = to_base
 
-    def put_data(self, round, agents, corridors=None):
+    def put_data(self, round, agents, ncfos, corridors=None):
         if self.animate_rounds[round]['corridor'] is None and corridors is not None:
             self.animate_rounds[round]['corridor'] = corridors
         for agent in agents:
@@ -33,9 +35,19 @@ class Visualization():
                     'A'].rotate_to_base(
                     self.animate_rounds[round]['uav'][agent][-1] - self.animate_rounds[round]['corridor'][
                         'A'].anchor_point)  #
-                # self.animate_rounds[round]['uav'][agent][-1] = self.animate_rounds[round]['corridor'][
-                #     'A'].rotate_to_base(
-                #     self.animate_rounds[round]['uav'][agent][-1] )  #
+        for ncfo in ncfos:
+            if ncfo in self.animate_rounds[round]['ncfo']:
+                self.animate_rounds[round]['ncfo'][ncfo].append(ncfo.position)
+            else:
+                self.animate_rounds[round]['ncfo'][ncfo] = [ncfo.position]
+            # if self.to_base:
+            #     self.animate_rounds[round]['ncfo'][agent][-1] = self.animate_rounds[round]['corridor'][
+            #         'A'].rotate_to_base(
+            #         self.animate_rounds[round]['ncfo'][agent][-1] - self.animate_rounds[round]['corridor'][
+            #             'A'].anchor_point)
+            # self.animate_rounds[round]['uav'][agent][-1] = self.animate_rounds[round]['corridor'][
+            #     'A'].rotate_to_base(
+            #     self.animate_rounds[round]['uav'][agent][-1] )  #
 
     def save_data(self, file_name):
         # Serialize with Pickle
@@ -50,26 +62,36 @@ class Visualization():
     def animate(self, frame_data):
         # round_index, frame_index=kwargs
         round_index, frame_index = frame_data
+
         if frame_index == 0:
-            num_agents = len(self.animate_rounds[round_index]['uav'])
-            self.lines = [self.ax.plot([0, 0, 0], [0, 0, 0], [0, 0, 0], linewidth=3)[0] for _ in range(num_agents)]
+            self.num_agents = len(self.animate_rounds[round_index]['uav'])
+            self.num_ncfos = len(self.animate_rounds[round_index]['ncfo'])
+            self.lines = ([self.ax.plot([0, 0, 0], [0, 0, 0], [0, 0, 0], linewidth=3)[0] for _ in
+                           range(self.num_agents)] +
+                          [self.ax.plot([0, 0, 0], [0, 0, 0], [0, 0, 0], linewidth=4, c='r')[0] for _ in
+                           range(self.num_ncfos)])
             self.plot_corridor(round_index)
 
         lines = self.lines
-        current_round_frames = self.animate_rounds[round_index]['uav']
+        current_round_UAV_frames = self.animate_rounds[round_index]['uav']
         start_idx = max(0, frame_index - 20)
-        for line, (agent, traj) in zip(lines, current_round_frames.items()):
+        for line, (agent, traj) in zip(lines[:self.num_agents], current_round_UAV_frames.items()):
             end_idx = min(frame_index + 1, len(traj))
             line.set_data(traj[start_idx:end_idx, 0], traj[start_idx:end_idx, 1])
             line.set_3d_properties(traj[start_idx:end_idx, 2])
+
+        current_round_NCFO_frames = self.animate_rounds[round_index]['ncfo']
+        for line, (ncfo, traj) in zip(lines[self.num_agents:], current_round_NCFO_frames.items()):
+            line.set_data(traj[start_idx:end_idx, 0], traj[start_idx:end_idx, 1])
+            line.set_3d_properties(traj[start_idx:end_idx, 2])
+
         # for line in lines:
         #     print(f"line: {line.get_data()}")
-
         return lines
 
-    def show_animation(self, mp4=False, gif=False, file_name=None):
-        if file_name:
-            self.read_data(file_name)
+    def show_animation(self, gif=True, load_file_name=None, save_to=None):
+        if load_file_name:
+            self.read_data(load_file_name)
         fig = plt.figure()
         self.ax = fig.add_subplot(111, projection='3d')
         self.ax.set_xlabel('X')
@@ -79,26 +101,29 @@ class Visualization():
         self.ax.set_ylim(-self.size, self.size)
         self.ax.set_zlim(-self.size, self.size)
         ani = FuncAnimation(fig, self.animate, frames=self.frame_locate(), interval=100)
-        if mp4 or gif:
-            ani.save('cylinder-torus-torus-cylinder.mp4', writer='ffmpeg', bitrate=2000, fps=30)
-            if gif:
-                clip = VideoFileClip("cylinder-torus-torus-cylinder.mp4")
-                clip.write_gif("cylinder-torus-torus-cylinder.gif")
+        #ani.save(f"{save_to}.gif",writer='imagemagick', fps=30)
+        ani.save(f"{save_to}.gif", writer='pillow', fps=30)
+        # if mp4 or gif:
+        #     ani.save(f"{save_to}.mp4", writer='ffmpeg', bitrate=2000, fps=30)
+        #     if gif:
+        #         clip = VideoFileClip(f"{save_to}.mp4")
+        #         clip.write_gif(f"{save_to}.gif")
         plt.show()
 
-
-
     def frame_locate(self, tail=20):
+        # frames_in_each_round = [max([len(single_round_data['uav'][agent]) for agent in single_round_data['uav']]) for single_round_data in
+        #                         self.animate_rounds]
         frames_in_each_round = []
         for single_round_data in self.animate_rounds:
             longest_frames = 0
             for agent in single_round_data['uav']:
                 longest_frames = max(longest_frames, len(single_round_data['uav'][agent]))
                 single_round_data['uav'][agent] = np.array(single_round_data['uav'][agent])
+            for ncfo in single_round_data['ncfo']:
+                # longest_frames = max(longest_frames, len(single_round_data['ncfo'][ncfo]))
+                single_round_data['ncfo'][ncfo] = np.array(single_round_data['ncfo'][ncfo])
             frames_in_each_round.append(longest_frames)
-
         for round_index, num_frame in enumerate(frames_in_each_round):
-
             for frame_index in range(num_frame + tail):
                 yield (round_index, frame_index)
 
@@ -125,6 +150,7 @@ class Visualization():
                 surface.remove()
         plt.draw()
         for name, corridor in self.animate_rounds[round]['corridor'].items():
+
             if isinstance(corridor, CylinderCorridor):
                 Xt, Yt, Zt = cylinder(r=corridor.radius,
                                       h=corridor.length)

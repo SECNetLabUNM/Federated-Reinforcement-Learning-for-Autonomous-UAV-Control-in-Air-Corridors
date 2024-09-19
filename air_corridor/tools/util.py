@@ -11,6 +11,83 @@ import torch
 from .uti_consts import *
 
 
+def is_inside_circle(point, circle_radius):
+    """Check if a point is inside a circle with given radius."""
+    return point[0] ** 2 + point[1] ** 2 <= circle_radius ** 2
+
+
+def rotate_point(point, angle):
+    """Rotate a point by a given angle around the origin."""
+    rotation_matrix = np.array([[np.cos(angle), -np.sin(angle)],
+                                [np.sin(angle), np.cos(angle)]])
+    return rotation_matrix.dot(point)
+
+
+def generate_hexagon_grid(circle_radius, side_length):
+    """Generate a grid of hexagon centers and vertices within a given circle."""
+    hexagon_centers = []
+    hexagon_vertex_list = []
+
+    # 60 degrees in radians and vertical spacing between centers
+    angle = np.deg2rad(60)
+    vertical_spacing = side_length * np.sqrt(3)
+
+    # Determine the range for the grid
+    grid_range_x = int(circle_radius / side_length) + 1
+    grid_range_y = int(circle_radius / (vertical_spacing / 2)) + 1
+
+    # Generate potential hexagon centers and their vertices
+    for i in range(-grid_range_y, grid_range_y + 1):
+        for j in range(-grid_range_x, grid_range_x + 1):
+            # Offset for even and odd rows
+            offset = 0 if i % 2 == 0 else side_length * 1.5
+            center_x = j * 3 * side_length + offset
+            center_y = i * vertical_spacing / 2
+            center = (center_x, center_y)
+
+            # Add the center if it's inside the circle
+            if is_inside_circle(center, circle_radius):
+                hexagon_centers.append(center)
+
+            # Calculate vertices and add those that are inside the circle
+            hex_vertices = [
+                (center[0] + np.cos(k * angle) * side_length, center[1] + np.sin(k * angle) * side_length)
+                for k in range(6)
+            ]
+            for vertex in hex_vertices:
+                if is_inside_circle(vertex, circle_radius) and vertex not in hexagon_vertex_list:
+                    can_add_vertex = True
+                    for exist in hexagon_vertex_list:
+                        if np.linalg.norm(np.array(vertex) - np.array(exist)) < (side_length / 2):
+                            can_add_vertex = False
+                            break
+                    if can_add_vertex:
+                        hexagon_vertex_list.append(vertex)
+
+    return hexagon_centers + hexagon_vertex_list
+
+
+def generate_random_hexagon_grid(circle_radius, side_length):
+    centers_vertices = generate_hexagon_grid(circle_radius, side_length)
+
+    # Choose a random angle between 0 and 360 degrees (in radians)
+    random_angle = np.deg2rad(random.uniform(0, 360))
+
+    # Apply rotation to each center and vertex
+    rotated_centers_vertices = [rotate_point(center, random_angle) for center in centers_vertices]
+
+    return rotated_centers_vertices
+
+
+def uniform_sample_circle(radius):
+    theta = random.uniform(0, 2 * math.pi)
+    u = random.uniform(0, 1)
+    r = radius * math.sqrt(u)
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+    return x, y, math.atan2(y, x)
+
+
 def index_offset(lst, target, offset):
     n = len(lst)
     i = lst.index(target)
@@ -95,17 +172,22 @@ def distribute_evenly_on_line(line_length, min_distance, num_points):
     return points
 
 
-def distribute_evenly_within_circle(radius, min_distance, num_points):
+def distribute_evenly_within_circle(radius, min_distance, num_points, mode='hexagon'):
     # Calculate the number of segments based on minimum distance
-    place_radius = radius - 0.5
-    rad_base = np.random.random() * np.pi * 2
-    points = []
-    rad_diff = 2 * np.pi / num_points
-    for i in range(num_points):
-        rad_point = rad_base + i * rad_diff
-        points.append(place_radius * np.array([np.cos(rad_point), np.sin(rad_point)]))
-    if num_points > 1 and np.linalg.norm(points[0] - points[1]) < min_distance:
-        raise ValueError('cannot meet min_distance requirement')
+    if mode == 'hexagon':
+        points = generate_random_hexagon_grid(radius, 0.65)
+        random.shuffle(points)
+        return points[:num_points]
+    elif mode == 'circle':
+        place_radius = radius - 0.5
+        rad_base = np.random.random() * np.pi * 2
+        points = []
+        rad_diff = 2 * np.pi / num_points
+        for i in range(num_points):
+            rad_point = rad_base + i * rad_diff
+            points.append(place_radius * np.array([np.cos(rad_point), np.sin(rad_point)]))
+        if num_points > 1 and np.linalg.norm(points[0] - points[1]) < min_distance:
+            raise ValueError('cannot meet min_distance requirement')
 
     return points
 
@@ -335,8 +417,15 @@ def vec2vec_rotation(unit_vec_1, vec_2):
 
     if np.abs(np.linalg.norm(unit_vec_1) - 1) > TRIVIAL_TOLERANCE:
         unit_vec_1 /= np.linalg.norm(unit_vec_1)
+    dot_product = np.dot(unit_vec_1, unit_vec_2)
+    if dot_product > 1 or dot_product < -1:
+        print(dot_product)
+    # Ensure dot product is within valid range [-1, 1]
+    dot_product = np.clip(dot_product, -1.0, 1.0)
 
-    angle = np.arccos(np.dot(unit_vec_1, unit_vec_2))
+    # Calculate the angle
+    angle = np.arccos(dot_product)
+    # angle = np.arccos(np.dot(unit_vec_1, unit_vec_2))
     if angle < TRIVIAL_TOLERANCE:
         return np.identity(3, dtype=np.float64)
 
@@ -377,6 +466,7 @@ def random_(difficulty, epsilon=0.1, segment=False):
             random_value = max(difficulty, 0.1) + random.uniform(-epsilon, epsilon)
         else:
             random_value = random.uniform(1 - epsilon, difficulty + epsilon)
+            # random_value = 1
     return random_value
 
 

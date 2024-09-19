@@ -21,6 +21,10 @@ class Point3D(Geometric3D):
             self.orientation_vec = polar_to_unit_normal(orientation_rad)
         else:
             self.orientation_vec = orientation_vec
+        if orientation_rad is None:
+            self.orientation_rad = cartesian_to_polar_or_spherical(self.orientation_vec)[1:]
+        else:
+            self.orientation_rad = orientation_rad
 
         # projected x from base x
         self.x = rotate(vec=X_UNIT, fromVec=Z_UNIT, toVec=self.orientation_vec)
@@ -40,11 +44,15 @@ class Point3D(Geometric3D):
         vec = self.point_relative_center_position(point)
         return self.rotate_to_base(vec)
 
+    def project_to_remote(self, point):
+        # vec = self.point_relative_center_position(point)
+        return self.anchor_point + self.rotate_to_remote(point)
+
     def point_relative_center_position(self, point):
         return point - self.anchor_point
 
     # @lru_cache(maxsize=2)
-    def convert_2_polar(self, point, reduce_space):
+    def convert_2_polar(self, point, reduce_space=True):
         if reduce_space:
             point = self.project_to_base(point)
         else:
@@ -52,7 +60,7 @@ class Point3D(Geometric3D):
         r, theta, phi = cartesian_to_polar_or_spherical(point)
         return r, theta, phi
 
-    def convert_vec_2_polar(self, point, velocity, reduce_space):
+    def convert_vec_2_polar(self, point, velocity, reduce_space=True):
         r1, theta1, phi1 = self.convert_2_polar(point, reduce_space)
         r2, theta2, phi2 = self.convert_2_polar(point + velocity, reduce_space)
         return r2 - r1, theta2 - theta1, phi2 - phi1,
@@ -65,17 +73,39 @@ class Point3D(Geometric3D):
     def is_inside(self, point):
         return np.allclose(point, self.anchor_point)
 
-    def report(self, base=None):
+    def report(self, base=None, reduce_space=True):
         # only fit reduce_space scenario
-        if self != base:
-            ori_based_on_former = base.rotate_to_base(self.orientation_vec)
-            _, theta, phi = cartesian_to_polar_or_spherical(ori_based_on_former)
-            status = list(base.anchor_point - self.anchor_point) +\
-                      list(base.rotate_to_base(self.orientation_vec)) +\
-                      [theta, phi]
+        '''
+         list(position_diff_on_base) + [r1, t1, p1]
+        position_diff_on_base was using the position diff without rotation in the last version
+        '''
+        if True:
+            if reduce_space:
+                if self != base:
+                    ori_on_base = base.rotate_to_base(self.orientation_vec)
+                    _, theta, phi = cartesian_to_polar_or_spherical(ori_on_base)
+                    position_diff_on_base = base.project_to_base(self.anchor_point - base.anchor_point)
+                    r1, t1, p1 = cartesian_to_polar_or_spherical(position_diff_on_base)
+                    status = list(position_diff_on_base) + [r1, t1, p1] + \
+                             list(ori_on_base) + [theta, phi]
+                else:
+                    status = [0, 0, 0, 0, 0, 0] + list(Z_UNIT) + [0, 0]
+            else:
+                _, theta, phi = cartesian_to_polar_or_spherical(self.orientation_vec)
+                status = [0, 0, 0, 0, 0, 0] + list(self.orientation_vec) + [theta, phi]
         else:
-            status = [0, 0, 0] +list(Z_UNIT) +[0, 0]
+            if self != base:
+                ori_based_on_former = base.rotate_to_base(self.orientation_vec)
+                _, theta, phi = cartesian_to_polar_or_spherical(ori_based_on_former)
+                status = list(self.anchor_point - base.anchor_point) + \
+                         list(ori_based_on_former) + \
+                         [theta, phi] + list(self.orientation_vec) + list(self.orientation_rad)
+            else:
+                status = [0, 0, 0] + list(Z_UNIT) + [0, 0] + list(self.orientation_vec) + list(self.orientation_rad)
         return status
+
+    def anchor_alignment(self, off_set):
+        self.anchor_point = self.anchor_point - off_set
 
 
 class Sphere(Point3D):
@@ -92,8 +122,8 @@ class Sphere(Point3D):
     def distance_object_to_point(self, point):
         return super().point_relative_center_position(point) - self.radius
 
-    def is_inside(self, point):
-        return True if self.distance_object_to_point(point) < TRIVIAL_TOLERANCE else False
+    def is_inside(self, point, inflate=0):
+        return True if self.distance_object_to_point(point) < TRIVIAL_TOLERANCE + inflate else False
 
 
 class Cylinder(Point3D):
@@ -115,6 +145,50 @@ class Cylinder(Point3D):
             )
         )
 
+    def determine_rotation_with_next_torus(self, torus_ori=np.array([1, 0, 0])):
+        '''
+        this step is to simplify the state for cylinder, if there are at least 2 corridors in the state.
+        align the following torus orientation to [1,0,0]
+        '''
+        torus_ori_base = self.rotate_to_base(torus_ori)
+        if list(torus_ori_base) != [1, 0, 0]:
+            rotate_torus_ori_2_std = vec2vec_rotation(torus_ori_base, np.array([1, 0, 0]))
+            rotate_std_2_torus_ori = vec2vec_rotation(np.array([1, 0, 0]), torus_ori_base)
+
+            self.rotation_matrix_to_base = np.dot(rotate_torus_ori_2_std, self.rotation_matrix_to_base)
+            self.rotation_matrix_to_remote = np.dot(self.rotation_matrix_to_remote, rotate_std_2_torus_ori)
+
+    #     self.rotate_cylinder_to_base = self.rotation_matrix_to_base
+    #     self.rotate_cylinder_to_remote = self.rotation_matrix_to_remote
+    #
+    # def determine_rotation_with_next_torus(self, torus_ori=np.array([1, 0, 0])):
+    #     '''
+    #     this step is to simplify the state for cylinder, if there are at least 2 corridors in the state.
+    #     align the following torus orientation to [1,0,0]
+    #     '''
+    #     if torus_ori != np.array([1, 0, 0]):
+    #         rotate_torus_ori_2_std = vec2vec_rotation(torus_ori, np.array([1, 0, 0]))
+    #         rotate_std_2_torus_ori = vec2vec_rotation(np.array([1, 0, 0]), torus_ori)
+    #
+    #         self.rotate_cylinder_to_base = np.dot(rotate_torus_ori_2_std, self.rotation_matrix_to_base)
+    #         self.rotate_cylinder_to_remote = np.dot(self.rotation_matrix_to_remote, rotate_std_2_torus_ori)
+    #
+    # def rotate_to_base(self, vec):
+    #     return np.dot(self.rotate_cylinder_to_base, vec)
+    #
+    # def rotate_to_remote(self, vec):
+    #     '''
+    #     project action back to global coordination, since action is only a vector. rotation only in enough.
+    #     '''
+    #     return np.dot(self.rotate_cylinder_to_remote, vec)
+    #
+    # def project_to_base(self, point):
+    #     '''
+    #     simplify state space
+    #     '''
+    #     vec = self.point_relative_center_position(point)
+    #     return self.rotate_to_base(vec)
+
     def __repr__(self):
         return f"Cylinder(anchor_point={self.anchor_point.tolist()}, " \
                f"orientation_vec={self.orientation_vec.tolist()}, " \
@@ -128,8 +202,11 @@ class Cylinder(Point3D):
             distance_signed_parallel_line_point(self.anchor_point, self.orientation_vec, point)) - self.length / 2
         return max(distance_x, distance_y)
 
-    def is_inside(self, point):
-        return (True,None) if self.distance_object_to_point(point) <= TRIVIAL_TOLERANCE else (False,'breached')
+    def is_inside(self, point, inflate=0):
+        if self.distance_object_to_point(point) <= TRIVIAL_TOLERANCE + inflate:
+            return (True, None)
+        else:
+            return (False, 'breached_c')
 
     def line_cross_des_plane_n_how_much(self, inside_point, outside_point):
         if self.is_inside(self.point_relative_center_position(outside_point)):
@@ -138,6 +215,20 @@ class Cylinder(Point3D):
                                       self.point_relative_center_position(outside_point),
                                       self.up_left,
                                       self.up_right)
+
+    def sample_a_point_within(self):
+        if self.length < 0.8:
+            return None
+        diff_r, z, rad_tube = uniform_sample_circle(self.radius)
+        point = (self.anchor_point +
+                 self.radius * (self.x * math.cos(rad_tube) + self.y * math.sin(rad_tube)) +
+                 self.orientation_vec * random.uniform(-self.length / 2 + 0.8, self.length / 2))
+
+        return point
+
+    def anchor_alignment(self, off_set):
+        super().anchor_alignment(off_set)
+        self.endCirclePlane.anchor_alignment(off_set)
 
 
 class Circle(Point3D):
@@ -158,8 +249,8 @@ class Circle(Point3D):
     def distance_object_to_point(self, point):
         pass
 
-    def report_state(self):
-        pass
+    def anchor_alignment(self, off_set):
+        super().anchor_alignment(off_set)
 
 
 class newTorus(Point3D):
@@ -183,16 +274,16 @@ class newTorus(Point3D):
         self.beginCirclePlane = (
             Circle(
                 anchor_point=self.anchor_point + major_radius * (
-                        self.x * np.cos(begin_rad) + self.y * np.sin(begin_rad)),
-                orientation_vec=(-self.x * np.sin(begin_rad) + self.y * np.cos(begin_rad)),
+                        self.x * math.cos(begin_rad) + self.y * math.sin(begin_rad)),
+                orientation_vec=(-self.x * math.sin(begin_rad) + self.y * math.cos(begin_rad)),
                 radius=minor_radius
             )
         )
         self.endCirclePlane = (
             Circle(
                 anchor_point=self.anchor_point + major_radius * (
-                        self.x * np.cos(end_rad) + self.y * np.sin(end_rad)),
-                orientation_vec=(-self.x * np.sin(end_rad) + self.y * np.cos(end_rad)),
+                        self.x * math.cos(end_rad) + self.y * math.sin(end_rad)),
+                orientation_vec=(-self.x * math.sin(end_rad) + self.y * math.cos(end_rad)),
                 radius=minor_radius
             )
         )
@@ -205,21 +296,27 @@ class newTorus(Point3D):
         # self.rotate_xy_x_to_begin = o3d.geometry.get_rotation_matrix_from_axis_angle(+self.begin_rad * Z_UNIT)
 
         # attatch end radian to pi/2 rad
-        self.rotate_xy_begin_to_x = o3d.geometry.get_rotation_matrix_from_axis_angle(
+        self.rotate_end_rad_to_y_in_xy = o3d.geometry.get_rotation_matrix_from_axis_angle(
             (+np.pi / 2 - self.end_rad) * Z_UNIT)
-        self.rotate_xy_x_to_begin = o3d.geometry.get_rotation_matrix_from_axis_angle(
+        self.rotate_y_to_enx_rad_in_xy = o3d.geometry.get_rotation_matrix_from_axis_angle(
             (-np.pi / 2 + self.end_rad) * Z_UNIT)
 
-        self.rotate_torus_to_base = np.dot(self.rotate_xy_begin_to_x, self.rotation_matrix_to_base)
-        self.rotate_torus_to_remote = np.dot(self.rotation_matrix_to_remote, self.rotate_xy_x_to_begin)
+        self.rotate_torus_to_base = np.dot(self.rotate_end_rad_to_y_in_xy, self.rotation_matrix_to_base)
+        self.rotate_torus_to_remote = np.dot(self.rotation_matrix_to_remote, self.rotate_y_to_enx_rad_in_xy)
 
     def rotate_to_base(self, vec):
         return np.dot(self.rotate_torus_to_base, vec)
 
     def rotate_to_remote(self, vec):
+        '''
+        project action back to global coordination, since action is only a vector. rotation only in enough.
+        '''
         return np.dot(self.rotate_torus_to_remote, vec)
 
     def project_to_base(self, point):
+        '''
+        simplify state space
+        '''
         vec = self.point_relative_center_position(point)
         return self.rotate_to_base(vec)
 
@@ -230,10 +327,6 @@ class newTorus(Point3D):
                f"minor_radius={self.minor_radius}, " \
                f"begin_degree={self.begin_rad}, " \
                f"end_degree={self.end_rad})"
-
-    def report_state(self):
-        return self.anchor_point.tolist() + self.orientation_vec.tolist() + [self.major_radius, self.minor_radius,
-                                                                             self.begin_rad, self.end_rad]
 
     def determine_positive_direction(self, point):
         '''
@@ -283,17 +376,17 @@ class newTorus(Point3D):
 
         assert self.end_rad > self.begin_rad
 
-        while angle <self.begin_rad:
-            angle+=np.pi * 2
+        while angle < self.begin_rad:
+            angle += np.pi * 2
 
         if self.begin_rad <= angle <= self.end_rad:
             return True
         else:
             return False
 
-    def is_inside(self, point):
+    def is_inside(self, point, inflate=0):
         signed_distance, degree_inside = self.distance_object_to_point(point, consider_angle=True)
-        status=[]
+        status = []
         # if degree_inside and signed_distance <= TRIVIAL_TOLERANCE:
         #     return True
         # else:
@@ -301,10 +394,30 @@ class newTorus(Point3D):
 
         if not degree_inside:
             status.append('rad')
-        if not signed_distance <= TRIVIAL_TOLERANCE:
+        if not signed_distance <= TRIVIAL_TOLERANCE + inflate:
             status.append('wall')
         if status:
-            return False,f"breached_{'_'.join(status)}"
+            return False, f"breached_{'_t_'.join(status)}"
         else:
             return True, None
 
+    def sample_a_point_within(self):
+        '''
+        randomly pick a point within for static obstacle
+        torus_rad is the radian based on torus
+        diff_r,z are generated by uniformly sampling the tube
+        '''
+        # torus_rad = random.random() * (self.end_rad - self.begin_rad) + self.begin_rad
+        diff = self.end_rad - self.begin_rad
+        if diff < 0.05479 * math.pi:  # 10'
+            return None
+        torus_rad = random.uniform(self.begin_rad, self.end_rad)
+        diff_r, z, rad_tube = uniform_sample_circle(self.minor_radius)
+        actual_radius = self.major_radius + diff_r
+        point = np.array([actual_radius * math.cos(torus_rad), actual_radius * math.sin(torus_rad), z])
+        return np.dot(self.rotation_matrix_to_remote, point) + self.anchor_point
+
+    def anchor_alignment(self, off_set):
+        super().anchor_alignment(off_set)
+        self.beginCirclePlane.anchor_alignment(off_set)
+        self.endCirclePlane.anchor_alignment(off_set)

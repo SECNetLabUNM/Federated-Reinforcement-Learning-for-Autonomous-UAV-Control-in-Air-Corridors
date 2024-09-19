@@ -22,6 +22,8 @@ class Tokenizer(nn.Module):
         # TEST: fix padsize to 32
         #self.fc64 = nn.Linear(64, hidden)
         #self.fc128 = nn.Linear(128, hidden)
+
+        # TEST: removed layers, and changed fc64/bn1 to output 128 instead of "hidden"
         self.bn1 = nn.BatchNorm1d(hidden)
         self.fc11 = nn.Linear(hidden, hidden)
         self.fc2 = nn.Linear(hidden, 128)
@@ -48,8 +50,6 @@ class Tokenizer(nn.Module):
             
         padded_input = F.pad(input_tensor, (0, padSize - input_tensor.size(-1)))
 
-       
-
         # This is needed for 3D inputs (training?)
         input_dims = len(input_tensor.shape)
         if input_dims == 3:
@@ -66,6 +66,7 @@ class Tokenizer(nn.Module):
         # elif padSize == 128:
         #     x = self.bn1(self.fc128(padded_input))
 
+        # No, removing the layers didn't improve training a lot. Stayed stuck at 0.2 difficulty
         x = self.bn1(self.fc64(padded_input))
         x = F.relu(self.fc11(x))
         x = self.bn2(self.fc2(x))

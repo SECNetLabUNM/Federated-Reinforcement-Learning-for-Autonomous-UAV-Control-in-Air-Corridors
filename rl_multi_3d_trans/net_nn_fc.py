@@ -103,7 +103,7 @@ class BetaActorMulti(nn.Module):
         super(BetaActorMulti, self).__init__()
         self.fc1 = nn.Linear(net_width, net_width)
         self.fc2_a = nn.Linear(net_width, int(net_width / 2))
-        self.bn1 = nn.BatchNorm1d(int(net_width / 2))
+        self.bn1 = nn.BatchNorm1d(int(net_width / 2)) # Seems unused?
         self.fc2_b = nn.Linear(int(net_width / 2), net_width)
         self.alpha_head = nn.Linear(net_width, action_dim)
         self.beta_head = nn.Linear(net_width, action_dim)
@@ -161,6 +161,7 @@ class CriticMulti(nn.Module):
             self.intput_merge = shared_layers
 
     def forward(self, s1, s2):
+        # ReLU won't work dumbass, you'll only get positive values
         merged_input = self.intput_merge(s1, s2)
         v = self.C4(merged_input)
         return v

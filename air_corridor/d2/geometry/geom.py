@@ -75,7 +75,7 @@ class Point2D(Geometric2D):
 #         self.width = width
 #         angle = np.arctan2(self.direction[1], self.direction[0])
 #         angle += np.pi / 2
-#         self.orthogonal_direction = np.array([np.cos(angle), np.sin(angle)])
+#         self.orthogonal_direction = np.array([math.cos(angle), math.sin(angle)])
 #
 #     def is_cross(self, point_last, point_current):
 #         line_end1 = self.anchor_point + self.width / 2 * self.orthogonal_direction
@@ -96,9 +96,9 @@ class DirectionalRectangle(Point2D):
         self.shape_type = [1, 0]
 
         self.half_width = 2
-        # length_vec = np.array([self.length * np.cos(self.direction), self.length * np.sin(self.direction)])
+        # length_vec = np.array([self.length * math.cos(self.direction), self.length * math.sin(self.direction)])
         # width_vec = np.array(
-        #     [self.width * np.cos(self.direction - np.pi / 2), self.width * np.sin(self.direction - np.pi / 2)])
+        #     [self.width * math.cos(self.direction - np.pi / 2), self.width * math.sin(self.direction - np.pi / 2)])
         length_vec = self.length / 2 * self.direction
         width_vec = self.half_width * np.dot(np.array([[0, -1], [1, 0]]), self.direction)
 
@@ -220,15 +220,15 @@ class directionalPartialAnnulus(Annulus):
         self.counter_clockwise = 1 if end_rad > begin_rad else -1
         self.whole_diff = end_rad - begin_rad
 
-        self.begin_outter = np.array([np.cos(begin_rad) * (major_radius + minor_radius),
-                                      np.sin(begin_rad) * (major_radius + minor_radius)])
-        self.begin_inner = np.array([np.cos(begin_rad) * (major_radius - minor_radius),
-                                     np.sin(begin_rad) * (major_radius - minor_radius)])
-        self.begin_dir = self.counter_clockwise * np.array([-np.sin(begin_rad), np.cos(begin_rad)])
-        self.end_outter = np.array([np.cos(end_rad) * (major_radius + minor_radius),
-                                    np.sin(end_rad) * (major_radius + minor_radius)])
-        self.end_inner = np.array([np.cos(end_rad) * (major_radius - minor_radius),
-                                   np.sin(end_rad) * (major_radius - minor_radius)])
+        self.begin_outter = np.array([math.cos(begin_rad) * (major_radius + minor_radius),
+                                      math.sin(begin_rad) * (major_radius + minor_radius)])
+        self.begin_inner = np.array([math.cos(begin_rad) * (major_radius - minor_radius),
+                                     math.sin(begin_rad) * (major_radius - minor_radius)])
+        self.begin_dir = self.counter_clockwise * np.array([-math.sin(begin_rad), math.cos(begin_rad)])
+        self.end_outter = np.array([math.cos(end_rad) * (major_radius + minor_radius),
+                                    math.sin(end_rad) * (major_radius + minor_radius)])
+        self.end_inner = np.array([math.cos(end_rad) * (major_radius - minor_radius),
+                                   math.sin(end_rad) * (major_radius - minor_radius)])
 
         self.shapeType = [0, 1]
 
@@ -289,6 +289,10 @@ class directionalPartialAnnulus(Annulus):
         if self._is_radian_in(rad_current) and radius_in:
             return True
         return False
+
+
+        # closest_on_torus_circle=np.array([self.major_radius*math.cos(torus_rad),self.major_radius*math.sin(torus_rad),0])
+
         # return True if self.status_object_to_point(point) == "in" and self.is_rad_in(point) else False
 
     # def report_state(self):
