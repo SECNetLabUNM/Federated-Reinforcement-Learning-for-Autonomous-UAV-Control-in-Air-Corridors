@@ -252,7 +252,7 @@ class PPO(object):
                     # calculate approx_kl http://joschu.net/blog/kl-approx.html
                     old_approx_kl = (-logratio).mean()
                     approx_kl = ((ratio - 1) - logratio).mean()
-                    clipfracs += [torch.mean((ratio - 1.0).abs() > self.clip_rate, dtype=torch.float32).item()]
+                    clipfracs = clipfracs+ [torch.mean((ratio - 1.0).abs() > self.clip_rate, dtype=torch.float32).item()]
 
                 surr1 = ratio * adv
                 surr2 = torch.clamp(ratio, 1 - self.clip_rate, 1 + self.clip_rate) * adv
@@ -264,22 +264,32 @@ class PPO(object):
                 c_loss = (self.critic(s1, s2) - td_target).pow(2).mean()
                 for name, param in self.critic.named_parameters():
                     if 'weight' in name:
-                        c_loss += param.pow(2).sum() * self.l2_reg
+                        c_loss =c_loss + param.pow(2).sum() * self.l2_reg
 
                 '''updata parameters'''
                 self.actor_optimizer.zero_grad()
-                a_loss.mean().backward(retain_graph=self.share_layer_flag)
+                
                 # torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 40)
+                
+
+
+                self.critic_optimizer.zero_grad()
+
+
+                c_loss.backward(retain_graph=True)
+                
+
+
+                a_loss.mean().backward(retain_graph=False)
+                self.critic_optimizer.step()
+                self.actor_optimizer.step()
+
                 total_actor_norm_before = torch.norm(
                     torch.stack([torch.norm(p.grad.detach(), 2) for p in self.actor.parameters() if
                                  p.grad is not None]), 2)
 
                 total_actor_norm = torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 20)
-
-                self.actor_optimizer.step()
-
-                self.critic_optimizer.zero_grad()
-                c_loss.backward()
+                
                 total_critic_norm_before = torch.norm(
                     torch.stack([torch.norm(p.grad.detach(), 2) for p in self.critic.parameters() if
                                  p.grad is not None]), 2)
@@ -287,8 +297,7 @@ class PPO(object):
                 # was_clipped = total_actor_norm > 20 or total_critic_norm > 1000
                 # print(
                 #     f" Total norm before clipping: {total_actor_norm_before:.4f}, After clipping: {total_critic_norm_before:.4f}, Was clipped: {was_clipped}")
-                self.critic_optimizer.step()
-
+                
         # y_pred, y_true = vs.cpu().numpy(), td_target.cpu().numpy()
         # var_y = np.var(y_true)
         # explained_var = np.nan if var_y == 0 else 1 - np.var(y_true - y_pred) / var_y
@@ -376,7 +385,7 @@ class PPO(object):
                     adv.append(advantage)
                 adv.reverse()
                 adv = copy.deepcopy(adv[0:-1])
-                collect_adv += adv
+                collect_adv = collect_adv+ adv
                 td_target = np.array(adv) + np.array(vs.to('cpu').squeeze(1))
             for i, single_transition in enumerate(self.data[agent]):
                 transitions.append(single_transition + [[td_target[i]], adv[i]])
@@ -441,9 +450,9 @@ class PPO(object):
     def weights_track(self, global_step):
         total_sum = 0.0
         for param in self.actor.parameters():
-            total_sum += torch.sum(param)
+            total_sum = total_sum + torch.sum(param)
         self.writer.add_scalar("weights/actor_sum", total_sum, global_step)
         total_sum = 0.0
         for param in self.critic.parameters():
-            total_sum += torch.sum(param)
+            total_sum + total_sum + torch.sum(param)
         self.writer.add_scalar("weights/critic_sum", total_sum, global_step)

@@ -130,7 +130,8 @@ class FcModule(nn.Module):
         input1 = x
         x = self.fc1_1(x)
         x = self.bn1(x)
-        x = F.relu(self.fc1_2(x)) + input1
+        x = F.relu(self.fc1_2(x))
+        x = x + input1
         ##############  add-on 11/27
         # if times > 1:
         #     input2 = x

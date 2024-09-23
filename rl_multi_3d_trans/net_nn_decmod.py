@@ -23,7 +23,7 @@ class SmallSetTransformer(nn.Module):
         #encoder_layer = nn.TransformerEncoderLayer(d_model=net_width, nhead=4, dim_feedforward=512, batch_first=True)
         #self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_enc)
         
-        self.decoder_mab = MAB(net_width, net_width, net_width, num_heads=8, ln=True)
+        self.decoder_mab = MAB(net_width, net_width, net_width, num_heads=4, ln=True)
         
         # # pytorch official decoder, having bugs
         # self.decoder_layer = nn.TransformerDecoderLayer(d_model=net_width, nhead=8, activation='gelu',
@@ -52,8 +52,8 @@ class SmallSetTransformer(nn.Module):
         # ########################################
 
     def forward(self, x, state):
-        x1 = x #self.encoder(x)
-        nan_recoding(self.logger, x1, 'encoding')
+        #x1 = x #self.encoder(x)
+        nan_recoding(self.logger, x, 'encoding')
 
         #query = self.S.repeat(x.size(0), 1, 1)
 
@@ -67,11 +67,11 @@ class SmallSetTransformer(nn.Module):
         # which is now [D_net * 1 * 1]
         # Not sure if this splitting is required
         # Is it because how batches are handled during training?
-        state2 = state.unsqueeze(1)
+        state2 = state.view(state.size(0),1,state.size(1))
 
         # Add the self-state output (state) to the "database" to use as K,V 
         # Use self-state output (state) as Q
-        x7 = self.decoder_mab(state2, torch.cat([x1,state2],dim=1))
+        x7 = self.decoder_mab(state2, torch.cat([x,state2],dim=1))
         x7 = x7.view(x7.size(0), -1)
         x7 = x7 + state
         
@@ -183,7 +183,7 @@ class MergedModel(nn.Module):
     def forward(self, s1, s2=None):
         s3 = s2
         s1_p = self.tk1(s1)
-        s1_p = s1_p.squeeze(1)
+        s1_p = s1_p.view(s1_p.size(0),s1_p.size(2))
         s3_p = self.tk2(s3)
         x = self.trans(s3_p, state=s1_p)
         nan_recoding(self.logger, x, 'trans_output')

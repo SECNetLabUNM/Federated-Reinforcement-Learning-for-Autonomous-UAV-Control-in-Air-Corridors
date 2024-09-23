@@ -644,7 +644,7 @@ class parallel_env(ParallelEnv):
                     reward_from_corridor = agent.corridors[agent.enroute['current']].evaluate_action(agent)
                 if agent.status != 'Normal':
                     disaster = True
-                rewards[agent] += reward_from_corridor
+                rewards[agent] = rewards[agent] + reward_from_corridor
                 agent.instant_reward = rewards[agent]
 
         for agent in self.all_flying:

@@ -58,23 +58,23 @@ parser.add_argument('--seed', type=int, default=55, help='random seed')
 # NOTE: Code will not work if too small: When set to 512, returns the error
 # UnboundLocalError: local variable 'c_loss' referenced before assignment
 # Coming from ppo.py, line 327
-parser.add_argument('--T_horizon', type=int, default=2048, help='lenth of long trajectory')
+parser.add_argument('--T_horizon', type=int, default=16384, help='lenth of long trajectory') # 16384
 
 parser.add_argument('--distnum', type=int, default=0, help='0:Beta ; 1:GS_ms;  2: GS_m')
-parser.add_argument('--Max_train_steps', type=int, default=1e7, help='Max training steps')
+parser.add_argument('--Max_train_steps', type=int, default=3e7, help='Max training steps')
 parser.add_argument('--save_interval', type=int, default=2.5e4, help='Model saving interval, in steps.')
 parser.add_argument('--eval_interval', type=int, default=1e4, help='Model evaluating interval, in steps.')
 parser.add_argument('--gamma', type=float, default=0.99, help='Discounted Factor')
 parser.add_argument('--lambd', type=float, default=0.95, help='GAE Factor')
 parser.add_argument('--clip_rate', type=float, default=0.2, help='PPO Clip rate')
 parser.add_argument('--K_epochs', type=int, default=4, help='PPO update times')
-parser.add_argument('--net_width', type=int, default=128, help='Hidden net width')
+parser.add_argument('--net_width', type=int, default=256, help='Hidden net width')
 parser.add_argument('--activation', type=str, default='tanh', help='activation function')
 parser.add_argument('--a_lr', type=float, default=1.5e-4, help='Learning rate of actor')
 parser.add_argument('--c_lr', type=float, default=1.5e-5, help='Learning rate of critic')
 parser.add_argument('--l2_reg', type=float, default=1e-3, help='L2 regulization coefficient for Critic')
-parser.add_argument('--a_optim_batch_size', type=int, default=64, help='lenth of sliced trajectory of actor')
-parser.add_argument('--c_optim_batch_size', type=int, default=64, help='lenth of sliced trajectory of critic')
+parser.add_argument('--a_optim_batch_size', type=int, default=1024, help='lenth of sliced trajectory of actor')
+parser.add_argument('--c_optim_batch_size', type=int, default=1024, help='lenth of sliced trajectory of critic') # 1024
 parser.add_argument('--entropy_coef', type=float, default=1e-3, help='Entropy coefficient of Actor')
 parser.add_argument('--entropy_coef_decay', type=float, default=0.99, help='Decay rate of entropy_coef')
 parser.add_argument('--share_layer_flag', type=str2bool, default=True, help='Share feature extraction layers?')
@@ -86,7 +86,6 @@ parser.add_argument('--consider_boid', type=str2bool, default=False, help='Rende
 parser.add_argument('--token_query', type=str2bool, default=True, help='tokenize s1 for query')
 parser.add_argument('--trans_position', type=str2bool, default=False, help='token input with position')
 
-# NOTE: This argument doesnt seem to be used
 parser.add_argument('--num_enc', type=int, default=2, help='number of encoders')
 parser.add_argument('--num_dec', type=int, default=3, help='number of encoders')
 
@@ -126,7 +125,7 @@ opt.a_optim_batch_size *= opt.multiply_batch
 opt.c_optim_batch_size *= opt.multiply_batch
 opt.save_interval = 2.5e5
 opt.Max_train_steps = int(opt.Max_train_steps)
-
+torch.autograd.set_detect_anomaly(True)
 
 def main():
     write = opt.write  # Use SummaryWriter to record the training.

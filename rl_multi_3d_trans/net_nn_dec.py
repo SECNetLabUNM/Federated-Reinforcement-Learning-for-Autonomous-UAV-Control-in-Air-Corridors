@@ -164,7 +164,7 @@ class MergedModel(nn.Module):
         self.net_width = net_width
 
         self.eb2 = BatchNormEmbedding(output_dim=net_width)
-        self.eb1 = BatchNormEmbedding(output_dim=net_width)
+        self.eb1 = BatchNormEmbedding(output_dim=net_width) # Looks like eb1 is not used
         self.eb3 = BatchNormEmbedding(output_dim=net_width)
         self.with_position = with_position
         self.logger = logger
@@ -173,8 +173,8 @@ class MergedModel(nn.Module):
 
     def forward(self, s1, s2=None):
         # s1_p = self.eb1(s1)
-        s3 = s2[:, -4:]
-        s2 = s2[:, :-4]
+        s3 = s2[:, -4:] # The last 4 
+        s2 = s2[:, :-4] # Everything up to the last 4
 
         s2_p = self.eb2(s2)
         s3_p = self.eb3(s3)
