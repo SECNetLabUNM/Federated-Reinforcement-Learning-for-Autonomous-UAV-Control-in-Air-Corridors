@@ -1,0 +1,1729 @@
+@comment{article{yang2020energy,
+  title={Energy efficient federated learning over wireless communication networks},
+  author={Yang, Zhaohui and Chen, Mingzhe and Saad, Walid and Hong, Choong Seon and Shikh-Bahaei, Mohammad},
+  journal={IEEE Trans. Wireless Commun.},
+  year={2020},
+  publisher={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@comment{}}
+
+@comment{article{yang2020energy,
+  title={Energy efficient federated learning over wireless communication networks},
+  author={Yang, Zhaohui and Chen, Mingzhe and Saad, Walid and Hong, Choong Seon and Shikh-Bahaei, Mohammad},
+  journal={IEEE Trans. Wireless Commun.},
+  year={2020},
+  publisher={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@comment{article{yang2020energy,
+  title={Energy efficient federated learning over wireless communication networks},
+  author={Yang, Zhaohui and Chen, Mingzhe and Saad, Walid and Hong, Choong Seon and Shikh-Bahaei, Mohammad},
+  journal={IEEE Trans. Wireless Commun.},
+  year={2020},
+  publisher={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@comment{article{yang2020energy,
+  title={Energy efficient federated learning over wireless communication networks},
+  author={Yang, Zhaohui and Chen, Mingzhe and Saad, Walid and Hong, Choong Seon and Shikh-Bahaei, Mohammad},
+  journal={IEEE Trans. Wireless Commun.},
+  year={2020},
+  publisher={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@comment{inproceedings{tran2019federated,
+  title={Federated learning over wireless networks: Optimization model design and analysis},
+  author={Tran, Nguyen H and Bao, Wei and Zomaya, Albert and Nguyen, Minh NH and Hong, Choong Seon},
+  booktitle={IEEE INFOCOM 2019-IEEE Conf. on Computer Commun.},
+  pages={1387--1395},
+  year={2019},
+  organization={IEEE}
+}}
+
+@inproceedings{10.1145/3035918.3035933,
+ abstract = {We study distributed machine learning in heterogeneous environments in this work. We first conduct a systematic study of existing systems running distributed stochastic gradient descent; we find that, although these systems work well in homogeneous environments, they can suffer performance degradation, sometimes up to 10x, in heterogeneous environments where stragglers are common because their synchronization protocols cannot fit a heterogeneous setting. Our first contribution is a heterogeneity-aware algorithm that uses a constant learning rate schedule for updates before adding them to the global parameter. This allows us to suppress stragglers' harm on robust convergence. As a further improvement, our second contribution is a more sophisticated learning rate schedule that takes into consideration the delayed information of each update. We theoretically prove the valid convergence of both approaches and implement a prototype system in the production cluster of our industrial partner Tencent Inc. We validate the performance of this prototype using a range of machine-learning workloads. Our prototype is 2-12x faster than other state-of-the-art systems, such as Spark, Petuum, and TensorFlow; and our proposed algorithm takes up to 6x fewer iterations to converge.},
+ address = {New York, NY, USA},
+ author = {Jiang, Jiawei and Cui, Bin and Zhang, Ce and Yu, Lele},
+ booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+ doi = {10.1145/3035918.3035933},
+ isbn = {9781450341974},
+ keywords = {straggler, stochastic gradient descent, parameter server, machine learning, heterogeneity environment, synchronization protocol},
+ location = {Chicago, Illinois, USA},
+ numpages = {16},
+ pages = {463–478},
+ publisher = {Association for Computing Machinery},
+ series = {SIGMOD '17},
+ title = {Heterogeneity-Aware Distributed Parameter Servers},
+ url = {https://doi.org/10.1145/3035918.3035933},
+ year = {2017}
+}
+
+@inproceedings{10.1145/3423211.3425685,
+ abstract = {Federated Learning (FL) is very appealing for its privacy benefits: essentially, a global model is trained with updates computed on mobile devices while keeping the data of users local. Standard FL infrastructures are however designed to have no energy or performance impact on mobile devices, and are therefore not suitable for applications that require frequent (online) model updates, such as news recommenders.This paper presents FLeet, the first Online FL system, acting as a middleware between the Android OS and the machine learning application. FLeet combines the privacy of Standard FL with the precision of online learning thanks to two core components: (i) I-Prof, a new lightweight profiler that predicts and controls the impact of learning tasks on mobile devices, and (ii) AdaSGD, a new adaptive learning algorithm that is resilient to delayed updates.Our extensive evaluation shows that Online FL, as implemented by FLeet, can deliver a 2.3\texttimes{} quality boost compared to Standard FL, while only consuming 0.036\% of the battery per day. I-Prof can accurately control the impact of learning tasks by improving the prediction accuracy up to 3.6\texttimes{} (computation time) and up to 19\texttimes{} (energy). AdaSGD outperforms alternative FL approaches by 18.4\% in terms of convergence speed on heterogeneous data.},
+ address = {New York, NY, USA},
+ author = {Damaskinos, Georgios and Guerraoui, Rachid and Kermarrec, Anne-Marie and Nitu, Vlad and Patra, Rhicheek and Taiani, Francois},
+ booktitle = {Proceedings of the 21st International Middleware Conference},
+ doi = {10.1145/3423211.3425685},
+ isbn = {9781450381536},
+ keywords = {asynchronous gradient descent, mobile Android devices, federated learning, online learning, profiling},
+ location = {Delft, Netherlands},
+ numpages = {15},
+ pages = {163–177},
+ publisher = {Association for Computing Machinery},
+ series = {Middleware '20},
+ title = {FLeet: Online Federated Learning via Staleness Awareness and Performance Prediction},
+ url = {https://doi.org/10.1145/3423211.3425685},
+ year = {2020}
+}
+
+@inproceedings{10.1145/3474085.3475272,
+ abstract = {Transformer achieves remarkable successes in understanding 1 and 2-dimensional signals (e.g., NLP and Image Content Understanding). As a potential alternative to convolutional neural networks, it shares merits of strong interpretability, high discriminative power on hyper-scale data, and flexibility in processing varying length inputs. However, its encoders naturally contain computational intensive operations such as pair-wise self-attention, incurring heavy computational burden when being applied on the complex 3-dimensional video signals. This paper presents Token Shift Module (i.e., TokShift), a novel, zero-parameter, zero-FLOPs operator, for modeling temporal relations within each transformer encoder. Specifically, the TokShift barely temporally shifts partial [Class] token features back-and-forth across adjacent frames. Then, we densely plug the module into each encoder of a plain 2D vision transformer for learning 3D video representation. It is worth noticing that our TokShift transformer is a pure convolutional-free video transformer pilot with computational efficiency for video understanding. Experiments on standard benchmarks verify its robustness, effectiveness, and efficiency. Particularly, with input clips of 8/12 frames, the TokShift transformer achieves SOTA precision: 79.83\%/80.40\% on the Kinetics-400, 66.56\% on EGTEA-Gaze+, and 96.80\% on UCF-101 datasets, comparable or better than existing SOTA convolutional counterparts. Our code is open-sourced in: https://github.com/VideoNetworks/TokShift-Transformer.},
+ address = {New York, NY, USA},
+ author = {Zhang, Hao and Hao, Yanbin and Ngo, Chong-Wah},
+ booktitle = {Proceedings of the 29th ACM International Conference on Multimedia},
+ doi = {10.1145/3474085.3475272},
+ isbn = {9781450386517},
+ keywords = {video classification, transformer, shift, self-attention},
+ location = {Virtual Event, China},
+ numpages = {9},
+ pages = {917–925},
+ publisher = {Association for Computing Machinery},
+ series = {MM '21},
+ title = {Token Shift Transformer for Video Classification},
+ url = {https://doi.org/10.1145/3474085.3475272},
+ year = {2021}
+}
+
+@inproceedings{7473672,
+ author = {Al-Aubidy, Kasim M. and Derbas, Ahmad M. and Al-Mutairi, Abdullah W.},
+ booktitle = {2016 13th International Multi-Conference on Systems, Signals   Devices (SSD)},
+ doi = {10.1109/SSD.2016.7473672},
+ number = {},
+ pages = {416-423},
+ title = {Real-time patient health monitoring and alarming using wireless-sensor-network},
+ volume = {},
+ year = {2016}
+}
+
+@inproceedings{7991382,
+ author = {Tony, Lima Agnel and Ghose, Debasish and Chakravarthy, Animesh},
+ booktitle = {2017 International Conference on Unmanned Aircraft Systems (ICUAS)},
+ doi = {10.1109/ICUAS.2017.7991382},
+ number = {},
+ pages = {1483-1492},
+ title = {Avoidance maps: A new concept in UAV collision avoidance},
+ volume = {},
+ year = {2017}
+}
+
+@inproceedings{8000018,
+ author = {Pandey, Purnendu Shekhar},
+ booktitle = {2017 17th International Conference on Computational Science and Its Applications (ICCSA)},
+ doi = {10.1109/ICCSA.2017.8000018},
+ number = {},
+ pages = {1-5},
+ title = {Machine Learning and IoT for prediction and detection of stress},
+ volume = {},
+ year = {2017}
+}
+
+@article{8663615,
+ author = {Zeng, Yong and Xu, Jie and Zhang, Rui},
+ doi = {10.1109/TWC.2019.2902559},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {4},
+ pages = {2329-2345},
+ title = {Energy Minimization for Wireless Communication With Rotary-Wing UAV},
+ volume = {18},
+ year = {2019}
+}
+
+@article{8675180,
+ author = {Liu, Yi and Yang, Chao and Jiang, Li and Xie, Shengli and Zhang, Yan},
+ doi = {10.1109/MNET.2019.1800254},
+ journal = {IEEE Network},
+ number = {2},
+ pages = {111-117},
+ title = {Intelligent Edge Computing for IoT-Based Energy Management in Smart Cities},
+ volume = {33},
+ year = {2019}
+}
+
+@article{8682048,
+ author = {Shakhatreh, Hazim and Sawalmeh, Ahmad H. and Al-Fuqaha, Ala and Dou, Zuochao and Almaita, Eyad and Khalil, Issa and Othman, Noor Shamsiah and Khreishah, Abdallah and Guizani, Mohsen},
+ doi = {10.1109/ACCESS.2019.2909530},
+ journal = {IEEE Access},
+ number = {},
+ pages = {48572-48634},
+ title = {Unmanned Aerial Vehicles (UAVs): A Survey on Civil Applications and Key Research Challenges},
+ volume = {7},
+ year = {2019}
+}
+
+@article{8706532,
+ author = {Shahini, Ali and Ansari, Nirwan},
+ doi = {10.1109/JIOT.2019.2914947},
+ journal = {IEEE Internet Things J.},
+ number = {4},
+ pages = {7183-7191},
+ title = {{NOMA} Aided Narrowband {IoT} for Machine Type Communications With User Clustering},
+ volume = {6},
+ year = {2019}
+}
+
+@article{8742658,
+ author = {Shakeri, Reza and Al-Garadi, Mohammed Ali and Badawy, Ahmed and Mohamed, Amr and Khattab, Tamer and Al-Ali, Abdulla Khalid and Harras, Khaled A. and Guizani, Mohsen},
+ doi = {10.1109/COMST.2019.2924143},
+ journal = {IEEE Communications Surveys and Tutorials},
+ number = {4},
+ pages = {3340-3385},
+ title = {Design Challenges of Multi-UAV Systems in Cyber-Physical Applications: A Comprehensive Survey and Future Directions},
+ volume = {21},
+ year = {2019}
+}
+
+@article{8851249,
+ author = {Yang, Howard H. and Liu, Zuozhu and Quek, Tony Q. S. and Poor, H. Vincent},
+ doi = {10.1109/TCOMM.2019.2944169},
+ journal = {IEEE Trans. Commun.},
+ number = {1},
+ pages = {317-333},
+ title = {Scheduling Policies for Federated Learning in Wireless Networks},
+ volume = {68},
+ year = {2020}
+}
+
+@inproceedings{8968560,
+ author = {Huegle, Maria and Kalweit, Gabriel and Mirchevska, Branka and Werling, Moritz and Boedecker, Joschka},
+ booktitle = {2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+ doi = {10.1109/IROS40897.2019.8968560},
+ number = {},
+ pages = {7566-7573},
+ title = {Dynamic Input for Deep Reinforcement Learning in Autonomous Driving},
+ volume = {},
+ year = {2019}
+}
+
+@article{9014530,
+ author = {Amiri, Mohammad Mohammadi and Gündüz, Deniz},
+ doi = {10.1109/TWC.2020.2974748},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {5},
+ pages = {3546-3557},
+ title = {Federated Learning Over Wireless Fading Channels},
+ volume = {19},
+ year = {2020}
+}
+
+@article{9108245,
+ author = {Yasin, Jawad N. and Mohamed, Sherif A. S. and Haghbayan, Mohammad-Hashem and Heikkonen, Jukka and Tenhunen, Hannu and Plosila, Juha},
+ doi = {10.1109/ACCESS.2020.3000064},
+ journal = {IEEE Access},
+ number = {},
+ pages = {105139-105155},
+ title = {Unmanned Aerial Vehicles (UAVs): Collision Avoidance Systems and Approaches},
+ volume = {8},
+ year = {2020}
+}
+
+@inproceedings{9149138,
+ author = {Shi, Wenqi and Zhou, Sheng and Niu, Zhisheng},
+ booktitle = {ICC 2020 - 2020 IEEE International Conference on Communications (ICC)},
+ doi = {10.1109/ICC40277.2020.9149138},
+ number = {},
+ pages = {1-6},
+ title = {Device Scheduling with Fast Convergence for Wireless Federated Learning},
+ volume = {},
+ year = {2020}
+}
+
+@article{9169921,
+ author = {Shiri, Hamid and Park, Jihong and Bennis, Mehdi},
+ doi = {10.1109/TCOMM.2020.3017281},
+ journal = {IEEE Transactions on Communications},
+ number = {11},
+ pages = {6840-6857},
+ title = {Communication-Efficient Massive UAV Online Path Control: Federated Learning Meets Mean-Field Game Theory},
+ volume = {68},
+ year = {2020}
+}
+
+@article{9210812,
+ author = {Chen, Mingzhe and Yang, Zhaohui and Saad, Walid and Yin, Changchuan and Poor, H. Vincent and Cui, Shuguang},
+ doi = {10.1109/TWC.2020.3024629},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {1},
+ pages = {269-283},
+ title = {A Joint Learning and Communications Framework for Federated Learning Over Wireless Networks},
+ volume = {20},
+ year = {2021}
+}
+
+@article{9237168,
+ author = {Xu, Jie and Wang, Heqiang},
+ doi = {10.1109/TWC.2020.3031503},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {2},
+ pages = {1188-1200},
+ title = {Client Selection and Bandwidth Allocation in Wireless Federated Learning Networks: A Long-Term Perspective},
+ volume = {20},
+ year = {2021}
+}
+
+@article{9292468,
+ author = {Chen, Mingzhe and Poor, H. Vincent and Saad, Walid and Cui, Shuguang},
+ doi = {10.1109/TWC.2020.3042530},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {4},
+ pages = {2457-2471},
+ title = {Convergence Time Optimization for Federated Learning Over Wireless Networks},
+ volume = {20},
+ year = {2021}
+}
+
+@article{9392296,
+ author = {Wang, Xin and Chen, Yudong and Zhu, Wenwu},
+ doi = {10.1109/TPAMI.2021.3069908},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ number = {9},
+ pages = {4555-4576},
+ title = {A Survey on Curriculum Learning},
+ volume = {44},
+ year = {2022}
+}
+
+@article{9509751,
+ author = {Yu, Liangkun and Albelaihi, Rana and Sun, Xiang and Ansari, Nirwan and Devetsikiotis, Michael},
+ doi = {10.1109/JIOT.2021.3103715},
+ journal = {IEEE Internet of Things Journal},
+ number = {},
+ pages = {1-1},
+ title = {Jointly Optimizing Client Selection and Resource Management in Wireless Federated Learning for Internet of Things},
+ volume = {},
+ year = {2021}
+}
+
+@inproceedings{9636301,
+ author = {Kim, Heecheol and Ohmura, Yoshiyuki and Kuniyoshi, Yasuo},
+ booktitle = {2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+ doi = {10.1109/IROS51168.2021.9636301},
+ keywords = {Neural networks;Computer architecture;Grasping;Transformers;Robot sensing systems;Manipulators;Task analysis;Imitation Learning;Dual Arm Manipulation;Deep Learning in Grasping and Manipulation},
+ number = {},
+ pages = {8965-8972},
+ title = {Transformer-based deep imitation learning for dual-arm robot manipulation},
+ volume = {},
+ year = {2021}
+}
+
+@inproceedings{9636344,
+ author = {Hsu, Christopher D. and Jeong, Heejin and Pappas, George J. and Chaudhari, Pratik},
+ booktitle = {2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+ doi = {10.1109/IROS51168.2021.9636344},
+ keywords = {Training;Technological innovation;Target tracking;Uncertainty;Scalability;Decentralized control;Reinforcement learning},
+ number = {},
+ pages = {4785-4791},
+ title = {Scalable Reinforcement Learning Policies for Multi-Agent Control},
+ volume = {},
+ year = {2021}
+}
+
+@article{9681233,
+ author = {Qin, Zengyi and Sun, Dawei and Fan, Chuchu},
+ doi = {10.1109/LRA.2022.3142743},
+ journal = {IEEE Robotics and Automation Letters},
+ keywords = {Safety;Dynamical systems;Control systems;Task analysis;Training;Costs;Aerospace electronics;Robust/adaptive control;robot safety},
+ number = {2},
+ pages = {1928-1935},
+ title = {Sablas: Learning Safe Control for Black-Box Dynamical Systems},
+ volume = {7},
+ year = {2022}
+}
+
+@article{9716741,
+ author = {Han, Kai and Wang, Yunhe and Chen, Hanting and Chen, Xinghao and Guo, Jianyuan and Liu, Zhenhua and Tang, Yehui and Xiao, An and Xu, Chunjing and Xu, Yixing and Yang, Zhaohui and Zhang, Yiman and Tao, Dacheng},
+ doi = {10.1109/TPAMI.2022.3152247},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ keywords = {Transformers;Task analysis;Encoding;Computer vision;Computational modeling;Visualization;Object detection;Computer vision;high-level vision;low-level vision;self-attention;transformer;video},
+ number = {1},
+ pages = {87-110},
+ title = {A Survey on Vision Transformer},
+ volume = {45},
+ year = {2023}
+}
+
+@misc{Albaseer:2022:DPS,
+ author = {Albaseer, Abdullatif and Abdallah, Mohamed and Al-Fuqaha, Ala and others},
+ publisher = {techrxiv},
+ title = {Data-Driven Participant Selection and Bandwidth Allocation for Heterogeneous Federated Edge Learning},
+ year = {2022}
+}
+
+@article{amiria2021convergence,
+ author = {Amiri, Mohammad Mohammadi and Gündüz, Deniz and Kulkarni, Sanjeev R. and Poor, H. Vincent},
+ doi = {10.1109/TWC.2021.3052681},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {6},
+ pages = {3643-3658},
+ title = {Convergence of Update Aware Device Scheduling for Federated Learning at the Wireless Edge},
+ volume = {20},
+ year = {2021}
+}
+
+@article{Ansari:2018:MEC,
+ author = {Nirwan ANSARI and Xiang SUN},
+ doi = {10.1587/transcom.2017NRI0001},
+ journal = {IEICE Transactions on Communications},
+ number = {3},
+ pages = {604-619},
+ title = {Mobile Edge Computing Empowers Internet of Things},
+ volume = {E101.B},
+ year = {2018}
+}
+
+@book{axler1997linear,
+ author = {Axler, Sheldon},
+ publisher = {Springer Science \& Business Media},
+ title = {Linear algebra done right},
+ year = {1997}
+}
+
+@inproceedings{balakrishnan2018smart,
+ author = {Balakrishnan, Sumathi and Vasudavan, Hemalata and Murugesan, Raja Kumar},
+ booktitle = {Proceedings of the 6th International Conference on Information Technology: IoT and Smart City},
+ pages = {120--127},
+ title = {Smart home technologies: A preliminary review},
+ year = {2018}
+}
+
+@article{barzilai1988two,
+ author = {Barzilai, Jonathan and Borwein, Jonathan M},
+ journal = {IMA journal of numerical analysis},
+ number = {1},
+ pages = {141--148},
+ publisher = {Oxford University Press},
+ title = {Two-point step size gradient methods},
+ volume = {8},
+ year = {1988}
+}
+
+@article{bolic2021sesar,
+ author = {Boli{\'c}, Tatjana and Ravenhill, Paul},
+ journal = {Engineering},
+ number = {4},
+ pages = {448--451},
+ publisher = {Elsevier},
+ title = {SESAR: The past, present, and future of European air traffic management research},
+ volume = {7},
+ year = {2021}
+}
+
+@misc{bonawitz2019federated,
+ archiveprefix = {arXiv},
+ author = {Keith Bonawitz and Hubert Eichner and Wolfgang Grieskamp and Dzmitry Huba and Alex Ingerman and Vladimir Ivanov and Chloe Kiddon and Jakub Konečný and Stefano Mazzocchi and H. Brendan McMahan and Timon Van Overveldt and David Petrou and Daniel Ramage and Jason Roselander},
+ eprint = {1902.01046},
+ primaryclass = {cs.LG},
+ title = {Towards Federated Learning at Scale: System Design},
+ year = {2019}
+}
+
+@incollection{borgwardt1988probabilistic,
+ author = {Borgwardt, Karl Heinx},
+ booktitle = {DGOR/NSOR},
+ pages = {564--575},
+ publisher = {Springer},
+ title = {Probabilistic analysis of the simplex method},
+ year = {1988}
+}
+
+@article{carrell2005fundamentals,
+ author = {Carrell, James B},
+ journal = {The University of British Columbia},
+ title = {Fundamentals of linear algebra},
+ year = {2005}
+}
+
+@article{carrivick2019fluvial,
+ author = {Carrivick, Jonathan L and Smith, Mark W},
+ journal = {Wiley Interdisciplinary Reviews: Water},
+ number = {1},
+ pages = {e1328},
+ publisher = {Wiley Online Library},
+ title = {Fluvial and aquatic applications of Structure from Motion photogrammetry and unmanned aerial vehicle/drone technology},
+ volume = {6},
+ year = {2019}
+}
+
+@article{chai2020fedat,
+ author = {Chai, Zheng and Chen, Yujing and Zhao, Liang and Cheng, Yue and Rangwala, Huzefa},
+ journal = {ArXivorg},
+ title = {Fedat: A communication-efficient federated learning method with asynchronous tiers under non-iid data},
+ year = {2020}
+}
+
+@inproceedings{chai2020tifl,
+ author = {Chai, Zheng and Ali, Ahsan and Zawad, Syed and Truex, Stacey and Anwar, Ali and Baracaldo, Nathalie and Zhou, Yi and Ludwig, Heiko and Yan, Feng and Cheng, Yue},
+ booktitle = {Proceedings of the 29th International Symposium on High-Performance Parallel and Distributed Computing},
+ pages = {125--136},
+ title = {Tifl: A tier-based federated learning system},
+ year = {2020}
+}
+
+@inproceedings{chakrabarty2019real,
+ author = {Chakrabarty, Anjan and Stepanyan, Vahram and Krishnakumar, Kalmanje S and Ippolito, Corey A},
+ booktitle = {AIAA Scitech 2019 Forum},
+ pages = {0958},
+ title = {Real-time path planning for multi-copters flying in UTM-TCL4},
+ year = {2019}
+}
+
+@article{chandrakasan1992low,
+ author = {Chandrakasan, Anantha P and Sheng, Samuel and Brodersen, Robert W},
+ journal = {IEICE Trans. Electron.},
+ number = {4},
+ pages = {371--382},
+ publisher = {The Institute of Electronics, Information and Communication Engineers},
+ title = {Low-power CMOS digital design},
+ volume = {75},
+ year = {1992}
+}
+
+@inproceedings{chen2020asynchronous,
+ author = {Chen, Yujing and Ning, Yue and Slawski, Martin and Rangwala, Huzefa},
+ booktitle = {2020 IEEE International Conference on Big Data (Big Data)},
+ organization = {IEEE},
+ pages = {15--24},
+ title = {Asynchronous online federated learning for edge devices with non-iid data},
+ year = {2020}
+}
+
+@article{chen2020joint,
+ author = {Chen, Mingzhe and Yang, Zhaohui and Saad, Walid and Yin, Changchuan and Poor, H. Vincent and Cui, Shuguang},
+ doi = {10.1109/TWC.2020.3024629},
+ journal = {IEEE Trans. Wireless Commun.},
+ number = {1},
+ pages = {269-283},
+ title = {A Joint Learning and Communications Framework for Federated Learning Over Wireless Networks},
+ volume = {20},
+ year = {2021}
+}
+
+@inproceedings{Damaskinos:2020:Fleet,
+ address = {New York, NY, USA},
+ author = {Damaskinos, Georgios and Guerraoui, Rachid and Kermarrec, Anne-Marie and Nitu, Vlad and Patra, Rhicheek and Taiani, Francois},
+ booktitle = {Proceedings of the 21st International Middleware Conference},
+ doi = {10.1145/3423211.3425685},
+ isbn = {9781450381536},
+ location = {Delft, Netherlands},
+ numpages = {15},
+ pages = {163–177},
+ publisher = {Association for Computing Machinery},
+ series = {Middleware '20},
+ title = {FLeet: Online Federated Learning via Staleness Awareness and Performance Prediction},
+ url = {https://doi.org/10.1145/3423211.3425685},
+ year = {2020}
+}
+
+@article{deadline,
+ author = {Zhai, Shaolei and Jin, Xin and Wei, Ling and Luo, Hongxuan and Cao, Min},
+ doi = {10.1109/ACCESS.2021.3050172},
+ journal = {IEEE Access},
+ number = {},
+ pages = {10400-10412},
+ title = {Dynamic Federated Learning for {GMEC} With Time-Varying Wireless Link},
+ volume = {9},
+ year = {2021}
+}
+
+@article{DENIZ2024100157,
+ abstract = {Advanced Air Mobility (AAM) has emerged as a pioneering concept designed to optimize the efficacy and ecological sustainability of air transportation. Its core objective is to provide highly automated air transportation services for passengers or cargo, operating at low altitudes within urban, suburban, and rural regions. AAM seeks to enhance the efficiency and environmental viability of the aviation sector by revolutionizing the way air travel is conducted. In a complex aviation environment, traffic management and control are essential technologies for safe and effective AAM operations. One of the most difficult obstacles in the envisioned AAM systems is vehicle coordination at merging points and intersections. The escalating demand for air mobility services, particularly within urban areas, poses significant complexities to the execution of such missions. In this study, we propose a novel multi-agent reinforcement learning (MARL) approach to efficiently manage high-density AAM operations in structured airspace. Our approach provides effective guidance to AAM vehicles, ensuring conflict avoidance, mitigating traffic congestion, reducing travel time, and maintaining safe separation. Specifically, intelligent learning-based algorithms are developed to provide speed guidance for each AAM vehicle, ensuring secure merging into air corridors and safe passage through intersections. To validate the effectiveness of our proposed model, we conduct training and evaluation using BlueSky, an open-source air traffic control simulation environment. Through the simulation of thousands of aircraft and the integration of real-world data, our study demonstrates the promising potential of MARL in enabling safe and efficient AAM operations. The simulation results validate the efficacy of our approach and its ability to achieve the desired outcomes.},
+ author = {Sabrullah Deniz and Yufei Wu and Yang Shi and Zhenbo Wang},
+ doi = {https://doi.org/10.1016/j.geits.2024.100157},
+ issn = {2773-1537},
+ journal = {Green Energy and Intelligent Transportation},
+ keywords = {Advanced Air Mobility (AAM), Urban Air Mobility (UAM), Air Traffic Control (ATC), Multi-Agent Reinforcement Learning (MARL)},
+ pages = {100157},
+ title = {A Reinforcement Learning Approach to Vehicle Coordination for Structured Advanced Air Mobility},
+ url = {https://www.sciencedirect.com/science/article/pii/S2773153724000094},
+ year = {2024}
+}
+
+@article{DHANVIJAY2019113,
+ abstract = {Internet of Things (IoT) on the Wireless Body Area Network (WBAN) for healthcare applications is an operative scenario for IoT devices that has gained attention from vast research fields in recent years. The IoT connects all subjects and the healthcare system seamlessly. This paper describes the WBAN based IoT healthcare system and reviews the state-of-the-art of the network architecture topology and applications in the IoT based healthcare solutions. Moreover, this paper analyzes the security and the privacy features consisting of privacy, authentication, energy, power, resource management, Quality of Services and the real-time wireless health monitoring that are quite problematic in many IoT healthcare architectures. Because, system architecture is not well-defined, data restriction and its integrity preservation is still a challenge. At present 90% of the information available is acquired in the recent two years. This survey mainly aims at analyzing healthcare purpose which is based on digital healthcare system. Further, it reports many IoT and the e-healthcare policies and systems that decide how to ease all bearable development. Thus, the overall system provides large possibilities for future research based on IoT healthcare system. Finally, research gaps are reviewed and the possible future aspects have been discussed.},
+ author = {Mrinai M. Dhanvijay and Shailaja C. Patil},
+ doi = {https://doi.org/10.1016/j.comnet.2019.03.006},
+ issn = {1389-1286},
+ journal = {Computer Networks},
+ keywords = {IoT, WBAN, Healthcare system, Body sensor},
+ pages = {113-131},
+ title = {Internet of Things: A survey of enabling technologies in healthcare and its applications},
+ url = {https://www.sciencedirect.com/science/article/pii/S1389128619302695},
+ volume = {153},
+ year = {2019}
+}
+
+@inproceedings{energy,
+ author = {Wang, Sihua and Chen, Mingzhe and Saad, Walid and Yin, Changchuan},
+ booktitle = {ICC 2020 - 2020 IEEE International Conference on Communications (ICC)},
+ doi = {10.1109/ICC40277.2020.9148625},
+ number = {},
+ pages = {1-6},
+ title = {Federated Learning for Energy-Efficient Task Computing in Wireless Networks},
+ volume = {},
+ year = {2020}
+}
+
+@inproceedings{energy1,
+ author = {Hu, Youqiang and Huang, Hejiao and Yu, Nuo},
+ booktitle = {2020 Intl. Conf. Wireless Commun. Signal Process},
+ doi = {10.1109/WCSP49889.2020.9299815},
+ number = {},
+ pages = {286-291},
+ title = {Device Scheduling for Energy-Efficient Federated Learning over Wireless Network Based on {TDMA} Mode},
+ volume = {},
+ year = {2020}
+}
+
+@article{FedMCCS,
+ author = {Abdulrahman, Sawsan and Tout, Hanine and Mourad, Azzam and Talhi, Chamseddine},
+ doi = {10.1109/JIOT.2020.3028742},
+ journal = {IEEE Internet of Things Journal},
+ number = {6},
+ pages = {4723-4735},
+ title = {FedMCCS: Multicriteria Client Selection Model for Optimal IoT Federated Learning},
+ volume = {8},
+ year = {2021}
+}
+
+@inproceedings{feyzmahdavian2014delayed,
+ author = {Feyzmahdavian, Hamid Reza and Aytekin, Arda and Johansson, Mikael},
+ booktitle = {2014 IEEE International Workshop on Machine Learning for Signal Processing (MLSP)},
+ organization = {IEEE},
+ pages = {1--6},
+ title = {A delayed proximal gradient method with linear convergence rate},
+ year = {2014}
+}
+
+@article{FL_app_health_care,
+ author = {Theodora S. Brisimi and Ruidi Chen and Theofanie Mela and Alex Olshevsky and Ioannis Ch. Paschalidis and Wei Shi},
+ doi = {https://doi.org/10.1016/j.ijmedinf.2018.01.007},
+ issn = {1386-5056},
+ journal = {International J. Med. Informat.},
+ pages = {59-67},
+ title = {Federated learning of predictive models from federated Electronic Health Records},
+ volume = {112},
+ year = {2018}
+}
+
+@article{FL_app_in_edge,
+ author = {X. {Wang} and Y. {Han} and C. {Wang} and Q. {Zhao} and X. {Chen} and M. {Chen}},
+ doi = {10.1109/MNET.2019.1800286},
+ journal = {IEEE Netw.},
+ number = {5},
+ pages = {156-165},
+ title = {In-Edge AI: Intelligentizing Mobile Edge Computing, Caching and Communication by Federated Learning},
+ volume = {33},
+ year = {2019}
+}
+
+@inproceedings{FL_iot_applica,
+ author = {T. {Yu} and T. {Li} and Y. {Sun} and S. {Nanda} and V. {Smith} and V. {Sekar} and S. {Seshan}},
+ booktitle = {2020 IEEE/ACM Fifth International Conference on Internet-of-Things Design and Implementation (IoTDI)},
+ doi = {10.1109/IoTDI49375.2020.00017},
+ number = {},
+ pages = {104-115},
+ title = {Learning Context-Aware Policies from Multiple Smart Homes via Federated Multi-Task Learning},
+ volume = {},
+ year = {2020}
+}
+
+@misc{gipson_2021,
+ author = {Gipson, Lillian},
+ journal = {NASA},
+ month = {Jun},
+ publisher = {NASA},
+ title = {NASA explores "smart" data for Autonomous World},
+ url = {https://www.nasa.gov/aeroresearch/nasa-explores-smart-data-for-autonomous-world},
+ year = {2021}
+}
+
+@article{goddard2017eu,
+ author = {Goddard, Michelle},
+ journal = {International Journal of Market Research},
+ number = {6},
+ pages = {703--705},
+ publisher = {SAGE Publications Sage UK: London, England},
+ title = {The EU General Data Protection Regulation (GDPR): European regulation that has a global impact},
+ volume = {59},
+ year = {2017}
+}
+
+@book{goodfellow2016deep,
+ author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron and Bengio, Yoshua},
+ number = {2},
+ publisher = {MIT press Cambridge},
+ title = {Deep learning},
+ volume = {1},
+ year = {2016}
+}
+
+@article{Granjal:2015:SIoT,
+ author = {Granjal, Jorge and Monteiro, Edmundo and Sá Silva, Jorge},
+ doi = {10.1109/COMST.2015.2388550},
+ journal = {IEEE Commun. Surveys Tuts.},
+ number = {3},
+ pages = {1294-1312},
+ title = {Security for the {Internet of Things}: A Survey of Existing Protocols and Open Research Issues},
+ volume = {17},
+ year = {2015}
+}
+
+@article{gu2020privacy,
+ author = {Gu, Bin and Xu, An and Huo, Zhouyuan and Deng, Cheng and Huang, Heng},
+ journal = {arXiv preprint arXiv:2008.06233},
+ title = {Privacy-preserving asynchronous federated learning algorithms for multi-party vertically collaborative learning},
+ year = {2020}
+}
+
+@inproceedings{hao2020time,
+ author = {Hao, Jiangshan and Zhao, Yanchao and Zhang, Jiale},
+ booktitle = {2020 IEEE 26th International Conference on Parallel and Distributed Systems (ICPADS)},
+ organization = {IEEE},
+ pages = {156--163},
+ title = {Time efficient federated learning with semi-asynchronous communication},
+ year = {2020}
+}
+
+@article{hard2018federated,
+ author = {Hard, Andrew and Rao, Kanishka and Mathews, Rajiv and Ramaswamy, Swaroop and Beaufays, Fran{\c{c}}oise and Augenstein, Sean and Eichner, Hubert and Kiddon, Chlo{\'e} and Ramage, Daniel},
+ journal = {arXiv preprint arXiv:1811.03604},
+ title = {Federated learning for mobile keyboard prediction},
+ year = {2018}
+}
+
+@article{heterogeneous,
+ author = {Hosseinalipour, Seyyedali and Brinton, Christopher G. and Aggarwal, Vaneet and Dai, Huaiyu and Chiang, Mung},
+ doi = {10.1109/MCOM.001.2000410},
+ journal = {IEEE Communications Magazine},
+ number = {12},
+ pages = {41-47},
+ title = {From Federated to Fog Learning: Distributed Machine Learning over Heterogeneous Wireless Networks},
+ volume = {58},
+ year = {2020}
+}
+
+@misc{https://doi.org/10.48550/arxiv.2207.03530,
+ author = {Bettini, Matteo and Kortvelesy, Ryan and Blumenkamp, Jan and Prorok, Amanda},
+ copyright = {arXiv.org perpetual, non-exclusive license},
+ doi = {10.48550/ARXIV.2207.03530},
+ keywords = {Robotics (cs.RO), Machine Learning (cs.LG), Multiagent Systems (cs.MA), FOS: Computer and information sciences, FOS: Computer and information sciences},
+ publisher = {arXiv},
+ title = {VMAS: A Vectorized Multi-Agent Simulator for Collective Robot Learning},
+ url = {https://arxiv.org/abs/2207.03530},
+ year = {2022}
+}
+
+@inproceedings{imteaj2020fedar,
+ author = {Imteaj, Ahmed and Amini, M Hadi},
+ booktitle = {2020 19th IEEE International Conference on Machine Learning and Applications (ICMLA)},
+ organization = {IEEE},
+ pages = {1153--1160},
+ title = {Fedar: Activity and resource-aware federated learning model for distributed mobile robots},
+ year = {2020}
+}
+
+@article{info12110442,
+ abstract = {A recurrent neural network (RNN) combines variable-length input data with a hidden state that depends on previous time steps to generate output data. RNNs have been widely used in time-series data analysis, and various RNN algorithms have been proposed, such as the standard RNN, long short-term memory (LSTM), and gated recurrent units (GRUs). In particular, it has been experimentally proven that LSTM and GRU have higher validation accuracy and prediction accuracy than the standard RNN. The learning ability is a measure of the effectiveness of gradient of error information that would be backpropagated. This study provided a theoretical and experimental basis for the result that LSTM and GRU have more efficient gradient descent than the standard RNN by analyzing and experimenting the gradient vanishing of the standard RNN, LSTM, and GRU. As a result, LSTM and GRU are robust to the degradation of gradient descent even when LSTM and GRU learn long-range input data, which means that the learning ability of LSTM and GRU is greater than standard RNN when learning long-range input data. Therefore, LSTM and GRU have higher validation accuracy and prediction accuracy than the standard RNN. In addition, it was verified whether the experimental results of river-level prediction models, solar power generation prediction models, and speech signal models using the standard RNN, LSTM, and GRUs are consistent with the analysis results of gradient vanishing.},
+ article-number = {442},
+ author = {Noh, Seol-Hyun},
+ doi = {10.3390/info12110442},
+ issn = {2078-2489},
+ journal = {Information},
+ number = {11},
+ title = {Analysis of Gradient Vanishing of RNNs and Performance Comparison},
+ url = {https://www.mdpi.com/2078-2489/12/11/442},
+ volume = {12},
+ year = {2021}
+}
+
+@inproceedings{irawan2017heart,
+ author = {Irawan, Hendry Cahya and Juhana, Tutun},
+ booktitle = {2017 11th international conference on telecommunication systems services and applications (TSSA)},
+ organization = {IEEE},
+ pages = {1--4},
+ title = {Heart rate monitoring using IoT wearable for ambulatory patient},
+ year = {2017}
+}
+
+@article{JMLR:v21:20-081,
+ author = {Tabish Rashid and Mikayel Samvelyan and Christian Schroeder de Witt and Gregory Farquhar and Jakob Foerster and Shimon Whiteson},
+ journal = {Journal of Machine Learning Research},
+ number = {178},
+ pages = {1--51},
+ title = {Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning},
+ url = {http://jmlr.org/papers/v21/20-081.html},
+ volume = {21},
+ year = {2020}
+}
+
+@phdthesis{johnson1973near,
+ author = {Johnson, David S},
+ school = {Massachusetts Institute of Technology},
+ title = {Near-optimal bin packing algorithms},
+ year = {1973}
+}
+
+@article{konevcny2017semi,
+ author = {Kone{\v{c}}n{\`y}, Jakub and Qu, Zheng and Richt{\'a}rik, Peter},
+ journal = {optimization Methods and Software},
+ number = {5},
+ pages = {993--1005},
+ publisher = {Taylor \& Francis},
+ title = {Semi-stochastic coordinate descent},
+ volume = {32},
+ year = {2017}
+}
+
+@article{krizhevsky2009learning,
+ author = {Krizhevsky, Alex and Hinton, Geoffrey and others},
+ publisher = {Citeseer},
+ title = {Learning multiple layers of features from tiny images},
+ year = {2009}
+}
+
+@misc{Krizhevsky2009LearningML,
+ author = {Alex Krizhevsky},
+ title = {Learning Multiple Layers of Features from Tiny Images},
+ year = {2009}
+}
+
+@article{krizhevsky2012imagenet,
+ author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+ journal = {Advances in neural information processing systems},
+ title = {Imagenet classification with deep convolutional neural networks},
+ volume = {25},
+ year = {2012}
+}
+
+@article{kwak2015dream,
+ author = {Kwak, Jeongho and Kim, Yeongjin and Lee, Joohyun and Chong, Song},
+ journal = {IEEE J. Sel. Areas Commun.},
+ number = {12},
+ pages = {2510--2523},
+ publisher = {IEEE},
+ title = {DREAM: Dynamic resource and task allocation for energy minimization in mobile cloud systems},
+ volume = {33},
+ year = {2015}
+}
+
+@article{le2019improving,
+ author = {Le, Tuong and Vo, Minh Thanh and Vo, Bay and Hwang, Eenjun and Rho, Seungmin and Baik, Sung Wook},
+ journal = {Applied Sciences},
+ number = {20},
+ pages = {4237},
+ publisher = {Multidisciplinary Digital Publishing Institute},
+ title = {Improving electric energy consumption prediction using CNN and Bi-LSTM},
+ volume = {9},
+ year = {2019}
+}
+
+@article{lecun1998gradient,
+ author = {LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+ journal = {Proceedings of the IEEE},
+ number = {11},
+ pages = {2278--2324},
+ publisher = {Ieee},
+ title = {Gradient-based learning applied to document recognition},
+ volume = {86},
+ year = {1998}
+}
+
+@article{li2018federated,
+ author = {Li, Tian and Sahu, Anit Kumar and Zaheer, Manzil and Sanjabi, Maziar and Talwalkar, Ameet and Smith, Virginia},
+ journal = {arXiv preprint arXiv:1812.06127},
+ title = {Federated optimization in heterogeneous networks},
+ year = {2018}
+}
+
+@article{li2020federated,
+ author = {Li, Tian and Sahu, Anit Kumar and Talwalkar, Ameet and Smith, Virginia},
+ journal = {IEEE Signal Process. Mag.},
+ number = {3},
+ pages = {50--60},
+ publisher = {IEEE},
+ title = {Federated learning: Challenges, methods, and future directions},
+ volume = {37},
+ year = {2020}
+}
+
+@inproceedings{li2020survey,
+ author = {Li, Li and Fan, Yuxi and Lin, Kuo-Yi},
+ booktitle = {2020 IEEE 16th International Conference on Control \& Automation (ICCA)},
+ organization = {IEEE},
+ pages = {791--796},
+ title = {A survey on federated learning},
+ year = {2020}
+}
+
+@article{li2021federated,
+ author = {Li, Qinbin and Diao, Yiqun and Chen, Quan and He, Bingsheng},
+ journal = {arXiv preprint arXiv:2102.02079},
+ title = {Federated learning on non-iid data silos: An experimental study},
+ year = {2021}
+}
+
+@inproceedings{lian2018asynchronous,
+ author = {Lian, Xiangru and Zhang, Wei and Zhang, Ce and Liu, Ji},
+ booktitle = {International Conference on Machine Learning},
+ organization = {PMLR},
+ pages = {3043--3052},
+ title = {Asynchronous decentralized parallel stochastic gradient descent},
+ year = {2018}
+}
+
+@article{lin2021relay,
+ author = {Lin, Zehong and Liu, Hang and Zhang, Ying-Jun Angela},
+ journal = {arXiv preprint arXiv:2107.09518},
+ title = {Relay-Assisted Cooperative Federated Learning},
+ year = {2021}
+}
+
+@article{lu2019differentially,
+ author = {Lu, Yunlong and Huang, Xiaohong and Dai, Yueyue and Maharjan, Sabita and Zhang, Yan},
+ journal = {IEEE Transactions on Industrial Informatics},
+ number = {3},
+ pages = {2134--2143},
+ publisher = {IEEE},
+ title = {Differentially private asynchronous federated learning for mobile edge computing in urban informatics},
+ volume = {16},
+ year = {2019}
+}
+
+@article{ma2021fedsa,
+ author = {Ma, Qianpiao and Xu, Yang and Xu, Hongli and Jiang, Zhida and Huang, Liusheng and Huang, He},
+ journal = {IEEE Journal on Selected Areas in Communications},
+ publisher = {IEEE},
+ title = {FedSA: A Semi-Asynchronous Federated Learning Mechanism in Heterogeneous Edge Computing},
+ year = {2021}
+}
+
+@article{MAL-083,
+ author = {Peter Kairouz and H. Brendan McMahan and Brendan Avent and Aurélien Bellet and Mehdi Bennis and Arjun Nitin Bhagoji and Kallista Bonawitz and Zachary Charles and Graham Cormode and Rachel Cummings and Rafael G. L. D’Oliveira and Hubert Eichner and Salim El Rouayheb and David Evans and Josh Gardner and Zachary Garrett and Adrià Gascón and Badih Ghazi and Phillip B. Gibbons and Marco Gruteser and Zaid Harchaoui and Chaoyang He and Lie He and Zhouyuan Huo and Ben Hutchinson and Justin Hsu and Martin Jaggi and Tara Javidi and Gauri Joshi and Mikhail Khodak and Jakub Konecný and Aleksandra Korolova and Farinaz Koushanfar and Sanmi Koyejo and Tancrède Lepoint and Yang Liu and Prateek Mittal and Mehryar Mohri and Richard Nock and Ayfer Özgür and Rasmus Pagh and Hang Qi and Daniel Ramage and Ramesh Raskar and Mariana Raykova and Dawn Song and Weikang Song and Sebastian U. Stich and Ziteng Sun and Ananda Theertha Suresh and Florian Tramèr and Praneeth Vepakomma and Jianyu Wang and Li Xiong and Zheng Xu and Qiang Yang and Felix X. Yu and Han Yu and Sen Zhao},
+ doi = {10.1561/2200000083},
+ issn = {1935-8237},
+ journal = {Foundations and Trends® in Machine Learning},
+ number = {1–2},
+ pages = {1-210},
+ title = {Advances and Open Problems in Federated Learning},
+ url = {http://dx.doi.org/10.1561/2200000083},
+ volume = {14},
+ year = {2021}
+}
+
+@article{marzetta2010noncooperative,
+ author = {Marzetta, Thomas L},
+ journal = {IEEE Trans. Wireless Commun.},
+ number = {11},
+ pages = {3590--3600},
+ publisher = {IEEE},
+ title = {Noncooperative cellular wireless with unlimited numbers of base station antennas},
+ volume = {9},
+ year = {2010}
+}
+
+@inproceedings{mcmahan2017communication,
+ author = {Brendan McMahan and Eider Moore and Daniel Ramage and Seth Hampson and Blaise Aguera y Arcas},
+ booktitle = {Proc. 20th Intl. Conf. Artif. Intell. Stat.},
+ month = {20--22 Apr},
+ pages = {1273--1282},
+ publisher = {PMLR},
+ title = {{Communication-Efficient Learning of Deep Networks from Decentralized Data}},
+ year = {2017}
+}
+
+@article{miettinen2010energy,
+ author = {Miettinen, Antti P and Nurminen, Jukka K},
+ journal = {HotCloud},
+ number = {4},
+ pages = {19},
+ title = {Energy efficiency of mobile clients in cloud computing.},
+ volume = {10},
+ year = {2010}
+}
+
+@inproceedings{MLSYS2020_38af8613,
+ author = {Li, Tian and Sahu, Anit Kumar and Zaheer, Manzil and Sanjabi, Maziar and Talwalkar, Ameet and Smith, Virginia},
+ booktitle = {Proceedings of Machine Learning and Systems},
+ editor = {I. Dhillon and D. Papailiopoulos and V. Sze},
+ pages = {429--450},
+ title = {Federated Optimization in Heterogeneous Networks},
+ url = {https://proceedings.mlsys.org/paper/2020/file/38af86134b65d0f10fe33d30dd76442e-Paper.pdf},
+ volume = {2},
+ year = {2020}
+}
+
+@techreport{Moore90efficientmemory-based,
+ author = {Andrew William Moore},
+ institution = {University of Cambridge},
+ title = {Efficient Memory-based Learning for Robot Control},
+ year = {1990}
+}
+
+@inproceedings{naik2017cyber,
+ author = {Naik, Swapnil and Maral, Vikas},
+ booktitle = {2017 2nd IEEE International Conference on Recent Trends in Electronics, Information \& Communication Technology (RTEICT)},
+ organization = {IEEE},
+ pages = {764--767},
+ title = {Cyber security—IoT},
+ year = {2017}
+}
+
+@misc{nasa2015nasa,
+ author = {NASA, U},
+ title = {NASA UTM 2015: The next era of aviation},
+ year = {2015}
+}
+
+@article{Nguyen:2021:FLI,
+ author = {Nguyen, Dinh C. and Ding, Ming and Pathirana, Pubudu N. and Seneviratne, Aruna and Li, Jun and Poor, H. Vincent},
+ doi = {10.1109/COMST.2021.3075439},
+ journal = {IEEE Commun. Surveys Tuts.},
+ note = {early access, doi:10.1109/COMST.2021.3075439},
+ title = {Federated Learning for {Internet of Things}: A Comprehensive Survey},
+ year = {}
+}
+
+@inproceedings{NIPS2017_3f5ee243,
+ author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, \L ukasz and Polosukhin, Illia},
+ booktitle = {Advances in Neural Information Processing Systems},
+ pages = {},
+ title = {Attention is All you Need},
+ volume = {30},
+ year = {2017}
+}
+
+@inproceedings{NIPS2017_f22e4747,
+ author = {Zaheer, Manzil and Kottur, Satwik and Ravanbakhsh, Siamak and Poczos, Barnabas and Salakhutdinov, Russ R and Smola, Alexander J},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {I. Guyon and U. Von Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Deep Sets},
+ url = {https://proceedings.neurips.cc/paper/2017/file/f22e4747da1aa27e363d86d40ff442fe-Paper.pdf},
+ volume = {30},
+ year = {2017}
+}
+
+@inproceedings{Nishio,
+ author = {T. {Nishio} and R. {Yonetani}},
+ booktitle = {2019 IEEE International Conference on Communications (ICC)},
+ doi = {10.1109/ICC.2019.8761315},
+ number = {},
+ pages = {1-7},
+ title = {Client Selection for Federated Learning with Heterogeneous Resources in Mobile Edge},
+ volume = {},
+ year = {2019}
+}
+
+@book{nocedal2006numerical,
+ author = {Nocedal, Jorge and Wright, Stephen},
+ publisher = {Springer Science \& Business Media},
+ title = {Numerical optimization},
+ year = {2006}
+}
+
+@article{pateriya2012analysis,
+ author = {Pateriya, Pushpendra Kumar and Kumar, Srijith S},
+ journal = {International Journal of Computer Applications},
+ number = {23},
+ publisher = {International Journal of Computer Applications, 244 5 th Avenue,\# 1526, New~…},
+ title = {Analysis on Man in the Middle Attack on SSL},
+ volume = {45},
+ year = {2012}
+}
+
+@article{petrescu2017history,
+ author = {Petrescu, Relly Victoria and Aversa, Raffaella and Akash, Bilal and Bucinell, Ronald and Corchado, Juan and Apicella, Antonio and Petrescu, Florian Ion},
+ journal = {Journal of Aircraft and Spacecraft Technology},
+ number = {1},
+ title = {History of aviation-a short review},
+ volume = {1},
+ year = {2017}
+}
+
+@inproceedings{pmlr-v162-cai22c,
+ abstract = {We study reinforcement learning for partially observed Markov decision processes (POMDPs) with infinite observation and state spaces, which remains less investigated theoretically. To this end, we make the first attempt at bridging partial observability and function approximation for a class of POMDPs with a linear structure. In detail, we propose a reinforcement learning algorithm (Optimistic Exploration via Adversarial Integral Equation or OP-TENET) that attains an $\epsilon$-optimal policy within $O(1/\epsilon^2)$ episodes. In particular, the sample complexity scales polynomially in the intrinsic dimension of the linear structure and is independent of the size of the observation and state spaces. The sample efficiency of OP-TENET is enabled by a sequence of ingredients: (i) a Bellman operator with finite memory, which represents the value function in a recursive manner, (ii) the identification and estimation of such an operator via an adversarial integral equation, which features a smoothed discriminator tailored to the linear structure, and (iii) the exploration of the observation and state spaces via optimism, which is based on quantifying the uncertainty in the adversarial integral equation.},
+ author = {Cai, Qi and Yang, Zhuoran and Wang, Zhaoran},
+ booktitle = {Proceedings of the 39th International Conference on Machine Learning},
+ editor = {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+ month = {17--23 Jul},
+ pages = {2485--2522},
+ pdf = {https://proceedings.mlr.press/v162/cai22c/cai22c.pdf},
+ publisher = {PMLR},
+ series = {Proceedings of Machine Learning Research},
+ title = {Reinforcement Learning from Partial Observation: Linear Function Approximation with Provable Sample Efficiency},
+ url = {https://proceedings.mlr.press/v162/cai22c.html},
+ volume = {162},
+ year = {2022}
+}
+
+@inproceedings{pmlr-v164-batra22a,
+ abstract = {We demonstrate the possibility of learning drone swarm controllers that are zero-shot transferable to real quadrotors via large-scale multi-agent end-to-end reinforcement learning. We train policies parameterized by neural networks that are capable of controlling individual drones in a swarm in a fully decentralized manner. Our policies, trained in simulated environments with realistic quadrotor physics, demonstrate advanced flocking behaviors, perform aggressive maneuvers in tight formations while avoiding collisions with each other, break and re-establish formations to avoid collisions with moving obstacles, and efficiently coordinate in pursuit-evasion tasks. We analyze, in simulation, how different model architectures and parameters of the training regime influence the final performance of neural swarms. We demonstrate the successful deployment of the model learned in simulation to highly resource-constrained physical quadrotors performing station keeping and goal swapping behaviors. Video demonstrations and source code are available at the project website https://sites.google.com/view/swarm-rl.},
+ author = {Batra, Sumeet and Huang, Zhehui and Petrenko, Aleksei and Kumar, Tushar and Molchanov, Artem and Sukhatme, Gaurav S.},
+ booktitle = {Proceedings of the 5th Conference on Robot Learning},
+ editor = {Faust, Aleksandra and Hsu, David and Neumann, Gerhard},
+ month = {08--11 Nov},
+ pages = {576--586},
+ pdf = {https://proceedings.mlr.press/v164/batra22a/batra22a.pdf},
+ publisher = {PMLR},
+ series = {Proceedings of Machine Learning Research},
+ title = {Decentralized Control of Quadrotor Swarms with End-to-end Deep Reinforcement Learning},
+ url = {https://proceedings.mlr.press/v164/batra22a.html},
+ volume = {164},
+ year = {2022}
+}
+
+@inproceedings{pmlr-v28-muandet13,
+ abstract = {This paper investigates domain generalization: How to take knowledge acquired from an arbitrary number of related domains and apply it to previously unseen domains? We propose Domain-Invariant Component Analysis (DICA), a kernel-based optimization algorithm that learns an invariant transformation by minimizing the dissimilarity across domains, whilst preserving the functional relationship between input and output variables. A learning-theoretic analysis shows that reducing dissimilarity improves the expected generalization ability of classifiers on new domains, motivating the proposed algorithm. Experimental results on synthetic and real-world datasets demonstrate that DICA successfully learns invariant features and improves classifier performance in practice.  },
+ address = {Atlanta, Georgia, USA},
+ author = {Muandet, Krikamol and Balduzzi, David and Schölkopf, Bernhard},
+ booktitle = {Proceedings of the 30th International Conference on Machine Learning},
+ editor = {Dasgupta, Sanjoy and McAllester, David},
+ month = {17--19 Jun},
+ number = {1},
+ pages = {10--18},
+ pdf = {http://proceedings.mlr.press/v28/muandet13.pdf},
+ publisher = {PMLR},
+ series = {Proceedings of Machine Learning Research},
+ title = {Domain Generalization via Invariant Feature Representation},
+ url = {https://proceedings.mlr.press/v28/muandet13.html},
+ volume = {28},
+ year = {2013}
+}
+
+@inproceedings{pmlr-v54-mcmahan17a,
+ abstract = {Modern mobile devices have access to a wealth of data suitable for learning models, which in turn can greatly improve the user experience on the device. For example, language models can improve speech recognition and text entry, and image models can automatically select good photos. However, this rich data is often privacy sensitive, large in quantity, or both, which may preclude logging to the data center and training there using conventional approaches. We advocate an alternative that leaves the training data distributed on the mobile devices, and learns a shared model by aggregating locally-computed updates. We term this decentralized approach Federated Learning. We present a practical method for the federated learning of deep networks based on iterative model averaging, and conduct an extensive empirical evaluation, considering five different model architectures and four datasets. These experiments demonstrate the approach is robust to the unbalanced and non-IID data distributions that are a defining characteristic of this setting. Communication costs are the principal constraint, and we show a reduction in required communication rounds by 10-100x as compared to synchronized stochastic gradient descent. },
+ address = {Fort Lauderdale, FL, USA},
+ author = {Brendan McMahan and Eider Moore and Daniel Ramage and Seth Hampson and Blaise Aguera y Arcas},
+ booktitle = {Proceedings of the 20th International Conference on Artificial Intelligence and Statistics},
+ editor = {Aarti Singh and Jerry Zhu},
+ month = {20--22 Apr},
+ pages = {1273--1282},
+ pdf = {http://proceedings.mlr.press/v54/mcmahan17a/mcmahan17a.pdf},
+ publisher = {PMLR},
+ series = {Proceedings of Machine Learning Research},
+ title = {{Communication-Efficient Learning of Deep Networks from Decentralized Data}},
+ url = {http://proceedings.mlr.press/v54/mcmahan17a.html},
+ volume = {54},
+ year = {2017}
+}
+
+@inproceedings{pmlr-v78-florensa17a,
+ author = {Florensa, Carlos and Held, David and Wulfmeier, Markus and Zhang, Michael and Abbeel, Pieter},
+ booktitle = {Proceedings of the 1st Annual Conference on Robot Learning},
+ editor = {Levine, Sergey and Vanhoucke, Vincent and Goldberg, Ken},
+ month = {13--15 Nov},
+ pages = {482--495},
+ title = {Reverse Curriculum Generation for Reinforcement Learning},
+ volume = {78},
+ year = {2017}
+}
+
+@inproceedings{pmlr-v97-lee19d,
+ abstract = {Many machine learning tasks such as multiple instance learning, 3D shape recognition, and few-shot image classification are defined on sets of instances. Since solutions to such problems do not depend on the order of elements of the set, models used to address them should be permutation invariant. We present an attention-based neural network module, the Set Transformer, specifically designed to model interactions among elements in the input set. The model consists of an encoder and a decoder, both of which rely on attention mechanisms. In an effort to reduce computational complexity, we introduce an attention scheme inspired by inducing point methods from sparse Gaussian process literature. It reduces the computation time of self-attention from quadratic to linear in the number of elements in the set. We show that our model is theoretically attractive and we evaluate it on a range of tasks, demonstrating the state-of-the-art performance compared to recent methods for set-structured data.},
+ author = {Lee, Juho and Lee, Yoonho and Kim, Jungtaek and Kosiorek, Adam and Choi, Seungjin and Teh, Yee Whye},
+ booktitle = {Proceedings of the 36th International Conference on Machine Learning},
+ editor = {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+ month = {09--15 Jun},
+ pages = {3744--3753},
+ pdf = {http://proceedings.mlr.press/v97/lee19d/lee19d.pdf},
+ publisher = {PMLR},
+ series = {Proceedings of Machine Learning Research},
+ title = {Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks},
+ url = {https://proceedings.mlr.press/v97/lee19d.html},
+ volume = {97},
+ year = {2019}
+}
+
+@misc{qin2021learning,
+ archiveprefix = {arXiv},
+ author = {Zengyi Qin and Kaiqing Zhang and Yuxiao Chen and Jingkai Chen and Chuchu Fan},
+ eprint = {2101.05436},
+ primaryclass = {cs.MA},
+ title = {Learning Safe Multi-Agent Control with Decentralized Neural Barrier Certificates},
+ year = {2021}
+}
+
+@inproceedings{Rana:2021:APS,
+ author = {Albelaihi, Rana and Sun, Xiang and Craft, Warren D. and Yu, Liangkun and Wang, Chonggang},
+ booktitle = {2021 IEEE Global Communications Conference (GLOBECOM)},
+ doi = {10.1109/GLOBECOM46510.2021.9685077},
+ number = {},
+ pages = {1-6},
+ title = {Adaptive Participant Selection in Heterogeneous Federated Learning},
+ volume = {},
+ year = {2021}
+}
+
+@article{reisizadeh2020straggler,
+ author = {Reisizadeh, Amirhossein and Tziotis, Isidoros and Hassani, Hamed and Mokhtari, Aryan and Pedarsani, Ramtin},
+ journal = {arXiv preprint arXiv:2012.14453},
+ title = {Straggler-resilient federated learning: Leveraging the interplay between statistical accuracy and system heterogeneity},
+ year = {2020}
+}
+
+@article{s22051911,
+ abstract = {Computing devices that can recognize various human activities or movements can be used to assist people in healthcare, sports, or human–robot interaction. Readily available data for this purpose can be obtained from the accelerometer and the gyroscope built into everyday smartphones. Effective classification of real-time activity data is, therefore, actively pursued using various machine learning methods. In this study, the transformer model, a deep learning neural network model developed primarily for the natural language processing and vision tasks, was adapted for a time-series analysis of motion signals. The self-attention mechanism inherent in the transformer, which expresses individual dependencies between signal values within a time series, can match the performance of state-of-the-art convolutional neural networks with long short-term memory. The performance of the proposed adapted transformer method was tested on the largest available public dataset of smartphone motion sensor data covering a wide range of activities, and obtained an average identification accuracy of 99.2% as compared with 89.67% achieved on the same data by a conventional machine learning method. The results suggest the expected future relevance of the transformer model for human activity recognition.},
+ article-number = {1911},
+ author = {Dirgová Luptáková, Iveta and Kubovčík, Martin and Pospíchal, Jiří},
+ doi = {10.3390/s22051911},
+ issn = {1424-8220},
+ journal = {Sensors},
+ number = {5},
+ pubmedid = {35271058},
+ title = {Wearable Sensor-Based Human Activity Recognition with Transformer Model},
+ url = {https://www.mdpi.com/1424-8220/22/5/1911},
+ volume = {22},
+ year = {2022}
+}
+
+@misc{schulman2017proximal,
+ archiveprefix = {arXiv},
+ author = {John Schulman and Filip Wolski and Prafulla Dhariwal and Alec Radford and Oleg Klimov},
+ eprint = {1707.06347},
+ primaryclass = {cs.LG},
+ title = {Proximal Policy Optimization Algorithms},
+ year = {2017}
+}
+
+@article{schulman2018highdimensional,
+ author = {Schulman, John and Moritz, Philipp and Levine, Sergey and Jordan, Michael and Abbeel, Pieter},
+ journal = {arXiv preprint arXiv:1506.02438},
+ title = {High-dimensional continuous control using generalized advantage estimation},
+ year = {2015}
+}
+
+@article{Schulman:2017:PPO,
+ author = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+ journal = {arXiv preprint arXiv:1707.06347},
+ title = {Proximal policy optimization algorithms},
+ year = {2017}
+}
+
+@inproceedings{shi2020device,
+ author = {Shi, Wenqi and Zhou, Sheng and Niu, Zhisheng},
+ booktitle = {2020 IEEE International Conference on Communications (ICC)},
+ pages = {1--6},
+ title = {Device scheduling with fast convergence for wireless federated learning},
+ year = {2020}
+}
+
+@article{shorten2019survey,
+ author = {Shorten, Connor and Khoshgoftaar, Taghi M},
+ journal = {Journal of Big Data},
+ number = {1},
+ pages = {1--48},
+ publisher = {Springer},
+ title = {A survey on image data augmentation for deep learning},
+ volume = {6},
+ year = {2019}
+}
+
+@inproceedings{Silver:2014:DDPG,
+ address = {Bejing, China},
+ author = {Silver, David and Lever, Guy and Heess, Nicolas and Degris, Thomas and Wierstra, Daan and Riedmiller, Martin},
+ booktitle = {Proceedings of the 31st International Conference on Machine Learning},
+ editor = {Xing, Eric P. and Jebara, Tony},
+ month = {22--24 Jun},
+ number = {1},
+ pages = {387--395},
+ publisher = {PMLR},
+ series = {Proceedings of Machine Learning Research},
+ title = {Deterministic Policy Gradient Algorithms},
+ volume = {32},
+ year = {2014}
+}
+
+@inproceedings{SmartPC,
+ author = {Li, Li and Xiong, Haoyi and Guo, Zhishan and Wang, Jun and Xu, Cheng-Zhong},
+ booktitle = {2019 IEEE Real-Time Systems Symposium (RTSS)},
+ doi = {10.1109/RTSS46320.2019.00043},
+ number = {},
+ pages = {406-418},
+ title = {{SmartPC}: Hierarchical Pace Control in Real-Time Federated Learning System},
+ volume = {},
+ year = {2019}
+}
+
+@misc{smith2018federated,
+ archiveprefix = {arXiv},
+ author = {Virginia Smith and Chao-Kai Chiang and Maziar Sanjabi and Ameet Talwalkar},
+ eprint = {1705.10467},
+ primaryclass = {cs.LG},
+ title = {Federated Multi-Task Learning},
+ year = {2018}
+}
+
+@article{spielman2004smoothed,
+ author = {Spielman, Daniel A and Teng, Shang-Hua},
+ journal = {Journal of the ACM (JACM)},
+ number = {3},
+ pages = {385--463},
+ publisher = {ACM New York, NY, USA},
+ title = {Smoothed analysis of algorithms: Why the simplex algorithm usually takes polynomial time},
+ volume = {51},
+ year = {2004}
+}
+
+@misc{statista,
+ journal = {Statista},
+ title = {The Statistics Portal},
+ url = {https://www.statista.com/}
+}
+
+@article{stripelis2021semi,
+ author = {Stripelis, Dimitris and Ambite, Jos{\'e} Luis},
+ journal = {arXiv preprint arXiv:2102.02849},
+ title = {Semi-synchronous federated learning},
+ year = {2021}
+}
+
+@article{su13137421,
+ abstract = {Advanced air mobility (AAM) is a broad concept enabling consumers access to on-demand air mobility, cargo and package delivery, healthcare applications, and emergency services through an integrated and connected multimodal transportation network. However, a number of challenges could impact AAM’s growth potential, such as autonomous flight, the availability of take-off and landing infrastructure (i.e., vertiports), integration into airspace and other modes of transportation, and competition with shared automated vehicles. This article discusses the results of a demand analysis examining the market potential of two potential AAM passenger markets—airport shuttles and air taxis. The airport shuttle market envisions AAM passenger service to, from, or between airports along fixed routes. The air taxi market envisions a more mature and scaled service that provides on-demand point-to-point passenger services throughout urban areas. Using a multi-method approach consisting of AAM travel demand modeling, Monte Carlo simulations, and constraint analysis, this study estimates that the air taxi and airport shuttle markets could capture a 0.5% mode share. The analysis concludes that AAM could replace non-discretionary trips greater than 45 min; however, demand for discretionary trips would be limited by consumer willingness to pay. This study concludes that AAM passenger services could have a daily demand of 82,000 passengers served by approximately 4000 four- to five-seat aircraft in the U.S., under the most conservative scenario, representing an annual market valuation of 2.5 billion USD.},
+ article-number = {7421},
+ author = {Goyal, Rohit and Reiche, Colleen and Fernando, Chris and Cohen, Adam},
+ doi = {10.3390/su13137421},
+ issn = {2071-1050},
+ journal = {Sustainability},
+ number = {13},
+ title = {Advanced Air Mobility: Demand Analysis and Market Potential of the Airport Shuttle and Air Taxi Markets},
+ url = {https://www.mdpi.com/2071-1050/13/13/7421},
+ volume = {13},
+ year = {2021}
+}
+
+@article{sun2020adaptive,
+ author = {Sun, Haijian and Ma, Xiang and Hu, Rose Qingyang},
+ journal = {IEEE Transactions on Vehicular Technology},
+ number = {12},
+ pages = {16325--16329},
+ publisher = {IEEE},
+ title = {Adaptive federated learning with gradient compression in uplink noma},
+ volume = {69},
+ year = {2020}
+}
+
+@article{Sun:2016:EdgeIoT,
+ author = {Sun, Xiang and Ansari, Nirwan},
+ doi = {10.1109/MCOM.2016.1600492CM},
+ journal = {IEEE Commun. Mag.},
+ number = {12},
+ pages = {22-29},
+ title = {{EdgeIoT}: Mobile Edge Computing for the {Internet of Things}},
+ volume = {54},
+ year = {2016}
+}
+
+@article{Sun:2017:LAW,
+ author = {Sun, Xiang and Ansari, Nirwan},
+ doi = {10.1109/LCOMM.2017.2690678},
+ journal = {IEEE Commun. Lett.},
+ number = {7},
+ pages = {1481-1484},
+ title = {Latency Aware Workload Offloading in the Cloudlet Network},
+ volume = {21},
+ year = {2017}
+}
+
+@article{Sun:2019:AML,
+ author = {Sun, Yaohua and Peng, Mugen and Zhou, Yangcheng and Huang, Yuzhe and Mao, Shiwen},
+ doi = {10.1109/COMST.2019.2924243},
+ journal = {IEEE Commun. Surveys Tuts.},
+ number = {4},
+ pages = {3072-3108},
+ title = {Application of Machine Learning in Wireless Networks: Key Techniques and Open Issues},
+ volume = {21},
+ year = {2019}
+}
+
+@book{sutton2018reinforcement,
+ author = {Sutton, Richard S and Barto, Andrew G},
+ publisher = {MIT press},
+ title = {Reinforcement learning: An introduction},
+ year = {2018}
+}
+
+@inproceedings{tran2019federated,
+ author = {Tran, Nguyen H. and Bao, Wei and Zomaya, Albert and Nguyen, Minh N. H. and Hong, Choong Seon},
+ booktitle = {IEEE INFOCOM 2019 - IEEE Conference on Computer Communications},
+ doi = {10.1109/INFOCOM.2019.8737464},
+ number = {},
+ pages = {1387-1395},
+ title = {Federated Learning over Wireless Networks: Optimization Model Design and Analysis},
+ volume = {},
+ year = {2019}
+}
+
+@inproceedings{tseng2014application,
+ author = {Tseng, Shih-Pang and Li, Bo-Rong and Pan, Jun-Long and Lin, Chia-Ju},
+ booktitle = {2014 International Conference on Orange Technologies},
+ organization = {IEEE},
+ pages = {65--68},
+ title = {An application of Internet of things with motion sensing on smart house},
+ year = {2014}
+}
+
+@book{UAMConOps2020,
+ author = {Federal Aviation Authority},
+ publisher = {Department of Transportation},
+ title = {Urban Air Mobility: Concept of operations},
+ year = {2020}
+}
+
+@article{upadhyay2017smooth,
+ author = {Upadhyay, Saurabh and Ratnoo, Ashwini},
+ journal = {Journal of Guidance, Control, and Dynamics},
+ number = {7},
+ pages = {1596--1612},
+ publisher = {American Institute of Aeronautics and Astronautics},
+ title = {Smooth path planning for unmanned aerial vehicles with airspace restrictions},
+ volume = {40},
+ year = {2017}
+}
+
+@article{vepakomma2018split,
+ author = {Vepakomma, Praneeth and Gupta, Otkrist and Swedish, Tristan and Raskar, Ramesh},
+ journal = {arXiv preprint arXiv:1812.00564},
+ title = {Split learning for health: Distributed deep learning without sharing raw patient data},
+ year = {2018}
+}
+
+@inproceedings{Vu:2021:SEM,
+ author = {Vu, Tung T. and Ngo, Duy T. and Ngo, Hien Quoc and Dao, Minh N. and Tran, Nguyen H. and Middleton, Richard H.},
+ booktitle = {ICC 2021 - IEEE International Conference on Communications},
+ doi = {10.1109/ICC42927.2021.9500541},
+ number = {},
+ pages = {1-6},
+ title = {Straggler Effect Mitigation for Federated Learning in Cell-Free Massive MIMO},
+ volume = {},
+ year = {2021}
+}
+
+@inproceedings{vyamajala2018real,
+ author = {Vyamajala, Shriya and Mohd, Tauheed Khan and Javaid, Ahmad},
+ booktitle = {2018 IEEE International Conference on Electro/Information Technology (EIT)},
+ organization = {IEEE},
+ pages = {0198--0202},
+ title = {A real-world implementation of sql injection attack using open source tools for enhanced cybersecurity learning},
+ year = {2018}
+}
+
+@article{wang2018cooperative,
+ author = {Wang, Jianyu and Joshi, Gauri},
+ journal = {arXiv preprint arXiv:1808.07576},
+ title = {Cooperative SGD: A unified framework for the design and analysis of communication-efficient SGD algorithms},
+ year = {2018}
+}
+
+@article{wang2019adaptive,
+ author = {Wang, Shiqiang and Tuor, Tiffany and Salonidis, Theodoros and Leung, Kin K and Makaya, Christian and He, Ting and Chan, Kevin},
+ journal = {IEEE J. Sel. Areas Commun.},
+ number = {6},
+ pages = {1205--1221},
+ publisher = {IEEE},
+ title = {Adaptive federated learning in resource constrained edge computing systems},
+ volume = {37},
+ year = {2019}
+}
+
+@article{wang2019edge,
+ author = {Wang, Xiaofei and Han, Yiwen and Wang, Chenyang and Zhao, Qiyang and Chen, Xu and Chen, Min},
+ journal = {IEEE Netw.},
+ number = {5},
+ pages = {156--165},
+ publisher = {IEEE},
+ title = {In-edge ai: Intelligentizing mobile edge computing, caching and communication by federated learning},
+ volume = {33},
+ year = {2019}
+}
+
+@article{wang2020federated,
+ author = {Wang, Sihua and Chen, Mingzhe and Yin, Changchuan and Saad, Walid and Hong, Choong Seon and Cui, Shuguang and Poor, H. Vincent},
+ journal = {IEEE Internet of Things Journal},
+ note = {early access, 10.1109/JIOT.2021.3080078},
+ title = {Federated Learning for Task and Resource Allocation in Wireless High Altitude Balloon Networks},
+ year = {2021}
+}
+
+@inproceedings{wang2021addressing,
+ author = {Wang, Lixu and Xu, Shichao and Wang, Xiao and Zhu, Qi},
+ booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+ number = {11},
+ pages = {10165--10173},
+ title = {Addressing class imbalance in federated learning},
+ volume = {35},
+ year = {2021}
+}
+
+@inproceedings{Wei:2016:SAD,
+ author = {Zhang, Wei and Gupta, Suyog and Lian, Xiangru and Liu, Ji},
+ booktitle = {Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence},
+ isbn = {9781577357704},
+ location = {New York, New York, USA},
+ numpages = {7},
+ pages = {2350–2356},
+ publisher = {AAAI Press},
+ series = {IJCAI'16},
+ title = {Staleness-Aware Async-SGD for Distributed Deep Learning},
+ year = {2016}
+}
+
+@article{wu2020safa,
+ author = {Wu, Wentai and He, Ligang and Lin, Weiwei and Mao, Rui and Maple, Carsten and Jarvis, Stephen},
+ journal = {IEEE Transactions on Computers},
+ number = {5},
+ pages = {655--668},
+ publisher = {IEEE},
+ title = {SAFA: A semi-asynchronous protocol for fast federated learning with low overhead},
+ volume = {70},
+ year = {2020}
+}
+
+@article{wu2021fedadapt,
+ author = {Wu, Di and Ullah, Rehmat and Harvey, Paul and Kilpatrick, Peter and Spence, Ivor and Varghese, Blesson},
+ journal = {arXiv preprint arXiv:2107.04271},
+ title = {Fedadapt: Adaptive offloading for iot devices in federated learning},
+ year = {2021}
+}
+
+@article{Xie:2019:AFO,
+ author = {Xie, Cong and Koyejo, Sanmi and Gupta, Indranil},
+ journal = {arXiv preprint arXiv:1903.03934},
+ title = {Asynchronous federated optimization},
+ year = {2019}
+}
+
+@article{xu2019elfish,
+ author = {Xu, Zirui and Yang, Zhao and Xiong, Jinjun and Yang, Janlei and Chen, Xiang},
+ journal = {Ratio},
+ number = {r1},
+ pages = {r2},
+ title = {Elfish: Resource-aware federated learning on heterogeneous edge devices},
+ volume = {2},
+ year = {2019}
+}
+
+@article{xu2020client,
+ author = {Xu, Jie and Wang, Heqiang},
+ journal = {arXiv preprint arXiv:2004.04314},
+ title = {Client Selection and Bandwidth Allocation in Wireless Federated Learning Networks: A Long-Term Perspective},
+ year = {2020}
+}
+
+@article{xu2021asynchronous,
+ author = {Xu, Chenhao and Qu, Youyang and Xiang, Yong and Gao, Longxiang},
+ journal = {arXiv preprint arXiv:2109.04269},
+ title = {Asynchronous federated learning on heterogeneous devices: A survey},
+ year = {2021}
+}
+
+@article{Xu:2021:CSB,
+ author = {Xu, Jie and Wang, Heqiang},
+ doi = {10.1109/TWC.2020.3031503},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {2},
+ pages = {1188-1200},
+ title = {Client Selection and Bandwidth Allocation in Wireless Federated Learning Networks: A Long-Term Perspective},
+ volume = {20},
+ year = {2021}
+}
+
+@article{yang2019scheduling,
+ author = {Yang, Howard H and Liu, Zuozhu and Quek, Tony QS and Poor, H Vincent},
+ journal = {IEEE Trans. Commun.},
+ number = {1},
+ pages = {317--333},
+ publisher = {IEEE},
+ title = {Scheduling policies for federated learning in wireless networks},
+ volume = {68},
+ year = {2019}
+}
+
+@article{yang2020delay,
+ adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+ adsurl = {https://ui.adsabs.harvard.edu/abs/2020arXiv200703462Y},
+ archiveprefix = {arXiv},
+ author = {{Yang}, Zhaohui and {Chen}, Mingzhe and {Saad}, Walid and {Hong}, Choong Seon and {Shikh-Bahaei}, Mohammad and {Poor}, H. Vincent and {Cui}, Shuguang},
+ eid = {arXiv:2007.03462},
+ eprint = {2007.03462},
+ journal = {arXiv e-prints},
+ keywords = {Electrical Engineering and Systems Science - Signal Processing, Computer Science - Machine Learning},
+ month = {July},
+ pages = {arXiv:2007.03462},
+ primaryclass = {eess.SP},
+ title = {{Delay Minimization for Federated Learning Over Wireless Communication Networks}},
+ year = {2020}
+}
+
+@article{yang2020energy,
+ author = {Yang, Zhaohui and Chen, Mingzhe and Saad, Walid and Hong, Choong Seon and Shikh-Bahaei, Mohammad},
+ doi = {10.1109/TWC.2020.3037554},
+ journal = {IEEE Transactions on Wireless Communications},
+ number = {3},
+ pages = {1935-1949},
+ title = {Energy Efficient Federated Learning Over Wireless Communication Networks},
+ volume = {20},
+ year = {2021}
+}
+
+@article{yang2020federated,
+ author = {Yang, Kai and Jiang, Tao and Shi, Yuanming and Ding, Zhi},
+ journal = {IEEE Trans. Wireless Commun.},
+ number = {3},
+ pages = {2022--2035},
+ publisher = {IEEE},
+ title = {Federated learning via over-the-air computation},
+ volume = {19},
+ year = {2020}
+}
+
+@article{yao2019qos,
+ author = {Yao, Jingjing and Ansari, Nirwan},
+ journal = {IEEE Trans. Veh. Technol.},
+ number = {7},
+ pages = {6649--6656},
+ publisher = {IEEE},
+ title = {{QoS}  -aware power control in internet of drones for data collection service},
+ volume = {68},
+ year = {2019}
+}
+
+@article{yao2020enhancing,
+ author = {Yao, Jingjing and Ansari, Nirwan},
+ journal = {IEEE Internet Things J.},
+ publisher = {IEEE},
+ title = {Enhancing Federated Learning in Fog-Aided {IoT} by {CPU} Frequency and Wireless Power Control},
+ year = {2020}
+}
+
+@article{Yaofog,
+ author = {J. {Yao} and N. {Ansari}},
+ doi = {10.1109/JIOT.2020.3022590},
+ journal = {IEEE Internet Things J.},
+ number = {5},
+ pages = {3438-3445},
+ title = {Enhancing Federated Learning in Fog-Aided {IoT} by {CPU} Frequency and Wireless Power Control},
+ volume = {8},
+ year = {2021}
+}
+
+@article{yu2021jointly,
+ author = {Yu, Liangkun and Albelaihi, Rana and Sun, Xiang and Ansari, Nirwan and Devetsikiotis, Michael},
+ doi = {10.1109/JIOT.2021.3103715},
+ journal = {IEEE Internet of Things Journal},
+ number = {6},
+ pages = {4385-4395},
+ title = {Jointly Optimizing Client Selection and Resource Management in Wireless Federated Learning for Internet of Things},
+ volume = {9},
+ year = {2022}
+}
+
+@article{Yu:2022:IDG,
+ author = {Yu, Peng and Yang, Mo and Xiong, Ao and Ding, Yahui and Li, Wenjing and Qiu, Xuesong and Meng, Luoming and Kadoch, Michel and Cheriet, Mohamed},
+ doi = {10.1109/TII.2020.3041159},
+ journal = {IEEE Transactions on Industrial Informatics},
+ number = {1},
+ pages = {520-530},
+ title = {Intelligent-Driven Green Resource Allocation for Industrial Internet of Things in 5G Heterogeneous Networks},
+ volume = {18},
+ year = {2022}
+}
+
+@article{Zhai:2021:DFL,
+ author = {S. {Zhai} and X. {Jin} and L. {Wei} and H. {Luo} and M. {Cao}},
+ doi = {10.1109/ACCESS.2021.3050172},
+ journal = {IEEE Access},
+ number = {},
+ pages = {10400-10412},
+ title = {Dynamic Federated Learning for {GMEC} With Time-Varying Wireless Link},
+ volume = {9},
+ year = {2021}
+}
+
+@article{zhang2021client,
+ author = {Zhang, Wenyu and Wang, Xiumin and Zhou, Pan and Wu, Weiwei and Zhang, Xinglin},
+ journal = {IEEE Access},
+ pages = {24462--24474},
+ publisher = {IEEE},
+ title = {Client Selection for Federated Learning With Non-IID Data in Mobile Edge Computing},
+ volume = {9},
+ year = {2021}
+}
+
+@article{Zhou_Zhang_Peng_Zhang_Li_Xiong_Zhang_2021,
+ abstractnote = {Many real-world applications require the prediction of long sequence time-series, such as electricity consumption planning. Long sequence time-series forecasting (LSTF) demands a high prediction capacity of the model, which is the ability to capture precise long-range dependency coupling between output and input efficiently. Recent studies have shown the potential of Transformer to increase the prediction capacity. However, there are several severe issues with Transformer that prevent it from being directly applicable to LSTF, including quadratic time complexity, high memory usage, and inherent limitation of the encoder-decoder architecture. To address these issues, we design an efficient transformer-based model for LSTF, named Informer, with three distinctive characteristics: (i) a ProbSparse self-attention mechanism, which achieves O(L log L) in time complexity and memory usage, and has comparable performance on sequences’ dependency alignment. (ii) the self-attention distilling highlights dominating attention by halving cascading layer input, and efficiently handles extreme long input sequences. (iii) the generative style decoder, while conceptually simple, predicts the long time-series sequences at one forward operation rather than a step-by-step way, which drastically improves the inference speed of long-sequence predictions. Extensive experiments on four large-scale datasets demonstrate that Informer significantly outperforms existing methods and provides a new solution to the LSTF problem.},
+ author = {Zhou, Haoyi and Zhang, Shanghang and Peng, Jieqi and Zhang, Shuai and Li, Jianxin and Xiong, Hui and Zhang, Wancai},
+ doi = {10.1609/aaai.v35i12.17325},
+ journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+ month = {May},
+ number = {12},
+ pages = {11106-11115},
+ title = {Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting},
+ url = {https://ojs.aaai.org/index.php/AAAI/article/view/17325},
+ volume = {35},
+ year = {2021}
+}

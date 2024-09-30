@@ -1,0 +1,4 @@
+2024-05-02 21:40:12,189 - Random Seed: 1
+2024-05-02 21:40:12,192 - Summary exists
+2024-05-02 21:40:12,192 - src: /mnt/storage/result/d2move_20240325092534_new_net/width_128epoch4_index_True_state2_cbfFalse_acc0.3_future2_shareTrue_netfc10_horizon8_batch16_enc2_dec2_spaceTrue_level20_capacity6_beta_base1.0_beta_adaptor_coefficient1.1/events.out.tfevents.1711380341.kun-System-Product-Name.3520987.0 
+dst: d2move_1714707612_0/0
