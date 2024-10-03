@@ -50,7 +50,7 @@ loadModel = True
 model_set = list(range(1))
 agents_set = list(range(5, 6))
 # level_set = [10, 11, 12, 13, 14]
-level_set = [14]
+level_set = [19]
 won_record = np.zeros([len(model_set), len(agents_set), len(level_set)])
 for i0, _ in enumerate(model_set):
 
@@ -71,9 +71,9 @@ for i0, _ in enumerate(model_set):
 
 
     ### fc10e grid release, trained with 6 agents, level 19
-    loadFolder = f"{result}d2move_20240417112207_new_net/dec_3_width_128epoch4_corindexTrue_netdec_horizon8_level19_capacity6_beta_adaptor1.1"
-    modelIndex = '19.0m'
-    net_model = 'dec'
+    loadFolder = "/home/meng/Documents/Code/HTransRL/trained_models/basic/HTransRL-T"
+    modelIndex = ''
+    net_model = 'fc10_3e'
     trained_level = 19
 
     kwargs = load_init_params(name='net_params', dir=loadFolder)
@@ -100,7 +100,7 @@ for i0, _ in enumerate(model_set):
                 '''
                 s, infos = env.reset(num_agents=num_agents,
                                      level=level,
-                                     dt=opt['dt'],
+                                     dt=1, #opt['dt'],
                                      num_corridor_in_state=opt['num_corridor_in_state'],
                                      corridor_index_awareness=opt['corridor_index_awareness'],
                                      beta_adaptor_coefficient=opt['beta_adaptor_coefficient'],
@@ -108,7 +108,7 @@ for i0, _ in enumerate(model_set):
                 current_actions = {}
                 step = 0
                 agents = env.agents
-                ani.put_data(agents={agent: agent.position for agent in env.agents},
+                ani.put_data(agents={agent: agent.position for agent in env.agents},ncfos =[],
                              corridors=env.corridors,
                              round=z)
                 while env.agents:
@@ -123,7 +123,7 @@ for i0, _ in enumerate(model_set):
                         actions = {agent: env.action_space(agent).sample() for agent in env.agents}
                     action_updated = False
                     s, rewards, terminations, truncations, infos = env.step(actions)
-                    ani.put_data(round=z, agents={agent: agent.position for agent in env.agents})
+                    ani.put_data(round=z, agents={agent: agent.position for agent in env.agents},ncfos=[])
                     # print(rewards)
 
                     for agent in env.agents:

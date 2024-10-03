@@ -18,36 +18,10 @@ max_round = 100
 def process_combination(combination):
     model_key, num_agents, level, model_ind = combination
 
-    if model_key == '1-3-1':
-        loadFolder = '/mnt/storage/result/d2move_20240308114523_new_net/epoch4_index_True_state2_cbfFalse_1111acc0.3_future2_shareTrue_netfc10_horizon8_batch16_enc2_dec2_spaceTrue_level14_capacity6_beta_base1.0_beta_adaptor_coefficient1.1'
-        modelINdex = '7.0m'
-        net_model = 'fc10'
-        trained_level = 13
-    elif model_key == '1-3-2':
-        loadFolder = '/mnt/storage/result/d2move_20240307142458_new_net/index_True_state2_cbfFalse_1111acc0.3_future2_shareTrue_netfc9_horizon8_batch16_enc2_dec2_spaceTrue_level14_capacity6_beta_base1.0_beta_adaptor_coefficient1.1'
-        modelINdex = '7.0m'
-        net_model = 'fc9'
-        trained_level = 13
-    elif model_key == '1-3-3':
-        loadFolder = '/mnt/storage/result/d2move_20240307142458_new_net/index_True_state2_cbfFalse_1111acc0.3_future2_shareTrue_netfc9_horizon8_batch16_enc2_dec2_spaceTrue_level14_capacity6_beta_base1.0_beta_adaptor_coefficient1.1'
-        modelINdex = '7.0m'
-        net_model = 'fc10'
-        trained_level = 13
-    elif model_key == '1-3-4':
-        loadFolder = '/mnt/storage/result/d2move_20240307142522_new_net/index_True_state2_cbfTrue_1111acc0.3_future2_shareTrue_netfc7_horizon8_batch16_enc2_dec2_spaceTrue_level14_capacity6_beta_base1.0_beta_adaptor_coefficient1.1'
-        modelINdex = '7.0m'
-        net_model = 'fc7'
-        trained_level = 13
-    elif model_key == '1-3-5':
-        loadFolder = '/mnt/storage/result/d2move_20240307142522_new_net/index_True_state2_cbfTrue_1111acc0.3_future2_shareTrue_netfc9_horizon8_batch16_enc2_dec2_spaceTrue_level14_capacity6_beta_base1.0_beta_adaptor_coefficient1.1'
-        modelINdex = '7.0m'
-        net_model = 'fc9'
-        trained_level = 13
-    elif model_key == '1-3-6':
-        loadFolder = '/mnt/storage/result/d2move_20240307142522_new_net/index_True_state2_cbfTrue_1111acc0.3_future2_shareTrue_netfc10_horizon8_batch16_enc2_dec2_spaceTrue_level14_capacity6_beta_base1.0_beta_adaptor_coefficient1.1'
-        modelINdex = '7.0m'
-        net_model = 'fc10'
-        trained_level = 13
+    loadFolder = '/home/meng/Documents/Code/HTransRL/trained_models/basic/HTransRL-T'
+    modelINdex = ''
+    net_model = 'fc10_3e'
+    trained_level = 13
     modelINdex = model_ind
 
     kwargs = load_init_params(name='net_params', dir=loadFolder)
@@ -131,7 +105,7 @@ def main():
         results = pool.map(process_combination, combinations)
         print(results)
 
-    with open('./plot/test_data1.json', 'w') as file:
+    with open('/home/meng/Documents/Code/HTransRL/test and visualization/plot/test_data1.json', 'w') as file:
         json.dump(results, file, indent=4)
 
     won_matrix = np.zeros([len(model_dic.keys()), len(agents_dic.keys()), len(level_dic.keys())])
