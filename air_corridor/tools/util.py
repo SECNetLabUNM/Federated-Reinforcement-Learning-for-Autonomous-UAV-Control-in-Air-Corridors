@@ -224,7 +224,7 @@ def apply_acceleration(init_velocity: np.ndarray,
     uncorrected_final_velocity = init_velocity + acc * dt
     norm_final = np.linalg.norm(uncorrected_final_velocity)
     if norm_final > velocity_max:
-        final_velocity = uncorrected_final_velocity / norm_final
+        final_velocity = velocity_max*uncorrected_final_velocity / norm_final
     else:
         final_velocity = uncorrected_final_velocity
 

@@ -3,11 +3,11 @@
 
 
 
-source /home/kun/anaconda3/bin/activate torch
+source /home/meng/miniconda3/bin/activate torch2
 
 # Current time for logging or file naming
 current_time=$(date +"%Y%m%d%H%M%S")
-desired_directory="/mnt/storage/result"
+desired_directory="/home/meng/Documents/Code/HTransRL/expfl2"
 
 # Create directory if it doesn't exist
 if [ ! -d "$desired_directory" ]; then
@@ -18,24 +18,24 @@ cd "$desired_directory"
 
 # Parameters initialization
 param1_values=(9) # num of agents
-param2_values=(8)
-param3_values=(16)
+param2_values=(1) # Mult horizon
+param3_values=(1) # Mult batch
 param4_values=('True')  # token query, work for trans only
 param5_values=('True' )  # reduce state or original state, original state is not well maintained
 #param6_values=(3 6)
-param6_values=(4.0 1.5) # visibility
-param8_values=( 19) #
+param6_values=(6.0) # visibility
+param8_values=(19) #
 param9_values=('fc10_3e') # network model
 param10_values=(True)  # whether to share layers
-param11_values=(5e-7)  # beta base
-param12_values=(1e-5)  # beta range
-param13_values=(0.1 0.075)  # num of future corridors in state, at least 1
+param11_values=(1.5e-5)  # Alr
+param12_values=(1.5e-6)  # Clr
+param13_values=(0.3)  # Turb var
 param14_values=(0.3 )  # acceleration max
-param15_values=( 128 )  # capability of corridor indexing
-param16_values=( 'False')  # rotate cylinder for simple
-param17_values=(3)  # state choice
-param18_values=( 'all' )  # state choice
-param19_values=(4)  # state choice
+param15_values=( 128 )  # Num neurons
+param16_values=( 'False')  # Partial fine tune
+param17_values=(1)  # Fed every
+param18_values=( 'all' )  # Fedkey
+param19_values=(4)  # K epoch
 max_concurrent=100
 concurrent_processes=0
 num_executions=1
@@ -71,11 +71,11 @@ for i in $(seq $num_executions); do
                       gpu_index=0 # Set default GPU indexn
 
                       # Construct experiment name
-                      exp_name="new_net:${param1}_${param2}_${param3}_${param6}_${param8}_${param9}_${param11}_${param12}_${param13}_${param16}_${param17}_${param18}_${param19}"
+                      exp_name="new_net:${param1}agents_${param6}Visibility_${param13}Turb_${param17}Fed_evry"
                       echo $PATH
                       # Run the Python script with parameters
-                      CUDA_VISIBLE_DEVICES=$gpu_index python /home/kun/PycharmProjects/air-corridor_ncfo/rl_federated_cluster/main_cluster.py \
-                          --seed 51 \
+                      CUDA_VISIBLE_DEVICES=$gpu_index python /home/meng/Documents/Code/FL-HtransL/rl_federated_cluster/main_cluster.py \
+                          --seed 33 \
                           --exp-name ${exp_name} \
                           --num_agents ${param1} \
                           --multiply_horrizion ${param2} \
@@ -90,10 +90,8 @@ for i in $(seq $num_executions); do
                           --fed_every ${param17} \
                           --fed_key  ${param18} \
                           --K_epochs ${param19} \
-                          --Max_train_steps 3e7 \
+                          --Max_train_steps 1e6 \
                           --LoadModel True \
-                          --LoadFolder '/mnt/storage/result/d2move_20240422072449_new_net/width_128epoch4_corindexTrue_netfc10_3e_horizon8_level19_capacity4_beta_adaptor1.1' \
-                          --ModelIndex 1.425e7 &
  #--current_time "$current_time" \
                       # Manage concurrent processes
                       concurrent_processes=$((concurrent_processes + 1))

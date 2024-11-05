@@ -13,7 +13,7 @@ import numpy as np
 import torch
 from torch.utils.tensorboard import SummaryWriter
 
-path_to_air_corridor = '/home/kun/PycharmProjects/air-corridor_ncfo'
+path_to_air_corridor = '/home/meng/Documents/Code/FL-HtransL/'
 sys.path.insert(0, path_to_air_corridor)
 
 # for i in sys.path:
@@ -45,7 +45,7 @@ parser.add_argument('--LoadModel', type=str2bool, default=True, help='Load pretr
 
 parser.add_argument('--ModelIndex', type=float, default=2e7, help='which model to load')
 parser.add_argument('--LoadFolder', type=str,
-                    default='/mnt/storage/result/d2move_20240325092534_new_net/width_128epoch4_index_True_state2_cbfFalse_acc0.3_future2_shareTrue_netfc10_horizon8_batch16_enc2_dec2_spaceTrue_level20_capacity6_beta_base1.0_beta_adaptor_coefficient1.1',
+                    default="/home/meng/Documents/Code/HTransRL/trained_models/tests/HTransRL-T",
                     help='Which folder to load')
 
 parser.add_argument('--complexity', type=str, default='simple', help='BWv3, BWHv3, Lch_Cv2, PV0, Humanv2, HCv2')
@@ -57,11 +57,11 @@ parser.add_argument('--video_turns', type=int, default=100, help='which model to
 
 parser.add_argument('--dt', type=float, default=1, help='Decay rate of entropy_coef')
 parser.add_argument('--reduce_space', type=str2bool, default=True, help='Share feature extraction layers?')
-parser.add_argument('--seed', type=int, default=1, help='random seed')
-parser.add_argument('--T_horizon', type=int, default=2048, help='lenth of long trajectory')
+parser.add_argument('--seed', type=int, default=33, help='random seed')
+parser.add_argument('--T_horizon', type=int, default=3600, help='lenth of long trajectory')
 parser.add_argument('--distnum', type=int, default=0, help='0:Beta ; 1:GS_ms;  2: GS_m')
-parser.add_argument('--Max_train_steps', type=float, default=3e7, help='Max training steps')
-parser.add_argument('--save_interval', type=int, default=5e5, help='Model saving interval, in steps.')
+parser.add_argument('--Max_train_steps', type=float, default=1e6, help='Max training steps')
+parser.add_argument('--save_interval', type=int, default=2.5e4, help='Model saving interval, in steps.')
 parser.add_argument('--eval_interval', type=int, default=1e4, help='Model evaluating interval, in steps.')
 parser.add_argument('--gamma', type=float, default=0.99, help='Discounted Factor')
 parser.add_argument('--lambd', type=float, default=0.95, help='GAE Factor')
@@ -72,31 +72,36 @@ parser.add_argument('--activation', type=str, default='tanh', help='activation f
 parser.add_argument('--a_lr', type=float, default=1e-5, help='Learning rate of actor')
 parser.add_argument('--c_lr', type=float, default=1e-6, help='Learning rate of critic')
 parser.add_argument('--l2_reg', type=float, default=1e-3, help='L2 regulization coefficient for Critic')
-parser.add_argument('--a_optim_batch_size', type=int, default=64, help='lenth of sliced trajectory of actor')
-parser.add_argument('--c_optim_batch_size', type=int, default=64, help='lenth of sliced trajectory of critic')
+parser.add_argument('--a_optim_batch_size', type=int, default=600, help='lenth of sliced trajectory of actor')
+parser.add_argument('--c_optim_batch_size', type=int, default=600, help='lenth of sliced trajectory of critic')
 parser.add_argument('--entropy_coef', type=float, default=1e-3, help='Entropy coefficient of Actor')
 parser.add_argument('--entropy_coef_decay', type=float, default=0.99, help='Decay rate of entropy_coef')
 parser.add_argument('--share_layer_flag', type=str2bool, default=True, help='Share feature extraction layers?')
 parser.add_argument('--multiply_horrizion', type=int, default=1, help='Share feature extraction layers?')
-parser.add_argument('--multiply_batch', type=int, default=2, help='Share feature extraction layers?')
+parser.add_argument('--multiply_batch', type=int, default=1, help='Share feature extraction layers?')
 parser.add_argument('--curriculum', type=str2bool, default=False, help='gradually increase range')
 parser.add_argument('--consider_boid', type=str2bool, default=False, help='Render or Not')
 parser.add_argument('--token_query', type=str2bool, default=True, help='tokenize s1 for query')
 parser.add_argument('--trans_position', type=str2bool, default=False, help='token input with position')
 parser.add_argument('--num_enc', type=int, default=2, help='number of encoders')
 parser.add_argument('--num_dec', type=int, default=2, help='number of encoders')
-parser.add_argument('--net_model', type=str, default='fc10', help='number of encoders')
+parser.add_argument('--net_model', type=str, default='fc10_3e', help='number of encoders')
 parser.add_argument('--liability', type=str2bool, default=True, help='number of encoders')
 parser.add_argument('--collision_free', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--beta_adaptor_coefficient', type=float, default=1.1, help='number of encoders')
 parser.add_argument('--beta_base', type=float, default=1.0, help='number of encoders')
-parser.add_argument('--level', type=int, default=13, help='Share feature extraction layers?')
+parser.add_argument('--level', type=int, default=19, help='Share feature extraction layers?')
 
 parser.add_argument('--num_corridor_in_state', type=int, default=2, help='number of encoders')
-parser.add_argument('--corridor_index_awareness', type=str, default='1111', help='indicate the corridor index')
+parser.add_argument('--corridor_index_awareness', type=str, default=[
+        1,
+        1,
+        1,
+        1
+    ], help='indicate the corridor index')
 parser.add_argument('--acceleration_max', type=float, default=0.3, help='Learning rate of actor')
 parser.add_argument('--velocity_max', type=float, default=1.5, help='Learning rate of actor')
-parser.add_argument('--base_difficulty', type=float, default=0.2, help='Learning rate of actor')
+parser.add_argument('--base_difficulty', type=float, default=1.0, help='Learning rate of actor')
 parser.add_argument('--ratio', type=float, default=0.5, help='How much percent for torus?')
 parser.add_argument('--uniform_state', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--dynamic_minor_radius', type=str2bool, default=False, help='Share feature extraction layers?')
@@ -108,14 +113,14 @@ parser.add_argument('--state_choice', type=int, default=2, help='number of encod
 parser.add_argument('--rest_awareness', type=str2bool, default=True, help='number of encoders')
 parser.add_argument('--cbf', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--with_corridor_index', type=str2bool, default=True, help='number of encoders')
-parser.add_argument('--num_agents', type=int, default=6, help='Decay rate of entropy_coef')
-parser.add_argument('--visibility', type=float, default=4, help='Learning rate of actor')
+parser.add_argument('--num_agents', type=int, default=9, help='Decay rate of entropy_coef')
+parser.add_argument('--visibility', type=float, default=6, help='Learning rate of actor')
 parser.add_argument('--fed_key', type=str, default='all', help='number of encoders')
-parser.add_argument('--fed_every', type=int, default=2, help='number of encoders')
+parser.add_argument('--fed_every', type=int, default=5, help='number of encoders')
 parser.add_argument('--current_time', type=str, default=None, help='indicate the corridor index')
-parser.add_argument('--cluster', type=int, default=3, help='number of encoders')
+parser.add_argument('--cluster', type=int, default=9, help='number of encoders')
 
-parser.add_argument('--partial_fine_tune', type=str2bool, default=True, help='number of encoders')
+parser.add_argument('--partial_fine_tune', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--turbulence_variance', type=float, default=0, help='Learning rate of actor')
 
 opt = parser.parse_args()
@@ -242,19 +247,18 @@ def main():
 
     }
 
+    model = PPO(**kwargs)
     if opt.LoadModel:
-        model = PPO(**kwargs)
         model.load(folder=opt.LoadFolder,
                    global_step=opt.ModelIndex,
                    partial_fine_tune=opt.partial_fine_tune)
-        total_steps = opt.ModelIndex
-    else:
-        save_init_params(name='net_params', **kwargs)
-        opt_dict = vars(opt)
-        opt_dict['dir'] = dir
-        save_init_params(name='main_params', **vars(opt))
-        model = PPO(**kwargs)
-        total_steps = 0
+        
+    save_init_params(name='net_params', **kwargs)
+    opt_dict = vars(opt)
+    opt_dict['dir'] = dir
+    save_init_params(name='main_params', **vars(opt))
+
+    total_steps = 0
 
     traj_lenth = 0
 
@@ -387,9 +391,9 @@ def main():
                         ave_travel_time += agent.travel_time if agent.travel_time > 0 else 0
 
                 ## calculate beta distribution variance
-                alpha = np.array([a.to('cpu') for a in alpha])
+                alpha = np.array([a.detach().cpu().numpy() for a in alpha])
                 # beta = np.array(beta.to('cpu'))
-                beta = np.array([b.to('cpu') for b in beta])
+                beta = np.array([b.detach().cpu().numpy() for b in beta])
                 variance = (alpha * beta) / ((alpha + beta) ** 2 * (alpha + beta + 1))
                 # Calculate the standard deviation for each element
                 std_dev = np.sqrt(variance)

@@ -9,7 +9,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 from torch.utils.data import Dataset
 import sys
 
-sys.path.append('/home/kun/PycharmProjects/air-corridor_ncfo/')
+sys.path.append('/home/meng/Documents/Code/FL-HtransL/')
 from rl_federated import net_nn_fc_10
 from rl_multi_3d_trans import net_nn_fc_10_3e
 
@@ -182,7 +182,7 @@ class PPO(object):
         if self.fed_key not in ['all', 'actor', 'critic']:
             return
         elif self.fed_key == 'all':
-            keys = ('critic', 'acotr')
+            keys = ('critic', 'actor')
         else:
             keys = [self.fed_key]
         for key in keys:
