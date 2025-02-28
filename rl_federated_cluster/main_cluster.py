@@ -116,7 +116,7 @@ parser.add_argument('--with_corridor_index', type=str2bool, default=True, help='
 parser.add_argument('--num_agents', type=int, default=9, help='Decay rate of entropy_coef')
 parser.add_argument('--visibility', type=float, default=6, help='Learning rate of actor')
 parser.add_argument('--fed_key', type=str, default='all', help='number of encoders')
-parser.add_argument('--fed_every', type=int, default=5, help='number of encoders')
+parser.add_argument('--fed_every', type=int, default=3, help='number of encoders')
 parser.add_argument('--current_time', type=str, default=None, help='indicate the corridor index')
 parser.add_argument('--cluster', type=int, default=9, help='number of encoders')
 
