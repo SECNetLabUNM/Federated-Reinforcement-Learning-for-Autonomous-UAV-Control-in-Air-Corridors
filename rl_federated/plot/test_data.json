@@ -1,0 +1,58 @@
+[
+    [
+        "1-1",
+        6,
+        20,
+        230,
+        0.38,
+        {
+            "collided": 336,
+            "breached_wall": 13,
+            "won": 230,
+            "collided_UAV": 13,
+            "breached_c": 8
+        }
+    ],
+    [
+        "1-1",
+        6,
+        20,
+        483,
+        0.81,
+        {
+            "collided": 52,
+            "won": 483,
+            "collided_UAV": 31,
+            "breached_c": 17,
+            "breached_wall": 17
+        }
+    ],
+    [
+        "1-1",
+        8,
+        20,
+        272,
+        0.34,
+        {
+            "collided": 478,
+            "won": 272,
+            "breached_c": 12,
+            "collided_UAV": 22,
+            "breached_wall": 16
+        }
+    ],
+    [
+        "1-1",
+        8,
+        20,
+        620,
+        0.78,
+        {
+            "breached_wall": 26,
+            "collided": 113,
+            "won": 620,
+            "collided_UAV": 20,
+            "breached_c": 21
+        }
+    ]
+]

@@ -1,0 +1,970 @@
+[
+    [
+        [
+            "4-5",
+            6,
+            21,
+            0.1,
+            4.0
+        ],
+        1325,
+        0.74,
+        {
+            "won": 1325,
+            "breached_c": 186,
+            "breached_wall": 158,
+            "collided": 116,
+            "collided_UAV": 15
+        },
+        1.2855126880573753
+    ],
+    [
+        [
+            "4-5",
+            6,
+            21,
+            0.1,
+            1.5
+        ],
+        1270,
+        0.71,
+        {
+            "won": 1270,
+            "breached_c": 233,
+            "collided_UAV": 35,
+            "breached_wall": 137,
+            "collided": 124,
+            "breached_rad_t_wall": 1
+        },
+        1.2858028288597216
+    ],
+    [
+        [
+            "4-5",
+            6,
+            21,
+            0.2,
+            4.0
+        ],
+        466,
+        0.26,
+        {
+            "breached_c": 421,
+            "collided": 402,
+            "breached_rad_t_wall": 4,
+            "breached_wall": 497,
+            "won": 466,
+            "collided_UAV": 10
+        },
+        1.2875778935074165
+    ],
+    [
+        [
+            "4-5",
+            6,
+            21,
+            0.2,
+            1.5
+        ],
+        501,
+        0.28,
+        {
+            "collided": 382,
+            "breached_c": 430,
+            "breached_wall": 450,
+            "won": 501,
+            "collided_UAV": 28,
+            "breached_rad_t_wall": 8,
+            "breached_rad": 1
+        },
+        1.2904845231764113
+    ],
+    [
+        [
+            "4-5",
+            6,
+            20,
+            0.1,
+            4.0
+        ],
+        1337,
+        0.74,
+        {
+            "breached_c": 190,
+            "breached_wall": 112,
+            "won": 1337,
+            "collided": 144,
+            "collided_UAV": 16,
+            "breached_rad_t_wall": 1
+        },
+        1.2698795594861108
+    ],
+    [
+        [
+            "4-5",
+            6,
+            20,
+            0.1,
+            1.5
+        ],
+        1312,
+        0.73,
+        {
+            "won": 1312,
+            "breached_wall": 118,
+            "breached_c": 218,
+            "collided_UAV": 36,
+            "collided": 116
+        },
+        1.2749154495740398
+    ],
+    [
+        [
+            "4-5",
+            6,
+            20,
+            0.2,
+            4.0
+        ],
+        640,
+        0.36,
+        {
+            "breached_wall": 362,
+            "won": 640,
+            "collided": 377,
+            "breached_c": 401,
+            "collided_UAV": 15,
+            "breached_rad_t_wall": 4,
+            "breached_rad": 1
+        },
+        1.2778739206684804
+    ],
+    [
+        [
+            "4-5",
+            6,
+            20,
+            0.2,
+            1.5
+        ],
+        639,
+        0.35,
+        {
+            "breached_c": 383,
+            "breached_wall": 390,
+            "collided": 357,
+            "won": 639,
+            "collided_UAV": 25,
+            "breached_rad_t_wall": 6
+        },
+        1.2790165930832516
+    ],
+    [
+        [
+            "4-5",
+            9,
+            21,
+            0.1,
+            4.0
+        ],
+        1760,
+        0.65,
+        {
+            "breached_wall": 232,
+            "breached_rad_t_wall": 1,
+            "won": 1760,
+            "breached_c": 301,
+            "collided": 383,
+            "collided_UAV": 23
+        },
+        1.27571989177139
+    ],
+    [
+        [
+            "4-5",
+            9,
+            21,
+            0.1,
+            1.5
+        ],
+        1638,
+        0.61,
+        {
+            "breached_wall": 224,
+            "won": 1638,
+            "breached_c": 376,
+            "collided": 395,
+            "collided_UAV": 63,
+            "breached_rad_t_wall": 3,
+            "breached_rad": 1
+        },
+        1.2807004865615739
+    ],
+    [
+        [
+            "4-5",
+            9,
+            21,
+            0.2,
+            4.0
+        ],
+        630,
+        0.23,
+        {
+            "collided": 810,
+            "breached_wall": 626,
+            "won": 630,
+            "breached_c": 617,
+            "breached_rad_t_wall": 2,
+            "collided_UAV": 15
+        },
+        1.2896627961954674
+    ],
+    [
+        [
+            "4-5",
+            9,
+            21,
+            0.2,
+            1.5
+        ],
+        604,
+        0.22,
+        {
+            "collided": 837,
+            "breached_wall": 564,
+            "breached_c": 651,
+            "won": 604,
+            "collided_UAV": 36,
+            "breached_rad_t_wall": 7,
+            "breached_rad": 1
+        },
+        1.291838305858139
+    ],
+    [
+        [
+            "4-5",
+            9,
+            20,
+            0.1,
+            4.0
+        ],
+        1736,
+        0.64,
+        {
+            "collided": 409,
+            "breached_rad_t_wall": 5,
+            "won": 1736,
+            "breached_c": 328,
+            "breached_wall": 196,
+            "collided_UAV": 26
+        },
+        1.2633971123864471
+    ],
+    [
+        [
+            "4-5",
+            9,
+            20,
+            0.1,
+            1.5
+        ],
+        1789,
+        0.66,
+        {
+            "breached_wall": 160,
+            "won": 1789,
+            "breached_c": 364,
+            "collided_UAV": 67,
+            "collided": 318,
+            "breached_rad_t_wall": 2
+        },
+        1.2690588490176882
+    ],
+    [
+        [
+            "4-5",
+            9,
+            20,
+            0.2,
+            4.0
+        ],
+        793,
+        0.29,
+        {
+            "collided": 802,
+            "breached_wall": 521,
+            "won": 793,
+            "breached_c": 561,
+            "collided_UAV": 19,
+            "breached_rad_t_wall": 4
+        },
+        1.2768150490233512
+    ],
+    [
+        [
+            "4-5",
+            9,
+            20,
+            0.2,
+            1.5
+        ],
+        771,
+        0.29,
+        {
+            "breached_c": 653,
+            "collided": 772,
+            "breached_wall": 458,
+            "won": 771,
+            "collided_UAV": 40,
+            "breached_rad_t_wall": 6
+        },
+        1.2782301516323042
+    ],
+    [
+        [
+            "4-5",
+            12,
+            21,
+            0.1,
+            4.0
+        ],
+        2013,
+        0.56,
+        {
+            "breached_c": 481,
+            "collided": 749,
+            "won": 2013,
+            "breached_wall": 323,
+            "collided_UAV": 29,
+            "breached_rad_t_wall": 5
+        },
+        1.2749966011249396
+    ],
+    [
+        [
+            "4-5",
+            12,
+            21,
+            0.1,
+            1.5
+        ],
+        1983,
+        0.55,
+        {
+            "breached_c": 493,
+            "won": 1983,
+            "breached_wall": 313,
+            "collided": 755,
+            "collided_UAV": 54,
+            "breached_rad_t_wall": 2
+        },
+        1.279748510803282
+    ],
+    [
+        [
+            "4-5",
+            12,
+            21,
+            0.2,
+            4.0
+        ],
+        688,
+        0.19,
+        {
+            "breached_c": 839,
+            "collided": 1343,
+            "breached_wall": 702,
+            "won": 688,
+            "breached_rad_t_wall": 9,
+            "collided_UAV": 19
+        },
+        1.288153266465212
+    ],
+    [
+        [
+            "4-5",
+            12,
+            21,
+            0.2,
+            1.5
+        ],
+        683,
+        0.19,
+        {
+            "breached_c": 856,
+            "collided": 1288,
+            "breached_wall": 714,
+            "won": 683,
+            "collided_UAV": 47,
+            "breached_rad": 1,
+            "breached_rad_t_wall": 11
+        },
+        1.2901956058079054
+    ],
+    [
+        [
+            "4-5",
+            12,
+            20,
+            0.1,
+            4.0
+        ],
+        2176,
+        0.6,
+        {
+            "collided": 698,
+            "breached_wall": 285,
+            "won": 2176,
+            "breached_c": 403,
+            "collided_UAV": 38
+        },
+        1.263407042720441
+    ],
+    [
+        [
+            "4-5",
+            12,
+            20,
+            0.1,
+            1.5
+        ],
+        2137,
+        0.59,
+        {
+            "breached_c": 501,
+            "breached_wall": 235,
+            "won": 2137,
+            "collided": 656,
+            "collided_UAV": 70,
+            "breached_rad": 1
+        },
+        1.2694031797111467
+    ],
+    [
+        [
+            "4-5",
+            12,
+            20,
+            0.2,
+            4.0
+        ],
+        857,
+        0.24,
+        {
+            "collided": 1317,
+            "breached_c": 814,
+            "breached_wall": 589,
+            "won": 857,
+            "collided_UAV": 20,
+            "breached_rad_t_wall": 3
+        },
+        1.2731110652754025
+    ],
+    [
+        [
+            "4-5",
+            12,
+            20,
+            0.2,
+            1.5
+        ],
+        876,
+        0.24,
+        {
+            "collided": 1253,
+            "breached_c": 827,
+            "breached_wall": 582,
+            "won": 876,
+            "collided_UAV": 49,
+            "breached_rad_t_wall": 13
+        },
+        1.2749423674434621
+    ],
+    [
+        [
+            "4-5",
+            18,
+            21,
+            0.1,
+            4.0
+        ],
+        2437,
+        0.45,
+        {
+            "breached_c": 757,
+            "collided": 1666,
+            "breached_wall": 490,
+            "won": 2437,
+            "collided_UAV": 39,
+            "breached_rad_t_wall": 11
+        },
+        1.2725656354889963
+    ],
+    [
+        [
+            "4-5",
+            18,
+            21,
+            0.1,
+            1.5
+        ],
+        2303,
+        0.43,
+        {
+            "breached_c": 806,
+            "collided": 1741,
+            "breached_wall": 448,
+            "won": 2303,
+            "collided_UAV": 95,
+            "breached_rad_t_wall": 7
+        },
+        1.2751130561568853
+    ],
+    [
+        [
+            "4-5",
+            18,
+            21,
+            0.2,
+            4.0
+        ],
+        694,
+        0.13,
+        {
+            "collided": 2574,
+            "breached_c": 1199,
+            "breached_wall": 893,
+            "won": 694,
+            "collided_UAV": 29,
+            "breached_rad_t_wall": 11
+        },
+        1.2899320037847246
+    ],
+    [
+        [
+            "4-5",
+            18,
+            21,
+            0.2,
+            1.5
+        ],
+        704,
+        0.13,
+        {
+            "breached_c": 1259,
+            "collided": 2483,
+            "breached_wall": 892,
+            "collided_UAV": 45,
+            "won": 704,
+            "breached_rad_t_wall": 17
+        },
+        1.2902052256899885
+    ],
+    [
+        [
+            "4-5",
+            18,
+            20,
+            0.1,
+            4.0
+        ],
+        2697,
+        0.5,
+        {
+            "breached_c": 669,
+            "collided_UAV": 44,
+            "collided": 1680,
+            "breached_wall": 307,
+            "won": 2697,
+            "breached_rad_t_wall": 3
+        },
+        1.258932750678164
+    ],
+    [
+        [
+            "4-5",
+            18,
+            20,
+            0.1,
+            1.5
+        ],
+        2581,
+        0.48,
+        {
+            "breached_c": 746,
+            "collided_UAV": 107,
+            "collided": 1651,
+            "won": 2581,
+            "breached_wall": 311,
+            "breached_rad_t_wall": 3,
+            "breached_rad": 1
+        },
+        1.2615045564746477
+    ],
+    [
+        [
+            "4-5",
+            18,
+            20,
+            0.2,
+            4.0
+        ],
+        1012,
+        0.19,
+        {
+            "breached_c": 1125,
+            "collided": 2485,
+            "breached_wall": 739,
+            "breached_rad_t_wall": 9,
+            "won": 1012,
+            "collided_UAV": 30
+        },
+        1.2751992177154663
+    ],
+    [
+        [
+            "4-5",
+            18,
+            20,
+            0.2,
+            1.5
+        ],
+        930,
+        0.17,
+        {
+            "breached_c": 1172,
+            "collided": 2467,
+            "breached_wall": 762,
+            "won": 930,
+            "collided_UAV": 48,
+            "breached_rad_t_wall": 21
+        },
+        1.2746675480956846
+    ],
+    [
+        [
+            "4-5",
+            24,
+            21,
+            0.1,
+            4.0
+        ],
+        2575,
+        0.36,
+        {
+            "breached_c": 1023,
+            "collided": 3058,
+            "breached_wall": 499,
+            "won": 2575,
+            "collided_UAV": 34,
+            "breached_rad_t_wall": 11
+        },
+        1.276430345058213
+    ],
+    [
+        [
+            "4-5",
+            24,
+            21,
+            0.1,
+            1.5
+        ],
+        2463,
+        0.34,
+        {
+            "breached_c": 1105,
+            "collided": 2963,
+            "breached_wall": 569,
+            "collided_UAV": 80,
+            "won": 2463,
+            "breached_rad_t_wall": 20
+        },
+        1.2769942359095243
+    ],
+    [
+        [
+            "4-5",
+            24,
+            21,
+            0.2,
+            4.0
+        ],
+        725,
+        0.1,
+        {
+            "collided": 3816,
+            "breached_c": 1635,
+            "collided_UAV": 26,
+            "breached_wall": 975,
+            "won": 725,
+            "breached_rad_t_wall": 22,
+            "breached_rad": 1
+        },
+        1.2835686135214868
+    ],
+    [
+        [
+            "4-5",
+            24,
+            21,
+            0.2,
+            1.5
+        ],
+        692,
+        0.1,
+        {
+            "breached_c": 1676,
+            "collided": 3701,
+            "breached_wall": 1038,
+            "won": 692,
+            "breached_rad_t_wall": 41,
+            "collided_UAV": 52
+        },
+        1.2848089404759302
+    ],
+    [
+        [
+            "4-5",
+            24,
+            20,
+            0.1,
+            4.0
+        ],
+        2958,
+        0.41,
+        {
+            "collided": 2834,
+            "collided_UAV": 51,
+            "breached_c": 955,
+            "breached_wall": 400,
+            "won": 2958,
+            "breached_rad_t_wall": 2
+        },
+        1.2586460680474396
+    ],
+    [
+        [
+            "4-5",
+            24,
+            20,
+            0.1,
+            1.5
+        ],
+        2854,
+        0.4,
+        {
+            "collided_UAV": 99,
+            "collided": 2746,
+            "breached_c": 993,
+            "breached_wall": 500,
+            "won": 2854,
+            "breached_rad_t_wall": 8
+        },
+        1.2621088577407682
+    ],
+    [
+        [
+            "4-5",
+            24,
+            20,
+            0.2,
+            4.0
+        ],
+        1069,
+        0.15,
+        {
+            "breached_c": 1545,
+            "collided": 3721,
+            "breached_wall": 811,
+            "won": 1069,
+            "collided_UAV": 44,
+            "breached_rad_t_wall": 10
+        },
+        1.2735430621056543
+    ],
+    [
+        [
+            "4-5",
+            24,
+            20,
+            0.2,
+            1.5
+        ],
+        892,
+        0.12,
+        {
+            "breached_c": 1653,
+            "collided": 3722,
+            "breached_wall": 838,
+            "collided_UAV": 66,
+            "won": 892,
+            "breached_rad_t_wall": 28,
+            "breached_rad": 1
+        },
+        1.2742818973821939
+    ],
+    [
+        [
+            "4-5",
+            36,
+            21,
+            0.1,
+            4.0
+        ],
+        2458,
+        0.23,
+        {
+            "breached_c": 1625,
+            "collided": 5898,
+            "collided_UAV": 59,
+            "breached_wall": 751,
+            "won": 2458,
+            "breached_rad_t_wall": 9
+        },
+        1.2744798368436714
+    ],
+    [
+        [
+            "4-5",
+            36,
+            21,
+            0.1,
+            1.5
+        ],
+        2188,
+        0.2,
+        {
+            "breached_c": 1740,
+            "collided": 5710,
+            "collided_UAV": 97,
+            "breached_wall": 1032,
+            "won": 2188,
+            "breached_rad_t_wall": 32,
+            "breached_rad": 1
+        },
+        1.2726004959077686
+    ],
+    [
+        [
+            "4-5",
+            36,
+            21,
+            0.2,
+            4.0
+        ],
+        628,
+        0.06,
+        {
+            "breached_c": 2181,
+            "collided": 6691,
+            "breached_wall": 1231,
+            "won": 628,
+            "breached_rad_t_wall": 28,
+            "collided_UAV": 39,
+            "breached_rad": 2
+        },
+        1.277446194143862
+    ],
+    [
+        [
+            "4-5",
+            36,
+            21,
+            0.2,
+            1.5
+        ],
+        457,
+        0.04,
+        {
+            "breached_c": 2314,
+            "collided": 6631,
+            "breached_wall": 1280,
+            "won": 457,
+            "collided_UAV": 67,
+            "breached_rad_t_wall": 49,
+            "breached_rad": 2
+        },
+        1.2695495112730841
+    ],
+    [
+        [
+            "4-5",
+            36,
+            20,
+            0.1,
+            4.0
+        ],
+        2931,
+        0.27,
+        {
+            "breached_c": 1540,
+            "collided": 5652,
+            "breached_wall": 600,
+            "won": 2931,
+            "collided_UAV": 71,
+            "breached_rad_t_wall": 6
+        },
+        1.2585556509484064
+    ],
+    [
+        [
+            "4-5",
+            36,
+            20,
+            0.1,
+            1.5
+        ],
+        2738,
+        0.25,
+        {
+            "collided": 5603,
+            "breached_c": 1626,
+            "breached_wall": 684,
+            "won": 2738,
+            "collided_UAV": 135,
+            "breached_rad_t_wall": 14
+        },
+        1.2546887784639071
+    ],
+    [
+        [
+            "4-5",
+            36,
+            20,
+            0.2,
+            4.0
+        ],
+        962,
+        0.09,
+        {
+            "collided": 6623,
+            "breached_c": 2172,
+            "breached_wall": 977,
+            "won": 962,
+            "collided_UAV": 43,
+            "breached_rad_t_wall": 23
+        },
+        1.2694052620454435
+    ],
+    [
+        [
+            "4-5",
+            36,
+            20,
+            0.2,
+            1.5
+        ],
+        820,
+        0.08,
+        {
+            "breached_c": 2340,
+            "collided": 6542,
+            "breached_wall": 1002,
+            "breached_rad_t_wall": 30,
+            "won": 820,
+            "collided_UAV": 66
+        },
+        1.2588442191718392
+    ]
+]
