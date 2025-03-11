@@ -158,18 +158,19 @@ class PPO(object):
         # Step 1: Get the structure of the state_dict from the first model
         avg_state_dict = OrderedDict({key: value.clone() for key, value in models[0].state_dict().items()})
 
-        # Step 2: Sum the parameters across all models, skipping those without requires_grad
-        for model in models[1:]:
-            model_state_dict = model.state_dict()
+        if len(models) > 1:
+            # Step 2: Sum the parameters across all models, skipping those without requires_grad
+            for model in models[1:]:
+                model_state_dict = model.state_dict()
+                for key, value in model_state_dict.items():
+                    if value.requires_grad:
+                        avg_state_dict[key] += value.clone()
+
+            # Step 3: Average the parameters
+            num_models = len(models)
             for key, value in model_state_dict.items():
                 if value.requires_grad:
-                    avg_state_dict[key] += value.clone()
-
-        # Step 3: Average the parameters
-        num_models = len(models)
-        for key, value in model_state_dict.items():
-            if value.requires_grad:
-                avg_state_dict[key] /= num_models
+                    avg_state_dict[key] /= num_models
 
         if for_saving:
             return avg_state_dict

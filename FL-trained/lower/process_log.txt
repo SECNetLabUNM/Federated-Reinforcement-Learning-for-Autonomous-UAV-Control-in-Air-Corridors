@@ -1,0 +1,2182 @@
+2024-11-01 16:29:54,368 - Random Seed: 55
+2024-11-01 16:29:54,369 - did not find summary
+2024-11-01 16:29:54,510 - Namespace(LoadModel=False, ModelIndex=2, LoadFolder='/home/meng/Documents/Code/HTransRL/trained_models/tests/HTransRL-T', complexity='simple', time='2024-11-01_16:29:49', exp_name='boilerplate', EnvIdex=2, write=True, render=False, video_turns=100, num_agents=9, variable_agent=True, dt=1, reduce_space=True, seed=55, T_horizon=16384, distnum=0, Max_train_steps=20000000, save_interval=250000.0, eval_interval=10000.0, gamma=0.99, lambd=0.95, clip_rate=0.2, K_epochs=4, net_width=128, activation='tanh', a_lr=0.00015, c_lr=1.5e-05, l2_reg=0.001, a_optim_batch_size=1024, c_optim_batch_size=1024, entropy_coef=0.001, entropy_coef_decay=0.99, share_layer_flag=True, multiply_horrizion=1, multiply_batch=1, reduce_epoch=False, curriculum=True, consider_boid=False, token_query=True, trans_position=False, num_enc=2, num_dec=2, net_model='fc10_3e', liability=True, collision_free=False, beta_adaptor_coefficient=1.1, beta_base=1.0, level=19, num_corridor_in_state=2, corridor_index_awareness=[1, 1, 1, 1], acceleration_max=0.3, velocity_max=1.5, base_difficulty=0.1, ratio=0.5, uniform_state=False, dynamic_minor_radius=False, num_obstacles=4, num_ncfos=3, rotate_for_cylinder=True, state_choice=2, rest_awareness=True, cbf=False, with_corridor_index=True, visibility=6.0, ask_comment=True, minrad=2, coldis=0.4, turb_variance=0.0, dir='d2move_2024-11-01_16:29:49_boilerplate_fc10_3e_htrl please work this time/')
+2024-11-01 16:29:59,246 - seed:55, steps:1k, 0.1, won:0.0%, s:-149.04, won_speed:0.0, status: Counter({'breached_rad': 322, 'breached_c': 281, 'breached_wall': 180, 'collided': 89, 'breached_rad_t_wall': 27, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-01 16:32:06,180 - 1505, 4, boilerplate
+2024-11-01 16:34:09,602 - 1336, 4, boilerplate
+2024-11-01 16:34:15,010 - seed:55, steps:34k, 0.1, won:0.0%, s:-77.1, won_speed:0.0, status: Counter({'breached_c': 283, 'breached_rad': 265, 'breached_wall': 214, 'collided': 101, 'breached_rad_t_wall': 30, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-01 16:36:08,726 - 1189, 4, boilerplate
+2024-11-01 16:37:59,868 - 1035, 4, boilerplate
+2024-11-01 16:38:05,632 - seed:55, steps:67k, 0.1, won:0.7%, s:-133.72, won_speed:0.549, status: Counter({'breached_c': 298, 'breached_rad': 231, 'breached_wall': 196, 'collided': 136, 'breached_rad_t_wall': 32, 'won': 6, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-01 16:39:49,857 - 965, 4, boilerplate
+2024-11-01 16:41:39,036 - 866, 4, boilerplate
+2024-11-01 16:41:46,079 - seed:55, steps:100k, 0.1, won:2.4%, s:-99.34, won_speed:0.556, status: Counter({'breached_c': 291, 'breached_rad': 242, 'collided': 154, 'breached_wall': 143, 'breached_rad_t_wall': 31, 'won': 21, 'collided_UAV': 10}), 
+ boilerplate
+2024-11-01 16:43:24,398 - 820, 4, boilerplate
+2024-11-01 16:45:13,007 - 796, 4, boilerplate
+2024-11-01 16:45:19,738 - seed:55, steps:133k, 0.1, won:3.8%, s:-74.75, won_speed:0.598, status: Counter({'breached_c': 278, 'breached_rad': 251, 'breached_wall': 156, 'collided': 131, 'won': 33, 'breached_rad_t_wall': 26, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-01 16:47:02,988 - 804, 4, boilerplate
+2024-11-01 16:48:54,995 - 892, 4, boilerplate
+2024-11-01 16:49:02,421 - seed:55, steps:165k, 0.1, won:7.6%, s:-45.81, won_speed:0.684, status: Counter({'breached_rad': 224, 'breached_wall': 208, 'breached_c': 199, 'collided': 172, 'won': 70, 'breached_rad_t_wall': 41, 'collided_UAV': 9}), 
+ boilerplate
+2024-11-01 16:50:51,558 - 856, 4, boilerplate
+2024-11-01 16:52:49,149 - 874, 4, boilerplate
+2024-11-01 16:52:56,221 - seed:55, steps:198k, 0.1, won:9.4%, s:-55.75, won_speed:0.678, status: Counter({'breached_rad': 201, 'collided': 191, 'breached_c': 187, 'breached_wall': 168, 'won': 84, 'breached_rad_t_wall': 48, 'collided_UAV': 12}), 
+ boilerplate
+2024-11-01 16:54:44,685 - 839, 4, boilerplate
+2024-11-01 16:56:40,767 - 810, 4, boilerplate
+2024-11-01 16:56:48,367 - seed:55, steps:231k, 0.1, won:9.9%, s:-34.57, won_speed:0.678, status: Counter({'collided': 229, 'breached_rad': 188, 'breached_c': 187, 'breached_wall': 137, 'won': 88, 'breached_rad_t_wall': 47, 'collided_UAV': 13}), 
+ boilerplate
+2024-11-01 16:58:37,794 - 810, 4, boilerplate
+2024-11-01 17:00:35,307 - 780, 4, boilerplate
+2024-11-01 17:00:42,223 - seed:55, steps:264k, 0.1, won:15.2%, s:-12.97, won_speed:0.716, status: Counter({'collided': 212, 'breached_rad': 208, 'breached_c': 154, 'won': 135, 'breached_wall': 134, 'breached_rad_t_wall': 24, 'collided_UAV': 21}), 
+ boilerplate
+2024-11-01 17:02:32,664 - 815, 4, boilerplate
+2024-11-01 17:04:32,535 - 807, 4, boilerplate
+2024-11-01 17:04:40,574 - seed:55, steps:297k, 0.1, won:19.6%, s:6.53, won_speed:0.719, status: Counter({'collided': 251, 'breached_rad': 237, 'won': 181, 'breached_c': 106, 'breached_wall': 105, 'breached_rad_t_wall': 28, 'collided_UAV': 17}), 
+ boilerplate
+2024-11-01 17:06:29,645 - 772, 4, boilerplate
+2024-11-01 17:08:29,156 - 784, 4, boilerplate
+2024-11-01 17:08:36,858 - seed:55, steps:329k, 0.1, won:18.8%, s:5.96, won_speed:0.719, status: Counter({'breached_rad': 241, 'collided': 241, 'won': 166, 'breached_wall': 117, 'breached_c': 77, 'breached_rad_t_wall': 24, 'collided_UAV': 16}), 
+ boilerplate
+2024-11-01 17:10:32,176 - 795, 4, boilerplate
+2024-11-01 17:12:32,574 - 749, 4, boilerplate
+2024-11-01 17:12:40,082 - seed:55, steps:362k, 0.1, won:21.1%, s:24.16, won_speed:0.723, status: Counter({'breached_rad': 252, 'collided': 238, 'won': 188, 'breached_wall': 98, 'breached_c': 70, 'breached_rad_t_wall': 24, 'collided_UAV': 21}), 
+ boilerplate
+2024-11-01 17:14:37,312 - 780, 4, boilerplate
+2024-11-01 17:16:40,692 - 764, 4, boilerplate
+2024-11-01 17:16:48,745 - seed:55, steps:395k, 0.1, won:24.9%, s:42.74, won_speed:0.673, status: Counter({'breached_rad': 268, 'collided': 247, 'won': 231, 'breached_wall': 98, 'breached_c': 52, 'breached_rad_t_wall': 18, 'collided_UAV': 15}), 
+ boilerplate
+2024-11-01 17:18:42,138 - 703, 4, boilerplate
+2024-11-01 17:20:44,184 - 722, 4, boilerplate
+2024-11-01 17:20:53,083 - seed:55, steps:428k, 0.1, won:26.2%, s:48.42, won_speed:0.713, status: Counter({'breached_rad': 326, 'won': 243, 'collided': 194, 'breached_wall': 85, 'breached_c': 41, 'breached_rad_t_wall': 23, 'collided_UAV': 14}), 
+ boilerplate
+2024-11-01 17:22:49,498 - 743, 4, boilerplate
+2024-11-01 17:24:50,201 - 709, 4, boilerplate
+2024-11-01 17:24:58,558 - seed:55, steps:461k, 0.1, won:30.0%, s:43.54, won_speed:0.703, status: Counter({'breached_rad': 335, 'won': 281, 'collided': 197, 'breached_wall': 77, 'breached_rad_t_wall': 18, 'breached_c': 15, 'collided_UAV': 15}), 
+ boilerplate
+2024-11-01 17:26:50,447 - 715, 4, boilerplate
+2024-11-01 17:28:53,632 - 689, 4, boilerplate
+2024-11-01 17:29:02,419 - seed:55, steps:494k, 0.1, won:31.5%, s:91.75, won_speed:0.693, status: Counter({'breached_rad': 325, 'won': 285, 'collided': 178, 'breached_wall': 69, 'breached_c': 26, 'breached_rad_t_wall': 13, 'collided_UAV': 9}), 
+ boilerplate
+2024-11-01 17:30:53,591 - 670, 4, boilerplate
+2024-11-01 17:33:00,157 - 700, 4, boilerplate
+2024-11-01 17:33:09,164 - seed:55, steps:526k, 0.1, won:38.1%, s:70.43, won_speed:0.748, status: Counter({'won': 346, 'breached_rad': 326, 'collided': 136, 'breached_wall': 38, 'collided_UAV': 25, 'breached_c': 24, 'breached_rad_t_wall': 12}), 
+ boilerplate
+2024-11-01 17:35:11,988 - 734, 4, boilerplate
+2024-11-01 17:37:17,762 - 696, 4, boilerplate
+2024-11-01 17:37:27,483 - seed:55, steps:559k, 0.1, won:40.5%, s:139.38, won_speed:0.697, status: Counter({'won': 352, 'breached_rad': 263, 'collided': 161, 'breached_wall': 42, 'breached_c': 19, 'collided_UAV': 19, 'breached_rad_t_wall': 13}), 
+ boilerplate
+2024-11-01 17:39:19,237 - 665, 4, boilerplate
+2024-11-01 17:41:21,132 - 626, 4, boilerplate
+2024-11-01 17:41:30,936 - seed:55, steps:592k, 0.1, won:42.0%, s:75.46, won_speed:0.704, status: Counter({'won': 364, 'breached_rad': 322, 'collided': 87, 'breached_wall': 31, 'breached_c': 29, 'collided_UAV': 21, 'breached_rad_t_wall': 13}), 
+ boilerplate
+2024-11-01 17:43:23,381 - 627, 4, boilerplate
+2024-11-01 17:45:23,678 - 559, 4, boilerplate
+2024-11-01 17:45:33,851 - seed:55, steps:625k, 0.1, won:43.9%, s:131.54, won_speed:0.654, status: Counter({'won': 397, 'breached_rad': 296, 'collided': 134, 'collided_UAV': 28, 'breached_wall': 22, 'breached_c': 15, 'breached_rad_t_wall': 12}), 
+ boilerplate
+2024-11-01 17:47:20,193 - 573, 4, boilerplate
+2024-11-01 17:49:23,258 - 639, 4, boilerplate
+2024-11-01 17:49:32,671 - seed:55, steps:658k, 0.1, won:45.5%, s:186.59, won_speed:0.726, status: Counter({'won': 419, 'breached_rad': 313, 'collided': 110, 'breached_c': 27, 'breached_wall': 24, 'collided_UAV': 18, 'breached_rad_t_wall': 9}), 
+ boilerplate
+2024-11-01 17:51:32,307 - 679, 4, boilerplate
+2024-11-01 17:53:28,372 - 549, 4, boilerplate
+2024-11-01 17:53:39,187 - seed:55, steps:691k, 0.1, won:48.9%, s:155.59, won_speed:0.675, status: Counter({'won': 438, 'breached_rad': 283, 'collided': 70, 'collided_UAV': 31, 'breached_c': 29, 'breached_wall': 26, 'breached_rad_t_wall': 19}), 
+ boilerplate
+2024-11-01 17:55:28,259 - 586, 4, boilerplate
+2024-11-01 17:57:28,922 - 628, 4, boilerplate
+2024-11-01 17:57:38,629 - seed:55, steps:723k, 0.1, won:46.5%, s:157.67, won_speed:0.751, status: Counter({'won': 415, 'breached_rad': 329, 'collided': 62, 'breached_wall': 27, 'breached_c': 26, 'collided_UAV': 21, 'breached_rad_t_wall': 13}), 
+ boilerplate
+2024-11-01 17:59:36,347 - 669, 4, boilerplate
+2024-11-01 18:01:43,821 - 662, 4, boilerplate
+2024-11-01 18:01:53,052 - seed:55, steps:756k, 0.1, won:51.6%, s:116.98, won_speed:0.747, status: Counter({'won': 463, 'breached_rad': 309, 'collided': 52, 'collided_UAV': 27, 'breached_c': 25, 'breached_wall': 12, 'breached_rad_t_wall': 10}), 
+ boilerplate
+2024-11-01 18:03:51,093 - 685, 4, boilerplate
+2024-11-01 18:05:57,924 - 653, 4, boilerplate
+2024-11-01 18:06:07,345 - seed:55, steps:789k, 0.1, won:54.6%, s:172.39, won_speed:0.703, status: Counter({'won': 488, 'breached_rad': 287, 'collided': 44, 'breached_c': 30, 'breached_wall': 21, 'collided_UAV': 19, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-01 18:08:03,780 - 655, 4, boilerplate
+2024-11-01 18:10:14,893 - 633, 4, boilerplate
+2024-11-01 18:10:24,760 - seed:55, steps:822k, 0.1, won:45.6%, s:182.43, won_speed:0.696, status: Counter({'won': 402, 'breached_rad': 365, 'collided': 40, 'collided_UAV': 29, 'breached_c': 24, 'breached_rad_t_wall': 12, 'breached_wall': 10}), 
+ boilerplate
+2024-11-01 18:12:23,593 - 646, 4, boilerplate
+2024-11-01 18:14:31,211 - 614, 4, boilerplate
+2024-11-01 18:14:41,866 - seed:55, steps:855k, 0.1, won:49.7%, s:140.32, won_speed:0.667, status: Counter({'won': 438, 'breached_rad': 355, 'collided_UAV': 29, 'collided': 22, 'breached_c': 19, 'breached_wall': 11, 'breached_rad_t_wall': 8}), 
+ boilerplate
+2024-11-01 18:16:36,009 - 609, 4, boilerplate
+2024-11-01 18:18:40,199 - 605, 4, boilerplate
+2024-11-01 18:18:50,576 - seed:55, steps:887k, 0.1, won:52.2%, s:147.14, won_speed:0.745, status: Counter({'won': 470, 'breached_rad': 330, 'collided': 42, 'collided_UAV': 23, 'breached_c': 21, 'breached_wall': 9, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-01 18:20:48,045 - 652, 4, boilerplate
+2024-11-01 18:22:53,290 - 639, 4, boilerplate
+2024-11-01 18:23:02,791 - seed:55, steps:920k, 0.1, won:51.9%, s:106.35, won_speed:0.681, status: Counter({'won': 453, 'breached_rad': 331, 'collided_UAV': 30, 'collided': 26, 'breached_wall': 13, 'breached_c': 13, 'breached_rad_t_wall': 7}), 
+ boilerplate
+2024-11-01 18:24:58,952 - 639, 4, boilerplate
+2024-11-01 18:27:01,298 - 593, 4, boilerplate
+2024-11-01 18:27:11,500 - seed:55, steps:953k, 0.1, won:56.4%, s:142.41, won_speed:0.663, status: Counter({'won': 504, 'breached_rad': 311, 'collided': 40, 'collided_UAV': 18, 'breached_c': 12, 'breached_wall': 5, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-01 18:29:01,864 - 571, 4, boilerplate
+2024-11-01 18:31:03,505 - 579, 4, boilerplate
+2024-11-01 18:31:16,196 - seed:55, steps:987k, 0.1, won:66.9%, s:214.24, won_speed:0.645, status: Counter({'won': 592, 'breached_rad': 202, 'breached_c': 28, 'collided': 22, 'collided_UAV': 16, 'breached_wall': 15, 'breached_rad_t_wall': 10}), 
+ boilerplate
+2024-11-01 18:33:11,473 - 490, 4, boilerplate
+2024-11-01 18:35:27,448 - 542, 4, boilerplate
+2024-11-01 18:35:40,697 - seed:55, steps:1019k, 0.2, won:87.8%, s:351.58, won_speed:0.818, status: Counter({'won': 800, 'collided_UAV': 40, 'breached_c': 23, 'collided': 22, 'breached_wall': 18, 'breached_rad_t_wall': 6, 'breached_rad': 2}), 
+ boilerplate
+2024-11-01 18:37:42,040 - 507, 4, boilerplate
+2024-11-01 18:39:55,721 - 500, 4, boilerplate
+2024-11-01 18:40:09,478 - seed:55, steps:1052k, 0.30000000000000004, won:78.8%, s:195.01, won_speed:0.869, status: Counter({'won': 712, 'breached_wall': 58, 'breached_c': 47, 'collided_UAV': 40, 'collided': 36, 'breached_rad_t_wall': 11}), 
+ boilerplate
+2024-11-01 18:42:02,339 - 449, 4, boilerplate
+2024-11-01 18:44:12,318 - 439, 4, boilerplate
+2024-11-01 18:44:27,041 - seed:55, steps:1085k, 0.4, won:63.0%, s:268.24, won_speed:0.924, status: Counter({'won': 551, 'breached_wall': 156, 'breached_c': 64, 'collided': 48, 'collided_UAV': 36, 'breached_rad_t_wall': 20}), 
+ boilerplate
+2024-11-01 18:46:14,029 - 419, 4, boilerplate
+2024-11-01 18:48:13,210 - 413, 4, boilerplate
+2024-11-01 18:48:30,870 - seed:55, steps:1119k, 0.5, won:54.9%, s:241.44, won_speed:0.889, status: Counter({'won': 526, 'breached_wall': 227, 'collided': 84, 'breached_c': 61, 'collided_UAV': 39, 'breached_rad_t_wall': 21}), 
+ boilerplate
+2024-11-01 18:50:20,735 - 383, 4, boilerplate
+2024-11-01 18:52:33,515 - 390, 4, boilerplate
+2024-11-01 18:52:49,239 - seed:55, steps:1151k, 0.5, won:61.5%, s:143.6, won_speed:0.948, status: Counter({'won': 548, 'breached_wall': 164, 'breached_c': 74, 'collided': 56, 'collided_UAV': 33, 'breached_rad_t_wall': 16}), 
+ boilerplate
+2024-11-01 18:54:37,712 - 393, 4, boilerplate
+2024-11-01 18:56:39,819 - 369, 4, boilerplate
+2024-11-01 18:56:58,937 - seed:55, steps:1185k, 0.6, won:59.9%, s:134.37, won_speed:0.914, status: Counter({'won': 550, 'breached_wall': 191, 'collided': 108, 'collided_UAV': 30, 'breached_c': 21, 'breached_rad_t_wall': 18}), 
+ boilerplate
+2024-11-01 18:58:49,455 - 351, 4, boilerplate
+2024-11-01 19:00:59,864 - 350, 4, boilerplate
+2024-11-01 19:01:19,934 - seed:55, steps:1218k, 0.6, won:72.2%, s:265.39, won_speed:0.906, status: Counter({'won': 656, 'breached_wall': 122, 'collided': 48, 'breached_c': 40, 'collided_UAV': 29, 'breached_rad_t_wall': 13}), 
+ boilerplate
+2024-11-01 19:03:03,622 - 336, 4, boilerplate
+2024-11-01 19:05:03,138 - 326, 4, boilerplate
+2024-11-01 19:05:23,494 - seed:55, steps:1251k, 0.7, won:62.4%, s:193.65, won_speed:0.941, status: Counter({'won': 577, 'breached_wall': 212, 'collided': 74, 'breached_c': 26, 'collided_UAV': 24, 'breached_rad_t_wall': 11}), 
+ boilerplate
+2024-11-01 19:06:57,691 - 328, 4, boilerplate
+2024-11-01 19:08:56,810 - 319, 4, boilerplate
+2024-11-01 19:09:17,450 - seed:55, steps:1284k, 0.7999999999999999, won:48.9%, s:116.35, won_speed:0.946, status: Counter({'won': 447, 'breached_wall': 263, 'collided': 141, 'collided_UAV': 31, 'breached_c': 22, 'breached_rad_t_wall': 10}), 
+ boilerplate
+2024-11-01 19:10:55,797 - 311, 4, boilerplate
+2024-11-01 19:12:53,830 - 307, 4, boilerplate
+2024-11-01 19:13:14,227 - seed:55, steps:1317k, 0.7999999999999999, won:61.2%, s:117.13, won_speed:0.946, status: Counter({'won': 559, 'breached_wall': 174, 'collided': 116, 'breached_c': 32, 'collided_UAV': 28, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-01 19:14:45,418 - 315, 4, boilerplate
+2024-11-01 19:16:37,289 - 311, 4, boilerplate
+2024-11-01 19:16:57,216 - seed:55, steps:1349k, 0.8999999999999999, won:45.3%, s:98.47, won_speed:0.984, status: Counter({'won': 409, 'breached_wall': 285, 'collided': 124, 'breached_c': 46, 'collided_UAV': 31, 'breached_rad_t_wall': 7}), 
+ boilerplate
+2024-11-01 19:18:29,585 - 304, 4, boilerplate
+2024-11-01 19:20:26,785 - 299, 4, boilerplate
+2024-11-01 19:20:48,832 - seed:55, steps:1383k, 0.8999999999999999, won:55.4%, s:145.56, won_speed:1.003, status: Counter({'won': 480, 'breached_wall': 185, 'collided': 126, 'breached_c': 48, 'collided_UAV': 22, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-01 19:22:27,622 - 291, 4, boilerplate
+2024-11-01 19:24:25,403 - 286, 4, boilerplate
+2024-11-01 19:24:48,836 - seed:55, steps:1415k, 0.8999999999999999, won:54.5%, s:116.64, won_speed:0.983, status: Counter({'won': 497, 'breached_wall': 200, 'breached_c': 95, 'collided': 87, 'collided_UAV': 24, 'breached_rad_t_wall': 9}), 
+ boilerplate
+2024-11-01 19:26:28,620 - 282, 4, boilerplate
+2024-11-01 19:28:29,842 - 276, 4, boilerplate
+2024-11-01 19:28:57,130 - seed:55, steps:1448k, 0.8999999999999999, won:66.4%, s:139.52, won_speed:0.96, status: Counter({'won': 626, 'breached_wall': 113, 'collided': 95, 'breached_c': 71, 'collided_UAV': 25, 'breached_rad_t_wall': 13}), 
+ boilerplate
+2024-11-01 19:30:35,328 - 280, 4, boilerplate
+2024-11-01 19:32:31,773 - 277, 4, boilerplate
+2024-11-01 19:32:53,994 - seed:55, steps:1481k, 0.9999999999999999, won:50.6%, s:120.25, won_speed:1.076, status: Counter({'won': 458, 'breached_wall': 159, 'collided': 134, 'breached_c': 125, 'collided_UAV': 19, 'breached_rad_t_wall': 11}), 
+ boilerplate
+2024-11-01 19:34:36,052 - 288, 4, boilerplate
+2024-11-01 19:36:40,576 - 287, 4, boilerplate
+2024-11-01 19:37:04,806 - seed:55, steps:1514k, 0.9999999999999999, won:50.6%, s:129.29, won_speed:1.112, status: Counter({'won': 448, 'breached_wall': 156, 'breached_c': 153, 'collided': 84, 'collided_UAV': 24, 'breached_rad_t_wall': 21}), 
+ boilerplate
+2024-11-01 19:38:49,473 - 287, 4, boilerplate
+2024-11-01 19:40:59,631 - 296, 4, boilerplate
+2024-11-01 19:41:24,234 - seed:55, steps:1546k, 0.9999999999999999, won:56.8%, s:128.52, won_speed:1.129, status: Counter({'won': 526, 'breached_wall': 149, 'collided': 105, 'breached_c': 105, 'collided_UAV': 28, 'breached_rad_t_wall': 13}), 
+ boilerplate
+2024-11-01 19:43:13,396 - 296, 4, boilerplate
+2024-11-01 19:45:23,729 - 296, 4, boilerplate
+2024-11-01 19:45:48,447 - seed:55, steps:1579k, 0.9999999999999999, won:69.7%, s:143.19, won_speed:1.128, status: Counter({'won': 621, 'breached_wall': 87, 'breached_c': 73, 'collided': 72, 'collided_UAV': 31, 'breached_rad_t_wall': 7}), 
+ boilerplate
+2024-11-01 19:47:44,360 - 298, 4, boilerplate
+2024-11-01 19:49:51,746 - 298, 4, boilerplate
+2024-11-01 19:50:14,029 - seed:55, steps:1612k, 1.0, won:51.3%, s:137.04, won_speed:1.117, status: Counter({'won': 469, 'breached_c': 184, 'breached_wall': 119, 'collided': 107, 'collided_UAV': 20, 'breached_rad_t_wall': 15}), 
+ boilerplate
+2024-11-01 19:52:00,146 - 297, 4, boilerplate
+2024-11-01 19:54:18,197 - 296, 4, boilerplate
+2024-11-01 19:54:42,427 - seed:55, steps:1645k, 1.0, won:68.2%, s:156.92, won_speed:1.194, status: Counter({'won': 625, 'collided': 116, 'breached_c': 74, 'breached_wall': 56, 'collided_UAV': 39, 'breached_rad_t_wall': 7}), 
+ boilerplate
+2024-11-01 19:56:38,543 - 314, 4, boilerplate
+2024-11-01 19:58:58,131 - 320, 4, boilerplate
+2024-11-01 19:59:21,835 - seed:55, steps:1677k, 1.0, won:78.3%, s:167.81, won_speed:1.177, status: Counter({'won': 704, 'breached_c': 77, 'collided': 45, 'breached_wall': 40, 'collided_UAV': 31, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-01 20:01:24,902 - 310, 4, boilerplate
+2024-11-01 20:03:49,813 - 309, 4, boilerplate
+2024-11-01 20:04:16,160 - seed:55, steps:1710k, 1.0, won:78.5%, s:264.12, won_speed:1.164, status: Counter({'won': 738, 'breached_c': 82, 'collided': 60, 'collided_UAV': 35, 'breached_wall': 25}), 
+ boilerplate
+2024-11-01 20:06:25,519 - 306, 4, boilerplate
+2024-11-01 20:08:47,179 - 304, 4, boilerplate
+2024-11-01 20:09:12,523 - seed:55, steps:1743k, 1.0, won:80.8%, s:188.71, won_speed:1.166, status: Counter({'won': 739, 'collided': 52, 'breached_wall': 48, 'breached_c': 48, 'collided_UAV': 25, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-01 20:11:10,686 - 301, 4, boilerplate
+2024-11-01 20:13:34,457 - 301, 4, boilerplate
+2024-11-01 20:13:59,590 - seed:55, steps:1776k, 1.0, won:80.3%, s:302.41, won_speed:1.151, status: Counter({'won': 745, 'collided': 52, 'breached_wall': 49, 'breached_c': 45, 'collided_UAV': 36, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 20:16:02,575 - 305, 4, boilerplate
+2024-11-01 20:18:29,376 - 304, 4, boilerplate
+2024-11-01 20:18:54,212 - seed:55, steps:1809k, 1.0, won:81.8%, s:347.42, won_speed:1.143, status: Counter({'won': 737, 'breached_c': 51, 'collided': 50, 'collided_UAV': 32, 'breached_wall': 31}), 
+ boilerplate
+2024-11-01 20:20:52,913 - 300, 4, boilerplate
+2024-11-01 20:23:16,579 - 309, 4, boilerplate
+2024-11-01 20:23:41,067 - seed:55, steps:1842k, 1.0, won:81.4%, s:183.51, won_speed:1.195, status: Counter({'won': 711, 'breached_c': 53, 'collided': 48, 'breached_wall': 30, 'collided_UAV': 27, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-01 20:25:45,085 - 315, 4, boilerplate
+2024-11-01 20:28:05,798 - 310, 4, boilerplate
+2024-11-01 20:28:31,788 - seed:55, steps:1875k, 1.0, won:75.0%, s:244.38, won_speed:1.19, status: Counter({'won': 691, 'breached_c': 74, 'collided': 71, 'breached_wall': 51, 'collided_UAV': 28, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-01 20:30:35,526 - 307, 4, boilerplate
+2024-11-01 20:32:51,002 - 312, 4, boilerplate
+2024-11-01 20:33:13,151 - seed:55, steps:1907k, 1.0, won:68.4%, s:281.6, won_speed:1.204, status: Counter({'won': 600, 'breached_wall': 92, 'breached_c': 87, 'collided': 56, 'collided_UAV': 28, 'breached_rad_t_wall': 14}), 
+ boilerplate
+2024-11-01 20:35:09,484 - 316, 4, boilerplate
+2024-11-01 20:37:28,860 - 313, 4, boilerplate
+2024-11-01 20:37:52,150 - seed:55, steps:1940k, 1.0, won:69.8%, s:229.44, won_speed:1.216, status: Counter({'won': 651, 'breached_c': 110, 'breached_wall': 79, 'collided': 56, 'collided_UAV': 26, 'breached_rad_t_wall': 11}), 
+ boilerplate
+2024-11-01 20:39:51,946 - 315, 4, boilerplate
+2024-11-01 20:42:09,695 - 307, 4, boilerplate
+2024-11-01 20:42:32,445 - seed:55, steps:1973k, 1.0, won:63.2%, s:227.09, won_speed:1.183, status: Counter({'won': 571, 'breached_c': 137, 'breached_wall': 103, 'collided': 44, 'collided_UAV': 28, 'breached_rad_t_wall': 20}), 
+ boilerplate
+2024-11-01 20:44:27,868 - 304, 4, boilerplate
+2024-11-01 20:46:48,383 - 306, 4, boilerplate
+2024-11-01 20:47:15,428 - seed:55, steps:2006k, 1.0, won:80.9%, s:361.96, won_speed:1.186, status: Counter({'won': 760, 'breached_c': 74, 'collided': 38, 'breached_wall': 35, 'collided_UAV': 27, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-01 20:49:21,145 - 302, 4, boilerplate
+2024-11-01 20:51:46,043 - 304, 4, boilerplate
+2024-11-01 20:52:12,293 - seed:55, steps:2039k, 1.0, won:74.0%, s:279.19, won_speed:1.208, status: Counter({'won': 682, 'breached_c': 139, 'breached_wall': 39, 'collided_UAV': 34, 'collided': 26, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 20:54:17,099 - 306, 4, boilerplate
+2024-11-01 20:56:32,941 - 295, 4, boilerplate
+2024-11-01 20:56:56,568 - seed:55, steps:2072k, 1.0, won:50.9%, s:177.75, won_speed:1.15, status: Counter({'won': 452, 'breached_wall': 190, 'breached_c': 166, 'collided': 46, 'collided_UAV': 22, 'breached_rad_t_wall': 12}), 
+ boilerplate
+2024-11-01 20:58:46,533 - 294, 4, boilerplate
+2024-11-01 21:01:02,763 - 297, 4, boilerplate
+2024-11-01 21:01:27,162 - seed:55, steps:2104k, 1.0, won:53.7%, s:112.9, won_speed:1.133, status: Counter({'won': 501, 'breached_wall': 158, 'breached_c': 131, 'collided': 90, 'collided_UAV': 34, 'breached_rad_t_wall': 19}), 
+ boilerplate
+2024-11-01 21:03:18,878 - 299, 4, boilerplate
+2024-11-01 21:05:40,916 - 296, 4, boilerplate
+2024-11-01 21:06:03,789 - seed:55, steps:2137k, 1.0, won:77.0%, s:175.19, won_speed:1.164, status: Counter({'won': 688, 'breached_c': 74, 'collided': 74, 'breached_wall': 32, 'collided_UAV': 22, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-01 21:08:00,758 - 304, 4, boilerplate
+2024-11-01 21:10:23,281 - 301, 4, boilerplate
+2024-11-01 21:10:47,905 - seed:55, steps:2170k, 1.0, won:81.1%, s:208.75, won_speed:1.184, status: Counter({'won': 737, 'collided': 54, 'breached_c': 42, 'breached_wall': 40, 'collided_UAV': 32, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-01 21:12:46,070 - 303, 4, boilerplate
+2024-11-01 21:15:13,629 - 304, 4, boilerplate
+2024-11-01 21:15:38,851 - seed:55, steps:2203k, 1.0, won:80.3%, s:255.18, won_speed:1.164, status: Counter({'won': 720, 'breached_wall': 60, 'collided': 42, 'breached_c': 38, 'collided_UAV': 32, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-01 21:17:43,410 - 305, 4, boilerplate
+2024-11-01 21:20:09,170 - 299, 4, boilerplate
+2024-11-01 21:20:32,779 - seed:55, steps:2236k, 1.0, won:88.6%, s:365.75, won_speed:1.167, status: Counter({'won': 768, 'breached_wall': 35, 'breached_c': 33, 'collided_UAV': 18, 'collided': 10, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-01 21:22:34,319 - 306, 4, boilerplate
+2024-11-01 21:25:07,958 - 305, 4, boilerplate
+2024-11-01 21:25:34,419 - seed:55, steps:2269k, 1.0, won:88.3%, s:258.2, won_speed:1.175, status: Counter({'won': 805, 'breached_c': 31, 'collided_UAV': 26, 'collided': 26, 'breached_wall': 23, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 21:27:42,736 - 306, 4, boilerplate
+2024-11-01 21:30:14,670 - 305, 4, boilerplate
+2024-11-01 21:30:40,307 - seed:55, steps:2301k, 1.0, won:86.7%, s:331.58, won_speed:1.169, status: Counter({'won': 809, 'breached_c': 59, 'collided': 28, 'collided_UAV': 25, 'breached_wall': 12}), 
+ boilerplate
+2024-11-01 21:32:46,635 - 304, 4, boilerplate
+2024-11-01 21:35:22,466 - 310, 4, boilerplate
+2024-11-01 21:35:47,654 - seed:55, steps:2334k, 1.0, won:90.7%, s:267.54, won_speed:1.197, status: Counter({'won': 834, 'collided_UAV': 27, 'collided': 24, 'breached_c': 22, 'breached_wall': 10, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-01 21:38:01,040 - 311, 4, boilerplate
+2024-11-01 21:40:29,347 - 314, 4, boilerplate
+2024-11-01 21:40:54,237 - seed:55, steps:2367k, 1.0, won:86.3%, s:372.84, won_speed:1.184, status: Counter({'won': 785, 'breached_wall': 41, 'breached_c': 38, 'collided': 30, 'collided_UAV': 16}), 
+ boilerplate
+2024-11-01 21:42:59,200 - 311, 4, boilerplate
+2024-11-01 21:45:28,615 - 315, 4, boilerplate
+2024-11-01 21:45:52,101 - seed:55, steps:2400k, 1.0, won:87.6%, s:227.74, won_speed:1.181, status: Counter({'won': 792, 'breached_c': 52, 'breached_wall': 28, 'collided': 18, 'collided_UAV': 14}), 
+ boilerplate
+2024-11-01 21:48:01,079 - 320, 4, boilerplate
+2024-11-01 21:50:34,375 - 317, 4, boilerplate
+2024-11-01 21:50:57,969 - seed:55, steps:2433k, 1.0, won:77.2%, s:318.74, won_speed:1.172, status: Counter({'won': 685, 'breached_wall': 77, 'breached_c': 55, 'collided': 52, 'collided_UAV': 15, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-01 21:52:59,330 - 305, 4, boilerplate
+2024-11-01 21:55:25,987 - 315, 4, boilerplate
+2024-11-01 21:55:49,853 - seed:55, steps:2465k, 1.0, won:79.7%, s:250.72, won_speed:1.162, status: Counter({'won': 718, 'collided': 68, 'breached_c': 57, 'breached_wall': 37, 'collided_UAV': 21}), 
+ boilerplate
+2024-11-01 21:57:49,111 - 307, 4, boilerplate
+2024-11-01 22:00:14,818 - 307, 4, boilerplate
+2024-11-01 22:00:37,783 - seed:55, steps:2498k, 1.0, won:84.4%, s:258.42, won_speed:1.172, status: Counter({'won': 731, 'breached_wall': 44, 'collided': 40, 'breached_c': 36, 'collided_UAV': 15}), 
+ boilerplate
+2024-11-01 22:02:38,940 - 314, 4, boilerplate
+2024-11-01 22:05:05,871 - 307, 4, boilerplate
+2024-11-01 22:05:30,777 - seed:55, steps:2531k, 1.0, won:87.4%, s:208.93, won_speed:1.156, status: Counter({'won': 804, 'breached_c': 43, 'collided': 29, 'collided_UAV': 27, 'breached_wall': 17}), 
+ boilerplate
+2024-11-01 22:07:33,374 - 305, 4, boilerplate
+2024-11-01 22:10:01,310 - 303, 4, boilerplate
+2024-11-01 22:10:28,590 - seed:55, steps:2565k, 1.0, won:86.4%, s:245.84, won_speed:1.093, status: Counter({'won': 797, 'breached_c': 54, 'collided': 48, 'breached_wall': 14, 'collided_UAV': 8, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 22:12:14,065 - 263, 4, boilerplate
+2024-11-01 22:14:31,915 - 282, 4, boilerplate
+2024-11-01 22:14:56,539 - seed:55, steps:2597k, 1.0, won:86.7%, s:366.07, won_speed:1.158, status: Counter({'won': 779, 'collided': 52, 'breached_wall': 29, 'breached_c': 25, 'collided_UAV': 13}), 
+ boilerplate
+2024-11-01 22:16:48,612 - 281, 4, boilerplate
+2024-11-01 22:19:08,037 - 273, 4, boilerplate
+2024-11-01 22:19:33,137 - seed:55, steps:2630k, 1.0, won:91.8%, s:195.91, won_speed:1.13, status: Counter({'won': 825, 'collided': 34, 'collided_UAV': 15, 'breached_wall': 15, 'breached_c': 10}), 
+ boilerplate
+2024-11-01 22:21:31,693 - 292, 4, boilerplate
+2024-11-01 22:23:54,365 - 285, 4, boilerplate
+2024-11-01 22:24:19,731 - seed:55, steps:2663k, 1.0, won:91.3%, s:197.21, won_speed:1.155, status: Counter({'won': 829, 'collided': 42, 'breached_c': 15, 'collided_UAV': 14, 'breached_wall': 8}), 
+ boilerplate
+2024-11-01 22:26:23,068 - 296, 4, boilerplate
+2024-11-01 22:28:50,591 - 311, 4, boilerplate
+2024-11-01 22:29:15,392 - seed:55, steps:2695k, 1.0, won:83.0%, s:242.93, won_speed:1.195, status: Counter({'won': 763, 'breached_c': 80, 'breached_wall': 39, 'collided': 22, 'collided_UAV': 14, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 22:31:21,436 - 307, 4, boilerplate
+2024-11-01 22:33:51,770 - 311, 4, boilerplate
+2024-11-01 22:34:17,255 - seed:55, steps:2728k, 1.0, won:85.5%, s:223.57, won_speed:1.191, status: Counter({'won': 789, 'collided': 44, 'breached_c': 44, 'breached_wall': 35, 'collided_UAV': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 22:36:21,225 - 313, 4, boilerplate
+2024-11-01 22:38:52,551 - 313, 4, boilerplate
+2024-11-01 22:39:16,706 - seed:55, steps:2761k, 1.0, won:87.9%, s:284.67, won_speed:1.166, status: Counter({'won': 801, 'breached_wall': 37, 'collided': 31, 'breached_c': 23, 'collided_UAV': 19}), 
+ boilerplate
+2024-11-01 22:41:15,213 - 304, 4, boilerplate
+2024-11-01 22:43:41,959 - 309, 4, boilerplate
+2024-11-01 22:44:06,412 - seed:55, steps:2794k, 1.0, won:88.5%, s:322.39, won_speed:1.175, status: Counter({'won': 789, 'collided': 36, 'breached_wall': 27, 'breached_c': 25, 'collided_UAV': 15}), 
+ boilerplate
+2024-11-01 22:46:08,933 - 304, 4, boilerplate
+2024-11-01 22:48:35,383 - 296, 4, boilerplate
+2024-11-01 22:49:00,295 - seed:55, steps:2827k, 1.0, won:83.6%, s:185.55, won_speed:1.204, status: Counter({'won': 783, 'breached_c': 69, 'breached_wall': 36, 'collided': 26, 'collided_UAV': 23}), 
+ boilerplate
+2024-11-01 22:50:58,979 - 306, 4, boilerplate
+2024-11-01 22:53:23,705 - 297, 4, boilerplate
+2024-11-01 22:53:48,927 - seed:55, steps:2860k, 1.0, won:88.1%, s:206.02, won_speed:1.151, status: Counter({'won': 797, 'breached_wall': 32, 'breached_c': 29, 'collided': 26, 'collided_UAV': 19, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-01 22:55:40,884 - 282, 4, boilerplate
+2024-11-01 22:57:54,495 - 271, 4, boilerplate
+2024-11-01 22:58:21,249 - seed:55, steps:2893k, 1.0, won:90.6%, s:221.57, won_speed:1.166, status: Counter({'won': 856, 'breached_c': 29, 'breached_wall': 23, 'collided': 18, 'breached_rad': 11, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-01 23:00:17,897 - 280, 4, boilerplate
+2024-11-01 23:02:41,386 - 295, 4, boilerplate
+2024-11-01 23:03:05,627 - seed:55, steps:2925k, 1.0, won:90.9%, s:255.64, won_speed:1.185, status: Counter({'won': 811, 'collided': 39, 'breached_wall': 18, 'collided_UAV': 11, 'breached_c': 11, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-01 23:05:09,403 - 301, 4, boilerplate
+2024-11-01 23:07:39,320 - 304, 4, boilerplate
+2024-11-01 23:08:04,921 - seed:55, steps:2958k, 1.0, won:89.3%, s:339.22, won_speed:1.218, status: Counter({'won': 832, 'breached_wall': 34, 'breached_c': 26, 'collided': 20, 'collided_UAV': 19, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 23:10:12,082 - 313, 4, boilerplate
+2024-11-01 23:12:43,978 - 315, 4, boilerplate
+2024-11-01 23:13:10,656 - seed:55, steps:2991k, 1.0, won:94.3%, s:213.4, won_speed:1.186, status: Counter({'won': 818, 'breached_c': 21, 'breached_wall': 13, 'collided': 10, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-01 23:15:17,516 - 309, 4, boilerplate
+2024-11-01 23:17:46,512 - 322, 4, boilerplate
+2024-11-01 23:18:11,157 - seed:55, steps:3023k, 1.0, won:88.2%, s:281.48, won_speed:1.207, status: Counter({'won': 789, 'breached_c': 52, 'collided': 22, 'breached_wall': 20, 'collided_UAV': 11, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 23:20:21,064 - 318, 4, boilerplate
+2024-11-01 23:22:55,517 - 318, 4, boilerplate
+2024-11-01 23:23:22,119 - seed:55, steps:3056k, 1.0, won:88.3%, s:197.18, won_speed:1.191, status: Counter({'won': 833, 'breached_c': 46, 'breached_wall': 36, 'collided_UAV': 16, 'collided': 10, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-01 23:25:33,520 - 315, 4, boilerplate
+2024-11-01 23:28:04,911 - 306, 4, boilerplate
+2024-11-01 23:28:28,881 - seed:55, steps:3089k, 1.0, won:88.0%, s:240.66, won_speed:1.175, status: Counter({'won': 766, 'breached_wall': 37, 'breached_c': 32, 'collided': 28, 'collided_UAV': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-01 23:30:24,567 - 286, 4, boilerplate
+2024-11-01 23:32:54,121 - 302, 4, boilerplate
+2024-11-01 23:33:20,842 - seed:55, steps:3122k, 1.0, won:86.8%, s:200.19, won_speed:1.186, status: Counter({'won': 779, 'breached_c': 60, 'breached_wall': 27, 'collided': 16, 'collided_UAV': 8, 'breached_rad': 7}), 
+ boilerplate
+2024-11-01 23:35:28,706 - 302, 4, boilerplate
+2024-11-01 23:37:57,534 - 306, 4, boilerplate
+2024-11-01 23:38:24,551 - seed:55, steps:3155k, 1.0, won:90.7%, s:238.78, won_speed:1.172, status: Counter({'won': 842, 'breached_wall': 36, 'breached_c': 25, 'collided': 18, 'collided_UAV': 4, 'breached_rad': 3}), 
+ boilerplate
+2024-11-01 23:40:24,126 - 308, 4, boilerplate
+2024-11-01 23:42:50,547 - 303, 4, boilerplate
+2024-11-01 23:43:14,339 - seed:55, steps:3188k, 1.0, won:93.0%, s:377.74, won_speed:1.211, status: Counter({'won': 792, 'collided': 18, 'breached_wall': 15, 'breached_c': 14, 'collided_UAV': 11, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-01 23:45:18,723 - 306, 4, boilerplate
+2024-11-01 23:47:47,968 - 311, 4, boilerplate
+2024-11-01 23:48:12,796 - seed:55, steps:3221k, 1.0, won:91.7%, s:210.59, won_speed:1.196, status: Counter({'won': 811, 'breached_c': 23, 'collided': 22, 'breached_wall': 15, 'collided_UAV': 13}), 
+ boilerplate
+2024-11-01 23:50:18,935 - 310, 4, boilerplate
+2024-11-01 23:52:44,963 - 308, 4, boilerplate
+2024-11-01 23:53:08,559 - seed:55, steps:3254k, 1.0, won:90.4%, s:248.35, won_speed:1.189, status: Counter({'won': 786, 'collided': 32, 'breached_wall': 21, 'breached_c': 19, 'collided_UAV': 11}), 
+ boilerplate
+2024-11-01 23:55:13,667 - 311, 4, boilerplate
+2024-11-01 23:57:37,226 - 289, 4, boilerplate
+2024-11-01 23:58:02,445 - seed:55, steps:3287k, 1.0, won:89.1%, s:314.42, won_speed:1.142, status: Counter({'won': 779, 'collided': 28, 'breached_c': 28, 'breached_wall': 26, 'collided_UAV': 12, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 00:00:04,113 - 291, 4, boilerplate
+2024-11-02 00:02:33,266 - 298, 4, boilerplate
+2024-11-02 00:03:00,020 - seed:55, steps:3320k, 1.0, won:88.1%, s:189.36, won_speed:1.161, status: Counter({'won': 804, 'breached_wall': 42, 'breached_c': 32, 'collided': 18, 'collided_UAV': 12, 'breached_rad': 5}), 
+ boilerplate
+2024-11-02 00:05:05,318 - 294, 4, boilerplate
+2024-11-02 00:07:35,549 - 288, 4, boilerplate
+2024-11-02 00:08:02,520 - seed:55, steps:3353k, 1.0, won:91.4%, s:341.11, won_speed:1.13, status: Counter({'won': 837, 'breached_c': 38, 'breached_wall': 22, 'collided': 10, 'collided_UAV': 7, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 00:10:05,276 - 291, 4, boilerplate
+2024-11-02 00:12:35,414 - 301, 4, boilerplate
+2024-11-02 00:13:01,590 - seed:55, steps:3385k, 1.0, won:81.4%, s:235.16, won_speed:1.161, status: Counter({'won': 745, 'breached_c': 120, 'breached_wall': 30, 'collided': 10, 'collided_UAV': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 00:15:08,014 - 302, 4, boilerplate
+2024-11-02 00:17:33,914 - 299, 4, boilerplate
+2024-11-02 00:17:58,519 - seed:55, steps:3418k, 1.0, won:90.5%, s:277.97, won_speed:1.154, status: Counter({'won': 776, 'breached_c': 38, 'breached_wall': 21, 'collided_UAV': 11, 'collided': 10, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 00:20:03,636 - 301, 4, boilerplate
+2024-11-02 00:22:35,258 - 300, 4, boilerplate
+2024-11-02 00:23:00,860 - seed:55, steps:3451k, 1.0, won:85.9%, s:224.8, won_speed:1.139, status: Counter({'won': 784, 'breached_c': 65, 'breached_wall': 37, 'collided_UAV': 13, 'collided': 10, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-02 00:25:04,096 - 300, 4, boilerplate
+2024-11-02 00:27:34,744 - 297, 4, boilerplate
+2024-11-02 00:28:03,396 - seed:55, steps:3484k, 1.0, won:80.0%, s:295.42, won_speed:1.115, status: Counter({'won': 725, 'breached_wall': 79, 'breached_c': 71, 'collided': 14, 'collided_UAV': 11, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-02 00:30:06,492 - 288, 4, boilerplate
+2024-11-02 00:32:36,062 - 298, 4, boilerplate
+2024-11-02 00:33:03,542 - seed:55, steps:3517k, 1.0, won:88.4%, s:214.23, won_speed:1.114, status: Counter({'won': 827, 'breached_c': 48, 'collided': 26, 'breached_wall': 17, 'collided_UAV': 17, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 00:35:11,921 - 292, 4, boilerplate
+2024-11-02 00:37:43,512 - 298, 4, boilerplate
+2024-11-02 00:38:09,369 - seed:55, steps:3549k, 1.0, won:90.8%, s:380.3, won_speed:1.14, status: Counter({'won': 798, 'breached_c': 49, 'collided': 14, 'collided_UAV': 11, 'breached_wall': 7}), 
+ boilerplate
+2024-11-02 00:40:14,017 - 295, 4, boilerplate
+2024-11-02 00:42:47,672 - 300, 4, boilerplate
+2024-11-02 00:43:13,174 - seed:55, steps:3582k, 1.0, won:88.2%, s:252.93, won_speed:1.162, status: Counter({'won': 795, 'breached_c': 36, 'breached_wall': 29, 'collided_UAV': 21, 'collided': 18, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 00:45:18,135 - 304, 4, boilerplate
+2024-11-02 00:47:50,599 - 297, 4, boilerplate
+2024-11-02 00:48:16,056 - seed:55, steps:3615k, 1.0, won:90.8%, s:330.69, won_speed:1.154, status: Counter({'won': 814, 'collided': 32, 'breached_c': 32, 'breached_wall': 13, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 00:50:23,865 - 305, 4, boilerplate
+2024-11-02 00:52:56,273 - 301, 4, boilerplate
+2024-11-02 00:53:20,537 - seed:55, steps:3648k, 1.0, won:88.4%, s:208.97, won_speed:1.146, status: Counter({'won': 800, 'breached_c': 58, 'breached_wall': 21, 'collided': 18, 'collided_UAV': 7, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 00:55:29,598 - 300, 4, boilerplate
+2024-11-02 00:58:02,420 - 298, 4, boilerplate
+2024-11-02 00:58:29,778 - seed:55, steps:3680k, 1.0, won:92.8%, s:198.03, won_speed:1.156, status: Counter({'won': 832, 'breached_c': 24, 'collided': 22, 'breached_wall': 9, 'collided_UAV': 8, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 01:00:40,150 - 300, 4, boilerplate
+2024-11-02 01:03:15,440 - 296, 4, boilerplate
+2024-11-02 01:03:41,624 - seed:55, steps:3714k, 1.0, won:93.3%, s:301.42, won_speed:1.144, status: Counter({'won': 838, 'breached_c': 41, 'breached_wall': 9, 'collided': 8, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 01:05:47,283 - 298, 4, boilerplate
+2024-11-02 01:08:28,534 - 298, 4, boilerplate
+2024-11-02 01:08:56,523 - seed:55, steps:3746k, 1.0, won:91.5%, s:397.41, won_speed:1.165, status: Counter({'won': 833, 'breached_wall': 25, 'collided': 24, 'breached_c': 15, 'collided_UAV': 13}), 
+ boilerplate
+2024-11-02 01:11:07,011 - 301, 4, boilerplate
+2024-11-02 01:13:35,755 - 293, 4, boilerplate
+2024-11-02 01:14:01,563 - seed:55, steps:3779k, 1.0, won:91.1%, s:396.96, won_speed:1.154, status: Counter({'won': 831, 'breached_c': 31, 'collided': 22, 'collided_UAV': 16, 'breached_wall': 12}), 
+ boilerplate
+2024-11-02 01:16:04,843 - 297, 4, boilerplate
+2024-11-02 01:18:45,908 - 306, 4, boilerplate
+2024-11-02 01:19:13,190 - seed:55, steps:3812k, 1.0, won:92.3%, s:211.99, won_speed:1.164, status: Counter({'won': 814, 'collided': 30, 'breached_c': 18, 'collided_UAV': 14, 'breached_wall': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 01:21:23,003 - 305, 4, boilerplate
+2024-11-02 01:24:03,771 - 301, 4, boilerplate
+2024-11-02 01:24:30,757 - seed:55, steps:3845k, 1.0, won:82.3%, s:351.62, won_speed:1.146, status: Counter({'won': 765, 'collided': 94, 'breached_wall': 27, 'breached_c': 24, 'collided_UAV': 19, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 01:26:31,388 - 301, 4, boilerplate
+2024-11-02 01:28:58,719 - 298, 4, boilerplate
+2024-11-02 01:29:25,789 - seed:55, steps:3878k, 1.0, won:91.7%, s:248.73, won_speed:1.143, status: Counter({'won': 870, 'collided': 30, 'breached_wall': 21, 'collided_UAV': 19, 'breached_c': 9}), 
+ boilerplate
+2024-11-02 01:31:34,822 - 299, 4, boilerplate
+2024-11-02 01:34:07,155 - 301, 4, boilerplate
+2024-11-02 01:34:30,858 - seed:55, steps:3910k, 1.0, won:92.3%, s:325.53, won_speed:1.147, status: Counter({'won': 796, 'collided': 26, 'breached_c': 15, 'collided_UAV': 13, 'breached_wall': 12}), 
+ boilerplate
+2024-11-02 01:36:39,011 - 302, 4, boilerplate
+2024-11-02 01:39:18,166 - 305, 4, boilerplate
+2024-11-02 01:39:44,024 - seed:55, steps:3943k, 1.0, won:91.1%, s:266.76, won_speed:1.16, status: Counter({'won': 838, 'breached_c': 28, 'breached_wall': 20, 'collided_UAV': 17, 'collided': 16, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 01:41:49,592 - 298, 4, boilerplate
+2024-11-02 01:44:19,132 - 302, 4, boilerplate
+2024-11-02 01:44:47,242 - seed:55, steps:3976k, 1.0, won:93.3%, s:302.87, won_speed:1.149, status: Counter({'won': 844, 'collided_UAV': 18, 'breached_c': 16, 'collided': 14, 'breached_wall': 11, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 01:46:56,149 - 303, 4, boilerplate
+2024-11-02 01:49:37,303 - 305, 4, boilerplate
+2024-11-02 01:50:04,053 - seed:55, steps:4009k, 1.0, won:94.9%, s:222.61, won_speed:1.199, status: Counter({'won': 848, 'collided': 14, 'collided_UAV': 11, 'breached_c': 10, 'breached_wall': 9, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 01:52:16,604 - 310, 4, boilerplate
+2024-11-02 01:54:50,510 - 302, 4, boilerplate
+2024-11-02 01:55:17,025 - seed:55, steps:4042k, 1.0, won:86.0%, s:241.25, won_speed:1.154, status: Counter({'won': 763, 'collided': 40, 'breached_c': 37, 'breached_wall': 31, 'collided_UAV': 13, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 01:57:25,305 - 303, 4, boilerplate
+2024-11-02 02:00:05,632 - 302, 4, boilerplate
+2024-11-02 02:00:33,000 - seed:55, steps:4075k, 1.0, won:91.9%, s:231.94, won_speed:1.15, status: Counter({'won': 809, 'collided': 26, 'breached_wall': 21, 'breached_c': 14, 'collided_UAV': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 02:02:41,381 - 302, 4, boilerplate
+2024-11-02 02:05:20,585 - 303, 4, boilerplate
+2024-11-02 02:05:49,729 - seed:55, steps:4107k, 1.0, won:87.6%, s:292.59, won_speed:1.129, status: Counter({'won': 816, 'breached_wall': 42, 'breached_c': 30, 'collided': 26, 'collided_UAV': 13, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-02 02:08:02,792 - 297, 4, boilerplate
+2024-11-02 02:10:40,310 - 297, 4, boilerplate
+2024-11-02 02:11:07,017 - seed:55, steps:4140k, 1.0, won:88.2%, s:370.93, won_speed:1.138, status: Counter({'won': 776, 'breached_c': 34, 'breached_wall': 31, 'collided': 28, 'collided_UAV': 8, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 02:13:15,596 - 303, 4, boilerplate
+2024-11-02 02:15:55,400 - 303, 4, boilerplate
+2024-11-02 02:16:21,128 - seed:55, steps:4173k, 1.0, won:91.9%, s:215.04, won_speed:1.139, status: Counter({'won': 828, 'breached_c': 31, 'collided': 24, 'breached_wall': 13, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 02:18:28,274 - 306, 4, boilerplate
+2024-11-02 02:21:04,448 - 308, 4, boilerplate
+2024-11-02 02:21:30,949 - seed:55, steps:4206k, 1.0, won:91.2%, s:303.32, won_speed:1.156, status: Counter({'won': 843, 'breached_c': 35, 'collided': 20, 'breached_wall': 16, 'collided_UAV': 7, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 02:23:40,824 - 307, 4, boilerplate
+2024-11-02 02:26:13,427 - 310, 4, boilerplate
+2024-11-02 02:26:38,753 - seed:55, steps:4239k, 1.0, won:90.0%, s:228.23, won_speed:1.142, status: Counter({'won': 804, 'collided': 38, 'breached_c': 19, 'breached_wall': 15, 'collided_UAV': 12, 'breached_rad_t_wall': 4, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 02:28:45,750 - 305, 4, boilerplate
+2024-11-02 02:31:21,077 - 305, 4, boilerplate
+2024-11-02 02:31:45,815 - seed:55, steps:4272k, 1.0, won:91.3%, s:212.34, won_speed:1.144, status: Counter({'won': 817, 'collided': 26, 'breached_c': 24, 'collided_UAV': 15, 'breached_wall': 13}), 
+ boilerplate
+2024-11-02 02:33:55,415 - 307, 4, boilerplate
+2024-11-02 02:36:32,920 - 311, 4, boilerplate
+2024-11-02 02:36:58,514 - seed:55, steps:4304k, 1.0, won:88.3%, s:223.68, won_speed:1.159, status: Counter({'won': 789, 'collided': 40, 'breached_wall': 27, 'collided_UAV': 17, 'breached_c': 17, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-02 02:39:09,365 - 310, 4, boilerplate
+2024-11-02 02:41:46,042 - 312, 4, boilerplate
+2024-11-02 02:42:12,069 - seed:55, steps:4337k, 1.0, won:92.6%, s:206.2, won_speed:1.172, status: Counter({'won': 865, 'collided': 30, 'breached_c': 19, 'collided_UAV': 10, 'breached_wall': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 02:44:22,100 - 310, 4, boilerplate
+2024-11-02 02:46:55,262 - 311, 4, boilerplate
+2024-11-02 02:47:19,409 - seed:55, steps:4370k, 1.0, won:92.4%, s:387.22, won_speed:1.159, status: Counter({'won': 812, 'collided': 38, 'breached_c': 17, 'breached_wall': 8, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-02 02:49:24,965 - 313, 4, boilerplate
+2024-11-02 02:52:00,398 - 307, 4, boilerplate
+2024-11-02 02:52:25,027 - seed:55, steps:4403k, 1.0, won:89.0%, s:191.02, won_speed:1.17, status: Counter({'won': 800, 'breached_wall': 51, 'collided_UAV': 19, 'breached_c': 15, 'collided': 8, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-02 02:54:33,211 - 310, 4, boilerplate
+2024-11-02 02:57:08,294 - 306, 4, boilerplate
+2024-11-02 02:57:34,451 - seed:55, steps:4436k, 1.0, won:89.9%, s:279.95, won_speed:1.137, status: Counter({'won': 788, 'breached_wall': 37, 'collided': 20, 'breached_c': 18, 'collided_UAV': 12, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 02:59:47,082 - 303, 4, boilerplate
+2024-11-02 03:02:25,075 - 310, 4, boilerplate
+2024-11-02 03:02:50,390 - seed:55, steps:4468k, 1.0, won:92.4%, s:215.29, won_speed:1.153, status: Counter({'won': 828, 'breached_c': 22, 'breached_wall': 16, 'collided_UAV': 14, 'collided': 12, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-02 03:04:59,842 - 310, 4, boilerplate
+2024-11-02 03:07:40,469 - 311, 4, boilerplate
+2024-11-02 03:08:08,069 - seed:55, steps:4501k, 1.0, won:90.4%, s:392.73, won_speed:1.149, status: Counter({'won': 824, 'breached_wall': 37, 'collided': 18, 'collided_UAV': 15, 'breached_c': 15, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 03:10:12,308 - 302, 4, boilerplate
+2024-11-02 03:12:46,042 - 308, 4, boilerplate
+2024-11-02 03:13:11,489 - seed:55, steps:4534k, 1.0, won:92.1%, s:340.0, won_speed:1.144, status: Counter({'won': 837, 'collided': 28, 'breached_wall': 22, 'breached_c': 11, 'collided_UAV': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 03:15:18,623 - 306, 4, boilerplate
+2024-11-02 03:17:47,481 - 304, 4, boilerplate
+2024-11-02 03:18:14,386 - seed:55, steps:4567k, 1.0, won:91.2%, s:210.86, won_speed:1.144, status: Counter({'won': 811, 'collided': 36, 'collided_UAV': 15, 'breached_c': 14, 'breached_wall': 12, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 03:20:24,595 - 302, 4, boilerplate
+2024-11-02 03:23:02,892 - 307, 4, boilerplate
+2024-11-02 03:23:30,736 - seed:55, steps:4600k, 1.0, won:85.8%, s:222.53, won_speed:1.142, status: Counter({'won': 789, 'breached_c': 80, 'collided': 20, 'breached_wall': 18, 'collided_UAV': 11, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 03:25:40,957 - 303, 4, boilerplate
+2024-11-02 03:28:12,519 - 299, 4, boilerplate
+2024-11-02 03:28:38,189 - seed:55, steps:4633k, 1.0, won:85.7%, s:234.35, won_speed:1.158, status: Counter({'won': 747, 'breached_c': 54, 'collided': 40, 'breached_wall': 22, 'collided_UAV': 9}), 
+ boilerplate
+2024-11-02 03:30:46,470 - 303, 4, boilerplate
+2024-11-02 03:33:19,498 - 304, 4, boilerplate
+2024-11-02 03:33:45,683 - seed:55, steps:4666k, 1.0, won:83.8%, s:183.23, won_speed:1.147, status: Counter({'won': 781, 'collided': 51, 'breached_wall': 45, 'breached_c': 41, 'collided_UAV': 9, 'breached_rad_t_wall': 3, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 03:35:52,520 - 303, 4, boilerplate
+2024-11-02 03:38:23,303 - 307, 4, boilerplate
+2024-11-02 03:38:50,295 - seed:55, steps:4698k, 1.0, won:85.0%, s:369.72, won_speed:1.169, status: Counter({'won': 780, 'breached_c': 66, 'collided': 45, 'breached_wall': 17, 'collided_UAV': 8, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 03:40:59,301 - 310, 4, boilerplate
+2024-11-02 03:43:34,031 - 308, 4, boilerplate
+2024-11-02 03:44:00,319 - seed:55, steps:4731k, 1.0, won:87.1%, s:368.79, won_speed:1.155, status: Counter({'won': 777, 'breached_c': 40, 'breached_wall': 32, 'collided': 30, 'collided_UAV': 11, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 03:46:09,696 - 306, 4, boilerplate
+2024-11-02 03:48:47,234 - 306, 4, boilerplate
+2024-11-02 03:49:12,512 - seed:55, steps:4764k, 1.0, won:87.8%, s:188.48, won_speed:1.148, status: Counter({'won': 791, 'breached_c': 38, 'collided': 35, 'breached_wall': 29, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-02 03:51:20,724 - 301, 4, boilerplate
+2024-11-02 03:53:59,439 - 299, 4, boilerplate
+2024-11-02 03:54:26,113 - seed:55, steps:4797k, 1.0, won:88.5%, s:184.58, won_speed:1.138, status: Counter({'won': 779, 'breached_c': 42, 'breached_wall': 30, 'collided': 24, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-02 03:56:34,558 - 301, 4, boilerplate
+2024-11-02 03:59:15,166 - 298, 4, boilerplate
+2024-11-02 03:59:42,617 - seed:55, steps:4830k, 1.0, won:93.1%, s:198.67, won_speed:1.139, status: Counter({'won': 832, 'breached_wall': 24, 'breached_c': 15, 'collided': 12, 'collided_UAV': 7, 'breached_rad_t_wall': 3, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 04:01:50,907 - 298, 4, boilerplate
+2024-11-02 04:04:29,965 - 295, 4, boilerplate
+2024-11-02 04:04:58,026 - seed:55, steps:4863k, 1.0, won:84.7%, s:248.85, won_speed:1.126, status: Counter({'won': 803, 'breached_c': 73, 'breached_wall': 33, 'collided': 32, 'collided_UAV': 7}), 
+ boilerplate
+2024-11-02 04:07:04,062 - 296, 4, boilerplate
+2024-11-02 04:09:39,324 - 297, 4, boilerplate
+2024-11-02 04:10:06,037 - seed:55, steps:4895k, 1.0, won:86.0%, s:218.92, won_speed:1.134, status: Counter({'won': 776, 'breached_c': 42, 'breached_wall': 42, 'collided': 33, 'collided_UAV': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 04:12:16,769 - 303, 4, boilerplate
+2024-11-02 04:14:48,128 - 296, 4, boilerplate
+2024-11-02 04:15:16,797 - seed:55, steps:4928k, 1.0, won:87.6%, s:252.73, won_speed:1.131, status: Counter({'won': 808, 'breached_c': 68, 'breached_wall': 23, 'collided': 16, 'collided_UAV': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 04:17:21,037 - 294, 4, boilerplate
+2024-11-02 04:19:51,004 - 297, 4, boilerplate
+2024-11-02 04:20:17,875 - seed:55, steps:4961k, 1.0, won:89.2%, s:367.65, won_speed:1.127, status: Counter({'won': 780, 'breached_c': 52, 'breached_wall': 17, 'collided': 16, 'collided_UAV': 8, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 04:22:24,628 - 295, 4, boilerplate
+2024-11-02 04:24:58,696 - 297, 4, boilerplate
+2024-11-02 04:25:26,928 - seed:55, steps:4994k, 1.0, won:87.2%, s:371.96, won_speed:1.138, status: Counter({'won': 788, 'breached_c': 81, 'breached_wall': 15, 'collided': 10, 'collided_UAV': 7, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 04:27:33,093 - 294, 4, boilerplate
+2024-11-02 04:30:07,884 - 297, 4, boilerplate
+2024-11-02 04:30:35,128 - seed:55, steps:5026k, 1.0, won:91.5%, s:328.93, won_speed:1.155, status: Counter({'won': 809, 'breached_c': 42, 'collided': 14, 'breached_wall': 14, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 04:32:43,186 - 304, 4, boilerplate
+2024-11-02 04:35:17,089 - 306, 4, boilerplate
+2024-11-02 04:35:44,399 - seed:55, steps:5059k, 1.0, won:91.1%, s:237.23, won_speed:1.156, status: Counter({'won': 836, 'breached_c': 48, 'breached_wall': 15, 'collided': 10, 'collided_UAV': 6, 'breached_rad': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 04:37:54,593 - 303, 4, boilerplate
+2024-11-02 04:40:23,132 - 295, 4, boilerplate
+2024-11-02 04:40:50,763 - seed:55, steps:5092k, 1.0, won:86.5%, s:287.35, won_speed:1.144, status: Counter({'won': 822, 'breached_c': 60, 'breached_wall': 35, 'collided': 26, 'collided_UAV': 6, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 04:42:59,817 - 297, 4, boilerplate
+2024-11-02 04:45:24,202 - 290, 4, boilerplate
+2024-11-02 04:45:50,171 - seed:55, steps:5125k, 1.0, won:87.0%, s:354.98, won_speed:1.155, status: Counter({'won': 760, 'breached_c': 56, 'breached_wall': 32, 'collided': 16, 'collided_UAV': 5, 'breached_rad': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 04:47:54,746 - 298, 4, boilerplate
+2024-11-02 04:50:22,644 - 300, 4, boilerplate
+2024-11-02 04:50:50,621 - seed:55, steps:5158k, 1.0, won:91.7%, s:221.58, won_speed:1.167, status: Counter({'won': 858, 'breached_c': 40, 'breached_wall': 21, 'collided': 10, 'collided_UAV': 5, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 04:52:58,260 - 300, 4, boilerplate
+2024-11-02 04:55:31,033 - 305, 4, boilerplate
+2024-11-02 04:55:59,169 - seed:55, steps:5191k, 1.0, won:93.1%, s:208.06, won_speed:1.171, status: Counter({'won': 875, 'breached_c': 22, 'collided': 20, 'breached_wall': 11, 'collided_UAV': 11, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 04:58:13,577 - 308, 4, boilerplate
+2024-11-02 05:00:49,077 - 310, 4, boilerplate
+2024-11-02 05:01:14,614 - seed:55, steps:5223k, 1.0, won:87.8%, s:375.68, won_speed:1.163, status: Counter({'won': 796, 'breached_c': 46, 'collided': 26, 'breached_wall': 25, 'collided_UAV': 13, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 05:03:23,873 - 310, 4, boilerplate
+2024-11-02 05:05:53,331 - 306, 4, boilerplate
+2024-11-02 05:06:17,812 - seed:55, steps:5256k, 1.0, won:89.8%, s:229.96, won_speed:1.173, status: Counter({'won': 802, 'breached_c': 44, 'collided': 18, 'breached_wall': 15, 'collided_UAV': 14}), 
+ boilerplate
+2024-11-02 05:08:25,227 - 307, 4, boilerplate
+2024-11-02 05:11:00,798 - 308, 4, boilerplate
+2024-11-02 05:11:25,809 - seed:55, steps:5289k, 1.0, won:87.8%, s:323.15, won_speed:1.208, status: Counter({'won': 795, 'collided': 46, 'breached_c': 39, 'collided_UAV': 13, 'breached_wall': 10, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 05:13:37,445 - 324, 4, boilerplate
+2024-11-02 05:16:20,049 - 325, 4, boilerplate
+2024-11-02 05:16:45,137 - seed:55, steps:5322k, 1.0, won:89.5%, s:284.95, won_speed:1.211, status: Counter({'won': 798, 'breached_c': 56, 'breached_wall': 18, 'collided': 10, 'collided_UAV': 4, 'breached_rad_t_wall': 3, 'breached_rad': 3}), 
+ boilerplate
+2024-11-02 05:18:55,601 - 324, 4, boilerplate
+2024-11-02 05:21:28,042 - 323, 4, boilerplate
+2024-11-02 05:21:53,609 - seed:55, steps:5354k, 1.0, won:93.2%, s:213.77, won_speed:1.211, status: Counter({'won': 820, 'collided': 22, 'breached_c': 21, 'collided_UAV': 9, 'breached_wall': 8}), 
+ boilerplate
+2024-11-02 05:24:07,233 - 323, 4, boilerplate
+2024-11-02 05:26:46,000 - 316, 4, boilerplate
+2024-11-02 05:27:12,695 - seed:55, steps:5387k, 1.0, won:93.8%, s:357.62, won_speed:1.195, status: Counter({'won': 869, 'breached_c': 21, 'collided': 14, 'breached_wall': 11, 'collided_UAV': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 05:29:23,773 - 311, 4, boilerplate
+2024-11-02 05:32:02,402 - 312, 4, boilerplate
+2024-11-02 05:32:27,916 - seed:55, steps:5420k, 1.0, won:93.0%, s:406.92, won_speed:1.19, status: Counter({'won': 846, 'breached_c': 24, 'breached_wall': 17, 'collided_UAV': 11, 'collided': 10, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 05:34:38,021 - 315, 4, boilerplate
+2024-11-02 05:37:14,559 - 315, 4, boilerplate
+2024-11-02 05:37:40,169 - seed:55, steps:5453k, 1.0, won:93.8%, s:260.08, won_speed:1.19, status: Counter({'won': 815, 'breached_wall': 24, 'collided_UAV': 12, 'collided': 10, 'breached_c': 8}), 
+ boilerplate
+2024-11-02 05:39:45,592 - 311, 4, boilerplate
+2024-11-02 05:42:21,844 - 316, 4, boilerplate
+2024-11-02 05:42:47,510 - seed:55, steps:5486k, 1.0, won:95.2%, s:240.05, won_speed:1.182, status: Counter({'won': 835, 'collided_UAV': 15, 'breached_wall': 12, 'breached_c': 9, 'collided': 4, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 05:44:49,401 - 304, 4, boilerplate
+2024-11-02 05:47:26,561 - 305, 4, boilerplate
+2024-11-02 05:47:53,753 - seed:55, steps:5519k, 1.0, won:93.1%, s:202.97, won_speed:1.176, status: Counter({'won': 847, 'breached_c': 21, 'collided_UAV': 18, 'breached_wall': 13, 'collided': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 05:50:06,453 - 307, 4, boilerplate
+2024-11-02 05:52:40,296 - 313, 4, boilerplate
+2024-11-02 05:53:05,279 - seed:55, steps:5551k, 1.0, won:89.8%, s:390.0, won_speed:1.213, status: Counter({'won': 812, 'breached_c': 33, 'collided': 26, 'breached_wall': 20, 'collided_UAV': 11, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 05:55:15,514 - 321, 4, boilerplate
+2024-11-02 05:57:55,163 - 316, 4, boilerplate
+2024-11-02 05:58:19,748 - seed:55, steps:5584k, 1.0, won:92.5%, s:323.98, won_speed:1.208, status: Counter({'won': 787, 'breached_c': 19, 'breached_wall': 17, 'collided_UAV': 16, 'collided': 12}), 
+ boilerplate
+2024-11-02 06:00:32,672 - 314, 4, boilerplate
+2024-11-02 06:03:07,113 - 319, 4, boilerplate
+2024-11-02 06:03:33,095 - seed:55, steps:5617k, 1.0, won:93.5%, s:239.27, won_speed:1.208, status: Counter({'won': 837, 'collided': 20, 'breached_c': 19, 'breached_wall': 17, 'collided_UAV': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 06:05:45,869 - 320, 4, boilerplate
+2024-11-02 06:08:22,985 - 318, 4, boilerplate
+2024-11-02 06:08:47,057 - seed:55, steps:5650k, 1.0, won:91.3%, s:237.32, won_speed:1.193, status: Counter({'won': 833, 'collided': 30, 'breached_c': 22, 'collided_UAV': 17, 'breached_wall': 10}), 
+ boilerplate
+2024-11-02 06:10:57,235 - 315, 4, boilerplate
+2024-11-02 06:13:29,074 - 320, 4, boilerplate
+2024-11-02 06:13:53,781 - seed:55, steps:5683k, 1.0, won:90.8%, s:286.17, won_speed:1.2, status: Counter({'won': 804, 'collided': 36, 'breached_wall': 23, 'breached_c': 14, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-02 06:16:06,529 - 318, 4, boilerplate
+2024-11-02 06:18:47,165 - 317, 4, boilerplate
+2024-11-02 06:19:13,481 - seed:55, steps:5715k, 1.0, won:94.9%, s:316.95, won_speed:1.22, status: Counter({'won': 874, 'breached_wall': 21, 'breached_c': 13, 'collided_UAV': 7, 'collided': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 06:21:29,444 - 324, 4, boilerplate
+2024-11-02 06:24:04,860 - 327, 4, boilerplate
+2024-11-02 06:24:30,439 - seed:55, steps:5748k, 1.0, won:94.0%, s:307.69, won_speed:1.234, status: Counter({'won': 853, 'collided': 24, 'breached_wall': 11, 'collided_UAV': 10, 'breached_c': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 06:26:42,712 - 328, 4, boilerplate
+2024-11-02 06:29:22,043 - 328, 4, boilerplate
+2024-11-02 06:29:47,456 - seed:55, steps:5781k, 1.0, won:90.3%, s:198.67, won_speed:1.236, status: Counter({'won': 840, 'breached_wall': 47, 'collided': 28, 'breached_c': 8, 'collided_UAV': 4, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 06:32:04,175 - 330, 4, boilerplate
+2024-11-02 06:34:42,723 - 330, 4, boilerplate
+2024-11-02 06:35:07,404 - seed:55, steps:5814k, 1.0, won:94.1%, s:203.45, won_speed:1.234, status: Counter({'won': 849, 'collided': 29, 'collided_UAV': 10, 'breached_wall': 9, 'breached_c': 3, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 06:37:17,029 - 330, 4, boilerplate
+2024-11-02 06:39:55,772 - 327, 4, boilerplate
+2024-11-02 06:40:20,084 - seed:55, steps:5847k, 1.0, won:92.7%, s:383.05, won_speed:1.239, status: Counter({'won': 800, 'breached_wall': 33, 'collided_UAV': 8, 'collided': 8, 'breached_rad': 6, 'breached_c': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 06:42:32,676 - 327, 4, boilerplate
+2024-11-02 06:45:08,980 - 327, 4, boilerplate
+2024-11-02 06:45:33,767 - seed:55, steps:5879k, 1.0, won:90.2%, s:295.36, won_speed:1.212, status: Counter({'won': 825, 'collided': 45, 'breached_wall': 19, 'breached_c': 14, 'collided_UAV': 8, 'breached_rad': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 06:47:46,957 - 331, 4, boilerplate
+2024-11-02 06:50:21,423 - 322, 4, boilerplate
+2024-11-02 06:50:46,568 - seed:55, steps:5912k, 1.0, won:90.5%, s:334.95, won_speed:1.238, status: Counter({'won': 824, 'collided': 36, 'breached_wall': 21, 'collided_UAV': 13, 'breached_c': 13, 'breached_rad': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 06:52:58,666 - 330, 4, boilerplate
+2024-11-02 06:55:37,718 - 326, 4, boilerplate
+2024-11-02 06:56:02,808 - seed:55, steps:5945k, 1.0, won:91.5%, s:291.53, won_speed:1.225, status: Counter({'won': 819, 'breached_wall': 26, 'collided': 26, 'breached_c': 10, 'collided_UAV': 9, 'breached_rad': 5}), 
+ boilerplate
+2024-11-02 06:58:14,542 - 321, 4, boilerplate
+2024-11-02 07:00:50,945 - 323, 4, boilerplate
+2024-11-02 07:01:15,085 - seed:55, steps:5978k, 1.0, won:86.3%, s:214.88, won_speed:1.222, status: Counter({'won': 771, 'breached_wall': 55, 'collided': 48, 'collided_UAV': 7, 'breached_c': 7, 'breached_rad': 5}), 
+ boilerplate
+2024-11-02 07:03:20,001 - 322, 4, boilerplate
+2024-11-02 07:05:54,046 - 323, 4, boilerplate
+2024-11-02 07:06:19,894 - seed:55, steps:6011k, 1.0, won:90.7%, s:210.26, won_speed:1.234, status: Counter({'won': 817, 'collided': 38, 'breached_wall': 20, 'breached_c': 19, 'collided_UAV': 7}), 
+ boilerplate
+2024-11-02 07:08:29,304 - 321, 4, boilerplate
+2024-11-02 07:11:01,637 - 321, 4, boilerplate
+2024-11-02 07:11:24,310 - seed:55, steps:6044k, 1.0, won:87.2%, s:183.94, won_speed:1.24, status: Counter({'won': 782, 'collided': 48, 'breached_c': 39, 'breached_wall': 23, 'collided_UAV': 3, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 07:13:30,321 - 324, 4, boilerplate
+2024-11-02 07:16:03,981 - 323, 4, boilerplate
+2024-11-02 07:16:29,802 - seed:55, steps:6076k, 1.0, won:90.5%, s:213.6, won_speed:1.231, status: Counter({'won': 828, 'collided': 36, 'breached_c': 24, 'breached_wall': 20, 'collided_UAV': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 07:18:38,947 - 326, 4, boilerplate
+2024-11-02 07:21:15,268 - 325, 4, boilerplate
+2024-11-02 07:21:40,632 - seed:55, steps:6109k, 1.0, won:87.6%, s:228.84, won_speed:1.221, status: Counter({'won': 816, 'collided': 52, 'breached_wall': 29, 'breached_c': 21, 'collided_UAV': 11, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 07:23:50,237 - 321, 4, boilerplate
+2024-11-02 07:26:25,386 - 320, 4, boilerplate
+2024-11-02 07:26:50,796 - seed:55, steps:6142k, 1.0, won:91.5%, s:390.62, won_speed:1.221, status: Counter({'won': 826, 'collided': 36, 'breached_wall': 17, 'breached_c': 13, 'collided_UAV': 11}), 
+ boilerplate
+2024-11-02 07:29:00,395 - 317, 4, boilerplate
+2024-11-02 07:31:35,270 - 323, 4, boilerplate
+2024-11-02 07:32:00,029 - seed:55, steps:6175k, 1.0, won:88.9%, s:331.18, won_speed:1.221, status: Counter({'won': 816, 'collided': 50, 'breached_c': 23, 'collided_UAV': 14, 'breached_wall': 13, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 07:34:13,681 - 323, 4, boilerplate
+2024-11-02 07:36:50,154 - 324, 4, boilerplate
+2024-11-02 07:37:13,975 - seed:55, steps:6208k, 1.0, won:84.7%, s:261.54, won_speed:1.216, status: Counter({'won': 750, 'collided': 62, 'breached_c': 37, 'breached_wall': 29, 'collided_UAV': 6, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 07:39:17,827 - 324, 4, boilerplate
+2024-11-02 07:41:41,361 - 319, 4, boilerplate
+2024-11-02 07:42:04,410 - seed:55, steps:6241k, 1.0, won:81.7%, s:277.26, won_speed:1.207, status: Counter({'won': 714, 'breached_wall': 73, 'collided': 58, 'breached_c': 19, 'collided_UAV': 5, 'breached_rad': 5}), 
+ boilerplate
+2024-11-02 07:43:57,553 - 316, 4, boilerplate
+2024-11-02 07:46:10,684 - 317, 4, boilerplate
+2024-11-02 07:46:34,009 - seed:55, steps:6274k, 1.0, won:81.1%, s:241.06, won_speed:1.209, status: Counter({'won': 715, 'collided': 82, 'breached_wall': 69, 'breached_c': 11, 'collided_UAV': 3, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 07:48:31,655 - 315, 4, boilerplate
+2024-11-02 07:51:01,905 - 315, 4, boilerplate
+2024-11-02 07:51:27,461 - seed:55, steps:6306k, 1.0, won:88.4%, s:331.61, won_speed:1.236, status: Counter({'won': 828, 'collided': 55, 'breached_wall': 35, 'collided_UAV': 9, 'breached_c': 7, 'breached_rad': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 07:53:35,661 - 322, 4, boilerplate
+2024-11-02 07:56:04,389 - 321, 4, boilerplate
+2024-11-02 07:56:29,614 - seed:55, steps:6339k, 1.0, won:90.0%, s:209.98, won_speed:1.233, status: Counter({'won': 808, 'breached_c': 26, 'breached_wall': 24, 'collided': 24, 'collided_UAV': 14, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 07:58:40,193 - 322, 4, boilerplate
+2024-11-02 08:01:12,961 - 322, 4, boilerplate
+2024-11-02 08:01:38,395 - seed:55, steps:6372k, 1.0, won:90.2%, s:288.23, won_speed:1.235, status: Counter({'won': 812, 'breached_wall': 39, 'breached_c': 21, 'collided': 20, 'collided_UAV': 7, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 08:03:46,724 - 323, 4, boilerplate
+2024-11-02 08:06:20,959 - 318, 4, boilerplate
+2024-11-02 08:06:46,626 - seed:55, steps:6405k, 1.0, won:90.4%, s:376.66, won_speed:1.215, status: Counter({'won': 798, 'collided': 30, 'breached_c': 26, 'breached_wall': 21, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-02 08:08:49,859 - 312, 4, boilerplate
+2024-11-02 08:11:13,926 - 304, 4, boilerplate
+2024-11-02 08:11:38,709 - seed:55, steps:6438k, 1.0, won:87.9%, s:185.59, won_speed:1.217, status: Counter({'won': 784, 'breached_c': 54, 'collided': 22, 'breached_wall': 22, 'collided_UAV': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 08:13:40,960 - 310, 4, boilerplate
+2024-11-02 08:16:05,124 - 314, 4, boilerplate
+2024-11-02 08:16:29,252 - seed:55, steps:6471k, 1.0, won:88.5%, s:251.13, won_speed:1.204, status: Counter({'won': 799, 'breached_c': 51, 'collided': 26, 'breached_wall': 18, 'collided_UAV': 8, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 08:18:35,256 - 308, 4, boilerplate
+2024-11-02 08:21:05,595 - 308, 4, boilerplate
+2024-11-02 08:21:32,023 - seed:55, steps:6503k, 1.0, won:94.5%, s:244.2, won_speed:1.211, status: Counter({'won': 847, 'breached_c': 26, 'collided_UAV': 9, 'breached_wall': 7, 'collided': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 08:23:42,871 - 310, 4, boilerplate
+2024-11-02 08:26:19,591 - 311, 4, boilerplate
+2024-11-02 08:26:44,756 - seed:55, steps:6536k, 1.0, won:93.9%, s:305.85, won_speed:1.199, status: Counter({'won': 849, 'breached_c': 18, 'collided_UAV': 13, 'breached_wall': 11, 'collided': 10, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 08:28:50,720 - 314, 4, boilerplate
+2024-11-02 08:31:28,202 - 316, 4, boilerplate
+2024-11-02 08:31:53,444 - seed:55, steps:6569k, 1.0, won:91.7%, s:194.8, won_speed:1.223, status: Counter({'won': 816, 'breached_c': 33, 'collided': 18, 'breached_wall': 15, 'collided_UAV': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 08:34:06,123 - 313, 4, boilerplate
+2024-11-02 08:36:46,867 - 320, 4, boilerplate
+2024-11-02 08:37:12,071 - seed:55, steps:6602k, 1.0, won:95.4%, s:308.84, won_speed:1.238, status: Counter({'won': 854, 'breached_c': 11, 'breached_wall': 11, 'collided': 10, 'collided_UAV': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 08:39:25,235 - 323, 4, boilerplate
+2024-11-02 08:42:04,475 - 328, 4, boilerplate
+2024-11-02 08:42:28,975 - seed:55, steps:6634k, 1.0, won:94.2%, s:343.95, won_speed:1.236, status: Counter({'won': 831, 'collided_UAV': 16, 'breached_c': 14, 'collided': 14, 'breached_wall': 7}), 
+ boilerplate
+2024-11-02 08:44:39,501 - 325, 4, boilerplate
+2024-11-02 08:47:15,720 - 328, 4, boilerplate
+2024-11-02 08:47:39,002 - seed:55, steps:6667k, 1.0, won:91.5%, s:263.76, won_speed:1.242, status: Counter({'won': 827, 'collided': 30, 'breached_c': 19, 'breached_wall': 18, 'collided_UAV': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 08:49:47,498 - 326, 4, boilerplate
+2024-11-02 08:52:24,829 - 327, 4, boilerplate
+2024-11-02 08:52:49,431 - seed:55, steps:6700k, 1.0, won:92.8%, s:220.9, won_speed:1.241, status: Counter({'won': 843, 'collided': 26, 'breached_c': 17, 'collided_UAV': 12, 'breached_wall': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 08:55:03,712 - 328, 4, boilerplate
+2024-11-02 08:57:47,638 - 329, 4, boilerplate
+2024-11-02 08:58:13,239 - seed:55, steps:6733k, 1.0, won:90.3%, s:297.66, won_speed:1.238, status: Counter({'won': 828, 'breached_c': 33, 'collided': 26, 'breached_wall': 21, 'collided_UAV': 9}), 
+ boilerplate
+2024-11-02 09:00:29,589 - 327, 4, boilerplate
+2024-11-02 09:03:06,305 - 326, 4, boilerplate
+2024-11-02 09:03:31,641 - seed:55, steps:6766k, 1.0, won:90.0%, s:385.13, won_speed:1.25, status: Counter({'won': 802, 'breached_c': 36, 'collided': 24, 'breached_wall': 14, 'collided_UAV': 14, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 09:05:45,438 - 326, 4, boilerplate
+2024-11-02 09:08:23,077 - 325, 4, boilerplate
+2024-11-02 09:08:49,348 - seed:55, steps:6799k, 1.0, won:92.5%, s:274.21, won_speed:1.225, status: Counter({'won': 858, 'breached_c': 23, 'collided': 18, 'breached_wall': 17, 'collided_UAV': 12}), 
+ boilerplate
+2024-11-02 09:11:01,212 - 322, 4, boilerplate
+2024-11-02 09:13:35,194 - 323, 4, boilerplate
+2024-11-02 09:14:00,846 - seed:55, steps:6831k, 1.0, won:91.7%, s:203.15, won_speed:1.236, status: Counter({'won': 846, 'collided': 26, 'breached_wall': 19, 'collided_UAV': 16, 'breached_c': 16}), 
+ boilerplate
+2024-11-02 09:16:15,514 - 322, 4, boilerplate
+2024-11-02 09:18:50,735 - 321, 4, boilerplate
+2024-11-02 09:19:15,700 - seed:55, steps:6864k, 1.0, won:94.9%, s:224.71, won_speed:1.244, status: Counter({'won': 854, 'collided': 20, 'breached_c': 13, 'collided_UAV': 7, 'breached_wall': 6}), 
+ boilerplate
+2024-11-02 09:21:31,001 - 329, 4, boilerplate
+2024-11-02 09:24:07,317 - 323, 4, boilerplate
+2024-11-02 09:24:32,386 - seed:55, steps:6897k, 1.0, won:93.2%, s:394.9, won_speed:1.224, status: Counter({'won': 818, 'breached_wall': 17, 'collided': 16, 'breached_c': 14, 'collided_UAV': 12, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 09:26:46,015 - 327, 4, boilerplate
+2024-11-02 09:29:26,585 - 325, 4, boilerplate
+2024-11-02 09:29:52,759 - seed:55, steps:6930k, 1.0, won:94.3%, s:224.71, won_speed:1.236, status: Counter({'won': 855, 'collided': 22, 'breached_wall': 12, 'breached_c': 10, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-02 09:32:03,120 - 325, 4, boilerplate
+2024-11-02 09:34:42,225 - 330, 4, boilerplate
+2024-11-02 09:35:07,522 - seed:55, steps:6963k, 1.0, won:94.9%, s:302.14, won_speed:1.241, status: Counter({'won': 839, 'collided': 14, 'breached_c': 13, 'breached_wall': 9, 'collided_UAV': 5, 'breached_rad': 2, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 09:37:21,569 - 323, 4, boilerplate
+2024-11-02 09:39:57,700 - 325, 4, boilerplate
+2024-11-02 09:40:22,283 - seed:55, steps:6995k, 1.0, won:93.8%, s:391.23, won_speed:1.227, status: Counter({'won': 819, 'breached_wall': 22, 'breached_c': 16, 'collided': 8, 'collided_UAV': 5, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 09:42:30,945 - 323, 4, boilerplate
+2024-11-02 09:45:09,389 - 326, 4, boilerplate
+2024-11-02 09:45:34,773 - seed:55, steps:7028k, 1.0, won:89.3%, s:283.96, won_speed:1.216, status: Counter({'won': 794, 'breached_wall': 37, 'breached_c': 26, 'collided': 18, 'collided_UAV': 8, 'breached_rad': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 09:47:43,643 - 323, 4, boilerplate
+2024-11-02 09:50:16,286 - 319, 4, boilerplate
+2024-11-02 09:50:39,495 - seed:55, steps:7061k, 1.0, won:91.6%, s:256.62, won_speed:1.198, status: Counter({'won': 803, 'breached_c': 29, 'collided': 24, 'breached_wall': 12, 'collided_UAV': 7, 'breached_rad': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 09:52:43,745 - 318, 4, boilerplate
+2024-11-02 09:55:13,833 - 313, 4, boilerplate
+2024-11-02 09:55:39,684 - seed:55, steps:7094k, 1.0, won:95.1%, s:228.48, won_speed:1.217, status: Counter({'won': 866, 'breached_c': 14, 'collided_UAV': 14, 'breached_wall': 9, 'collided': 8}), 
+ boilerplate
+2024-11-02 09:57:51,003 - 318, 4, boilerplate
+2024-11-02 10:00:25,148 - 315, 4, boilerplate
+2024-11-02 10:00:49,860 - seed:55, steps:7127k, 1.0, won:94.2%, s:273.72, won_speed:1.196, status: Counter({'won': 854, 'breached_c': 17, 'breached_wall': 14, 'collided': 12, 'collided_UAV': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 10:03:01,614 - 311, 4, boilerplate
+2024-11-02 10:05:38,920 - 309, 4, boilerplate
+2024-11-02 10:06:04,006 - seed:55, steps:7160k, 1.0, won:89.1%, s:213.32, won_speed:1.19, status: Counter({'won': 817, 'breached_wall': 52, 'breached_c': 28, 'collided': 10, 'collided_UAV': 10}), 
+ boilerplate
+2024-11-02 10:08:08,937 - 315, 4, boilerplate
+2024-11-02 10:10:36,351 - 313, 4, boilerplate
+2024-11-02 10:11:01,319 - seed:55, steps:7193k, 1.0, won:93.8%, s:252.22, won_speed:1.19, status: Counter({'won': 872, 'breached_c': 20, 'collided_UAV': 19, 'collided': 14, 'breached_wall': 5}), 
+ boilerplate
+2024-11-02 10:13:09,742 - 311, 4, boilerplate
+2024-11-02 10:15:40,085 - 311, 4, boilerplate
+2024-11-02 10:16:04,904 - seed:55, steps:7225k, 1.0, won:97.2%, s:422.11, won_speed:1.188, status: Counter({'won': 876, 'collided_UAV': 7, 'breached_wall': 6, 'breached_c': 6, 'collided': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 10:18:15,552 - 315, 4, boilerplate
+2024-11-02 10:20:46,694 - 315, 4, boilerplate
+2024-11-02 10:21:13,590 - seed:55, steps:7258k, 1.0, won:94.6%, s:417.64, won_speed:1.194, status: Counter({'won': 870, 'collided': 18, 'collided_UAV': 13, 'breached_wall': 9, 'breached_c': 8, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 10:23:22,106 - 312, 4, boilerplate
+2024-11-02 10:25:56,271 - 314, 4, boilerplate
+2024-11-02 10:26:21,260 - seed:55, steps:7291k, 1.0, won:94.1%, s:270.0, won_speed:1.204, status: Counter({'won': 847, 'breached_wall': 22, 'collided': 12, 'breached_c': 10, 'collided_UAV': 9}), 
+ boilerplate
+2024-11-02 10:28:27,898 - 317, 4, boilerplate
+2024-11-02 10:30:59,982 - 318, 4, boilerplate
+2024-11-02 10:31:23,438 - seed:55, steps:7324k, 1.0, won:94.9%, s:201.79, won_speed:1.227, status: Counter({'won': 838, 'breached_c': 14, 'collided_UAV': 12, 'collided': 12, 'breached_wall': 7}), 
+ boilerplate
+2024-11-02 10:33:32,053 - 323, 4, boilerplate
+2024-11-02 10:36:03,568 - 321, 4, boilerplate
+2024-11-02 10:36:27,496 - seed:55, steps:7357k, 1.0, won:95.0%, s:266.58, won_speed:1.199, status: Counter({'won': 830, 'breached_c': 18, 'collided': 12, 'breached_wall': 7, 'collided_UAV': 7}), 
+ boilerplate
+2024-11-02 10:38:33,416 - 313, 4, boilerplate
+2024-11-02 10:41:05,484 - 319, 4, boilerplate
+2024-11-02 10:41:30,155 - seed:55, steps:7389k, 1.0, won:95.4%, s:307.71, won_speed:1.219, status: Counter({'won': 854, 'breached_wall': 13, 'breached_c': 11, 'collided_UAV': 9, 'collided': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 10:43:41,347 - 321, 4, boilerplate
+2024-11-02 10:46:15,842 - 326, 4, boilerplate
+2024-11-02 10:46:39,878 - seed:55, steps:7422k, 1.0, won:92.2%, s:249.12, won_speed:1.238, status: Counter({'won': 866, 'collided': 28, 'breached_wall': 27, 'breached_c': 10, 'collided_UAV': 7, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 10:48:51,109 - 326, 4, boilerplate
+2024-11-02 10:51:23,409 - 324, 4, boilerplate
+2024-11-02 10:51:46,356 - seed:55, steps:7455k, 1.0, won:91.5%, s:262.11, won_speed:1.225, status: Counter({'won': 821, 'collided': 30, 'breached_wall': 17, 'breached_c': 16, 'collided_UAV': 12, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 10:53:53,973 - 326, 4, boilerplate
+2024-11-02 10:56:26,374 - 325, 4, boilerplate
+2024-11-02 10:56:50,584 - seed:55, steps:7488k, 1.0, won:93.8%, s:242.11, won_speed:1.241, status: Counter({'won': 839, 'collided': 20, 'collided_UAV': 12, 'breached_wall': 11, 'breached_c': 11, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 10:58:59,192 - 323, 4, boilerplate
+2024-11-02 11:01:31,086 - 326, 4, boilerplate
+2024-11-02 11:01:55,461 - seed:55, steps:7521k, 1.0, won:91.1%, s:247.64, won_speed:1.236, status: Counter({'won': 868, 'collided': 42, 'breached_wall': 21, 'breached_c': 15, 'collided_UAV': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 11:04:06,712 - 326, 4, boilerplate
+2024-11-02 11:06:39,550 - 328, 4, boilerplate
+2024-11-02 11:07:03,155 - seed:55, steps:7553k, 1.0, won:93.9%, s:223.77, won_speed:1.241, status: Counter({'won': 848, 'breached_c': 19, 'breached_wall': 14, 'collided': 10, 'collided_UAV': 9, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 11:09:15,589 - 333, 4, boilerplate
+2024-11-02 11:11:54,233 - 332, 4, boilerplate
+2024-11-02 11:12:19,191 - seed:55, steps:7586k, 1.0, won:94.3%, s:249.85, won_speed:1.241, status: Counter({'won': 862, 'breached_c': 17, 'breached_wall': 14, 'collided_UAV': 13, 'collided': 8}), 
+ boilerplate
+2024-11-02 11:14:31,744 - 332, 4, boilerplate
+2024-11-02 11:17:06,848 - 327, 4, boilerplate
+2024-11-02 11:17:30,222 - seed:55, steps:7619k, 1.0, won:95.7%, s:245.64, won_speed:1.228, status: Counter({'won': 850, 'collided_UAV': 15, 'collided': 12, 'breached_wall': 8, 'breached_c': 3}), 
+ boilerplate
+2024-11-02 11:19:42,484 - 327, 4, boilerplate
+2024-11-02 11:22:24,380 - 322, 4, boilerplate
+2024-11-02 11:22:50,282 - seed:55, steps:7652k, 1.0, won:96.2%, s:409.62, won_speed:1.219, status: Counter({'won': 851, 'collided': 12, 'breached_wall': 9, 'collided_UAV': 9, 'breached_c': 4}), 
+ boilerplate
+2024-11-02 11:25:03,422 - 321, 4, boilerplate
+2024-11-02 11:27:44,835 - 324, 4, boilerplate
+2024-11-02 11:28:10,753 - seed:55, steps:7685k, 1.0, won:96.3%, s:410.47, won_speed:1.237, status: Counter({'won': 855, 'breached_c': 11, 'breached_wall': 10, 'collided_UAV': 6, 'collided': 6}), 
+ boilerplate
+2024-11-02 11:30:20,925 - 324, 4, boilerplate
+2024-11-02 11:32:58,602 - 327, 4, boilerplate
+2024-11-02 11:33:21,890 - seed:55, steps:7717k, 1.0, won:93.1%, s:345.57, won_speed:1.211, status: Counter({'won': 836, 'breached_c': 26, 'collided': 18, 'breached_wall': 14, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-02 11:35:33,393 - 330, 4, boilerplate
+2024-11-02 11:38:13,286 - 327, 4, boilerplate
+2024-11-02 11:38:38,315 - seed:55, steps:7750k, 1.0, won:93.6%, s:354.79, won_speed:1.243, status: Counter({'won': 869, 'collided': 26, 'breached_wall': 18, 'breached_c': 8, 'collided_UAV': 7}), 
+ boilerplate
+2024-11-02 11:40:56,159 - 329, 4, boilerplate
+2024-11-02 11:43:36,482 - 329, 4, boilerplate
+2024-11-02 11:44:01,116 - seed:55, steps:7783k, 1.0, won:91.2%, s:194.6, won_speed:1.242, status: Counter({'won': 807, 'breached_c': 46, 'collided': 12, 'breached_wall': 9, 'collided_UAV': 8, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 11:46:17,008 - 335, 4, boilerplate
+2024-11-02 11:48:51,383 - 328, 4, boilerplate
+2024-11-02 11:49:16,283 - seed:55, steps:7816k, 1.0, won:92.2%, s:399.57, won_speed:1.233, status: Counter({'won': 828, 'collided': 23, 'breached_wall': 22, 'breached_c': 15, 'collided_UAV': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 11:51:36,537 - 333, 4, boilerplate
+2024-11-02 11:54:16,613 - 328, 4, boilerplate
+2024-11-02 11:54:40,388 - seed:55, steps:7849k, 1.0, won:92.6%, s:263.49, won_speed:1.265, status: Counter({'won': 816, 'breached_wall': 27, 'breached_c': 13, 'collided_UAV': 12, 'collided': 10, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 11:56:54,026 - 338, 4, boilerplate
+2024-11-02 11:59:36,223 - 338, 4, boilerplate
+2024-11-02 12:00:02,573 - seed:55, steps:7881k, 1.0, won:94.1%, s:259.35, won_speed:1.256, status: Counter({'won': 896, 'breached_wall': 21, 'collided': 18, 'collided_UAV': 9, 'breached_c': 6, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 12:02:19,028 - 337, 4, boilerplate
+2024-11-02 12:05:02,249 - 338, 4, boilerplate
+2024-11-02 12:05:26,825 - seed:55, steps:7914k, 1.0, won:93.9%, s:281.84, won_speed:1.258, status: Counter({'won': 879, 'breached_wall': 26, 'breached_c': 17, 'collided': 10, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 12:07:41,941 - 335, 4, boilerplate
+2024-11-02 12:10:24,236 - 335, 4, boilerplate
+2024-11-02 12:10:47,658 - seed:55, steps:7947k, 1.0, won:96.4%, s:222.66, won_speed:1.271, status: Counter({'won': 845, 'breached_wall': 13, 'collided': 8, 'breached_c': 6, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 12:13:00,735 - 339, 4, boilerplate
+2024-11-02 12:15:37,304 - 337, 4, boilerplate
+2024-11-02 12:16:01,093 - seed:55, steps:7980k, 1.0, won:96.6%, s:207.57, won_speed:1.266, status: Counter({'won': 856, 'breached_wall': 15, 'collided_UAV': 8, 'breached_c': 7}), 
+ boilerplate
+2024-11-02 12:18:15,004 - 338, 4, boilerplate
+2024-11-02 12:20:55,941 - 336, 4, boilerplate
+2024-11-02 12:21:19,509 - seed:55, steps:8013k, 1.0, won:94.0%, s:227.79, won_speed:1.254, status: Counter({'won': 860, 'breached_wall': 17, 'breached_c': 15, 'collided': 12, 'collided_UAV': 9, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 12:23:37,521 - 342, 4, boilerplate
+2024-11-02 12:26:17,344 - 334, 4, boilerplate
+2024-11-02 12:26:43,266 - seed:55, steps:8046k, 1.0, won:96.3%, s:250.55, won_speed:1.231, status: Counter({'won': 864, 'breached_wall': 15, 'collided': 10, 'collided_UAV': 7, 'breached_c': 1}), 
+ boilerplate
+2024-11-02 12:29:03,472 - 333, 4, boilerplate
+2024-11-02 12:31:47,466 - 336, 4, boilerplate
+2024-11-02 12:32:10,390 - seed:55, steps:8079k, 1.0, won:95.3%, s:264.73, won_speed:1.238, status: Counter({'won': 823, 'breached_wall': 27, 'collided': 6, 'collided_UAV': 4, 'breached_c': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 12:34:25,533 - 334, 4, boilerplate
+2024-11-02 12:37:09,118 - 337, 4, boilerplate
+2024-11-02 12:37:34,870 - seed:55, steps:8111k, 1.0, won:95.8%, s:252.04, won_speed:1.25, status: Counter({'won': 865, 'breached_wall': 13, 'collided_UAV': 12, 'collided': 10, 'breached_c': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 12:39:50,997 - 334, 4, boilerplate
+2024-11-02 12:42:23,728 - 336, 4, boilerplate
+2024-11-02 12:42:46,988 - seed:55, steps:8144k, 1.0, won:89.8%, s:341.66, won_speed:1.234, status: Counter({'won': 828, 'breached_wall': 52, 'collided': 18, 'collided_UAV': 9, 'breached_c': 9, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-02 12:45:00,753 - 334, 4, boilerplate
+2024-11-02 12:47:44,571 - 340, 4, boilerplate
+2024-11-02 12:48:07,285 - seed:55, steps:8177k, 1.0, won:93.0%, s:219.72, won_speed:1.251, status: Counter({'won': 837, 'breached_wall': 25, 'collided': 16, 'breached_c': 9, 'collided_UAV': 8, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-02 12:50:23,625 - 339, 4, boilerplate
+2024-11-02 12:53:06,838 - 335, 4, boilerplate
+2024-11-02 12:53:31,710 - seed:55, steps:8210k, 1.0, won:92.1%, s:240.25, won_speed:1.256, status: Counter({'won': 831, 'breached_wall': 40, 'collided': 10, 'breached_c': 8, 'collided_UAV': 8, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-02 12:55:49,507 - 337, 4, boilerplate
+2024-11-02 12:58:32,559 - 339, 4, boilerplate
+2024-11-02 12:58:56,199 - seed:55, steps:8242k, 1.0, won:94.0%, s:206.96, won_speed:1.263, status: Counter({'won': 855, 'collided': 22, 'breached_wall': 14, 'collided_UAV': 13, 'breached_c': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 13:01:14,508 - 343, 4, boilerplate
+2024-11-02 13:03:55,730 - 347, 4, boilerplate
+2024-11-02 13:04:21,277 - seed:55, steps:8275k, 1.0, won:95.2%, s:286.74, won_speed:1.275, status: Counter({'won': 887, 'collided_UAV': 17, 'breached_wall': 16, 'collided': 8, 'breached_rad_t_wall': 2, 'breached_c': 2}), 
+ boilerplate
+2024-11-02 13:06:40,502 - 343, 4, boilerplate
+2024-11-02 13:09:23,954 - 340, 4, boilerplate
+2024-11-02 13:09:48,739 - seed:55, steps:8308k, 1.0, won:94.2%, s:246.29, won_speed:1.267, status: Counter({'won': 848, 'breached_wall': 21, 'collided': 14, 'breached_c': 11, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 13:12:04,369 - 347, 4, boilerplate
+2024-11-02 13:14:40,304 - 345, 4, boilerplate
+2024-11-02 13:15:05,136 - seed:55, steps:8341k, 1.0, won:93.5%, s:249.58, won_speed:1.262, status: Counter({'won': 861, 'breached_wall': 22, 'collided_UAV': 14, 'collided': 12, 'breached_c': 11, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:17:21,766 - 340, 4, boilerplate
+2024-11-02 13:20:03,669 - 345, 4, boilerplate
+2024-11-02 13:20:28,458 - seed:55, steps:8374k, 1.0, won:93.9%, s:315.35, won_speed:1.267, status: Counter({'won': 869, 'collided': 24, 'breached_c': 17, 'breached_wall': 9, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:22:45,260 - 346, 4, boilerplate
+2024-11-02 13:25:26,799 - 342, 4, boilerplate
+2024-11-02 13:25:52,504 - seed:55, steps:8407k, 1.0, won:96.1%, s:359.34, won_speed:1.248, status: Counter({'won': 866, 'breached_c': 11, 'collided_UAV': 9, 'collided': 8, 'breached_wall': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:28:09,385 - 339, 4, boilerplate
+2024-11-02 13:30:53,824 - 341, 4, boilerplate
+2024-11-02 13:31:17,481 - seed:55, steps:8439k, 1.0, won:95.9%, s:427.12, won_speed:1.264, status: Counter({'won': 880, 'collided': 16, 'breached_wall': 11, 'breached_c': 6, 'collided_UAV': 3, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 13:33:31,834 - 342, 4, boilerplate
+2024-11-02 13:36:10,694 - 342, 4, boilerplate
+2024-11-02 13:36:35,296 - seed:55, steps:8472k, 1.0, won:96.3%, s:319.65, won_speed:1.265, status: Counter({'won': 879, 'breached_c': 11, 'collided_UAV': 8, 'collided': 8, 'breached_wall': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:38:52,037 - 339, 4, boilerplate
+2024-11-02 13:41:27,789 - 340, 4, boilerplate
+2024-11-02 13:41:51,305 - seed:55, steps:8505k, 1.0, won:95.2%, s:223.83, won_speed:1.267, status: Counter({'won': 848, 'collided': 14, 'breached_wall': 11, 'collided_UAV': 8, 'breached_c': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 13:44:04,993 - 340, 4, boilerplate
+2024-11-02 13:46:40,956 - 339, 4, boilerplate
+2024-11-02 13:47:04,895 - seed:55, steps:8538k, 1.0, won:96.0%, s:362.26, won_speed:1.287, status: Counter({'won': 873, 'collided': 10, 'breached_wall': 10, 'breached_c': 8, 'collided_UAV': 7, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:49:22,261 - 337, 4, boilerplate
+2024-11-02 13:51:57,916 - 339, 4, boilerplate
+2024-11-02 13:52:22,839 - seed:55, steps:8571k, 1.0, won:93.8%, s:351.77, won_speed:1.285, status: Counter({'won': 850, 'breached_wall': 25, 'breached_c': 17, 'collided': 10, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:54:38,608 - 339, 4, boilerplate
+2024-11-02 13:57:16,770 - 341, 4, boilerplate
+2024-11-02 13:57:39,861 - seed:55, steps:8603k, 1.0, won:91.1%, s:223.73, won_speed:1.283, status: Counter({'won': 843, 'breached_c': 48, 'breached_wall': 12, 'collided_UAV': 11, 'collided': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 13:59:55,585 - 347, 4, boilerplate
+2024-11-02 14:02:34,996 - 343, 4, boilerplate
+2024-11-02 14:02:59,610 - seed:55, steps:8636k, 1.0, won:96.2%, s:256.77, won_speed:1.271, status: Counter({'won': 883, 'collided': 14, 'collided_UAV': 10, 'breached_c': 7, 'breached_wall': 4}), 
+ boilerplate
+2024-11-02 14:05:15,550 - 342, 4, boilerplate
+2024-11-02 14:07:56,159 - 345, 4, boilerplate
+2024-11-02 14:08:20,486 - seed:55, steps:8669k, 1.0, won:94.9%, s:426.1, won_speed:1.275, status: Counter({'won': 882, 'breached_wall': 16, 'collided': 12, 'breached_c': 10, 'collided_UAV': 6, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 14:10:35,787 - 342, 4, boilerplate
+2024-11-02 14:13:10,655 - 343, 4, boilerplate
+2024-11-02 14:13:33,412 - seed:55, steps:8702k, 1.0, won:96.1%, s:270.51, won_speed:1.274, status: Counter({'won': 839, 'breached_wall': 14, 'breached_c': 9, 'collided_UAV': 6, 'collided': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 14:15:47,426 - 340, 4, boilerplate
+2024-11-02 14:18:21,284 - 339, 4, boilerplate
+2024-11-02 14:18:45,277 - seed:55, steps:8735k, 1.0, won:93.6%, s:273.99, won_speed:1.274, status: Counter({'won': 858, 'breached_c': 21, 'collided': 14, 'breached_wall': 12, 'collided_UAV': 8, 'breached_rad_t_wall': 3, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 14:20:56,105 - 338, 4, boilerplate
+2024-11-02 14:23:28,517 - 339, 4, boilerplate
+2024-11-02 14:23:53,676 - seed:55, steps:8767k, 1.0, won:96.4%, s:375.25, won_speed:1.27, status: Counter({'won': 906, 'breached_c': 10, 'collided': 8, 'collided_UAV': 7, 'breached_wall': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 14:26:10,889 - 341, 4, boilerplate
+2024-11-02 14:28:51,282 - 336, 4, boilerplate
+2024-11-02 14:29:15,437 - seed:55, steps:8800k, 1.0, won:97.0%, s:290.43, won_speed:1.267, status: Counter({'won': 899, 'collided': 10, 'collided_UAV': 7, 'breached_wall': 6, 'breached_c': 4, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 14:31:36,701 - 340, 4, boilerplate
+2024-11-02 14:34:16,703 - 340, 4, boilerplate
+2024-11-02 14:34:42,323 - seed:55, steps:8833k, 1.0, won:96.3%, s:360.78, won_speed:1.267, status: Counter({'won': 871, 'breached_wall': 20, 'breached_c': 5, 'collided': 4, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 14:37:02,432 - 340, 4, boilerplate
+2024-11-02 14:39:43,438 - 339, 4, boilerplate
+2024-11-02 14:40:09,364 - seed:55, steps:8866k, 1.0, won:98.3%, s:371.8, won_speed:1.266, status: Counter({'won': 901, 'collided': 6, 'breached_c': 4, 'breached_wall': 4, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 14:42:31,039 - 338, 4, boilerplate
+2024-11-02 14:45:13,782 - 335, 4, boilerplate
+2024-11-02 14:45:36,794 - seed:55, steps:8899k, 1.0, won:95.6%, s:249.99, won_speed:1.245, status: Counter({'won': 864, 'breached_wall': 20, 'breached_c': 10, 'collided': 6, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 14:47:52,984 - 333, 4, boilerplate
+2024-11-02 14:50:26,857 - 340, 4, boilerplate
+2024-11-02 14:50:50,558 - seed:55, steps:8931k, 1.0, won:94.4%, s:244.03, won_speed:1.268, status: Counter({'won': 850, 'breached_c': 28, 'breached_wall': 13, 'collided': 8, 'collided_UAV': 1}), 
+ boilerplate
+2024-11-02 14:53:06,173 - 343, 4, boilerplate
+2024-11-02 14:55:49,920 - 344, 4, boilerplate
+2024-11-02 14:56:14,291 - seed:55, steps:8964k, 1.0, won:95.5%, s:339.17, won_speed:1.28, status: Counter({'won': 824, 'breached_c': 15, 'breached_wall': 10, 'collided': 10, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-02 14:58:31,851 - 341, 4, boilerplate
+2024-11-02 15:01:10,981 - 342, 4, boilerplate
+2024-11-02 15:01:36,160 - seed:55, steps:8997k, 1.0, won:95.1%, s:314.01, won_speed:1.275, status: Counter({'won': 872, 'breached_wall': 19, 'breached_c': 16, 'collided': 8, 'breached_rad_t_wall': 1, 'collided_UAV': 1}), 
+ boilerplate
+2024-11-02 15:03:56,381 - 341, 4, boilerplate
+2024-11-02 15:06:35,260 - 341, 4, boilerplate
+2024-11-02 15:06:59,418 - seed:55, steps:9030k, 1.0, won:95.3%, s:209.66, won_speed:1.284, status: Counter({'won': 872, 'collided': 18, 'breached_c': 11, 'breached_wall': 9, 'collided_UAV': 3, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 15:09:19,123 - 346, 4, boilerplate
+2024-11-02 15:12:01,468 - 341, 4, boilerplate
+2024-11-02 15:12:26,132 - seed:55, steps:9063k, 1.0, won:95.5%, s:418.56, won_speed:1.276, status: Counter({'won': 869, 'collided': 20, 'breached_c': 10, 'collided_UAV': 9, 'breached_wall': 2}), 
+ boilerplate
+2024-11-02 15:14:45,115 - 343, 4, boilerplate
+2024-11-02 15:17:28,223 - 343, 4, boilerplate
+2024-11-02 15:17:51,557 - seed:55, steps:9096k, 1.0, won:96.5%, s:284.36, won_speed:1.263, status: Counter({'won': 885, 'breached_c': 12, 'breached_wall': 8, 'collided': 8, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-02 15:20:07,426 - 343, 4, boilerplate
+2024-11-02 15:22:52,843 - 344, 4, boilerplate
+2024-11-02 15:23:17,142 - seed:55, steps:9128k, 1.0, won:96.1%, s:352.26, won_speed:1.269, status: Counter({'won': 856, 'collided': 10, 'breached_wall': 10, 'breached_c': 9, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 15:25:35,822 - 344, 4, boilerplate
+2024-11-02 15:28:17,345 - 339, 4, boilerplate
+2024-11-02 15:28:42,033 - seed:55, steps:9161k, 1.0, won:97.0%, s:248.2, won_speed:1.253, status: Counter({'won': 863, 'collided': 20, 'breached_wall': 5, 'collided_UAV': 1, 'breached_c': 1}), 
+ boilerplate
+2024-11-02 15:30:58,578 - 339, 4, boilerplate
+2024-11-02 15:33:41,399 - 342, 4, boilerplate
+2024-11-02 15:34:06,766 - seed:55, steps:9194k, 1.0, won:97.1%, s:279.58, won_speed:1.257, status: Counter({'won': 872, 'collided': 14, 'collided_UAV': 6, 'breached_wall': 3, 'breached_c': 3}), 
+ boilerplate
+2024-11-02 15:36:25,913 - 340, 4, boilerplate
+2024-11-02 15:39:05,761 - 338, 4, boilerplate
+2024-11-02 15:39:29,371 - seed:55, steps:9227k, 1.0, won:95.4%, s:241.11, won_speed:1.256, status: Counter({'won': 838, 'breached_wall': 15, 'collided': 14, 'breached_c': 6, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 15:41:43,344 - 341, 4, boilerplate
+2024-11-02 15:44:22,269 - 339, 4, boilerplate
+2024-11-02 15:44:46,423 - seed:55, steps:9260k, 1.0, won:96.6%, s:413.57, won_speed:1.258, status: Counter({'won': 858, 'collided': 13, 'collided_UAV': 7, 'breached_c': 6, 'breached_wall': 4}), 
+ boilerplate
+2024-11-02 15:47:06,812 - 340, 4, boilerplate
+2024-11-02 15:49:50,837 - 337, 4, boilerplate
+2024-11-02 15:50:15,422 - seed:55, steps:9293k, 1.0, won:96.8%, s:207.16, won_speed:1.243, status: Counter({'won': 855, 'breached_wall': 10, 'collided': 8, 'collided_UAV': 5, 'breached_c': 5}), 
+ boilerplate
+2024-11-02 15:52:32,650 - 334, 4, boilerplate
+2024-11-02 15:55:13,524 - 338, 4, boilerplate
+2024-11-02 15:55:38,020 - seed:55, steps:9325k, 1.0, won:97.6%, s:248.87, won_speed:1.267, status: Counter({'won': 861, 'collided': 10, 'breached_wall': 7, 'breached_c': 2, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 15:58:00,903 - 338, 4, boilerplate
+2024-11-02 16:00:35,799 - 334, 4, boilerplate
+2024-11-02 16:01:00,263 - seed:55, steps:9358k, 1.0, won:91.9%, s:214.12, won_speed:1.247, status: Counter({'won': 821, 'breached_wall': 43, 'collided': 22, 'collided_UAV': 5, 'breached_c': 2}), 
+ boilerplate
+2024-11-02 16:03:11,613 - 332, 4, boilerplate
+2024-11-02 16:05:43,283 - 330, 4, boilerplate
+2024-11-02 16:06:07,494 - seed:55, steps:9391k, 1.0, won:91.8%, s:348.78, won_speed:1.233, status: Counter({'won': 849, 'breached_wall': 41, 'collided': 21, 'collided_UAV': 10, 'breached_rad_t_wall': 2, 'breached_c': 2}), 
+ boilerplate
+2024-11-02 16:08:23,642 - 329, 4, boilerplate
+2024-11-02 16:11:05,148 - 334, 4, boilerplate
+2024-11-02 16:11:28,599 - seed:55, steps:9424k, 1.0, won:94.0%, s:310.23, won_speed:1.244, status: Counter({'won': 860, 'collided': 22, 'collided_UAV': 17, 'breached_wall': 11, 'breached_c': 3, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 16:13:46,141 - 332, 4, boilerplate
+2024-11-02 16:16:25,462 - 335, 4, boilerplate
+2024-11-02 16:16:48,161 - seed:55, steps:9457k, 1.0, won:95.1%, s:201.2, won_speed:1.238, status: Counter({'won': 836, 'breached_wall': 24, 'collided': 14, 'collided_UAV': 3, 'breached_c': 1, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 16:19:02,256 - 335, 4, boilerplate
+2024-11-02 16:21:42,107 - 336, 4, boilerplate
+2024-11-02 16:22:06,556 - seed:55, steps:9489k, 1.0, won:94.4%, s:307.93, won_speed:1.262, status: Counter({'won': 859, 'collided': 20, 'breached_c': 16, 'breached_wall': 11, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-02 16:24:21,920 - 339, 4, boilerplate
+2024-11-02 16:27:04,566 - 344, 4, boilerplate
+2024-11-02 16:27:28,301 - seed:55, steps:9522k, 1.0, won:91.6%, s:293.02, won_speed:1.272, status: Counter({'won': 813, 'collided': 32, 'breached_c': 24, 'breached_wall': 11, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-02 16:29:45,559 - 342, 4, boilerplate
+2024-11-02 16:32:26,309 - 342, 4, boilerplate
+2024-11-02 16:32:49,844 - seed:55, steps:9555k, 1.0, won:96.7%, s:280.89, won_speed:1.284, status: Counter({'won': 871, 'breached_wall': 13, 'breached_c': 8, 'collided_UAV': 5, 'collided': 4}), 
+ boilerplate
+2024-11-02 16:35:04,912 - 344, 4, boilerplate
+2024-11-02 16:37:43,292 - 346, 4, boilerplate
+2024-11-02 16:38:08,001 - seed:55, steps:9588k, 1.0, won:97.7%, s:222.34, won_speed:1.279, status: Counter({'won': 917, 'breached_wall': 11, 'breached_c': 5, 'collided_UAV': 3, 'collided': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 16:40:25,564 - 343, 4, boilerplate
+2024-11-02 16:43:01,623 - 344, 4, boilerplate
+2024-11-02 16:43:24,712 - seed:55, steps:9621k, 1.0, won:95.5%, s:243.3, won_speed:1.265, status: Counter({'won': 846, 'breached_c': 21, 'breached_wall': 9, 'collided': 6, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 16:45:34,756 - 342, 4, boilerplate
+2024-11-02 16:48:15,056 - 339, 4, boilerplate
+2024-11-02 16:48:39,170 - seed:55, steps:9653k, 1.0, won:95.8%, s:310.81, won_speed:1.276, status: Counter({'won': 859, 'collided': 16, 'breached_wall': 14, 'breached_c': 5, 'collided_UAV': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 16:50:58,170 - 344, 4, boilerplate
+2024-11-02 16:53:42,922 - 346, 4, boilerplate
+2024-11-02 16:54:07,482 - seed:55, steps:9686k, 1.0, won:97.0%, s:417.91, won_speed:1.272, status: Counter({'won': 864, 'breached_wall': 11, 'collided': 6, 'collided_UAV': 5, 'breached_c': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 16:56:23,484 - 343, 4, boilerplate
+2024-11-02 16:59:04,121 - 341, 4, boilerplate
+2024-11-02 16:59:27,606 - seed:55, steps:9719k, 1.0, won:94.2%, s:244.17, won_speed:1.265, status: Counter({'won': 841, 'breached_wall': 37, 'breached_rad_t_wall': 6, 'collided': 4, 'breached_c': 3, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 17:01:44,837 - 339, 4, boilerplate
+2024-11-02 17:04:27,802 - 337, 4, boilerplate
+2024-11-02 17:04:51,876 - seed:55, steps:9752k, 1.0, won:97.1%, s:223.12, won_speed:1.268, status: Counter({'won': 849, 'collided': 12, 'breached_wall': 11, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 17:07:08,719 - 337, 4, boilerplate
+2024-11-02 17:09:49,291 - 335, 4, boilerplate
+2024-11-02 17:10:14,093 - seed:55, steps:9785k, 1.0, won:95.3%, s:271.19, won_speed:1.28, status: Counter({'won': 847, 'breached_wall': 24, 'collided': 8, 'breached_c': 5, 'collided_UAV': 3, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 17:12:31,358 - 343, 4, boilerplate
+2024-11-02 17:15:15,422 - 342, 4, boilerplate
+2024-11-02 17:15:41,274 - seed:55, steps:9817k, 1.0, won:94.7%, s:356.88, won_speed:1.268, status: Counter({'won': 861, 'breached_wall': 20, 'collided': 14, 'collided_UAV': 11, 'breached_rad_t_wall': 2, 'breached_c': 1}), 
+ boilerplate
+2024-11-02 17:17:59,940 - 338, 4, boilerplate
+2024-11-02 17:20:42,355 - 345, 4, boilerplate
+2024-11-02 17:21:07,637 - seed:55, steps:9850k, 1.0, won:96.7%, s:278.34, won_speed:1.294, status: Counter({'won': 862, 'breached_c': 9, 'breached_wall': 8, 'collided_UAV': 7, 'collided': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 17:23:27,953 - 340, 4, boilerplate
+2024-11-02 17:26:05,959 - 345, 4, boilerplate
+2024-11-02 17:26:28,353 - seed:55, steps:9883k, 1.0, won:97.0%, s:352.15, won_speed:1.283, status: Counter({'won': 852, 'collided': 10, 'breached_wall': 6, 'breached_c': 5, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-02 17:28:48,201 - 342, 4, boilerplate
+2024-11-02 17:31:24,857 - 342, 4, boilerplate
+2024-11-02 17:31:46,957 - seed:55, steps:9916k, 1.0, won:92.5%, s:236.41, won_speed:1.255, status: Counter({'won': 824, 'collided': 32, 'breached_wall': 31, 'breached_rad_t_wall': 2, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 17:33:59,705 - 339, 4, boilerplate
+2024-11-02 17:36:42,275 - 340, 4, boilerplate
+2024-11-02 17:37:07,818 - seed:55, steps:9949k, 1.0, won:91.6%, s:201.28, won_speed:1.261, status: Counter({'won': 837, 'breached_wall': 42, 'collided': 24, 'breached_rad_t_wall': 6, 'collided_UAV': 4, 'breached_c': 1}), 
+ boilerplate
+2024-11-02 17:39:22,048 - 340, 4, boilerplate
+2024-11-02 17:42:05,326 - 338, 4, boilerplate
+2024-11-02 17:42:31,239 - seed:55, steps:9982k, 1.0, won:96.8%, s:229.32, won_speed:1.278, status: Counter({'won': 874, 'collided': 14, 'breached_wall': 11, 'breached_c': 3, 'collided_UAV': 1}), 
+ boilerplate
+2024-11-02 17:44:49,431 - 335, 4, boilerplate
+2024-11-02 17:47:29,283 - 345, 4, boilerplate
+2024-11-02 17:47:53,930 - seed:55, steps:10014k, 1.0, won:96.7%, s:279.25, won_speed:1.286, status: Counter({'won': 866, 'breached_wall': 13, 'collided': 12, 'collided_UAV': 2, 'breached_rad_t_wall': 2, 'breached_c': 1}), 
+ boilerplate
+2024-11-02 17:50:09,880 - 342, 4, boilerplate
+2024-11-02 17:52:52,821 - 340, 4, boilerplate
+2024-11-02 17:53:18,332 - seed:55, steps:10047k, 1.0, won:97.2%, s:262.1, won_speed:1.278, status: Counter({'won': 904, 'collided': 8, 'breached_wall': 6, 'breached_c': 5, 'collided_UAV': 4, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 17:55:38,822 - 338, 4, boilerplate
+2024-11-02 17:58:23,924 - 343, 4, boilerplate
+2024-11-02 17:58:49,049 - seed:55, steps:10080k, 1.0, won:95.6%, s:315.74, won_speed:1.283, status: Counter({'won': 872, 'collided': 14, 'collided_UAV': 10, 'breached_wall': 10, 'breached_c': 6}), 
+ boilerplate
+2024-11-02 18:01:07,560 - 343, 4, boilerplate
+2024-11-02 18:03:54,937 - 344, 4, boilerplate
+2024-11-02 18:04:19,087 - seed:55, steps:10113k, 1.0, won:96.8%, s:277.73, won_speed:1.27, status: Counter({'won': 859, 'collided': 8, 'breached_c': 7, 'collided_UAV': 7, 'breached_wall': 5, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 18:06:36,806 - 344, 4, boilerplate
+2024-11-02 18:09:22,818 - 344, 4, boilerplate
+2024-11-02 18:09:47,079 - seed:55, steps:10146k, 1.0, won:97.2%, s:208.08, won_speed:1.251, status: Counter({'won': 861, 'collided': 10, 'breached_wall': 8, 'collided_UAV': 5, 'breached_rad_t_wall': 1, 'breached_c': 1}), 
+ boilerplate
+2024-11-02 18:11:59,713 - 337, 4, boilerplate
+2024-11-02 18:14:40,136 - 332, 4, boilerplate
+2024-11-02 18:15:05,497 - seed:55, steps:10179k, 1.0, won:97.5%, s:359.85, won_speed:1.273, status: Counter({'won': 870, 'collided': 10, 'breached_wall': 6, 'breached_c': 4, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 18:17:22,744 - 334, 4, boilerplate
+2024-11-02 18:20:01,708 - 335, 4, boilerplate
+2024-11-02 18:20:26,883 - seed:55, steps:10211k, 1.0, won:97.4%, s:225.21, won_speed:1.265, status: Counter({'won': 854, 'collided': 6, 'breached_wall': 6, 'breached_c': 6, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-02 18:22:44,971 - 339, 4, boilerplate
+2024-11-02 18:25:29,122 - 337, 4, boilerplate
+2024-11-02 18:25:53,709 - seed:55, steps:10244k, 1.0, won:89.5%, s:319.64, won_speed:1.238, status: Counter({'won': 781, 'breached_c': 60, 'breached_wall': 23, 'collided_UAV': 5, 'collided': 4}), 
+ boilerplate
+2024-11-02 18:28:02,304 - 320, 4, boilerplate
+2024-11-02 18:30:46,720 - 331, 4, boilerplate
+2024-11-02 18:31:12,250 - seed:55, steps:10277k, 1.0, won:97.2%, s:229.61, won_speed:1.254, status: Counter({'won': 871, 'collided': 10, 'breached_wall': 8, 'collided_UAV': 5, 'breached_c': 2}), 
+ boilerplate
+2024-11-02 18:33:30,066 - 332, 4, boilerplate
+2024-11-02 18:36:02,853 - 333, 4, boilerplate
+2024-11-02 18:36:25,429 - seed:55, steps:10310k, 1.0, won:95.4%, s:296.68, won_speed:1.251, status: Counter({'won': 823, 'breached_wall': 18, 'breached_c': 8, 'collided': 8, 'collided_UAV': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 18:38:33,220 - 331, 4, boilerplate
+2024-11-02 18:41:08,846 - 332, 4, boilerplate
+2024-11-02 18:41:34,532 - seed:55, steps:10343k, 1.0, won:94.8%, s:207.85, won_speed:1.226, status: Counter({'won': 865, 'collided': 16, 'breached_wall': 14, 'breached_c': 11, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 18:43:50,306 - 325, 4, boilerplate
+2024-11-02 18:46:29,979 - 329, 4, boilerplate
+2024-11-02 18:46:53,556 - seed:55, steps:10376k, 1.0, won:97.2%, s:358.81, won_speed:1.235, status: Counter({'won': 867, 'breached_wall': 10, 'collided_UAV': 5, 'collided': 4, 'breached_c': 3, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 18:49:08,757 - 326, 4, boilerplate
+2024-11-02 18:51:50,735 - 327, 4, boilerplate
+2024-11-02 18:52:15,185 - seed:55, steps:10409k, 1.0, won:96.8%, s:254.33, won_speed:1.243, status: Counter({'won': 882, 'collided': 10, 'breached_c': 7, 'breached_wall': 6, 'collided_UAV': 3, 'breached_rad': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 18:54:24,148 - 327, 4, boilerplate
+2024-11-02 18:57:02,919 - 325, 4, boilerplate
+2024-11-02 18:57:28,766 - seed:55, steps:10441k, 1.0, won:96.1%, s:211.9, won_speed:1.244, status: Counter({'won': 884, 'breached_wall': 11, 'collided': 10, 'collided_UAV': 6, 'breached_c': 6, 'breached_rad': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 18:59:44,127 - 328, 4, boilerplate
+2024-11-02 19:02:18,939 - 330, 4, boilerplate
+2024-11-02 19:02:42,931 - seed:55, steps:10474k, 1.0, won:96.8%, s:233.7, won_speed:1.235, status: Counter({'won': 886, 'breached_wall': 14, 'breached_c': 7, 'collided_UAV': 6, 'collided': 2}), 
+ boilerplate
+2024-11-02 19:04:54,575 - 330, 4, boilerplate
+2024-11-02 19:07:25,735 - 328, 4, boilerplate
+2024-11-02 19:07:49,452 - seed:55, steps:10507k, 1.0, won:97.1%, s:349.02, won_speed:1.24, status: Counter({'won': 846, 'collided': 12, 'breached_wall': 6, 'breached_c': 5, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 19:10:05,558 - 328, 4, boilerplate
+2024-11-02 19:12:49,644 - 331, 4, boilerplate
+2024-11-02 19:13:13,512 - seed:55, steps:10540k, 1.0, won:97.6%, s:365.01, won_speed:1.241, status: Counter({'won': 882, 'breached_wall': 8, 'collided_UAV': 6, 'breached_c': 4, 'collided': 4}), 
+ boilerplate
+2024-11-02 19:15:29,190 - 327, 4, boilerplate
+2024-11-02 19:18:06,467 - 335, 4, boilerplate
+2024-11-02 19:18:29,904 - seed:55, steps:10572k, 1.0, won:95.7%, s:274.56, won_speed:1.247, status: Counter({'won': 853, 'collided': 12, 'breached_wall': 12, 'breached_c': 7, 'collided_UAV': 4, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 19:20:42,738 - 336, 4, boilerplate
+2024-11-02 19:23:21,180 - 334, 4, boilerplate
+2024-11-02 19:23:47,338 - seed:55, steps:10605k, 1.0, won:97.3%, s:359.68, won_speed:1.256, status: Counter({'won': 871, 'collided': 12, 'collided_UAV': 5, 'breached_c': 4, 'breached_wall': 3}), 
+ boilerplate
+2024-11-02 19:26:01,318 - 336, 4, boilerplate
+2024-11-02 19:28:39,050 - 334, 4, boilerplate
+2024-11-02 19:29:04,606 - seed:55, steps:10638k, 1.0, won:96.9%, s:278.71, won_speed:1.259, status: Counter({'won': 868, 'collided': 16, 'breached_c': 6, 'breached_wall': 4, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 19:31:22,437 - 336, 4, boilerplate
+2024-11-02 19:33:56,332 - 344, 4, boilerplate
+2024-11-02 19:34:18,693 - seed:55, steps:10671k, 1.0, won:93.4%, s:237.65, won_speed:1.293, status: Counter({'won': 822, 'breached_c': 25, 'breached_wall': 15, 'collided': 8, 'collided_UAV': 7, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 19:36:30,153 - 344, 4, boilerplate
+2024-11-02 19:39:11,961 - 340, 4, boilerplate
+2024-11-02 19:39:36,798 - seed:55, steps:10704k, 1.0, won:90.6%, s:199.66, won_speed:1.282, status: Counter({'won': 822, 'breached_c': 41, 'breached_wall': 23, 'breached_rad_t_wall': 13, 'collided_UAV': 6, 'collided': 2}), 
+ boilerplate
+2024-11-02 19:41:51,263 - 343, 4, boilerplate
+2024-11-02 19:44:23,198 - 342, 4, boilerplate
+2024-11-02 19:44:46,893 - seed:55, steps:10736k, 1.0, won:83.6%, s:180.92, won_speed:1.312, status: Counter({'won': 749, 'breached_c': 58, 'breached_wall': 46, 'collided': 22, 'breached_rad_t_wall': 16, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-02 19:46:57,859 - 346, 4, boilerplate
+2024-11-02 19:49:31,727 - 353, 4, boilerplate
+2024-11-02 19:49:54,648 - seed:55, steps:10769k, 1.0, won:81.7%, s:178.89, won_speed:1.305, status: Counter({'won': 739, 'breached_c': 84, 'breached_wall': 41, 'breached_rad_t_wall': 21, 'collided': 16, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-02 19:52:06,356 - 343, 4, boilerplate
+2024-11-02 19:54:42,558 - 346, 4, boilerplate
+2024-11-02 19:55:04,865 - seed:55, steps:10802k, 1.0, won:89.3%, s:331.27, won_speed:1.297, status: Counter({'won': 804, 'breached_c': 45, 'collided': 26, 'breached_wall': 14, 'breached_rad_t_wall': 6, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-02 19:57:16,816 - 345, 4, boilerplate
+2024-11-02 19:59:52,203 - 346, 4, boilerplate
+2024-11-02 20:00:15,325 - seed:55, steps:10835k, 1.0, won:92.4%, s:309.27, won_speed:1.301, status: Counter({'won': 854, 'breached_c': 23, 'breached_wall': 17, 'collided': 16, 'collided_UAV': 7, 'breached_rad_t_wall': 6, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 20:02:30,769 - 343, 4, boilerplate
+2024-11-02 20:05:05,379 - 344, 4, boilerplate
+2024-11-02 20:05:30,254 - seed:55, steps:10868k, 1.0, won:92.0%, s:308.57, won_speed:1.282, status: Counter({'won': 848, 'breached_c': 33, 'breached_wall': 15, 'collided': 12, 'collided_UAV': 10, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-02 20:07:49,101 - 342, 4, boilerplate
+2024-11-02 20:10:21,959 - 342, 4, boilerplate
+2024-11-02 20:10:44,997 - seed:55, steps:10900k, 1.0, won:94.5%, s:230.62, won_speed:1.282, status: Counter({'won': 877, 'breached_c': 20, 'breached_wall': 13, 'collided': 12, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 20:13:01,074 - 342, 4, boilerplate
+2024-11-02 20:15:37,361 - 338, 4, boilerplate
+2024-11-02 20:15:59,957 - seed:55, steps:10933k, 1.0, won:95.8%, s:254.03, won_speed:1.276, status: Counter({'won': 871, 'breached_wall': 14, 'breached_c': 12, 'collided': 6, 'collided_UAV': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 20:18:17,586 - 346, 4, boilerplate
+2024-11-02 20:20:56,772 - 344, 4, boilerplate
+2024-11-02 20:21:19,682 - seed:55, steps:10966k, 1.0, won:95.5%, s:271.89, won_speed:1.312, status: Counter({'won': 840, 'collided': 12, 'collided_UAV': 11, 'breached_c': 9, 'breached_wall': 7, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 20:23:37,469 - 344, 4, boilerplate
+2024-11-02 20:26:18,683 - 347, 4, boilerplate
+2024-11-02 20:26:42,753 - seed:55, steps:10999k, 1.0, won:92.5%, s:344.43, won_speed:1.309, status: Counter({'won': 833, 'collided': 34, 'breached_c': 22, 'breached_wall': 8, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 20:28:59,481 - 347, 4, boilerplate
+2024-11-02 20:31:37,215 - 346, 4, boilerplate
+2024-11-02 20:32:00,203 - seed:55, steps:11032k, 1.0, won:92.5%, s:201.1, won_speed:1.286, status: Counter({'won': 830, 'breached_c': 23, 'collided': 22, 'breached_wall': 12, 'collided_UAV': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 20:34:14,469 - 348, 4, boilerplate
+2024-11-02 20:36:53,432 - 348, 4, boilerplate
+2024-11-02 20:37:15,641 - seed:55, steps:11064k, 1.0, won:93.6%, s:196.78, won_speed:1.295, status: Counter({'won': 810, 'collided': 19, 'breached_c': 13, 'collided_UAV': 13, 'breached_wall': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 20:39:28,164 - 351, 4, boilerplate
+2024-11-02 20:42:04,796 - 345, 4, boilerplate
+2024-11-02 20:42:27,664 - seed:55, steps:11097k, 1.0, won:94.2%, s:274.2, won_speed:1.287, status: Counter({'won': 850, 'breached_c': 22, 'collided': 16, 'breached_wall': 8, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 20:44:40,077 - 345, 4, boilerplate
+2024-11-02 20:47:16,473 - 350, 4, boilerplate
+2024-11-02 20:47:39,423 - seed:55, steps:11130k, 1.0, won:94.0%, s:203.93, won_speed:1.307, status: Counter({'won': 848, 'breached_wall': 21, 'collided': 14, 'breached_c': 13, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 20:49:56,845 - 343, 4, boilerplate
+2024-11-02 20:52:35,348 - 350, 4, boilerplate
+2024-11-02 20:52:58,951 - seed:55, steps:11163k, 1.0, won:96.0%, s:280.85, won_speed:1.303, status: Counter({'won': 870, 'breached_c': 13, 'breached_wall': 8, 'collided_UAV': 7, 'collided': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 20:55:16,360 - 345, 4, boilerplate
+2024-11-02 20:57:53,148 - 346, 4, boilerplate
+2024-11-02 20:58:17,383 - seed:55, steps:11196k, 1.0, won:88.0%, s:289.46, won_speed:1.31, status: Counter({'won': 799, 'breached_wall': 39, 'breached_c': 34, 'breached_rad_t_wall': 22, 'collided': 8, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 21:00:30,031 - 348, 4, boilerplate
+2024-11-02 21:03:10,652 - 347, 4, boilerplate
+2024-11-02 21:03:34,299 - seed:55, steps:11229k, 1.0, won:85.8%, s:236.24, won_speed:1.318, status: Counter({'won': 814, 'breached_c': 73, 'breached_wall': 29, 'collided_UAV': 14, 'breached_rad_t_wall': 13, 'collided': 6}), 
+ boilerplate
+2024-11-02 21:05:46,731 - 343, 4, boilerplate
+2024-11-02 21:08:21,730 - 352, 4, boilerplate
+2024-11-02 21:08:43,972 - seed:55, steps:11261k, 1.0, won:86.1%, s:321.66, won_speed:1.307, status: Counter({'won': 776, 'breached_c': 67, 'breached_wall': 33, 'collided': 12, 'collided_UAV': 8, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-02 21:10:55,762 - 351, 4, boilerplate
+2024-11-02 21:13:30,208 - 350, 4, boilerplate
+2024-11-02 21:13:54,016 - seed:55, steps:11294k, 1.0, won:80.8%, s:298.85, won_speed:1.31, status: Counter({'won': 727, 'breached_c': 73, 'breached_wall': 60, 'collided': 18, 'breached_rad_t_wall': 16, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 21:16:06,675 - 346, 4, boilerplate
+2024-11-02 21:18:43,626 - 363, 4, boilerplate
+2024-11-02 21:19:06,227 - seed:55, steps:11327k, 1.0, won:71.3%, s:302.99, won_speed:1.316, status: Counter({'won': 642, 'breached_c': 108, 'breached_wall': 77, 'breached_rad_t_wall': 35, 'collided': 30, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-02 21:21:19,976 - 360, 4, boilerplate
+2024-11-02 21:23:55,414 - 354, 4, boilerplate
+2024-11-02 21:24:17,107 - seed:55, steps:11360k, 1.0, won:75.7%, s:179.83, won_speed:1.316, status: Counter({'won': 690, 'breached_c': 106, 'breached_wall': 66, 'breached_rad_t_wall': 24, 'collided': 20, 'collided_UAV': 5, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 21:26:31,729 - 354, 4, boilerplate
+2024-11-02 21:29:05,297 - 352, 4, boilerplate
+2024-11-02 21:29:28,434 - seed:55, steps:11393k, 1.0, won:77.3%, s:160.19, won_speed:1.302, status: Counter({'won': 662, 'breached_c': 105, 'breached_wall': 49, 'breached_rad_t_wall': 24, 'collided': 10, 'collided_UAV': 5, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 21:31:38,206 - 352, 4, boilerplate
+2024-11-02 21:34:10,138 - 356, 4, boilerplate
+2024-11-02 21:34:33,041 - seed:55, steps:11425k, 1.0, won:84.2%, s:238.3, won_speed:1.309, status: Counter({'won': 744, 'breached_wall': 56, 'breached_c': 50, 'breached_rad_t_wall': 19, 'collided': 12, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-02 21:36:42,886 - 349, 4, boilerplate
+2024-11-02 21:39:14,285 - 355, 4, boilerplate
+2024-11-02 21:39:36,025 - seed:55, steps:11458k, 1.0, won:74.6%, s:273.32, won_speed:1.312, status: Counter({'won': 666, 'breached_c': 117, 'breached_wall': 60, 'breached_rad_t_wall': 24, 'collided': 18, 'collided_UAV': 7, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 21:41:48,810 - 355, 4, boilerplate
+2024-11-02 21:44:21,978 - 350, 4, boilerplate
+2024-11-02 21:44:43,779 - seed:55, steps:11491k, 1.0, won:75.3%, s:237.15, won_speed:1.312, status: Counter({'won': 660, 'breached_c': 109, 'breached_wall': 56, 'collided': 25, 'breached_rad_t_wall': 16, 'collided_UAV': 10, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 21:46:56,938 - 352, 4, boilerplate
+2024-11-02 21:49:36,201 - 349, 4, boilerplate
+2024-11-02 21:50:00,405 - seed:55, steps:11524k, 1.0, won:84.5%, s:202.84, won_speed:1.31, status: Counter({'won': 771, 'breached_c': 62, 'breached_wall': 52, 'breached_rad_t_wall': 15, 'collided': 6, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 21:52:15,974 - 347, 4, boilerplate
+2024-11-02 21:54:48,224 - 347, 4, boilerplate
+2024-11-02 21:55:10,467 - seed:55, steps:11557k, 1.0, won:77.7%, s:281.11, won_speed:1.294, status: Counter({'won': 686, 'breached_c': 101, 'breached_wall': 67, 'breached_rad_t_wall': 17, 'collided': 10, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-02 21:57:17,632 - 342, 4, boilerplate
+2024-11-02 21:59:48,851 - 346, 4, boilerplate
+2024-11-02 22:00:11,629 - seed:55, steps:11590k, 1.0, won:75.2%, s:332.35, won_speed:1.303, status: Counter({'won': 694, 'breached_wall': 99, 'breached_c': 79, 'collided': 22, 'breached_rad_t_wall': 19, 'collided_UAV': 10}), 
+ boilerplate
+2024-11-02 22:02:21,481 - 345, 4, boilerplate
+2024-11-02 22:04:50,737 - 343, 4, boilerplate
+2024-11-02 22:05:14,157 - seed:55, steps:11622k, 1.0, won:88.9%, s:290.99, won_speed:1.305, status: Counter({'won': 810, 'breached_c': 32, 'breached_wall': 26, 'collided': 22, 'breached_rad_t_wall': 15, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-02 22:07:23,937 - 340, 4, boilerplate
+2024-11-02 22:10:00,222 - 341, 4, boilerplate
+2024-11-02 22:10:23,643 - seed:55, steps:11655k, 1.0, won:80.1%, s:262.13, won_speed:1.301, status: Counter({'won': 739, 'breached_c': 67, 'breached_wall': 60, 'collided': 36, 'breached_rad_t_wall': 16, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-02 22:12:36,153 - 335, 4, boilerplate
+2024-11-02 22:15:08,902 - 345, 4, boilerplate
+2024-11-02 22:15:32,652 - seed:55, steps:11688k, 1.0, won:77.9%, s:335.47, won_speed:1.3, status: Counter({'won': 702, 'breached_wall': 97, 'breached_c': 55, 'breached_rad_t_wall': 21, 'collided': 20, 'collided_UAV': 4, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 22:17:42,780 - 347, 4, boilerplate
+2024-11-02 22:20:18,574 - 340, 4, boilerplate
+2024-11-02 22:20:40,992 - seed:55, steps:11721k, 1.0, won:88.8%, s:291.73, won_speed:1.301, status: Counter({'won': 801, 'breached_c': 54, 'breached_wall': 27, 'collided': 12, 'collided_UAV': 4, 'breached_rad_t_wall': 3, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 22:22:52,341 - 341, 4, boilerplate
+2024-11-02 22:25:26,707 - 339, 4, boilerplate
+2024-11-02 22:25:49,444 - seed:55, steps:11754k, 1.0, won:90.0%, s:202.99, won_speed:1.313, status: Counter({'won': 773, 'breached_wall': 30, 'collided': 22, 'breached_c': 19, 'collided_UAV': 11, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-02 22:27:58,827 - 344, 4, boilerplate
+2024-11-02 22:30:32,469 - 340, 4, boilerplate
+2024-11-02 22:30:55,133 - seed:55, steps:11786k, 1.0, won:85.1%, s:244.65, won_speed:1.289, status: Counter({'won': 762, 'breached_c': 59, 'breached_wall': 29, 'collided': 22, 'breached_rad': 13, 'collided_UAV': 6, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-02 22:33:04,423 - 340, 4, boilerplate
+2024-11-02 22:35:35,863 - 345, 4, boilerplate
+2024-11-02 22:35:59,304 - seed:55, steps:11819k, 1.0, won:84.3%, s:252.57, won_speed:1.303, status: Counter({'won': 791, 'breached_c': 56, 'breached_wall': 38, 'collided': 32, 'breached_rad_t_wall': 10, 'collided_UAV': 9, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 22:38:09,621 - 341, 4, boilerplate
+2024-11-02 22:40:45,575 - 343, 4, boilerplate
+2024-11-02 22:41:09,242 - seed:55, steps:11852k, 1.0, won:87.0%, s:325.61, won_speed:1.308, status: Counter({'won': 791, 'breached_c': 36, 'collided': 36, 'breached_wall': 24, 'collided_UAV': 13, 'breached_rad_t_wall': 9}), 
+ boilerplate
+2024-11-02 22:43:22,844 - 339, 4, boilerplate
+2024-11-02 22:45:56,626 - 341, 4, boilerplate
+2024-11-02 22:46:18,404 - seed:55, steps:11885k, 1.0, won:87.2%, s:270.09, won_speed:1.289, status: Counter({'won': 751, 'breached_wall': 67, 'breached_c': 24, 'collided': 14, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 22:48:20,032 - 346, 4, boilerplate
+2024-11-02 22:50:50,990 - 340, 4, boilerplate
+2024-11-02 22:51:14,421 - seed:55, steps:11918k, 1.0, won:87.2%, s:193.62, won_speed:1.282, status: Counter({'won': 800, 'breached_wall': 50, 'breached_c': 29, 'collided': 14, 'collided_UAV': 12, 'breached_rad_t_wall': 11, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 22:53:25,390 - 340, 4, boilerplate
+2024-11-02 22:55:59,512 - 334, 4, boilerplate
+2024-11-02 22:56:23,159 - seed:55, steps:11951k, 1.0, won:90.9%, s:396.3, won_speed:1.272, status: Counter({'won': 819, 'breached_c': 44, 'breached_wall': 18, 'collided': 10, 'collided_UAV': 7, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 22:58:32,660 - 332, 4, boilerplate
+2024-11-02 23:01:06,527 - 335, 4, boilerplate
+2024-11-02 23:01:30,300 - seed:55, steps:11984k, 1.0, won:89.2%, s:258.95, won_speed:1.28, status: Counter({'won': 806, 'breached_wall': 34, 'collided': 24, 'breached_c': 18, 'breached_rad_t_wall': 12, 'collided_UAV': 9, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 23:03:43,025 - 338, 4, boilerplate
+2024-11-02 23:06:20,504 - 333, 4, boilerplate
+2024-11-02 23:06:42,768 - seed:55, steps:12016k, 1.0, won:94.2%, s:294.44, won_speed:1.267, status: Counter({'won': 809, 'breached_c': 19, 'collided': 14, 'collided_UAV': 8, 'breached_wall': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 23:09:00,079 - 337, 4, boilerplate
+2024-11-02 23:11:43,030 - 333, 4, boilerplate
+2024-11-02 23:12:07,620 - seed:55, steps:12049k, 1.0, won:92.3%, s:197.72, won_speed:1.224, status: Counter({'won': 816, 'breached_c': 30, 'breached_wall': 15, 'collided': 12, 'collided_UAV': 6, 'breached_rad_t_wall': 3, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 23:14:19,295 - 332, 4, boilerplate
+2024-11-02 23:16:54,571 - 336, 4, boilerplate
+2024-11-02 23:17:19,735 - seed:55, steps:12082k, 1.0, won:94.5%, s:286.3, won_speed:1.271, status: Counter({'won': 892, 'breached_wall': 19, 'collided': 18, 'breached_c': 10, 'collided_UAV': 3, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-02 23:19:31,402 - 330, 4, boilerplate
+2024-11-02 23:22:06,766 - 336, 4, boilerplate
+2024-11-02 23:22:30,083 - seed:55, steps:12115k, 1.0, won:92.2%, s:395.16, won_speed:1.287, status: Counter({'won': 815, 'breached_c': 25, 'collided': 22, 'breached_wall': 11, 'collided_UAV': 8, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 23:24:44,062 - 333, 4, boilerplate
+2024-11-02 23:27:15,181 - 331, 4, boilerplate
+2024-11-02 23:27:39,628 - seed:55, steps:12148k, 1.0, won:90.1%, s:263.42, won_speed:1.246, status: Counter({'won': 816, 'breached_c': 47, 'breached_wall': 21, 'collided_UAV': 10, 'collided': 6, 'breached_rad_t_wall': 4, 'breached_rad': 2}), 
+ boilerplate
+2024-11-02 23:29:51,166 - 329, 4, boilerplate
+2024-11-02 23:32:25,228 - 328, 4, boilerplate
+2024-11-02 23:32:49,440 - seed:55, steps:12180k, 1.0, won:93.9%, s:221.59, won_speed:1.259, status: Counter({'won': 842, 'breached_wall': 26, 'collided': 12, 'collided_UAV': 7, 'breached_c': 6, 'breached_rad_t_wall': 3, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 23:35:05,989 - 332, 4, boilerplate
+2024-11-02 23:37:43,879 - 331, 4, boilerplate
+2024-11-02 23:38:08,336 - seed:55, steps:12213k, 1.0, won:93.3%, s:393.47, won_speed:1.263, status: Counter({'won': 811, 'breached_wall': 27, 'breached_c': 12, 'collided_UAV': 10, 'collided': 8, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-02 23:40:21,852 - 335, 4, boilerplate
+2024-11-02 23:43:02,024 - 331, 4, boilerplate
+2024-11-02 23:43:27,397 - seed:55, steps:12246k, 1.0, won:93.6%, s:307.58, won_speed:1.248, status: Counter({'won': 843, 'breached_c': 17, 'collided': 10, 'breached_wall': 10, 'breached_rad': 10, 'collided_UAV': 8, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-02 23:45:44,926 - 333, 4, boilerplate
+2024-11-02 23:48:21,421 - 331, 4, boilerplate
+2024-11-02 23:48:46,290 - seed:55, steps:12279k, 1.0, won:93.7%, s:305.63, won_speed:1.232, status: Counter({'won': 846, 'breached_c': 24, 'collided': 18, 'breached_wall': 7, 'collided_UAV': 4, 'breached_rad_t_wall': 3, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 23:51:01,706 - 325, 4, boilerplate
+2024-11-02 23:53:34,100 - 335, 4, boilerplate
+2024-11-02 23:53:57,697 - seed:55, steps:12312k, 1.0, won:88.3%, s:213.0, won_speed:1.234, status: Counter({'won': 801, 'breached_c': 78, 'breached_wall': 12, 'collided': 10, 'collided_UAV': 3, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-02 23:56:10,396 - 334, 4, boilerplate
+2024-11-02 23:58:45,050 - 336, 4, boilerplate
+2024-11-02 23:59:08,825 - seed:55, steps:12344k, 1.0, won:91.0%, s:336.71, won_speed:1.268, status: Counter({'won': 811, 'breached_c': 45, 'breached_wall': 13, 'collided': 12, 'collided_UAV': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 00:01:22,270 - 335, 4, boilerplate
+2024-11-03 00:04:00,612 - 332, 4, boilerplate
+2024-11-03 00:04:25,937 - seed:55, steps:12377k, 1.0, won:91.5%, s:339.6, won_speed:1.246, status: Counter({'won': 818, 'breached_c': 28, 'breached_wall': 23, 'collided': 12, 'collided_UAV': 11, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 00:06:41,145 - 328, 4, boilerplate
+2024-11-03 00:09:14,878 - 328, 4, boilerplate
+2024-11-03 00:09:39,693 - seed:55, steps:12410k, 1.0, won:90.6%, s:384.15, won_speed:1.236, status: Counter({'won': 792, 'breached_c': 39, 'breached_wall': 18, 'collided': 10, 'collided_UAV': 9, 'breached_rad': 3, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 00:11:51,588 - 325, 4, boilerplate
+2024-11-03 00:14:34,222 - 324, 4, boilerplate
+2024-11-03 00:14:58,826 - seed:55, steps:12443k, 1.0, won:93.0%, s:293.56, won_speed:1.25, status: Counter({'won': 808, 'breached_wall': 18, 'breached_c': 16, 'collided': 16, 'collided_UAV': 8, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 00:17:08,014 - 326, 4, boilerplate
+2024-11-03 00:19:42,783 - 325, 4, boilerplate
+2024-11-03 00:20:06,368 - seed:55, steps:12476k, 1.0, won:91.4%, s:232.39, won_speed:1.225, status: Counter({'won': 806, 'breached_c': 27, 'collided': 23, 'breached_wall': 12, 'collided_UAV': 11, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 00:22:14,437 - 323, 4, boilerplate
+2024-11-03 00:24:44,270 - 326, 4, boilerplate
+2024-11-03 00:25:08,248 - seed:55, steps:12509k, 1.0, won:93.5%, s:244.19, won_speed:1.258, status: Counter({'won': 847, 'collided': 34, 'breached_c': 11, 'collided_UAV': 8, 'breached_wall': 6}), 
+ boilerplate
+2024-11-03 00:27:19,786 - 329, 4, boilerplate
+2024-11-03 00:29:53,214 - 319, 4, boilerplate
+2024-11-03 00:30:18,591 - seed:55, steps:12542k, 1.0, won:92.9%, s:233.67, won_speed:1.229, status: Counter({'won': 886, 'breached_c': 28, 'collided': 20, 'breached_wall': 10, 'collided_UAV': 9, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 00:32:34,287 - 325, 4, boilerplate
+2024-11-03 00:35:11,793 - 328, 4, boilerplate
+2024-11-03 00:35:35,912 - seed:55, steps:12574k, 1.0, won:88.0%, s:234.2, won_speed:1.256, status: Counter({'won': 803, 'collided': 36, 'breached_c': 34, 'breached_wall': 23, 'collided_UAV': 12, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 00:37:48,025 - 334, 4, boilerplate
+2024-11-03 00:40:27,443 - 334, 4, boilerplate
+2024-11-03 00:40:50,186 - seed:55, steps:12607k, 1.0, won:88.4%, s:204.09, won_speed:1.242, status: Counter({'won': 779, 'collided': 40, 'breached_c': 34, 'collided_UAV': 13, 'breached_wall': 11, 'breached_rad': 4}), 
+ boilerplate
+2024-11-03 00:42:59,828 - 331, 4, boilerplate
+2024-11-03 00:45:37,021 - 337, 4, boilerplate
+2024-11-03 00:46:01,681 - seed:55, steps:12640k, 1.0, won:91.3%, s:201.33, won_speed:1.256, status: Counter({'won': 831, 'breached_wall': 28, 'breached_c': 28, 'collided': 14, 'breached_rad_t_wall': 6, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 00:48:15,507 - 333, 4, boilerplate
+2024-11-03 00:50:53,991 - 331, 4, boilerplate
+2024-11-03 00:51:18,086 - seed:55, steps:12673k, 1.0, won:93.5%, s:335.14, won_speed:1.256, status: Counter({'won': 801, 'breached_c': 25, 'collided': 14, 'collided_UAV': 8, 'breached_wall': 6, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 00:53:35,414 - 334, 4, boilerplate
+2024-11-03 00:56:19,156 - 329, 4, boilerplate
+2024-11-03 00:56:43,743 - seed:55, steps:12706k, 1.0, won:93.3%, s:267.25, won_speed:1.262, status: Counter({'won': 829, 'breached_c': 30, 'collided': 18, 'breached_wall': 6, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-03 00:59:00,829 - 331, 4, boilerplate
+2024-11-03 01:01:41,715 - 337, 4, boilerplate
+2024-11-03 01:02:05,810 - seed:55, steps:12738k, 1.0, won:90.8%, s:192.61, won_speed:1.268, status: Counter({'won': 800, 'collided': 36, 'breached_c': 20, 'breached_wall': 17, 'collided_UAV': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 01:04:21,624 - 333, 4, boilerplate
+2024-11-03 01:06:58,750 - 330, 4, boilerplate
+2024-11-03 01:07:24,761 - seed:55, steps:12771k, 1.0, won:91.1%, s:205.03, won_speed:1.275, status: Counter({'won': 846, 'breached_wall': 31, 'breached_c': 23, 'collided': 18, 'collided_UAV': 7, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 01:09:36,255 - 334, 4, boilerplate
+2024-11-03 01:12:19,144 - 332, 4, boilerplate
+2024-11-03 01:12:43,514 - seed:55, steps:12804k, 1.0, won:90.4%, s:235.24, won_speed:1.256, status: Counter({'won': 809, 'breached_c': 35, 'collided': 26, 'breached_wall': 19, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 01:14:56,502 - 337, 4, boilerplate
+2024-11-03 01:17:32,896 - 334, 4, boilerplate
+2024-11-03 01:17:57,425 - seed:55, steps:12837k, 1.0, won:87.4%, s:329.94, won_speed:1.297, status: Counter({'won': 795, 'breached_c': 54, 'breached_wall': 32, 'collided': 14, 'breached_rad_t_wall': 11, 'collided_UAV': 2, 'breached_rad': 2}), 
+ boilerplate
+2024-11-03 01:20:09,250 - 335, 4, boilerplate
+2024-11-03 01:22:42,540 - 340, 4, boilerplate
+2024-11-03 01:23:07,600 - seed:55, steps:12870k, 1.0, won:92.5%, s:281.02, won_speed:1.269, status: Counter({'won': 867, 'breached_c': 31, 'breached_wall': 22, 'collided_UAV': 8, 'breached_rad_t_wall': 7, 'collided': 2}), 
+ boilerplate
+2024-11-03 01:25:23,236 - 337, 4, boilerplate
+2024-11-03 01:27:56,948 - 325, 4, boilerplate
+2024-11-03 01:28:21,978 - seed:55, steps:12903k, 1.0, won:91.8%, s:346.85, won_speed:1.268, status: Counter({'won': 832, 'breached_c': 31, 'breached_wall': 24, 'collided_UAV': 8, 'collided': 8, 'breached_rad_t_wall': 2, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 01:30:34,547 - 333, 4, boilerplate
+2024-11-03 01:33:10,308 - 330, 4, boilerplate
+2024-11-03 01:33:32,669 - seed:55, steps:12935k, 1.0, won:88.8%, s:380.88, won_speed:1.286, status: Counter({'won': 791, 'breached_wall': 49, 'breached_c': 25, 'breached_rad_t_wall': 9, 'collided_UAV': 8, 'collided': 8, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 01:35:39,804 - 335, 4, boilerplate
+2024-11-03 01:38:13,400 - 336, 4, boilerplate
+2024-11-03 01:38:36,678 - seed:55, steps:12968k, 1.0, won:91.7%, s:232.64, won_speed:1.265, status: Counter({'won': 804, 'breached_c': 31, 'collided': 14, 'collided_UAV': 12, 'breached_wall': 11, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-03 01:40:45,184 - 334, 4, boilerplate
+2024-11-03 01:43:20,841 - 333, 4, boilerplate
+2024-11-03 01:43:44,520 - seed:55, steps:13001k, 1.0, won:93.9%, s:354.41, won_speed:1.256, status: Counter({'won': 854, 'breached_wall': 19, 'breached_c': 16, 'collided': 8, 'collided_UAV': 7, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-03 01:45:55,472 - 327, 4, boilerplate
+2024-11-03 01:48:34,337 - 335, 4, boilerplate
+2024-11-03 01:48:56,902 - seed:55, steps:13034k, 1.0, won:89.1%, s:260.75, won_speed:1.275, status: Counter({'won': 806, 'breached_c': 35, 'breached_wall': 28, 'breached_rad_t_wall': 14, 'collided': 12, 'collided_UAV': 10}), 
+ boilerplate
+2024-11-03 01:51:11,317 - 335, 4, boilerplate
+2024-11-03 01:53:47,444 - 339, 4, boilerplate
+2024-11-03 01:54:10,651 - seed:55, steps:13066k, 1.0, won:91.1%, s:197.05, won_speed:1.289, status: Counter({'won': 810, 'breached_c': 37, 'breached_wall': 20, 'collided': 10, 'collided_UAV': 8, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 01:56:24,015 - 338, 4, boilerplate
+2024-11-03 01:59:02,910 - 336, 4, boilerplate
+2024-11-03 01:59:25,864 - seed:55, steps:13099k, 1.0, won:91.5%, s:340.74, won_speed:1.283, status: Counter({'won': 822, 'breached_c': 42, 'collided': 16, 'breached_wall': 10, 'breached_rad_t_wall': 4, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-03 01:01:37,608 - 338, 4, boilerplate
+2024-11-03 01:04:12,815 - 337, 4, boilerplate
+2024-11-03 01:04:36,239 - seed:55, steps:13132k, 1.0, won:90.1%, s:397.22, won_speed:1.303, status: Counter({'won': 812, 'breached_c': 42, 'breached_wall': 25, 'collided_UAV': 15, 'breached_rad_t_wall': 5, 'collided': 2}), 
+ boilerplate
+2024-11-03 01:06:50,236 - 339, 4, boilerplate
+2024-11-03 01:09:27,533 - 333, 4, boilerplate
+2024-11-03 01:09:49,931 - seed:55, steps:13165k, 1.0, won:92.7%, s:264.89, won_speed:1.289, status: Counter({'won': 817, 'breached_c': 25, 'breached_wall': 15, 'collided_UAV': 11, 'collided': 8, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-03 01:12:08,127 - 337, 4, boilerplate
+2024-11-03 01:14:44,055 - 332, 4, boilerplate
+2024-11-03 01:15:07,877 - seed:55, steps:13198k, 1.0, won:90.8%, s:395.13, won_speed:1.274, status: Counter({'won': 817, 'breached_c': 35, 'collided': 21, 'breached_wall': 18, 'collided_UAV': 5, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 01:17:22,119 - 334, 4, boilerplate
+2024-11-03 01:20:03,952 - 334, 4, boilerplate
+2024-11-03 01:20:29,142 - seed:55, steps:13231k, 1.0, won:93.0%, s:304.03, won_speed:1.269, status: Counter({'won': 835, 'breached_c': 24, 'collided_UAV': 14, 'breached_wall': 14, 'collided': 7, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 01:22:45,524 - 335, 4, boilerplate
+2024-11-03 01:25:24,263 - 330, 4, boilerplate
+2024-11-03 01:25:48,550 - seed:55, steps:13263k, 1.0, won:91.7%, s:390.44, won_speed:1.287, status: Counter({'won': 805, 'collided': 20, 'collided_UAV': 19, 'breached_c': 19, 'breached_wall': 15}), 
+ boilerplate
+2024-11-03 01:28:07,251 - 339, 4, boilerplate
+2024-11-03 01:30:48,381 - 340, 4, boilerplate
+2024-11-03 01:31:12,667 - seed:55, steps:13296k, 1.0, won:94.2%, s:429.7, won_speed:1.277, status: Counter({'won': 887, 'collided': 16, 'breached_wall': 15, 'breached_c': 13, 'collided_UAV': 9, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 01:33:24,997 - 335, 4, boilerplate
+2024-11-03 01:35:55,667 - 331, 4, boilerplate
+2024-11-03 01:36:20,567 - seed:55, steps:13329k, 1.0, won:86.0%, s:185.42, won_speed:1.265, status: Counter({'won': 773, 'breached_c': 64, 'collided': 32, 'breached_wall': 20, 'collided_UAV': 7, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 01:38:35,150 - 333, 4, boilerplate
+2024-11-03 01:41:11,973 - 332, 4, boilerplate
+2024-11-03 01:41:36,753 - seed:55, steps:13362k, 1.0, won:92.1%, s:226.35, won_speed:1.273, status: Counter({'won': 856, 'breached_c': 30, 'collided': 16, 'breached_wall': 12, 'collided_UAV': 11, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 01:43:50,152 - 331, 4, boilerplate
+2024-11-03 01:46:24,784 - 329, 4, boilerplate
+2024-11-03 01:46:48,428 - seed:55, steps:13395k, 1.0, won:94.4%, s:359.16, won_speed:1.275, status: Counter({'won': 863, 'collided': 15, 'collided_UAV': 13, 'breached_wall': 11, 'breached_c': 11, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 01:49:01,926 - 325, 4, boilerplate
+2024-11-03 01:51:34,182 - 328, 4, boilerplate
+2024-11-03 01:51:57,113 - seed:55, steps:13428k, 1.0, won:92.4%, s:345.84, won_speed:1.251, status: Counter({'won': 830, 'collided': 26, 'breached_c': 17, 'collided_UAV': 11, 'breached_wall': 10, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 01:54:07,366 - 331, 4, boilerplate
+2024-11-03 01:56:39,200 - 336, 4, boilerplate
+2024-11-03 01:57:03,300 - seed:55, steps:13460k, 1.0, won:95.1%, s:315.73, won_speed:1.265, status: Counter({'won': 871, 'breached_wall': 19, 'collided': 12, 'breached_c': 9, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 01:59:16,487 - 334, 4, boilerplate
+2024-11-03 02:01:48,989 - 332, 4, boilerplate
+2024-11-03 02:02:12,302 - seed:55, steps:13493k, 1.0, won:94.1%, s:215.42, won_speed:1.278, status: Counter({'won': 818, 'breached_c': 20, 'collided': 14, 'breached_wall': 11, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 02:04:22,307 - 332, 4, boilerplate
+2024-11-03 02:06:56,897 - 335, 4, boilerplate
+2024-11-03 02:07:19,893 - seed:55, steps:13526k, 1.0, won:91.0%, s:327.1, won_speed:1.291, status: Counter({'won': 790, 'breached_c': 36, 'collided': 19, 'breached_wall': 11, 'collided_UAV': 8, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 02:09:29,504 - 334, 4, boilerplate
+2024-11-03 02:11:59,800 - 339, 4, boilerplate
+2024-11-03 02:12:22,898 - seed:55, steps:13559k, 1.0, won:87.4%, s:258.7, won_speed:1.268, status: Counter({'won': 801, 'breached_c': 47, 'breached_wall': 39, 'collided': 16, 'collided_UAV': 10, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 02:14:30,585 - 343, 4, boilerplate
+2024-11-03 02:17:04,105 - 344, 4, boilerplate
+2024-11-03 02:17:26,903 - seed:55, steps:13592k, 1.0, won:89.4%, s:237.53, won_speed:1.283, status: Counter({'won': 814, 'breached_c': 47, 'collided': 26, 'breached_wall': 12, 'collided_UAV': 10, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 02:19:36,445 - 345, 4, boilerplate
+2024-11-03 02:22:08,956 - 340, 4, boilerplate
+2024-11-03 02:22:32,833 - seed:55, steps:13624k, 1.0, won:90.9%, s:339.41, won_speed:1.261, status: Counter({'won': 818, 'collided': 32, 'breached_c': 25, 'collided_UAV': 13, 'breached_wall': 12}), 
+ boilerplate
+2024-11-03 02:24:43,587 - 341, 4, boilerplate
+2024-11-03 02:27:18,634 - 336, 4, boilerplate
+2024-11-03 02:27:41,979 - seed:55, steps:13657k, 1.0, won:93.8%, s:226.01, won_speed:1.268, status: Counter({'won': 856, 'breached_wall': 22, 'collided_UAV': 12, 'collided': 12, 'breached_c': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 02:29:54,643 - 336, 4, boilerplate
+2024-11-03 02:32:30,422 - 335, 4, boilerplate
+2024-11-03 02:32:53,600 - seed:55, steps:13690k, 1.0, won:93.7%, s:206.18, won_speed:1.257, status: Counter({'won': 847, 'breached_wall': 15, 'breached_c': 14, 'collided_UAV': 12, 'collided': 8, 'breached_rad_t_wall': 6, 'breached_rad': 2}), 
+ boilerplate
+2024-11-03 02:35:08,525 - 339, 4, boilerplate
+2024-11-03 02:37:44,812 - 341, 4, boilerplate
+2024-11-03 02:38:08,650 - seed:55, steps:13723k, 1.0, won:90.3%, s:196.81, won_speed:1.278, status: Counter({'won': 812, 'breached_wall': 42, 'collided_UAV': 16, 'collided': 12, 'breached_c': 11, 'breached_rad': 3, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 02:40:17,407 - 341, 4, boilerplate
+2024-11-03 02:42:53,712 - 339, 4, boilerplate
+2024-11-03 02:43:16,626 - seed:55, steps:13756k, 1.0, won:89.9%, s:331.6, won_speed:1.276, status: Counter({'won': 796, 'breached_wall': 47, 'breached_c': 24, 'collided_UAV': 7, 'collided': 6, 'breached_rad_t_wall': 3, 'breached_rad': 2}), 
+ boilerplate
+2024-11-03 02:45:30,579 - 336, 4, boilerplate
+2024-11-03 02:48:10,401 - 339, 4, boilerplate
+2024-11-03 02:48:35,854 - seed:55, steps:13789k, 1.0, won:94.1%, s:209.15, won_speed:1.273, status: Counter({'won': 869, 'breached_wall': 23, 'collided': 15, 'breached_c': 6, 'collided_UAV': 5, 'breached_rad_t_wall': 5}), 
+ boilerplate
+2024-11-03 02:50:55,161 - 335, 4, boilerplate
+2024-11-03 02:53:40,863 - 337, 4, boilerplate
+2024-11-03 02:54:07,433 - seed:55, steps:13821k, 1.0, won:95.5%, s:237.68, won_speed:1.264, status: Counter({'won': 901, 'breached_c': 13, 'collided_UAV': 12, 'breached_wall': 11, 'collided': 6}), 
+ boilerplate
+2024-11-03 02:56:25,072 - 332, 4, boilerplate
+2024-11-03 02:59:07,214 - 334, 4, boilerplate
+2024-11-03 02:59:32,112 - seed:55, steps:13854k, 1.0, won:95.8%, s:362.96, won_speed:1.274, status: Counter({'won': 876, 'collided': 14, 'breached_wall': 10, 'breached_c': 8, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-03 03:01:48,547 - 335, 4, boilerplate
+2024-11-03 03:04:28,772 - 339, 4, boilerplate
+2024-11-03 03:04:53,600 - seed:55, steps:13887k, 1.0, won:86.6%, s:202.25, won_speed:1.282, status: Counter({'won': 770, 'breached_c': 52, 'breached_wall': 26, 'collided': 26, 'collided_UAV': 9, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-03 03:07:08,614 - 331, 4, boilerplate
+2024-11-03 03:09:42,886 - 331, 4, boilerplate
+2024-11-03 03:10:05,953 - seed:55, steps:13920k, 1.0, won:90.2%, s:379.88, won_speed:1.281, status: Counter({'won': 793, 'breached_c': 36, 'breached_wall': 25, 'collided': 18, 'collided_UAV': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 03:12:16,510 - 334, 4, boilerplate
+2024-11-03 03:14:51,560 - 335, 4, boilerplate
+2024-11-03 03:15:16,637 - seed:55, steps:13953k, 1.0, won:93.1%, s:352.34, won_speed:1.285, status: Counter({'won': 846, 'breached_c': 22, 'breached_wall': 16, 'collided': 11, 'collided_UAV': 8, 'breached_rad_t_wall': 6}), 
+ boilerplate
+2024-11-03 03:17:29,192 - 334, 4, boilerplate
+2024-11-03 03:20:07,319 - 336, 4, boilerplate
+2024-11-03 03:20:33,072 - seed:55, steps:13986k, 1.0, won:93.7%, s:276.03, won_speed:1.285, status: Counter({'won': 857, 'breached_c': 23, 'breached_wall': 19, 'collided': 8, 'collided_UAV': 5, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 03:22:46,950 - 333, 4, boilerplate
+2024-11-03 03:25:21,505 - 326, 4, boilerplate
+2024-11-03 03:25:45,385 - seed:55, steps:14018k, 1.0, won:90.2%, s:190.67, won_speed:1.285, status: Counter({'won': 795, 'breached_wall': 49, 'collided': 16, 'collided_UAV': 9, 'breached_c': 9, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 03:27:59,137 - 333, 4, boilerplate
+2024-11-03 03:30:37,483 - 329, 4, boilerplate
+2024-11-03 03:31:03,973 - seed:55, steps:14051k, 1.0, won:93.9%, s:351.76, won_speed:1.246, status: Counter({'won': 853, 'breached_c': 17, 'breached_wall': 14, 'collided': 10, 'collided_UAV': 10, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 03:33:17,851 - 328, 4, boilerplate
+2024-11-03 03:35:56,878 - 332, 4, boilerplate
+2024-11-03 03:36:21,716 - seed:55, steps:14084k, 1.0, won:94.5%, s:405.88, won_speed:1.272, status: Counter({'won': 840, 'breached_wall': 16, 'breached_c': 15, 'collided': 8, 'collided_UAV': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 03:38:33,389 - 325, 4, boilerplate
+2024-11-03 03:41:11,828 - 328, 4, boilerplate
+2024-11-03 03:41:37,295 - seed:55, steps:14117k, 1.0, won:94.1%, s:302.67, won_speed:1.236, status: Counter({'won': 834, 'breached_c': 22, 'collided_UAV': 13, 'collided': 10, 'breached_wall': 4, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 03:43:49,763 - 322, 4, boilerplate
+2024-11-03 03:46:27,364 - 335, 4, boilerplate
+2024-11-03 03:46:52,208 - seed:55, steps:14149k, 1.0, won:95.8%, s:245.97, won_speed:1.281, status: Counter({'won': 844, 'collided_UAV': 11, 'breached_c': 9, 'breached_wall': 7, 'breached_rad_t_wall': 6, 'collided': 4}), 
+ boilerplate
+2024-11-03 03:49:08,683 - 330, 4, boilerplate
+2024-11-03 03:51:45,415 - 332, 4, boilerplate
+2024-11-03 03:52:08,674 - seed:55, steps:14182k, 1.0, won:89.3%, s:326.05, won_speed:1.293, status: Counter({'won': 787, 'breached_wall': 44, 'breached_c': 30, 'breached_rad_t_wall': 9, 'collided': 8, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 03:54:19,423 - 330, 4, boilerplate
+2024-11-03 03:56:58,047 - 325, 4, boilerplate
+2024-11-03 03:57:22,510 - seed:55, steps:14215k, 1.0, won:87.4%, s:191.3, won_speed:1.271, status: Counter({'won': 799, 'breached_wall': 48, 'collided': 34, 'breached_c': 27, 'breached_rad_t_wall': 3, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 03:59:37,162 - 332, 4, boilerplate
+2024-11-03 04:02:10,060 - 321, 4, boilerplate
+2024-11-03 04:02:33,930 - seed:55, steps:14248k, 1.0, won:89.0%, s:374.49, won_speed:1.289, status: Counter({'won': 783, 'breached_wall': 44, 'breached_c': 29, 'collided': 16, 'collided_UAV': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 04:04:45,862 - 327, 4, boilerplate
+2024-11-03 04:07:20,100 - 325, 4, boilerplate
+2024-11-03 04:07:44,714 - seed:55, steps:14281k, 1.0, won:92.6%, s:334.93, won_speed:1.271, status: Counter({'won': 808, 'breached_wall': 24, 'breached_c': 19, 'collided': 12, 'collided_UAV': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 04:09:55,289 - 332, 4, boilerplate
+2024-11-03 04:12:33,110 - 321, 4, boilerplate
+2024-11-03 04:12:58,243 - seed:55, steps:14314k, 1.0, won:95.5%, s:277.56, won_speed:1.274, status: Counter({'won': 856, 'breached_wall': 15, 'breached_c': 9, 'collided_UAV': 7, 'breached_rad_t_wall': 5, 'collided': 4}), 
+ boilerplate
+2024-11-03 04:15:12,342 - 328, 4, boilerplate
+2024-11-03 04:17:52,330 - 333, 4, boilerplate
+2024-11-03 04:18:15,414 - seed:55, steps:14346k, 1.0, won:91.3%, s:196.4, won_speed:1.286, status: Counter({'won': 818, 'breached_wall': 27, 'collided': 24, 'breached_c': 15, 'collided_UAV': 11, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 04:20:24,106 - 328, 4, boilerplate
+2024-11-03 04:22:53,965 - 327, 4, boilerplate
+2024-11-03 04:23:17,401 - seed:55, steps:14379k, 1.0, won:91.8%, s:201.51, won_speed:1.286, status: Counter({'won': 840, 'breached_wall': 30, 'collided': 24, 'breached_c': 13, 'collided_UAV': 7, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 04:25:26,730 - 325, 4, boilerplate
+2024-11-03 04:27:57,789 - 330, 4, boilerplate
+2024-11-03 04:28:22,414 - seed:55, steps:14412k, 1.0, won:89.6%, s:287.46, won_speed:1.278, status: Counter({'won': 800, 'breached_wall': 51, 'collided': 20, 'breached_c': 17, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 04:30:36,652 - 328, 4, boilerplate
+2024-11-03 04:33:14,603 - 328, 4, boilerplate
+2024-11-03 04:33:39,774 - seed:55, steps:14445k, 1.0, won:93.0%, s:243.49, won_speed:1.261, status: Counter({'won': 847, 'breached_wall': 44, 'breached_c': 8, 'collided_UAV': 6, 'collided': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 04:35:55,751 - 333, 4, boilerplate
+2024-11-03 04:38:37,626 - 329, 4, boilerplate
+2024-11-03 04:39:02,705 - seed:55, steps:14478k, 1.0, won:96.1%, s:357.15, won_speed:1.272, status: Counter({'won': 862, 'collided': 14, 'breached_wall': 9, 'collided_UAV': 9, 'breached_c': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 04:41:16,101 - 329, 4, boilerplate
+2024-11-03 04:43:56,051 - 329, 4, boilerplate
+2024-11-03 04:44:21,295 - seed:55, steps:14511k, 1.0, won:95.8%, s:230.56, won_speed:1.261, status: Counter({'won': 873, 'collided': 16, 'collided_UAV': 9, 'breached_wall': 7, 'breached_c': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 04:46:37,511 - 335, 4, boilerplate
+2024-11-03 04:49:18,104 - 332, 4, boilerplate
+2024-11-03 04:49:42,643 - seed:55, steps:14543k, 1.0, won:94.1%, s:252.52, won_speed:1.286, status: Counter({'won': 872, 'breached_c': 29, 'breached_wall': 15, 'collided': 6, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-03 04:51:58,799 - 337, 4, boilerplate
+2024-11-03 04:54:35,508 - 337, 4, boilerplate
+2024-11-03 04:54:59,038 - seed:55, steps:14576k, 1.0, won:95.2%, s:417.58, won_speed:1.262, status: Counter({'won': 865, 'collided': 22, 'collided_UAV': 11, 'breached_c': 9, 'breached_wall': 2}), 
+ boilerplate
+2024-11-03 04:57:12,709 - 337, 4, boilerplate
+2024-11-03 04:59:52,098 - 336, 4, boilerplate
+2024-11-03 05:00:16,779 - seed:55, steps:14609k, 1.0, won:97.2%, s:236.25, won_speed:1.291, status: Counter({'won': 891, 'breached_c': 8, 'collided': 8, 'collided_UAV': 7, 'breached_wall': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 05:02:36,298 - 337, 4, boilerplate
+2024-11-03 05:05:17,552 - 342, 4, boilerplate
+2024-11-03 05:05:40,212 - seed:55, steps:14642k, 1.0, won:95.6%, s:251.04, won_speed:1.287, status: Counter({'won': 862, 'collided': 14, 'breached_c': 10, 'breached_wall': 8, 'collided_UAV': 8}), 
+ boilerplate
+2024-11-03 05:07:57,645 - 338, 4, boilerplate
+2024-11-03 05:10:38,178 - 345, 4, boilerplate
+2024-11-03 05:11:01,349 - seed:55, steps:14674k, 1.0, won:85.8%, s:204.32, won_speed:1.277, status: Counter({'won': 775, 'breached_c': 72, 'breached_wall': 24, 'collided': 18, 'collided_UAV': 11, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 05:13:13,225 - 344, 4, boilerplate
+2024-11-03 05:15:51,220 - 342, 4, boilerplate
+2024-11-03 05:16:16,310 - seed:55, steps:14707k, 1.0, won:95.4%, s:235.02, won_speed:1.269, status: Counter({'won': 886, 'breached_c': 19, 'collided': 12, 'collided_UAV': 7, 'breached_wall': 5}), 
+ boilerplate
+2024-11-03 05:18:30,638 - 346, 4, boilerplate
+2024-11-03 05:21:09,154 - 343, 4, boilerplate
+2024-11-03 05:21:31,710 - seed:55, steps:14740k, 1.0, won:96.3%, s:228.71, won_speed:1.281, status: Counter({'won': 862, 'breached_c': 11, 'breached_wall': 8, 'collided': 8, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-03 05:23:45,564 - 348, 4, boilerplate
+2024-11-03 05:26:22,256 - 348, 4, boilerplate
+2024-11-03 05:26:45,881 - seed:55, steps:14773k, 1.0, won:96.4%, s:249.07, won_speed:1.289, status: Counter({'won': 856, 'collided': 12, 'breached_wall': 9, 'collided_UAV': 7, 'breached_c': 4}), 
+ boilerplate
+2024-11-03 05:28:58,560 - 346, 4, boilerplate
+2024-11-03 05:31:38,089 - 351, 4, boilerplate
+2024-11-03 05:32:02,258 - seed:55, steps:14806k, 1.0, won:96.2%, s:207.63, won_speed:1.29, status: Counter({'won': 857, 'collided': 18, 'breached_c': 7, 'collided_UAV': 5, 'breached_wall': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 05:34:18,738 - 348, 4, boilerplate
+2024-11-03 05:37:00,038 - 342, 4, boilerplate
+2024-11-03 05:37:23,914 - seed:55, steps:14838k, 1.0, won:95.5%, s:363.61, won_speed:1.3, status: Counter({'won': 874, 'collided': 16, 'breached_c': 9, 'breached_wall': 9, 'collided_UAV': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 05:39:42,244 - 349, 4, boilerplate
+2024-11-03 05:42:18,929 - 353, 4, boilerplate
+2024-11-03 05:42:40,315 - seed:55, steps:14871k, 1.0, won:96.1%, s:393.86, won_speed:1.299, status: Counter({'won': 810, 'breached_c': 11, 'breached_wall': 9, 'collided_UAV': 6, 'collided': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 05:44:56,306 - 349, 4, boilerplate
+2024-11-03 05:47:37,036 - 349, 4, boilerplate
+2024-11-03 05:48:01,400 - seed:55, steps:14904k, 1.0, won:94.9%, s:221.45, won_speed:1.292, status: Counter({'won': 838, 'breached_wall': 13, 'collided': 10, 'breached_c': 9, 'collided_UAV': 8, 'breached_rad_t_wall': 4, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 05:50:19,833 - 345, 4, boilerplate
+2024-11-03 05:53:03,130 - 347, 4, boilerplate
+2024-11-03 05:53:26,726 - seed:55, steps:14937k, 1.0, won:96.2%, s:433.96, won_speed:1.292, status: Counter({'won': 893, 'collided_UAV': 10, 'breached_c': 10, 'collided': 8, 'breached_wall': 7}), 
+ boilerplate
+2024-11-03 05:55:45,204 - 351, 4, boilerplate
+2024-11-03 05:58:30,447 - 349, 4, boilerplate
+2024-11-03 05:58:52,597 - seed:55, steps:14970k, 1.0, won:96.8%, s:307.17, won_speed:1.283, status: Counter({'won': 842, 'breached_c': 11, 'breached_wall': 7, 'collided_UAV': 6, 'collided': 4}), 
+ boilerplate
+2024-11-03 06:01:11,448 - 346, 4, boilerplate
+2024-11-03 06:03:52,930 - 348, 4, boilerplate
+2024-11-03 06:04:16,332 - seed:55, steps:15002k, 1.0, won:97.0%, s:364.95, won_speed:1.299, status: Counter({'won': 874, 'breached_c': 14, 'collided_UAV': 9, 'breached_wall': 2, 'collided': 2}), 
+ boilerplate
+2024-11-03 06:06:36,146 - 352, 4, boilerplate
+2024-11-03 06:09:14,654 - 349, 4, boilerplate
+2024-11-03 06:09:37,825 - seed:55, steps:15035k, 1.0, won:95.6%, s:233.99, won_speed:1.294, status: Counter({'won': 888, 'breached_c': 19, 'collided': 10, 'breached_wall': 7, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 06:11:53,078 - 349, 4, boilerplate
+2024-11-03 06:14:31,405 - 344, 4, boilerplate
+2024-11-03 06:14:55,686 - seed:55, steps:15068k, 1.0, won:97.5%, s:370.57, won_speed:1.293, status: Counter({'won': 890, 'breached_c': 10, 'breached_wall': 7, 'collided_UAV': 3, 'collided': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 06:17:19,207 - 346, 4, boilerplate
+2024-11-03 06:20:04,360 - 347, 4, boilerplate
+2024-11-03 06:20:27,022 - seed:55, steps:15101k, 1.0, won:94.9%, s:408.57, won_speed:1.268, status: Counter({'won': 842, 'breached_wall': 17, 'breached_c': 11, 'collided': 10, 'collided_UAV': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 06:22:45,843 - 349, 4, boilerplate
+2024-11-03 06:25:26,680 - 349, 4, boilerplate
+2024-11-03 06:25:48,940 - seed:55, steps:15134k, 1.0, won:95.4%, s:266.58, won_speed:1.297, status: Counter({'won': 824, 'collided': 14, 'collided_UAV': 12, 'breached_c': 8, 'breached_wall': 6}), 
+ boilerplate
+2024-11-03 06:28:04,179 - 346, 4, boilerplate
+2024-11-03 06:30:41,066 - 346, 4, boilerplate
+2024-11-03 06:31:03,136 - seed:55, steps:15166k, 1.0, won:94.3%, s:350.21, won_speed:1.293, status: Counter({'won': 838, 'breached_wall': 18, 'breached_c': 12, 'collided': 12, 'collided_UAV': 9}), 
+ boilerplate
+2024-11-03 06:33:20,305 - 348, 4, boilerplate
+2024-11-03 06:36:00,465 - 351, 4, boilerplate
+2024-11-03 06:36:23,922 - seed:55, steps:15199k, 1.0, won:93.9%, s:317.08, won_speed:1.295, status: Counter({'won': 871, 'collided': 26, 'breached_c': 13, 'collided_UAV': 12, 'breached_wall': 6}), 
+ boilerplate
+2024-11-03 06:38:39,384 - 351, 4, boilerplate
+2024-11-03 06:41:15,709 - 351, 4, boilerplate
+2024-11-03 06:41:38,290 - seed:55, steps:15232k, 1.0, won:94.9%, s:244.48, won_speed:1.277, status: Counter({'won': 837, 'breached_c': 14, 'collided': 12, 'breached_wall': 10, 'collided_UAV': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 06:43:53,704 - 348, 4, boilerplate
+2024-11-03 06:46:32,177 - 346, 4, boilerplate
+2024-11-03 06:46:54,597 - seed:55, steps:15265k, 1.0, won:94.4%, s:244.93, won_speed:1.294, status: Counter({'won': 841, 'breached_c': 25, 'collided': 10, 'breached_wall': 7, 'collided_UAV': 4, 'breached_rad_t_wall': 4}), 
+ boilerplate
+2024-11-03 06:49:11,323 - 349, 4, boilerplate
+2024-11-03 06:51:47,801 - 352, 4, boilerplate
+2024-11-03 06:52:11,329 - seed:55, steps:15298k, 1.0, won:95.8%, s:256.8, won_speed:1.289, status: Counter({'won': 884, 'collided': 14, 'breached_wall': 13, 'breached_c': 7, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 06:54:29,703 - 352, 4, boilerplate
+2024-11-03 06:57:07,965 - 347, 4, boilerplate
+2024-11-03 06:57:31,161 - seed:55, steps:15331k, 1.0, won:96.7%, s:232.37, won_speed:1.289, status: Counter({'won': 877, 'breached_wall': 11, 'collided_UAV': 8, 'collided': 8, 'breached_c': 3}), 
+ boilerplate
+2024-11-03 06:59:49,791 - 345, 4, boilerplate
+2024-11-03 07:02:30,866 - 345, 4, boilerplate
+2024-11-03 07:02:53,602 - seed:55, steps:15363k, 1.0, won:96.5%, s:354.87, won_speed:1.277, status: Counter({'won': 853, 'breached_wall': 13, 'collided_UAV': 9, 'breached_c': 8, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 07:05:13,614 - 355, 4, boilerplate
+2024-11-03 07:07:56,601 - 351, 4, boilerplate
+2024-11-03 07:08:20,439 - seed:55, steps:15396k, 1.0, won:95.6%, s:360.85, won_speed:1.284, status: Counter({'won': 870, 'collided': 20, 'breached_c': 10, 'collided_UAV': 7, 'breached_wall': 3}), 
+ boilerplate
+2024-11-03 07:10:33,356 - 346, 4, boilerplate
+2024-11-03 07:13:09,946 - 347, 4, boilerplate
+2024-11-03 07:13:33,198 - seed:55, steps:15429k, 1.0, won:96.4%, s:254.32, won_speed:1.298, status: Counter({'won': 875, 'breached_wall': 11, 'breached_c': 9, 'collided': 8, 'collided_UAV': 3, 'breached_rad_t_wall': 1, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 07:15:48,292 - 350, 4, boilerplate
+2024-11-03 07:18:28,263 - 345, 4, boilerplate
+2024-11-03 07:18:52,113 - seed:55, steps:15462k, 1.0, won:96.7%, s:258.92, won_speed:1.286, status: Counter({'won': 889, 'breached_c': 11, 'collided_UAV': 8, 'breached_wall': 7, 'collided': 4}), 
+ boilerplate
+2024-11-03 07:21:10,897 - 347, 4, boilerplate
+2024-11-03 07:23:50,001 - 351, 4, boilerplate
+2024-11-03 07:24:12,881 - seed:55, steps:15495k, 1.0, won:96.6%, s:422.03, won_speed:1.296, status: Counter({'won': 870, 'breached_c': 8, 'collided_UAV': 8, 'collided': 8, 'breached_wall': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 07:26:32,658 - 352, 4, boilerplate
+2024-11-03 07:29:13,435 - 352, 4, boilerplate
+2024-11-03 07:29:38,325 - seed:55, steps:15528k, 1.0, won:94.2%, s:359.14, won_speed:1.301, status: Counter({'won': 863, 'breached_c': 19, 'collided': 12, 'collided_UAV': 10, 'breached_wall': 10, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 07:31:56,342 - 348, 4, boilerplate
+2024-11-03 07:34:36,655 - 350, 4, boilerplate
+2024-11-03 07:34:59,474 - seed:55, steps:15561k, 1.0, won:95.7%, s:204.73, won_speed:1.292, status: Counter({'won': 843, 'breached_wall': 11, 'breached_c': 10, 'collided_UAV': 8, 'collided': 8, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 07:37:14,924 - 349, 4, boilerplate
+2024-11-03 07:39:49,686 - 348, 4, boilerplate
+2024-11-03 07:40:12,937 - seed:55, steps:15593k, 1.0, won:95.3%, s:342.26, won_speed:1.285, status: Counter({'won': 827, 'collided': 22, 'breached_wall': 10, 'collided_UAV': 5, 'breached_c': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 07:42:32,367 - 347, 4, boilerplate
+2024-11-03 07:45:17,545 - 348, 4, boilerplate
+2024-11-03 07:45:41,106 - seed:55, steps:15626k, 1.0, won:97.2%, s:205.25, won_speed:1.295, status: Counter({'won': 847, 'collided': 12, 'breached_wall': 6, 'collided_UAV': 4, 'breached_c': 2}), 
+ boilerplate
+2024-11-03 07:48:01,349 - 349, 4, boilerplate
+2024-11-03 07:50:37,137 - 349, 4, boilerplate
+2024-11-03 07:50:58,356 - seed:55, steps:15659k, 1.0, won:95.5%, s:330.58, won_speed:1.291, status: Counter({'won': 800, 'collided': 16, 'breached_wall': 11, 'breached_c': 9, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-03 07:53:12,378 - 351, 4, boilerplate
+2024-11-03 07:55:52,357 - 349, 4, boilerplate
+2024-11-03 07:56:14,830 - seed:55, steps:15692k, 1.0, won:97.2%, s:430.81, won_speed:1.289, status: Counter({'won': 889, 'collided': 11, 'collided_UAV': 6, 'breached_wall': 4, 'breached_c': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 07:58:35,420 - 349, 4, boilerplate
+2024-11-03 08:01:23,071 - 350, 4, boilerplate
+2024-11-03 08:01:47,618 - seed:55, steps:15724k, 1.0, won:96.7%, s:326.67, won_speed:1.292, status: Counter({'won': 897, 'collided': 12, 'collided_UAV': 9, 'breached_wall': 7, 'breached_c': 3}), 
+ boilerplate
+2024-11-03 08:04:02,561 - 352, 4, boilerplate
+2024-11-03 08:06:44,340 - 350, 4, boilerplate
+2024-11-03 08:07:08,039 - seed:55, steps:15757k, 1.0, won:96.9%, s:231.33, won_speed:1.29, status: Counter({'won': 873, 'collided': 10, 'breached_c': 8, 'breached_wall': 4, 'collided_UAV': 4, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 08:09:27,273 - 354, 4, boilerplate
+2024-11-03 08:12:14,534 - 355, 4, boilerplate
+2024-11-03 08:12:39,041 - seed:55, steps:15790k, 1.0, won:97.1%, s:353.19, won_speed:1.3, status: Counter({'won': 851, 'breached_c': 11, 'collided': 6, 'breached_wall': 4, 'collided_UAV': 2, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 08:14:58,067 - 353, 4, boilerplate
+2024-11-03 08:17:40,096 - 358, 4, boilerplate
+2024-11-03 08:18:03,908 - seed:55, steps:15823k, 1.0, won:94.4%, s:194.12, won_speed:1.316, status: Counter({'won': 804, 'collided': 20, 'breached_c': 15, 'collided_UAV': 8, 'breached_rad_t_wall': 3, 'breached_wall': 2}), 
+ boilerplate
+2024-11-03 08:20:18,489 - 351, 4, boilerplate
+2024-11-03 08:22:57,797 - 354, 4, boilerplate
+2024-11-03 08:23:19,973 - seed:55, steps:15856k, 1.0, won:95.0%, s:355.26, won_speed:1.308, status: Counter({'won': 852, 'collided': 16, 'breached_c': 13, 'breached_wall': 9, 'collided_UAV': 7}), 
+ boilerplate
+2024-11-03 08:25:35,723 - 351, 4, boilerplate
+2024-11-03 08:28:22,371 - 358, 4, boilerplate
+2024-11-03 08:28:46,266 - seed:55, steps:15888k, 1.0, won:95.4%, s:400.69, won_speed:1.304, status: Counter({'won': 829, 'collided': 24, 'breached_c': 7, 'breached_wall': 6, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 08:31:02,807 - 353, 4, boilerplate
+2024-11-03 08:33:46,787 - 355, 4, boilerplate
+2024-11-03 08:34:09,691 - seed:55, steps:15921k, 1.0, won:93.5%, s:201.9, won_speed:1.303, status: Counter({'won': 833, 'collided': 18, 'breached_wall': 16, 'breached_c': 12, 'collided_UAV': 12}), 
+ boilerplate
+2024-11-03 08:36:24,409 - 352, 4, boilerplate
+2024-11-03 08:39:02,034 - 352, 4, boilerplate
+2024-11-03 08:39:26,550 - seed:55, steps:15954k, 1.0, won:96.4%, s:359.13, won_speed:1.311, status: Counter({'won': 865, 'collided': 16, 'collided_UAV': 9, 'breached_c': 4, 'breached_wall': 3}), 
+ boilerplate
+2024-11-03 08:41:46,138 - 351, 4, boilerplate
+2024-11-03 08:44:31,733 - 354, 4, boilerplate
+2024-11-03 08:44:56,470 - seed:55, steps:15987k, 1.0, won:96.9%, s:230.91, won_speed:1.303, status: Counter({'won': 870, 'collided_UAV': 8, 'collided': 8, 'breached_c': 6, 'breached_wall': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 08:47:20,096 - 352, 4, boilerplate
+2024-11-03 08:50:03,213 - 356, 4, boilerplate
+2024-11-03 08:50:27,056 - seed:55, steps:16020k, 1.0, won:96.9%, s:306.74, won_speed:1.312, status: Counter({'won': 844, 'collided': 18, 'breached_c': 5, 'breached_wall': 3, 'collided_UAV': 1}), 
+ boilerplate
+2024-11-03 08:52:46,959 - 355, 4, boilerplate
+2024-11-03 08:55:33,755 - 357, 4, boilerplate
+2024-11-03 08:55:59,046 - seed:55, steps:16053k, 1.0, won:97.3%, s:220.03, won_speed:1.318, status: Counter({'won': 907, 'breached_wall': 12, 'breached_c': 7, 'collided': 4, 'collided_UAV': 2}), 
+ boilerplate
+2024-11-03 08:58:21,341 - 356, 4, boilerplate
+2024-11-03 09:01:08,411 - 357, 4, boilerplate
+2024-11-03 09:01:32,804 - seed:55, steps:16085k, 1.0, won:96.9%, s:289.6, won_speed:1.318, status: Counter({'won': 897, 'breached_c': 9, 'collided_UAV': 9, 'collided': 8, 'breached_wall': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:03:53,688 - 355, 4, boilerplate
+2024-11-03 09:06:32,790 - 352, 4, boilerplate
+2024-11-03 09:06:55,595 - seed:55, steps:16118k, 1.0, won:95.0%, s:404.14, won_speed:1.303, status: Counter({'won': 834, 'breached_c': 13, 'collided': 12, 'breached_wall': 10, 'collided_UAV': 8, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:09:14,092 - 354, 4, boilerplate
+2024-11-03 09:11:59,395 - 356, 4, boilerplate
+2024-11-03 09:12:23,090 - seed:55, steps:16151k, 1.0, won:96.2%, s:277.85, won_speed:1.301, status: Counter({'won': 859, 'collided_UAV': 10, 'breached_wall': 9, 'collided': 8, 'breached_c': 6, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:14:43,614 - 358, 4, boilerplate
+2024-11-03 09:17:28,036 - 351, 4, boilerplate
+2024-11-03 09:17:52,836 - seed:55, steps:16184k, 1.0, won:96.6%, s:229.7, won_speed:1.3, status: Counter({'won': 868, 'breached_c': 17, 'breached_wall': 7, 'collided_UAV': 5, 'collided': 2}), 
+ boilerplate
+2024-11-03 09:20:11,790 - 352, 4, boilerplate
+2024-11-03 09:22:54,782 - 351, 4, boilerplate
+2024-11-03 09:23:19,882 - seed:55, steps:16217k, 1.0, won:94.1%, s:363.14, won_speed:1.295, status: Counter({'won': 876, 'breached_c': 21, 'collided': 18, 'breached_wall': 9, 'collided_UAV': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 09:25:43,362 - 350, 4, boilerplate
+2024-11-03 09:28:24,497 - 346, 4, boilerplate
+2024-11-03 09:28:48,670 - seed:55, steps:16250k, 1.0, won:93.6%, s:337.95, won_speed:1.282, status: Counter({'won': 819, 'collided': 26, 'breached_c': 15, 'breached_wall': 8, 'collided_UAV': 4, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 09:31:05,646 - 347, 4, boilerplate
+2024-11-03 09:33:51,718 - 351, 4, boilerplate
+2024-11-03 09:34:15,768 - seed:55, steps:16282k, 1.0, won:94.7%, s:201.92, won_speed:1.301, status: Counter({'won': 836, 'breached_c': 25, 'collided': 12, 'collided_UAV': 4, 'breached_rad_t_wall': 3, 'breached_wall': 3}), 
+ boilerplate
+2024-11-03 09:36:37,203 - 349, 4, boilerplate
+2024-11-03 09:39:19,538 - 353, 4, boilerplate
+2024-11-03 09:39:42,969 - seed:55, steps:16315k, 1.0, won:94.0%, s:344.4, won_speed:1.296, status: Counter({'won': 831, 'collided': 18, 'breached_wall': 17, 'breached_c': 12, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:42:02,676 - 354, 4, boilerplate
+2024-11-03 09:44:26,798 - 349, 4, boilerplate
+2024-11-03 09:44:47,520 - seed:55, steps:16348k, 1.0, won:86.9%, s:308.85, won_speed:1.294, status: Counter({'won': 771, 'breached_c': 85, 'collided': 18, 'breached_wall': 10, 'collided_UAV': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:46:52,986 - 359, 4, boilerplate
+2024-11-03 09:49:19,085 - 358, 4, boilerplate
+2024-11-03 09:49:39,725 - seed:55, steps:16381k, 1.0, won:80.5%, s:247.29, won_speed:1.286, status: Counter({'won': 729, 'breached_c': 135, 'collided': 24, 'breached_wall': 12, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:51:45,823 - 350, 4, boilerplate
+2024-11-03 09:54:15,977 - 359, 4, boilerplate
+2024-11-03 09:54:37,876 - seed:55, steps:16414k, 1.0, won:83.6%, s:177.47, won_speed:1.276, status: Counter({'won': 762, 'breached_c': 85, 'collided': 41, 'breached_wall': 19, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 09:56:43,721 - 347, 4, boilerplate
+2024-11-03 09:59:07,975 - 345, 4, boilerplate
+2024-11-03 09:59:29,517 - seed:55, steps:16446k, 1.0, won:84.5%, s:174.53, won_speed:1.275, status: Counter({'won': 755, 'breached_c': 75, 'collided': 42, 'breached_wall': 17, 'collided_UAV': 3, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 10:01:35,670 - 339, 4, boilerplate
+2024-11-03 10:04:05,686 - 337, 4, boilerplate
+2024-11-03 10:04:29,087 - seed:55, steps:16479k, 1.0, won:84.1%, s:354.15, won_speed:1.268, status: Counter({'won': 759, 'breached_c': 54, 'collided': 52, 'breached_wall': 28, 'breached_rad_t_wall': 4, 'collided_UAV': 4, 'breached_rad': 1}), 
+ boilerplate
+2024-11-03 10:06:33,141 - 339, 4, boilerplate
+2024-11-03 10:08:56,883 - 338, 4, boilerplate
+2024-11-03 10:09:20,496 - seed:55, steps:16512k, 1.0, won:82.9%, s:173.05, won_speed:1.256, status: Counter({'won': 751, 'breached_c': 76, 'collided': 57, 'breached_wall': 16, 'collided_UAV': 3, 'breached_rad_t_wall': 3}), 
+ boilerplate
+2024-11-03 10:11:21,884 - 337, 4, boilerplate
+2024-11-03 10:13:50,919 - 337, 4, boilerplate
+2024-11-03 10:14:14,481 - seed:55, steps:16545k, 1.0, won:85.6%, s:227.46, won_speed:1.267, status: Counter({'won': 810, 'breached_c': 59, 'collided': 46, 'breached_wall': 20, 'breached_rad_t_wall': 6, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-03 10:16:25,354 - 334, 4, boilerplate
+2024-11-03 10:18:51,961 - 331, 4, boilerplate
+2024-11-03 10:19:14,931 - seed:55, steps:16578k, 1.0, won:88.8%, s:390.27, won_speed:1.273, status: Counter({'won': 819, 'breached_c': 46, 'collided': 36, 'breached_wall': 11, 'collided_UAV': 8, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 10:21:22,633 - 336, 4, boilerplate
+2024-11-03 10:23:53,693 - 330, 4, boilerplate
+2024-11-03 10:24:17,134 - seed:55, steps:16611k, 1.0, won:92.8%, s:215.51, won_speed:1.266, status: Counter({'won': 830, 'collided': 36, 'breached_c': 25, 'breached_wall': 2, 'collided_UAV': 1}), 
+ boilerplate
+2024-11-03 10:26:29,635 - 330, 4, boilerplate
+2024-11-03 10:29:05,334 - 329, 4, boilerplate
+2024-11-03 10:29:28,960 - seed:55, steps:16643k, 1.0, won:93.3%, s:215.09, won_speed:1.271, status: Counter({'won': 821, 'collided': 26, 'breached_c': 19, 'breached_wall': 8, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-03 10:31:35,398 - 334, 4, boilerplate
+2024-11-03 10:34:10,174 - 328, 4, boilerplate
+2024-11-03 10:34:34,409 - seed:55, steps:16676k, 1.0, won:92.8%, s:219.21, won_speed:1.256, status: Counter({'won': 836, 'collided': 30, 'breached_c': 18, 'breached_wall': 14, 'collided_UAV': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 10:36:48,155 - 333, 4, boilerplate
+2024-11-03 10:39:22,342 - 331, 4, boilerplate
+2024-11-03 10:39:46,446 - seed:55, steps:16709k, 1.0, won:91.2%, s:387.16, won_speed:1.26, status: Counter({'won': 810, 'collided': 25, 'breached_wall': 24, 'breached_c': 21, 'collided_UAV': 7, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 10:41:53,479 - 334, 4, boilerplate
+2024-11-03 10:44:29,744 - 331, 4, boilerplate
+2024-11-03 10:44:54,188 - seed:55, steps:16742k, 1.0, won:92.4%, s:237.2, won_speed:1.26, status: Counter({'won': 825, 'breached_c': 25, 'breached_wall': 18, 'collided': 18, 'collided_UAV': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 10:47:00,312 - 331, 4, boilerplate
+2024-11-03 10:49:31,488 - 333, 4, boilerplate
+2024-11-03 10:49:54,974 - seed:55, steps:16775k, 1.0, won:92.2%, s:240.44, won_speed:1.27, status: Counter({'won': 830, 'breached_wall': 31, 'breached_c': 18, 'collided': 14, 'collided_UAV': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 10:52:06,115 - 331, 4, boilerplate
+2024-11-03 10:54:41,762 - 330, 4, boilerplate
+2024-11-03 10:55:04,052 - seed:55, steps:16807k, 1.0, won:93.1%, s:306.66, won_speed:1.276, status: Counter({'won': 847, 'breached_c': 29, 'breached_wall': 19, 'collided': 12, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 10:57:12,775 - 331, 4, boilerplate
+2024-11-03 10:59:49,677 - 326, 4, boilerplate
+2024-11-03 11:00:16,517 - seed:55, steps:16840k, 1.0, won:96.8%, s:382.66, won_speed:1.252, status: Counter({'won': 924, 'breached_c': 14, 'breached_wall': 7, 'collided_UAV': 6, 'collided': 4}), 
+ boilerplate
+2024-11-03 11:02:30,191 - 325, 4, boilerplate
+2024-11-03 11:05:08,159 - 334, 4, boilerplate
+2024-11-03 11:05:33,268 - seed:55, steps:16873k, 1.0, won:94.9%, s:250.72, won_speed:1.265, status: Counter({'won': 868, 'breached_wall': 17, 'collided': 16, 'breached_c': 10, 'collided_UAV': 3, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 11:07:43,806 - 337, 4, boilerplate
+2024-11-03 11:10:23,252 - 333, 4, boilerplate
+2024-11-03 11:10:47,392 - seed:55, steps:16906k, 1.0, won:95.5%, s:302.28, won_speed:1.267, status: Counter({'won': 837, 'collided': 14, 'breached_wall': 11, 'breached_c': 9, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-03 11:13:01,778 - 332, 4, boilerplate
+2024-11-03 11:15:42,621 - 335, 4, boilerplate
+2024-11-03 11:16:07,576 - seed:55, steps:16939k, 1.0, won:97.1%, s:220.82, won_speed:1.273, status: Counter({'won': 913, 'collided': 8, 'breached_wall': 7, 'breached_c': 7, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 11:18:23,879 - 335, 4, boilerplate
+2024-11-03 11:21:01,105 - 333, 4, boilerplate
+2024-11-03 11:21:26,912 - seed:55, steps:16972k, 1.0, won:90.3%, s:400.59, won_speed:1.258, status: Counter({'won': 832, 'breached_wall': 33, 'breached_rad_t_wall': 26, 'collided': 12, 'breached_c': 12, 'collided_UAV': 6}), 
+ boilerplate
+2024-11-03 11:23:40,707 - 328, 4, boilerplate
+2024-11-03 11:26:20,816 - 336, 4, boilerplate
+2024-11-03 11:26:45,521 - seed:55, steps:17004k, 1.0, won:46.6%, s:188.63, won_speed:1.306, status: Counter({'won': 415, 'breached_wall': 361, 'breached_rad_t_wall': 81, 'collided': 16, 'breached_c': 15, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 11:28:58,849 - 333, 4, boilerplate
+2024-11-03 11:31:40,529 - 333, 4, boilerplate
+2024-11-03 11:32:05,486 - seed:55, steps:17037k, 1.0, won:92.9%, s:348.44, won_speed:1.264, status: Counter({'won': 841, 'collided': 22, 'breached_c': 16, 'breached_wall': 16, 'breached_rad_t_wall': 7, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 11:34:19,781 - 334, 4, boilerplate
+2024-11-03 11:36:58,204 - 336, 4, boilerplate
+2024-11-03 11:37:22,649 - seed:55, steps:17070k, 1.0, won:95.1%, s:277.82, won_speed:1.286, status: Counter({'won': 865, 'collided': 22, 'breached_wall': 12, 'breached_c': 6, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 11:39:33,634 - 338, 4, boilerplate
+2024-11-03 11:42:14,342 - 343, 4, boilerplate
+2024-11-03 11:42:36,978 - seed:55, steps:17103k, 1.0, won:94.4%, s:271.37, won_speed:1.29, status: Counter({'won': 843, 'collided': 18, 'breached_rad': 11, 'breached_wall': 10, 'breached_c': 7, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-03 11:44:51,447 - 345, 4, boilerplate
+2024-11-03 11:47:26,511 - 341, 4, boilerplate
+2024-11-03 11:47:51,359 - seed:55, steps:17135k, 1.0, won:96.2%, s:421.75, won_speed:1.296, status: Counter({'won': 870, 'breached_wall': 13, 'collided_UAV': 9, 'breached_c': 8, 'collided': 2, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 11:50:07,147 - 340, 4, boilerplate
+2024-11-03 11:52:46,546 - 341, 4, boilerplate
+2024-11-03 11:53:10,639 - seed:55, steps:17168k, 1.0, won:92.2%, s:199.75, won_speed:1.297, status: Counter({'won': 829, 'breached_c': 22, 'breached_wall': 19, 'collided': 18, 'collided_UAV': 10, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 11:55:24,260 - 340, 4, boilerplate
+2024-11-03 11:58:01,903 - 342, 4, boilerplate
+2024-11-03 11:58:26,264 - seed:55, steps:17201k, 1.0, won:94.3%, s:244.06, won_speed:1.292, status: Counter({'won': 843, 'breached_c': 24, 'breached_wall': 12, 'collided': 8, 'collided_UAV': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 12:00:44,239 - 344, 4, boilerplate
+2024-11-03 12:03:24,084 - 348, 4, boilerplate
+2024-11-03 12:03:47,979 - seed:55, steps:17234k, 1.0, won:93.4%, s:223.36, won_speed:1.306, status: Counter({'won': 848, 'breached_wall': 28, 'breached_c': 17, 'collided_UAV': 8, 'breached_rad_t_wall': 7}), 
+ boilerplate
+2024-11-03 12:06:03,840 - 346, 4, boilerplate
+2024-11-03 12:08:43,745 - 347, 4, boilerplate
+2024-11-03 12:09:06,264 - seed:55, steps:17267k, 1.0, won:93.2%, s:236.32, won_speed:1.316, status: Counter({'won': 812, 'breached_c': 26, 'breached_wall': 15, 'breached_rad_t_wall': 7, 'collided': 6, 'collided_UAV': 5}), 
+ boilerplate
+2024-11-03 12:11:23,192 - 350, 4, boilerplate
+2024-11-03 12:14:02,442 - 347, 4, boilerplate
+2024-11-03 12:14:25,713 - seed:55, steps:17299k, 1.0, won:93.4%, s:217.12, won_speed:1.309, status: Counter({'won': 818, 'breached_c': 29, 'breached_wall': 13, 'collided': 10, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 12:16:44,766 - 348, 4, boilerplate
+2024-11-03 12:19:27,408 - 346, 4, boilerplate
+2024-11-03 12:19:51,891 - seed:55, steps:17332k, 1.0, won:94.0%, s:313.27, won_speed:1.319, status: Counter({'won': 866, 'breached_c': 26, 'breached_wall': 14, 'collided': 6, 'breached_rad_t_wall': 5, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-03 12:22:08,770 - 349, 4, boilerplate
+2024-11-03 12:24:42,452 - 350, 4, boilerplate
+2024-11-03 12:25:05,553 - seed:55, steps:17365k, 1.0, won:96.4%, s:209.58, won_speed:1.311, status: Counter({'won': 865, 'breached_c': 11, 'collided': 10, 'breached_wall': 6, 'collided_UAV': 4, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 12:27:22,473 - 347, 4, boilerplate
+2024-11-03 12:29:56,498 - 348, 4, boilerplate
+2024-11-03 12:30:19,371 - seed:55, steps:17398k, 1.0, won:97.9%, s:257.58, won_speed:1.333, status: Counter({'won': 887, 'breached_c': 7, 'breached_wall': 6, 'collided_UAV': 3, 'collided': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 12:32:36,849 - 350, 4, boilerplate
+2024-11-03 12:35:21,628 - 350, 4, boilerplate
+2024-11-03 12:35:43,727 - seed:55, steps:17431k, 1.0, won:97.1%, s:353.95, won_speed:1.321, status: Counter({'won': 852, 'breached_wall': 9, 'breached_c': 7, 'collided_UAV': 5, 'collided': 4}), 
+ boilerplate
+2024-11-03 12:37:58,688 - 350, 4, boilerplate
+2024-11-03 12:40:39,617 - 354, 4, boilerplate
+2024-11-03 12:41:04,503 - seed:55, steps:17463k, 1.0, won:95.6%, s:283.46, won_speed:1.321, status: Counter({'won': 879, 'breached_c': 12, 'breached_wall': 10, 'collided': 10, 'collided_UAV': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 12:43:26,065 - 353, 4, boilerplate
+2024-11-03 12:46:07,706 - 357, 4, boilerplate
+2024-11-03 12:46:32,172 - seed:55, steps:17496k, 1.0, won:95.3%, s:359.7, won_speed:1.308, status: Counter({'won': 865, 'breached_c': 15, 'collided': 10, 'breached_wall': 9, 'collided_UAV': 7, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 12:48:53,539 - 354, 4, boilerplate
+2024-11-03 12:51:35,309 - 355, 4, boilerplate
+2024-11-03 12:52:00,269 - seed:55, steps:17529k, 1.0, won:96.1%, s:234.3, won_speed:1.337, status: Counter({'won': 886, 'breached_c': 16, 'collided': 10, 'breached_wall': 7, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 12:54:18,415 - 353, 4, boilerplate
+2024-11-03 12:56:55,987 - 355, 4, boilerplate
+2024-11-03 12:57:18,533 - seed:55, steps:17562k, 1.0, won:94.9%, s:337.96, won_speed:1.326, status: Counter({'won': 817, 'collided': 16, 'breached_c': 16, 'breached_wall': 9, 'collided_UAV': 2, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 12:59:34,742 - 356, 4, boilerplate
+2024-11-03 13:02:15,127 - 355, 4, boilerplate
+2024-11-03 13:02:37,284 - seed:55, steps:17595k, 1.0, won:94.9%, s:354.25, won_speed:1.294, status: Counter({'won': 854, 'collided': 20, 'breached_c': 12, 'collided_UAV': 7, 'breached_wall': 7}), 
+ boilerplate
+2024-11-03 13:04:57,689 - 351, 4, boilerplate
+2024-11-03 13:07:41,514 - 355, 4, boilerplate
+2024-11-03 13:08:05,043 - seed:55, steps:17627k, 1.0, won:94.4%, s:403.8, won_speed:1.322, status: Counter({'won': 836, 'collided': 28, 'collided_UAV': 8, 'breached_c': 7, 'breached_wall': 5, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 13:10:22,702 - 355, 4, boilerplate
+2024-11-03 13:13:02,811 - 354, 4, boilerplate
+2024-11-03 13:13:27,188 - seed:55, steps:17660k, 1.0, won:96.1%, s:362.49, won_speed:1.318, status: Counter({'won': 872, 'collided': 10, 'breached_c': 10, 'collided_UAV': 7, 'breached_wall': 6, 'breached_rad_t_wall': 2}), 
+ boilerplate
+2024-11-03 13:15:46,983 - 351, 4, boilerplate
+2024-11-03 13:18:31,642 - 353, 4, boilerplate
+2024-11-03 13:18:55,161 - seed:55, steps:17693k, 1.0, won:96.4%, s:425.9, won_speed:1.321, status: Counter({'won': 879, 'breached_wall': 12, 'breached_c': 10, 'collided': 8, 'collided_UAV': 3}), 
+ boilerplate
+2024-11-03 13:21:16,423 - 360, 4, boilerplate
+2024-11-03 13:23:58,593 - 355, 4, boilerplate
+2024-11-03 13:24:22,136 - seed:55, steps:17726k, 1.0, won:93.4%, s:228.71, won_speed:1.324, status: Counter({'won': 869, 'collided': 26, 'breached_c': 20, 'breached_wall': 11, 'collided_UAV': 4}), 
+ boilerplate
+2024-11-03 13:26:39,960 - 354, 4, boilerplate
+2024-11-03 13:29:18,904 - 355, 4, boilerplate
+2024-11-03 13:29:43,760 - seed:55, steps:17759k, 1.0, won:93.8%, s:270.42, won_speed:1.318, status: Counter({'won': 845, 'collided': 26, 'breached_c': 16, 'breached_wall': 8, 'collided_UAV': 5, 'breached_rad_t_wall': 1}), 
+ boilerplate
+2024-11-03 13:32:03,591 - 344, 4, boilerplate
+2024-11-03 13:34:44,193 - 345, 4, boilerplate
+2024-11-03 13:35:08,750 - seed:55, steps:17792k, 1.0, won:98.0%, s:281.62, won_speed:1.295, status: Counter({'won': 875, 'breached_c': 11, 'breached_wall': 4, 'collided': 2, 'collided_UAV': 1}), 
+ boilerplate
+2024-11-03 13:37:22,378 - 350, 4, boilerplate
+2024-11-03 13:40:07,203 - 349, 4, boilerplate
+2024-11-03 13:40:31,294 - seed:55, steps:17824k, 1.0, won:96.4%, s:206.77, won_speed:1.298, status: Counter({'won': 853, 'collided': 14, 'collided_UAV': 8, 'breached_c': 5, 'breached_wall': 5}), 
+ boilerplate
+2024-11-03 13:42:54,352 - 350, 4, boilerplate
+2024-11-03 13:45:40,434 - 349, 4, boilerplate
+2024-11-03 13:46:06,710 - seed:55, steps:17857k, 1.0, won:98.3%, s:226.7, won_speed:1.291, status: Counter({'won': 937, 'breached_c': 11, 'collided': 2, 'breached_rad_t_wall': 2, 'breached_wall': 1}), 
+ boilerplate
+2024-11-03 13:48:29,953 - 348, 4, boilerplate

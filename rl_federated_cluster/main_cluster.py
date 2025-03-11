@@ -118,7 +118,7 @@ parser.add_argument('--visibility', type=float, default=6, help='Learning rate o
 parser.add_argument('--fed_key', type=str, default='all', help='number of encoders')
 parser.add_argument('--fed_every', type=int, default=3, help='number of encoders')
 parser.add_argument('--current_time', type=str, default=None, help='indicate the corridor index')
-parser.add_argument('--cluster', type=int, default=9, help='number of encoders')
+parser.add_argument('--cluster', type=int, default=3, help='number of encoders')
 
 parser.add_argument('--partial_fine_tune', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--turbulence_variance', type=float, default=0, help='Learning rate of actor')
@@ -468,7 +468,12 @@ def main():
                 fed_counter += 1
             if ready_for_train and not env.agents:
                 ready_for_train = False
-                model.train(total_steps, opt.K_epochs, fed_counter % opt.fed_every == 0)
+
+                if opt.cluster > 1:
+                    fed_trigger=fed_counter % opt.fed_every== 0
+                else:
+                    fed_trigger = False
+                model.train(total_steps, opt.K_epochs,  fed_trigger)
                 extra_save_index += 1
                 trained_times += 1
                 logger.info(f"{episodes}, {opt.K_epochs}, {opt.exp_name}")
