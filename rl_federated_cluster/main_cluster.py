@@ -8,6 +8,7 @@ import time
 from collections import Counter, defaultdict
 from datetime import datetime
 from functools import reduce
+import loratorch as lora
 
 import numpy as np
 import torch
@@ -58,7 +59,7 @@ parser.add_argument('--video_turns', type=int, default=100, help='which model to
 parser.add_argument('--dt', type=float, default=1, help='Decay rate of entropy_coef')
 parser.add_argument('--reduce_space', type=str2bool, default=True, help='Share feature extraction layers?')
 parser.add_argument('--seed', type=int, default=33, help='random seed')
-parser.add_argument('--T_horizon', type=int, default=3600, help='lenth of long trajectory')
+parser.add_argument('--T_horizon', type=int, default=7200, help='lenth of long trajectory')
 parser.add_argument('--distnum', type=int, default=0, help='0:Beta ; 1:GS_ms;  2: GS_m')
 parser.add_argument('--Max_train_steps', type=float, default=1e6, help='Max training steps')
 parser.add_argument('--save_interval', type=int, default=2.5e4, help='Model saving interval, in steps.')
@@ -118,7 +119,7 @@ parser.add_argument('--visibility', type=float, default=6, help='Learning rate o
 parser.add_argument('--fed_key', type=str, default='all', help='number of encoders')
 parser.add_argument('--fed_every', type=int, default=3, help='number of encoders')
 parser.add_argument('--current_time', type=str, default=None, help='indicate the corridor index')
-parser.add_argument('--cluster', type=int, default=3, help='number of encoders')
+parser.add_argument('--cluster', type=int, default=9, help='number of encoders')
 
 parser.add_argument('--partial_fine_tune', type=str2bool, default=False, help='number of encoders')
 parser.add_argument('--turbulence_variance', type=float, default=0, help='Learning rate of actor')
@@ -248,6 +249,8 @@ def main():
     }
 
     model = PPO(**kwargs)
+    model.save(0)
+
     if opt.LoadModel:
         model.load(folder=opt.LoadFolder,
                    global_step=opt.ModelIndex,
@@ -469,10 +472,7 @@ def main():
             if ready_for_train and not env.agents:
                 ready_for_train = False
 
-                if opt.cluster > 1:
-                    fed_trigger=fed_counter % opt.fed_every== 0
-                else:
-                    fed_trigger = False
+                fed_trigger = False
                 model.train(total_steps, opt.K_epochs,  fed_trigger)
                 extra_save_index += 1
                 trained_times += 1

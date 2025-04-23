@@ -8,6 +8,7 @@ from torch.distributions import Beta
 from air_corridor.tools.util import nan_recoding
 from rl_multi_3d_trans.net_modules import FcModule, Embedding, MAB, BatchNormEmbedding, LayerNormEmbedding
 
+import loratorch as lora
 
 ## whcih is actually 10_3
 
@@ -26,12 +27,12 @@ class SmallSetTransformer(nn.Module):
         self.decoder = nn.ModuleList(
             [MAB(net_width, net_width, net_width, num_heads=4, ln=True) for _ in range(num_dec)])
         self.eb = BatchNormEmbedding(output_dim=net_width, hidden=128)
-        self.fc = nn.Linear(net_width, net_width)
+        self.fc = lora.Linear(net_width, net_width,r=int(net_width/2),lora_alpha=net_width)
         self.with_position = with_position
         self.token_query = token_query
-        self.fc1 = nn.Linear(2 * net_width, net_width)
-        self.fc2 = nn.Linear(net_width, net_width)
-        self.fc3 = nn.Linear(net_width, net_width)
+        self.fc1 = lora.Linear(2 * net_width, net_width,r=int(net_width/2),lora_alpha=net_width)
+        self.fc2 = lora.Linear(net_width, net_width,r=int(net_width/2),lora_alpha=net_width)
+        self.fc3 = lora.Linear(net_width, net_width,r=int(net_width/2),lora_alpha=net_width)
         self.logger = logger
         self.fc_module = FcModule(net_width=net_width)
 
@@ -80,12 +81,25 @@ class FixedBranch(nn.Module):
 class BetaActorMulti(nn.Module):
     def __init__(self, s1_dim, s2_dim, action_dim, net_width, shared_layers=None, beta_base=1.0):
         super(BetaActorMulti, self).__init__()
-        self.fc1 = nn.Linear(net_width, net_width)
-        self.fc2_a = nn.Linear(net_width, int(net_width / 2))
+        # self.fc1 = nn.Linear(net_width, net_width)
+        # self.fc2_a = nn.Linear(net_width, int(net_width / 2))
+
+        self.fc1 = lora.Linear(net_width, net_width,r=int(net_width/2),lora_alpha=net_width)
+        self.fc2_a = lora.Linear(net_width, int(net_width / 2),r=int(net_width/2),lora_alpha=net_width)
+
         self.bn1 = nn.BatchNorm1d(int(net_width / 2))
-        self.fc2_b = nn.Linear(int(net_width / 2), net_width)
-        self.alpha_head = nn.Linear(net_width, action_dim)
-        self.beta_head = nn.Linear(net_width, action_dim)
+
+
+        #self.fc2_b = nn.Linear(int(net_width / 2), net_width)
+        
+        # self.alpha_head = nn.Linear(net_width, action_dim)
+        # self.beta_head = nn.Linear(net_width, action_dim)
+
+
+        self.fc2_b = lora.Linear(int(net_width/2),net_width,r=int(net_width/2),lora_alpha=net_width)
+        self.alpha_head = lora.Linear(net_width, action_dim,r=int(net_width/2),lora_alpha=net_width)
+        self.beta_head = lora.Linear(net_width, action_dim,r=int(net_width/2),lora_alpha=net_width)
+        
         if shared_layers is None:
             self.intput_merge = MergedModel(s1_dim, s2_dim, net_width)
         else:
@@ -120,7 +134,8 @@ class BetaActorMulti(nn.Module):
 class CriticMulti(nn.Module):
     def __init__(self, s1_dim, s2_dim, net_width, shared_layers=None):
         super(CriticMulti, self).__init__()
-        self.C4 = nn.Linear(net_width, 1)
+        #self.C4 = nn.Linear(net_width, 1)
+        self.C4 = lora.Linear(net_width, 1,r=int(net_width/2),lora_alpha=net_width)
         if shared_layers is None:
             self.intput_merge = MergedModel(s1_dim, s2_dim, net_width)
         else:

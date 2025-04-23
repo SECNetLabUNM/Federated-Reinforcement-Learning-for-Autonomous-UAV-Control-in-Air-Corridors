@@ -13,6 +13,8 @@ sys.path.append('/home/meng/Documents/Code/FL-HtransL/')
 from rl_federated import net_nn_fc_10
 from rl_multi_3d_trans import net_nn_fc_10_3e
 
+import loratorch as lora
+
 net_models = {
 
     'fc10': net_nn_fc_10,
@@ -148,6 +150,8 @@ class PPO(object):
                                                      beta_base).to(device))
             self.local_critics.append(
                 net_models[net_model].CriticMulti(state_dim, s2_dim, net_width, critic_merge).to(device))
+            
+            
         self.local_actor_optimizers = [torch.optim.Adam(actor.parameters(), lr=a_lr) for actor in self.local_actors]
         self.local_critic_optimizers = [torch.optim.Adam(critic.parameters(), lr=c_lr) for critic in self.local_critics]
 
@@ -223,6 +227,7 @@ class PPO(object):
 
 
     def train(self, global_step, epoches=None, syn_round=False):
+
         if self.anneal_lr:
             frac = 1.0 - global_step / self.totoal_steps
             alrnow = frac * self.a_lr
@@ -244,10 +249,12 @@ class PPO(object):
 
             '''update the actor-critic'''
             actor = self.local_actors[j]
+            lora.mark_only_lora_as_trainable(actor)
             actor.train()
             actor_optimizer = self.local_actor_optimizers[j]
 
             critic = self.local_critics[j]
+            lora.mark_only_lora_as_trainable(critic)
             critic.train()
             critic_optimizer = self.local_critic_optimizers[j]
             # if self.anneal_lr:
@@ -301,6 +308,8 @@ class PPO(object):
                     c_loss.backward()
                     critic_optimizer.step()
 
+                    lora.register_model_param_after_backward(critic)
+                    lora.register_model_param_after_backward(actor)
         if syn_round:
             # default only average over critic, if shared net for merge, then the merge part is also averaged.
             self.fed_average()
@@ -413,14 +422,26 @@ class PPO(object):
         else:
             global_step /= 1e6
             seq_name = f"{global_step}m{diff}"
-        torch.save(self.average_model_weights(self.local_actors, for_saving=True),
+        # torch.save(self.average_model_weights(self.local_actors, for_saving=True),
+        #            f"{self.dir}/ppo_actor_{seq_name}.pth")
+        # torch.save(self.average_model_weights(self.local_critics, for_saving=True),
+        #            f"{self.dir}/ppo_critic_{seq_name}.pth")
+        
+        torch.save(lora.lora_state_dict(self.local_actors[0]),
                    f"{self.dir}/ppo_actor_{seq_name}.pth")
-        torch.save(self.average_model_weights(self.local_critics, for_saving=True),
+        torch.save(lora.lora_state_dict(self.local_critics[0]),
                    f"{self.dir}/ppo_critic_{seq_name}.pth")
 
-    def load(self, folder, global_step, partial_fine_tune=True):
+    def load(self, folder, global_step, partial_fine_tune=True,lora = False):
         if isinstance(global_step, float) or isinstance(global_step, int):
             global_step = str(global_step / 1000000) + 'm'
+
+        # load pretrained model before loading lora
+        if lora:
+            for local_actor, local_critic in zip(self.local_actors, self.local_critics):
+                local_actor.load_state_dict(torch.load('/home/meng/Documents/Code/HTransRL/trained_models/tests/HTransRL-T/ppo_actor_20.0m.pth'),strict=False)
+                local_critic.load_state_dict(torch.load('/home/meng/Documents/Code/HTransRL/trained_models/tests/HTransRL-T/ppo_critic_20.0m.pth'),strict=False)
+
         if folder.startswith('/'):
             saved_actor_weights = torch.load(f"{folder}/ppo_actor_{global_step}.pth")
             saved_critic_weights = torch.load(f"{folder}/ppo_critic_{global_step}.pth")

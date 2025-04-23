@@ -27,15 +27,15 @@ param6_values=(6.0) # visibility
 param8_values=(19) #
 param9_values=('fc10_3e') # network model
 param10_values=(True)  # whether to share layers
-param11_values=(1.5e-5)  # Alr
-param12_values=(1.5e-6)  # Clr
+param11_values=(1.5e-6)  # Alr
+param12_values=(1.5e-5)  # Clr
 param13_values=(0.1)  # Turb var
 param14_values=(0.3 )  # acceleration max
 param15_values=( 128 )  # Num neurons
 param16_values=( 'False')  # Partial fine tune
 param17_values=(1)  # Fed every
 param18_values=( 'all' )  # Fedkey
-param19_values=(4)  # K epoch
+param19_values=(4 1 10)  # K epoch
 max_concurrent=100
 concurrent_processes=0
 num_executions=1
@@ -71,7 +71,7 @@ for i in $(seq $num_executions); do
                       gpu_index=0 # Set default GPU indexn
 
                       # Construct experiment name
-                      exp_name="new_net:${param1}agents_${param6}Visibility_${param13}Turb_${param17}Fed_evry"
+                      exp_name="loranet_adam_7200:${param11}a_lr:${param12}c_lr:${param19}K_epochs"
                       echo $PATH
                       # Run the Python script with parameters
                       CUDA_VISIBLE_DEVICES=$gpu_index python /home/meng/Documents/Code/FL-HtransL/rl_federated_cluster/main_cluster.py \

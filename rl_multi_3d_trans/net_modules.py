@@ -3,6 +3,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import loratorch as lora
 
 
 ## trans for everything, then query with self
@@ -11,13 +12,13 @@ class MAB(nn.Module):
         super(MAB, self).__init__()
         self.dim_V = dim_V
         self.num_heads = num_heads
-        self.fc_q = nn.Linear(dim_Q, dim_V)
-        self.fc_k = nn.Linear(dim_K, dim_V)
-        self.fc_v = nn.Linear(dim_K, dim_V)
+        self.fc_q = lora.Linear(dim_Q, dim_V,r=int(dim_Q/2),lora_alpha=dim_Q)
+        self.fc_k = lora.Linear(dim_K, dim_V, r=int(dim_K/2),lora_alpha=dim_K)
+        self.fc_v = lora.Linear(dim_K, dim_V, r=int(dim_K/2),lora_alpha=dim_K)
         if ln:
             self.ln0 = nn.LayerNorm(dim_V)
             self.ln1 = nn.LayerNorm(dim_V)
-        self.fc_o = nn.Linear(dim_V, dim_V)
+        self.fc_o = lora.Linear(dim_V, dim_V, r=int(dim_V/2),lora_alpha=dim_V)
 
     # def forward(self, Q, K):
     #     Q = self.fc_q(Q)
@@ -196,16 +197,16 @@ class LayerNormEmbedding(nn.Module):
     def __init__(self, input_dim_pad=32, hidden=64, output_dim=128, higher=False):
         super(LayerNormEmbedding, self).__init__()
         self.input_dim_pad = input_dim_pad
-        self.fc32 = nn.Linear(32, hidden)
-        self.fc64 = nn.Linear(64, hidden)
-        self.fc128 = nn.Linear(128, hidden)
+        self.fc32 = lora.Linear(32, hidden,r=int(hidden/2),lora_alpha=hidden)
+        self.fc64 = lora.Linear(64, hidden,r=int(hidden/2),lora_alpha=hidden)
+        self.fc128 = lora.Linear(128, hidden,r=int(hidden/2),lora_alpha=hidden)
         self.bn1 = nn.LayerNorm(hidden)
         self.fc11 = nn.Linear(hidden, hidden)
-        self.fc2 = nn.Linear(hidden, hidden)
-        self.fc3 = nn.Linear(hidden, hidden)
-        self.fc4 = nn.Linear(hidden, output_dim)
+        self.fc2 = lora.Linear(hidden, hidden,r=int(hidden/2),alpha=hidden)
+        self.fc3 = lora.Linear(hidden, hidden,r=int(hidden/2),alpha=hidden)
+        self.fc4 = lora.Linear(hidden, output_dim,r=int(hidden/2),alpha=hidden)
         self.act = nn.ReLU()
-        self.res_fc = nn.Linear(hidden, output_dim) if hidden != output_dim else None
+        self.res_fc = lora.Linear(hidden, output_dim,r=int(hidden/2),alpha=hidden) if hidden != output_dim else None
         self.output_dim = output_dim
 
     def forward(self, input_tensor, position_index=-1, max_len=3):
@@ -250,21 +251,21 @@ class BatchNormEmbedding(nn.Module):
     def __init__(self, input_dim_pad=32, hidden=64, output_dim=128, higher=False):
         super(BatchNormEmbedding, self).__init__()
         self.input_dim_pad = input_dim_pad
-        self.fc32 = nn.Linear(32, hidden)
-        self.fc64 = nn.Linear(64, hidden)
-        self.fc128 = nn.Linear(128, hidden)
+        self.fc32 = lora.Linear(32, hidden,r=int(hidden/2),lora_alpha=hidden)
+        self.fc64 = lora.Linear(64, hidden,r=int(hidden/2),lora_alpha=hidden)
+        self.fc128 = lora.Linear(128, hidden,r=int(hidden/2),lora_alpha=hidden)
         if higher:
             self.fc256 = nn.Linear(256, hidden)
             self.fc512 = nn.Linear(512, hidden)
             self.fc1024 = nn.Linear(1024, hidden)
         self.bn1 = nn.BatchNorm1d(hidden)
-        self.fc11 = nn.Linear(hidden, hidden)
-        self.fc2 = nn.Linear(hidden, hidden)
+        self.fc11 = lora.Linear(hidden, hidden,r=int(hidden/2),lora_alpha=hidden)
+        self.fc2 = lora.Linear(hidden, hidden,r=int(hidden/2),lora_alpha=hidden)
         self.bn2 = nn.BatchNorm1d(hidden)
-        self.fc3 = nn.Linear(hidden, hidden)
-        self.fc4 = nn.Linear(hidden, output_dim)
+        self.fc3 = lora.Linear(hidden, hidden,r=int(hidden/2),lora_alpha=hidden)
+        self.fc4 = lora.Linear(hidden, output_dim,r=int(hidden/2),lora_alpha=hidden)
         self.act = nn.ReLU()
-        self.res_fc = nn.Linear(hidden, output_dim) if hidden != output_dim else None
+        self.res_fc = lora.Linear(hidden, output_dim,r=int(hidden/2),lora_alpha=hidden) if hidden != output_dim else None
         self.output_dim = output_dim
 
     def forward(self, input_tensor, position_index=-1, max_len=3):
