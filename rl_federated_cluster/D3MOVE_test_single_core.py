@@ -38,7 +38,7 @@ for model_str in strs:
     model.load(folder=loadFolder, global_step=modelIndex,lora=True)
 
     opt = load_init_params(name='main_params', dir=loadFolder)
-    max_round = 100
+    max_round = 1000
 
     ani_bool = False
     if ani_bool:
